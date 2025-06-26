@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- Arme signature : Faux d'Expédition (Améliorée) -->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>ExpeditionScythe</defName>
+		<label>faux d'expéditionnaire</label>
+		<description>Une faux de guerre utilisée par les membres de l'Expédition 33. Sa lame courbe porte les marques de nombreux combats contre des entités mystérieuses. Version de base des armes anti-Gommage.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipement/WeaponMelee/ExpeditionScythe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>3.2</Mass>
+			<MarketValue>350</MarketValue>
+		</statBases>
+		<tools>
+			<li>
+				<label>lame</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>22</power>
+				<cooldownTime>2.4</cooldownTime>
+				<armorPenetration>0.15</armorPenetration>
+			</li>
+			<li>
+				<label>manche</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+		</tools>
+		<costList>
+			<Steel>75</Steel>
+			<WoodLog>20</WoodLog>
+			<Plasteel>20</Plasteel>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Lame Artistique Anti-Gommage -->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Expedition33_ArtisticBlade</defName>
+		<label>lame artistique</label>
+		<description>Une épée imprégnée de pouvoir créatif, spécialement conçue pour combattre les entités liées à la Paintress. Sa lame scintille d'une lueur artistique et inflige des dégâts supplémentaires aux créatures peintes.</description>
+		<thingClass>Mod_warult.Weapon_ArtisticBlade</thingClass>
+		<graphicData>
+			<texPath>Things/Item/Equipement/WeaponMelee/ArtisticBlade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.8</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>20000</WorkToMake>
+			<Mass>2.8</Mass>
+			<MarketValue>800</MarketValue>
+		</statBases>
+		<tools>
+			<li>
+				<label>lame artistique</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>28</power>
+				<cooldownTime>2.0</cooldownTime>
+				<armorPenetration>0.25</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Burn</def>
+						<amount>5</amount>
+						<chance>0.3</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>pommeau</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+		<costList>
+			<Steel>80</Steel>
+			<Plasteel>40</Plasteel>
+			<Gold>25</Gold>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Pinceau de Contre-Peinture 
+	<ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+		<defName>Expedition33_CounterPaintBrush</defName>
+		<label>pinceau de contre-peinture</label>
+		<description>L'arme ultime contre la Paintress. Ce pinceau mystique peut effacer les créations artistiques malveillantes et infliger des dégâts dévastateurs aux entités peintes. Son pouvoir est si grand qu'il peut même annuler temporairement les effets du Gommage.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipement/WeaponMelee/CounterPaintBrush</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>35000</WorkToMake>
+			<Mass>1.8</Mass>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<tools>
+			<li>
+				<label>pinceau mystique</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>35</power>
+				<cooldownTime>1.5</cooldownTime>
+				<armorPenetration>0.40</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>10</amount>
+						<chance>0.5</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+		</tools>
+		<costList>
+			<Steel>50</Steel>
+			<Plasteel>80</Plasteel>
+			<Gold>50</Gold>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>20</Uranium>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Expedition33_CounterPaintBrush</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>-->
+
+	<!-- Fusil à levier Belle Époque (Amélioré) -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Expedition33_LeverRifle</defName>
+		<label>fusil à levier d'expédition</label>
+		<description>Un fusil à levier de précision utilisé par les éclaireurs de l'Expédition 33. Son mécanisme fiable et sa portée en font l'arme de choix pour les missions de reconnaissance contre les entités mystérieuses.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipement/WeaponRanged/ExpeditionRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>3.8</Mass>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.80</AccuracyLong>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+			<MarketValue>450</MarketValue>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ExpeditionRifle</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>35</range>
+				<soundCast>Shot_BoltActionRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<costList>
+			<Steel>100</Steel>
+			<WoodLog>15</WoodLog>
+			<Plasteel>30</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Fusil Artistique Anti-Gommage 
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Expedition33_ArtisticRifle</defName>
+		<label>fusil artistique</label>
+		<description>Un fusil de précision modifié avec des composants artistiques mystiques. Ses projectiles sont imprégnés de pouvoir créatif et peuvent percer les défenses des entités liées à la Paintress.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipement/WeaponRanged/ArtisticRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>4.2</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>0.95</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ArtisticRifle</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>40</range>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+			</li>
+		</verbs>
+		<costList>
+			<Steel>120</Steel>
+			<Plasteel>50</Plasteel>
+			<Gold>30</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<smeltable>true</smeltable>
+		<smeltProducts>
+			<Steel>40</Steel>
+			<Plasteel>20</Plasteel>
+			<Gold>12</Gold>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</smeltProducts>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>-->
+
+	<!-- Projectile pour le fusil d'expédition -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ExpeditionRifle</defName>
+		<label>tir de fusil d'expédition</label>
+		<graphicData>
+			<texPath>Bullet/Tir_magique</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<speed>100</speed>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<!-- Projectile Artistique -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ArtisticRifle</defName>
+		<label>tir artistique</label>
+		<graphicData>
+			<texPath>Bullet/Tir_artistique</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>24</damageAmountBase>
+			<speed>110</speed>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<explosionRadius>1.5</explosionRadius>
+			<explosionDelay>0</explosionDelay>
+		</projectile>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<MainButtonDef>
+		<defName>GommageTracker</defName>
+		<label>Surveillance Gommage</label>
+		<description>Surveiller l'activite de la Paintress et l'etat des protections anti-Gommage.</description>
+		<tabWindowClass>Mod_warult.MainTabWindow_GommageTracker</tabWindowClass>
+		<order>35</order>
+	</MainButtonDef>
+</Defs>

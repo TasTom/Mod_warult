@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BiomeDef>
+		<defName>Expedition33_ContinentObscur</defName>
+		<label>Continent Obscur</label>
+		<description>Un paysage de montagnes sculptées et de vallons aux fleurs étranges. Les formations rocheuses semblent ciselées par une main invisible, tandis que des grottes ornementées s'ouvrent dans les flancs des collines. Une brume perpétuelle donne à ce lieu une atmosphère de mystère et de mélancolie.</description>
+
+		<workerClass>Mod_warult.BiomeWorker_ContinentObscur</workerClass>
+
+		<animalDensity>0.6</animalDensity>
+		<plantDensity>0.8</plantDensity>
+		<settlementSelectionWeight>0.9</settlementSelectionWeight>
+		<movementDifficulty>1.4</movementDifficulty>
+		<hasVirtualPlants>true</hasVirtualPlants>
+
+		<baseColor>(0.3, 0.2, 0.4)</baseColor>
+
+		<terrainsByFertility>
+			<li>
+				<terrain>Expedition33_SculptedStone</terrain>
+				<min>-999</min>
+				<max>0.5</max>
+			</li>
+			<li>
+				<terrain>Expedition33_MysticalValley</terrain>
+				<min>0.5</min>
+				<max>0.8</max>
+			</li>
+			<li>
+				<terrain>Expedition33_FloweringGround</terrain>
+				<min>0.8</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+
+		<wildPlants>
+			<Expedition33_CrimsonBlossom>0.7</Expedition33_CrimsonBlossom>
+			<Expedition33_TwistingVine>0.5</Expedition33_TwistingVine>
+			<Expedition33_ShadowFern>0.6</Expedition33_ShadowFern>
+			<Expedition33_GoldenMoss>0.4</Expedition33_GoldenMoss>
+		</wildPlants>
+
+		<wildAnimals>
+			<Hare>0.4</Hare>
+			<Elk>0.2</Elk>
+			<Wolf>0.1</Wolf>
+		</wildAnimals>
+
+		<baseWeatherCommonalities>
+			<Clear>8</Clear>
+			<Fog>12</Fog>
+			<Rain>8</Rain>
+			<DryThunderstorm>1</DryThunderstorm>
+			<RainyThunderstorm>3</RainyThunderstorm>
+			<FoggyRain>6</FoggyRain>
+		</baseWeatherCommonalities>
+
+		<temperatureRange>-5~35</temperatureRange>
+	</BiomeDef>
+</Defs>

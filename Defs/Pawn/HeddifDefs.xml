@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Protection par Bouclier Anti-Gommage -->
+	<HediffDef>
+		<defName>Expedition33_GommageProtection</defName>
+		<label>protection anti-gommage</label>
+		<description>Protégé contre les effets du Gommage par un bouclier personnel. Cette protection mystique scintille autour du porteur.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 1.0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>bouclier actif</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>-0.15</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Protection par Champ Anti-Gommage -->
+	<HediffDef>
+		<defName>Expedition33_FieldProtection</defName>
+		<label>champ protecteur</label>
+		<description>Protégé par un champ anti-Gommage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 1.0, 0.8)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>dans le champ</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+					<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+					<!-- CORRIGÉ -->
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Corruption Artistique -->
+	<HediffDef>
+		<defName>Expedition33_ArtisticCorruption</defName>
+		<label>corruption artistique</label>
+		<description>Exposé aux énergies de la Paintress, ce colon développe des "taches artistiques" qui modifient sa perception de la réalité.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.4, 0.8)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>3.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.1</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>légère</label>
+				<minSeverity>0</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<label>modérée</label>
+				<minSeverity>1.0</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.15</MentalBreakThreshold>
+					<WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>sévère</label>
+				<minSeverity>2.0</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.30</MentalBreakThreshold>
+					<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Berserk</mentalState>
+						<mtbDays>10</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Résistance au Gommage -->
+	<HediffDef>
+		<defName>Expedition33_GommageResistance</defName>
+		<label>résistance au gommage</label>
+		<description>Ce colon a développé une résistance naturelle aux effets du Gommage après une exposition prolongée aux technologies anti-Gommage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1.0, 0.8, 0.2)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>résistant</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>-0.20</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Inspiration Artistique -->
+	<HediffDef>
+		<defName>Expedition33_ArtisticInspiration</defName>
+		<label>inspiration artistique</label>
+		<description>Inspiré par la lutte contre la Paintress, ce colon ressent une créativité décuplée et une motivation renouvelée.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.8, 1.0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>180000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>inspiré</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<WorkSpeedGlobal>0.20</WorkSpeedGlobal>
+					<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Épuisement du Bouclier -->
+	<HediffDef>
+		<defName>Expedition33_ShieldExhaustion</defName>
+		<label>épuisement du bouclier</label>
+		<description>Le bouclier anti-Gommage de ce colon est épuisé. Il est temporairement vulnérable aux effets du Gommage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1.0, 0.4, 0.4)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>vulnérable</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>0.20</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Témoin du Gommage -->
+	<HediffDef>
+		<defName>Expedition33_GommageWitness</defName>
+		<label>témoin du gommage</label>
+		<description>Ce colon a assisté à un événement de Gommage. Le traumatisme de voir des personnes disparaître de la réalité laisse des cicatrices psychologiques profondes.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.5, 0.3, 0.3)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.02</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>traumatisé</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>0.25</MentalBreakThreshold>
+					<SocialImpact>-0.15</SocialImpact>
+				</statOffsets>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Wander_Sad</mentalState>
+						<mtbDays>5</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Bénédiction du Sanctuaire -->
+	<HediffDef>
+		<defName>Expedition33_SanctuaryBlessing</defName>
+		<label>bénédiction du sanctuaire</label>
+		<description>Ce colon a passé du temps dans le Sanctuaire Temporel. L'exposition aux énergies temporelles lui confère une sérénité et une clarté d'esprit exceptionnelles.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.9, 0.9, 0.2)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>300000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>béni</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>-0.30</MentalBreakThreshold>
+					<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+					<ResearchSpeed>0.25</ResearchSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThoughtDef>
+		<defName>GommageAnxiety</defName>
+		<workerClass>Mod_warult.ThoughtWorker_GommageAnxiety</workerClass>
+		<stages>
+			<li>
+				<label>inquiet du Gommage</label>
+				<description>J'ai entendu parler de ce phénomène mystérieux... Et si mon âge était le prochain à être maudit ?</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>terrifié par le Gommage</label>
+				<description>Mon âge approche des nombres dangereux ! Je pourrais disparaître à tout moment !</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+			<li>
+				<label>panique du Gommage</label>
+				<description>C'est un âge maudit ! Je vais être gommé ! Il faut que je fasse quelque chose !</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>ExpeditionMissionReady</defName>
+		<workerClass>Mod_warult.ThoughtWorker_ExpeditionMission</workerClass>
+		<stages>
+			<li>
+				<label>prêt pour la mission</label>
+				<description>Nous avons un quartier général opérationnel. Je me sens prêt à affronter Le Gommage !</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MemorialRespect</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>3</durationDays>
+		<stages>
+			<li>
+				<label>respecté les gommés</label>
+				<description>J'ai rendu hommage à ceux qui ont été effacés. Leur sacrifice ne sera pas oublié.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ExpeditionCamaraderie</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>5</durationDays>
+		<stages>
+			<li>
+				<label>camaraderie d'expédition</label>
+				<description>J'ai partagé des histoires d'expédition avec mes compagnons. Nous sommes unis face au Gommage.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>SurvivedGommage</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>10</durationDays>
+		<stages>
+			<li>
+				<label>survécu au Gommage</label>
+				<description>Nous avons survécu à un Gommage ! Peut-être que nous pouvons vraiment vaincre La Peintre.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>LostToGommage</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>15</durationDays>
+		<stages>
+			<li>
+				<label>perdu dans le Gommage</label>
+				<description>Quelqu'un a été gommé... Ils ont simplement disparu, comme s'ils n'avaient jamais existé.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+</Defs>

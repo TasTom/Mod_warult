@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Recette pour analyser le Gommage -->
+	<RecipeDef>
+		<defName>AnalyzeGommage</defName>
+		<label>analyser le phénomène de gommage</label>
+		<description>Étudier les échantillons de corruption artistique pour comprendre les mécanismes du Gommage. Accélère la recherche anti-Gommage.</description>
+		<jobString>analyse le Gommage.</jobString>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>ResearchSpeed</workSpeedStat>
+		<effectWorking>Research</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<li>Expedition33_Headquarters</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_GommageAnalysis</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<Silver>100</Silver>
+		</products>
+		<workSkill>Intellectual</workSkill>
+	</RecipeDef>
+
+	<!-- Recette pour planifier une mission d'urgence -->
+	<RecipeDef>
+		<defName>PlanEmergencyMission</defName>
+		<label>planifier mission d'urgence anti-gommage</label>
+		<description>Organiser une mission d'urgence pour évacuer les zones menacées par le Gommage. Améliore les chances de survie des colons.</description>
+		<jobString>planifie une mission d'urgence.</jobString>
+		<workAmount>2000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Research</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<li>Expedition33_Headquarters</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Intellectual>6</Intellectual>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_ArtisticDetection</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<Silver>75</Silver>
+		</products>
+		<workSkill>Intellectual</workSkill>
+	</RecipeDef>
+
+	<!-- Recette pour fabriquer bouclier anti-Gommage -->
+	<RecipeDef>
+		<defName>Make_AntiGommageShield</defName>
+		<label>fabriquer bouclier anti-gommage</label>
+		<description>Fabrique un bouclier personnel contre les effets du Gommage. Protection limitée mais efficace.</description>
+		<jobString>fabrique un bouclier anti-gommage.</jobString>
+		<workAmount>8000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<recipeUsers>
+			<li>Expedition33_Armory</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_AntiGommageShield</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+			<Expedition33_AntiGommageShield>1</Expedition33_AntiGommageShield>
+		</products>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<!-- Recette pour fabriquer lame artistique -->
+	<RecipeDef>
+		<defName>Make_ArtisticBlade</defName>
+		<label>forger lame artistique</label>
+		<description>Forger une épée imprégnée de pouvoir créatif, spécialement efficace contre les entités liées à la Paintress.</description>
+		<jobString>forge une lame artistique.</jobString>
+		<workAmount>12000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<recipeUsers>
+			<li>Expedition33_Armory</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<Expedition33_ArtisticBlade>1</Expedition33_ArtisticBlade>
+		</products>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<!-- Recette pour créer le pinceau de contre-peinture 
+	<RecipeDef>
+		<defName>Make_CounterPaintBrush</defName>
+		<label>créer pinceau de contre-peinture</label>
+		<description>Créer l'arme ultime contre la Paintress. Ce pinceau mystique peut effacer les créations artistiques malveillantes.</description>
+		<jobString>crée un pinceau de contre-peinture.</jobString>
+		<workAmount>20000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<recipeUsers>
+			<li>Expedition33_Armory</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>15</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_CounterPaintBrush</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<Expedition33_CounterPaintBrush>1</Expedition33_CounterPaintBrush>
+		</products>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef> -->
+
+	<!-- Recette pour fabriquer équipement d'expédition standard -->
+	<RecipeDef>
+		<defName>MakeExpeditionGear</defName>
+		<label>fabriquer uniforme d'expédition</label>
+		<description>Créer l'uniforme standard de l'Expédition 33 pour identifier les membres et améliorer le moral.</description>
+		<jobString>fabrique un uniforme d'expédition.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<recipeUsers>
+			<li>Expedition33_Armory</li>
+			<li>ElectricTailoringBench</li>
+			<li>HandTailoringBench</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_BasicProtection</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<Expedition33_Uniform>1</Expedition33_Uniform>
+		</products>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<!-- Recette pour calibrer détecteur d'âge maudit -->
+	<RecipeDef>
+		<defName>CalibrateDetector</defName>
+		<label>calibrer détecteur d'âge maudit</label>
+		<description>Améliorer la précision du détecteur d'âge maudit pour des alertes plus fiables.</description>
+		<jobString>calibre le détecteur.</jobString>
+		<workAmount>6000</workAmount>
+		<workSpeedStat>ResearchSpeed</workSpeedStat>
+		<effectWorking>Research</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<recipeUsers>
+			<li>Expedition33_Headquarters</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<researchPrerequisite>Expedition33_CursedAgeDetector</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<Silver>150</Silver>
+		</products>
+		<workSkill>Intellectual</workSkill>
+	</RecipeDef>
+</Defs>

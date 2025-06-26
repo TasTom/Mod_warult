@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Incident du Gommage - OPTIMISÉ POUR LES TESTS -->
+	<IncidentDef>
+		<defName>Expedition33_Gommage</defName>
+		<label>Le Gommage</label>
+		<workerClass>Mod_warult.IncidentWorker_Gommage</workerClass>
+		<category>ThreatBig</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<!-- AUGMENTÉ pour les tests -->
+		<baseChance>15.0</baseChance>
+		<minRefireDays>3</minRefireDays>
+		<earliestDay>5</earliestDay>
+		<!-- SUPPRIMÉ minThreatPoints pour éviter les blocages -->
+		<letterLabel>Le Gommage</letterLabel>
+		<letterText>Un phénomène mystérieux s'abat sur votre colonie...</letterText>
+		<letterDef>ThreatBig</letterDef>
+	</IncidentDef>
+
+	<!-- Mission d'Expédition - AMÉLIORÉ -->
+	<IncidentDef>
+		<defName>Expedition33_Mission</defName>
+		<label>Mission d'Expédition</label>
+		<workerClass>Mod_warult.IncidentWorker_ExpeditionMission</workerClass>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<baseChance>8.0</baseChance>
+		<minRefireDays>3</minRefireDays>
+		<earliestDay>5</earliestDay>
+		<letterLabel>Mission d'Expédition</letterLabel>
+		<letterText>L'Expédition 33 vous propose une mission...</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+
+	<!-- Apparition de la Panteresse - CORRIGÉ -->
+	<IncidentDef>
+		<defName>Expedition33_PainterSighting</defName>
+		<label>Apparition de la Panteresse</label>
+		<workerClass>Mod_warult.IncidentWorker_PainterSighting</workerClass>
+		<category>ThreatBig</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<baseChance>3.0</baseChance>
+		<minRefireDays>10</minRefireDays>
+		<earliestDay>20</earliestDay>
+		<letterLabel>La Panteresse</letterLabel>
+		<letterText>La terrifiante Panteresse a été aperçue près de votre colonie...</letterText>
+		<letterDef>ThreatBig</letterDef>
+	</IncidentDef>
+
+	<!-- NOUVEAU - Test simple pour vérifier que ça fonctionne -->
+	<IncidentDef>
+		<defName>Expedition33_TestEvent</defName>
+		<label>Test Expédition 33</label>
+		<workerClass>Mod_warult.IncidentWorker_TestEvent</workerClass>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<baseChance>25.0</baseChance>
+		<minRefireDays>1</minRefireDays>
+		<earliestDay>1</earliestDay>
+		<letterLabel>Test Expédition 33</letterLabel>
+		<letterText>Ceci est un test pour vérifier que tes événements fonctionnent !</letterText>
+		<letterDef>PositiveEvent</letterDef>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>Expedition33_SpawnPaintressOnSite</defName>
+		<label>Spawn Panteresse sur Site</label>
+		<workerClass>Mod_warult.IncidentWorker_SpawnPaintressOnSite</workerClass>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_Misc</li>
+		</targetTags>
+		<baseChance>100.0</baseChance>
+		<minRefireDays>1</minRefireDays>
+		<earliestDay>1</earliestDay>
+	</IncidentDef>
+
+
+</Defs>

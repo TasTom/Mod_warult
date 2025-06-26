@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>Expedition33_GommageAnalysis</defName>
+		<label>Analyse du Gommage</label>
+		<description>Étude approfondie du phénomène de Gommage pour comprendre ses mécanismes.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>Main</tab>
+		<researchViewX>10</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_ArtisticDetection</defName>
+		<label>Détection Artistique</label>
+		<description>Développement de méthodes pour détecter la corruption artistique.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_GommageAnalysis</li>
+		</prerequisites>
+		<researchViewX>11</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_BasicProtection</defName>
+		<label>Protection Basique</label>
+		<description>Premiers équipements de protection contre les effets mineurs du Gommage.</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_ArtisticDetection</li>
+		</prerequisites>
+		<researchViewX>12</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_CursedAgeDetector</defName>
+		<label>Détecteur d'Âge Maudit</label>
+		<description>Construction d'un appareil capable d'identifier l'âge actuellement peint.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_BasicProtection</li>
+		</prerequisites>
+		<researchViewX>13</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_AntiGommageShield</defName>
+		<label>Bouclier Anti-Gommage</label>
+		<description>Protection individuelle contre les effets du Gommage.</description>
+		<baseCost>1800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_BasicProtection</li>
+		</prerequisites>
+		<researchViewX>13</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_ArtisticWeapons</defName>
+		<label>Armes Artistiques</label>
+		<description>Armes imprégnées de pouvoir créatif pour combattre les entités peintes.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_BasicProtection</li>
+		</prerequisites>
+		<researchViewX>13</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_AntiGommageField</defName>
+		<label>Champ Anti-Gommage</label>
+		<description>Générateur de protection de zone pour toute la colonie.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_AntiGommageShield</li>
+		</prerequisites>
+		<researchViewX>14</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_CounterPaintBrush</defName>
+		<label>Pinceau de Contre-Peinture</label>
+		<description>Arme ultime capable d'effacer les créations de la Paintress.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_ArtisticWeapons</li>
+		</prerequisites>
+		<researchViewX>14</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Expedition33_TemporalSanctuary</defName>
+		<label>Sanctuaire Temporel</label>
+		<description>Refuge qui fige le temps pour échapper au Gommage.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>Expedition33_AntiGommageField</li>
+			<li>Expedition33_CounterPaintBrush</li>
+		</prerequisites>
+		<researchViewX>15</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+</Defs>

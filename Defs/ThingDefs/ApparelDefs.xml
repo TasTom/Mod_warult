@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- Uniforme d'Expédition 33 (Amélioré) -->
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Expedition33_Uniform</defName>
+		<label>uniforme d'expéditionnaire</label>
+		<description>Un uniforme militaire élégant de style Belle Époque porté par les membres de l'Expédition 33. Ses boutons dorés et ses épaulettes témoignent du rang de celui qui le porte. Offre une protection basique contre les effets du Gommage.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ExpeditionUniform/ExpeditionUniform</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>0.8</Mass>
+			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>8</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			<MarketValue>200</MarketValue>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<Cloth>60</Cloth>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ExpeditionUniform/ExpeditionUniform</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>Military</li>
+				<li>Expedition33</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.03</MentalBreakThreshold>
+			<SocialImpact>0.08</SocialImpact>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<researchPrerequisite>Expedition33_BasicProtection</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Bouclier Anti-Gommage -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Expedition33_AntiGommageShield</defName>
+		<label>bouclier anti-gommage</label>
+		<description>Un dispositif de protection personnel qui génère un champ protecteur contre les effets du Gommage. Ses circuits dorés scintillent d'une énergie mystique. Possède 3 charges de protection avant épuisement.</description>
+		<thingClass>Mod_warult.Apparel_AntiGommageShield</thingClass>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Shield/AntiGommageShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<modExtensions>
+			<li Class="OversizedApparel.Extension">
+				<drawSize>(0.5, 0.5)</drawSize>
+				<!-- 50% largeur et hauteur -->
+			</li>
+		</modExtensions>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>3.0</Mass>
+			<Flammability>0.2</Flammability>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<EquipDelay>5</EquipDelay>
+			<MarketValue>800</MarketValue>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Gold>15</Gold>
+		</costList>
+		<!-- AJOUTEZ CECI pour le smelting -->
+		<smeltable>true</smeltable>
+		<smeltProducts>
+			<Steel>25</Steel>
+			<!-- 50% de l'acier utilisé -->
+			<Gold>7</Gold>
+			<!-- 50% de l'or utilisé -->
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<!-- 33% des composants -->
+		</smeltProducts>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.15</MoveSpeed>
+			<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>LeftHand</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/Shield/AntiGommageShield</wornGraphicPath>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+				<li>Expedition33</li>
+				<li>AntiGommage</li>
+				<li>Belt</li>
+			</tags>
+		</apparel>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+	</ThingDef>
+
+	<!-- Armure Renforcée d'Expédition -->
+	<ThingDef ParentName="ApparelArmorPowerBase">
+		<defName>Expedition33_ReinforcedArmor</defName>
+		<label>armure renforcée d'expédition</label>
+		<description>Une armure de combat avancée développée spécifiquement pour lutter contre les entités liées à la Paintress. Ses plaques gravées de symboles mystiques offrent une protection supérieure contre les attaques artistiques.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ReinforcedArmor/ReinforcedArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>8.0</Mass>
+			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.60</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>8</EquipDelay>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		
+		<equippedStatOffsets>
+			<MoveSpeed>-0.20</MoveSpeed>
+			<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+			<MentalBreakThreshold>-0.15</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>120</Steel>
+			<Plasteel>60</Plasteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Gold>30</Gold>
+		</costList>
+		<smeltable>true</smeltable>
+		<smeltProducts>
+			<Steel>60</Steel>
+			<!-- 50% récupération -->
+			<Plasteel>30</Plasteel>
+			<!-- 50% récupération -->
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<!-- 33% récupération -->
+			<Gold>15</Gold>
+			<!-- 50% récupération -->
+		</smeltProducts>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ReinforcedArmor/ReinforcedArmor</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Military</li>
+				<li>Expedition33</li>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Casque d'officier (Activé et Amélioré) -->
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>Expedition33_OfficerHat</defName>
+		<label>casquette d'officier d'expédition</label>
+		<description>Une casquette militaire ornée de galons dorés et de symboles anti-Gommage, portée par les officiers de l'Expédition 33. Elle confère autorité et respect parmi les troupes tout en offrant une protection mentale contre les effets psychologiques du Gommage.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/OfficerHat/OfficerHat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.3</Mass>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<Insulation_Cold>8</Insulation_Cold>
+			<EquipDelay>2</EquipDelay>
+			<MarketValue>180</MarketValue>
+		</statBases>
+		<costList>
+			<Cloth>25</Cloth>
+			<Steel>15</Steel>
+			<Gold>5</Gold>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/OfficerHat/OfficerHat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Military</li>
+				<li>Expedition33</li>
+				<li>Officer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<equippedStatOffsets>
+			<SocialImpact>0.15</SocialImpact>
+			<NegotiationAbility>0.10</NegotiationAbility>
+			<MentalBreakThreshold>-0.08</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<researchPrerequisite>Expedition33_BasicProtection</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Bottes militaires (Activées et Améliorées) -->
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Expedition33_MilitaryBoots</defName>
+		<label>bottes d'expédition renforcées</label>
+		<description>Des bottes en cuir robustes portées par les expéditionnaires, renforcées avec des plaques métalliques et des semelles anti-glissement. Conçues pour résister aux longues marches et aux terrains difficiles lors des missions contre les entités mystérieuses.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/MilitaryBoots/MilitaryBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.5</Mass>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<Insulation_Cold>6</Insulation_Cold>
+			<EquipDelay>2</EquipDelay>
+			<MarketValue>120</MarketValue>
+		</statBases>
+		<costList>
+			<Cloth>20</Cloth>
+			<Steel>25</Steel>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/MilitaryBoots/MilitaryBoots</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>Military</li>
+				<li>Expedition33</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<equippedStatOffsets>
+			<MoveSpeed>0.08</MoveSpeed>
+			<WorkSpeedGlobal>0.02</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>Expedition33_Armory</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<researchPrerequisite>Expedition33_BasicProtection</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>

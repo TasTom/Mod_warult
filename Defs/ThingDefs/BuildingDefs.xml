@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- Quartier Général d'Expédition -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Expedition33_Headquarters</defName>
+		<label>quartier général d'expédition</label>
+		<description>Un bâtiment de commandement utilisé par l'Expédition 33 pour planifier leurs missions contre Le Gommage. Contient des cartes, des dossiers secrets et des équipements de communication. Permet de rechercher les technologies anti-Gommage.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/ExpeditionHQ</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<costList>
+			<WoodLog>150</WoodLog>
+			<Steel>75</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>8000</WorkToBuild>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<ResearchSpeedFactor>1.2</ResearchSpeedFactor>
+		</statBases>
+		<size>(3,2)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<buildingTags>
+				<li>Production</li>
+				<li>Expedition33</li>
+				<li>Research</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+					<li>MultiAnalyzer</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Expedition33_GommageAnalysis</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Détecteur d'Âge Maudit -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Expedition33_CursedAgeDetector</defName>
+		<label>détecteur d'âge maudit</label>
+		<description>Un appareil sophistiqué qui analyse les fluctuations artistiques pour détecter l'âge actuellement peint sur le monolithe de la Paintress. Alerte la colonie quand un Gommage est imminent.</description>
+		<thingClass>Mod_warult.Building_CursedAgeDetector</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/MultiAnalyzer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Gold>20</Gold>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<researchPrerequisites>
+			<li>Expedition33_CursedAgeDetector</li>
+		</researchPrerequisites>
+		<designationCategory>Security</designationCategory>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>50</pathCost>
+	</ThingDef>
+
+	<!-- Générateur de Champ Anti-Gommage -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Expedition33_AntiGommageField</defName>
+		<label>générateur de champ anti-gommage</label>
+		<description>Un générateur avancé qui crée un champ protecteur dans un rayon de 15 cases. Les colons dans cette zone sont protégés contre les effets du Gommage, mais l'appareil consomme énormément d'énergie.</description>
+		<thingClass>Mod_warult.Building_AntiGommageField</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/ShieldGeneratorLarge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<size>(3,3)</size>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<researchPrerequisites>
+			<li>Expedition33_AntiGommageField</li>
+		</researchPrerequisites>
+		<designationCategory>Security</designationCategory>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.5</fillPercent>
+		<pathCost>50</pathCost>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	</ThingDef>
+
+	<!-- Mémorial aux Gommés -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Expedition33_Memorial</defName>
+		<label>mémorial aux gommés</label>
+		<description>Un monument solennel dédié à ceux qui ont été effacés par Le Gommage. Les noms gravés dans la pierre rappellent que personne n'oublie les disparus, même si la réalité les a oubliés. Améliore le moral des survivants.</description>
+		<graphicData>
+			<texPath>Things/Building/Art/Expedition33_Memorial</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.35</fillPercent>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<costList>
+			<BlocksGranite>75</BlocksGranite>
+			<Gold>25</Gold>
+		</costList>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>40</Mass>
+			<Beauty>20</Beauty>
+		</statBases>
+		<size>(2,2)</size>
+		<designationCategory>Misc</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Art</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+	</ThingDef>
+
+	<!-- Armurerie d'Expédition (Améliorée) -->
+	<ThingDef ParentName="BenchBase">
+		<defName>Expedition33_Armory</defName>
+		<label>armurerie d'expédition</label>
+		<description>Un atelier spécialisé pour fabriquer les équipements uniques de l'Expédition 33. Les artisans qui y travaillent connaissent les secrets de fabrication des armes anti-Gommage, boucliers de protection et armes artistiques.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/ExpeditionArmory</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<WoodLog>80</WoodLog>
+			<Gold>30</Gold>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>10000</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkSpeedGlobal>1.0</WorkSpeedGlobal>
+		</statBases>
+		<size>(3,2)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<buildingTags>
+				<li>Production</li>
+				<li>Expedition33</li>
+				<li>Crafting</li>
+			</buildingTags>
+		</building>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>210</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Expedition33_BasicProtection</li>
+			<li>Smithing</li>
+			<li>Electricity</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Sanctuaire Temporel 
+	<ThingDef ParentName="BuildingBase">
+		<defName>Expedition33_TemporalSanctuary</defName>
+		<label>sanctuaire temporel</label>
+		<description>Une structure mystique qui peut figer le temps dans une zone limitée, offrant un refuge ultime contre le Gommage. Nécessite des ressources rares et une maintenance constante.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/AncientCryptosleepCasket</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<size>(4,4)</size>
+		<costList>
+			<Steel>300</Steel>
+			<Plasteel>100</Plasteel>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Uranium>50</Uranium>
+		</costList>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>25000</WorkToBuild>
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<researchPrerequisites>
+			<li>Expedition33_TemporalSanctuary</li>
+		</researchPrerequisites>
+		<designationCategory>Security</designationCategory>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.6</fillPercent>
+		<pathCost>70</pathCost>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+	-->
+</Defs>

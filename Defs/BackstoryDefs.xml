@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<BackstoryDef>
+		<defName>Expedition33_Recruit</defName>
+		<title>recrue d'expédition</title>
+		<titleShort>recrue</titleShort>
+		<description>[PAWN_nameDef] a été recruté(e) dans l'Expédition 33 après avoir montré des aptitudes prometteuses. [PAWN_pronoun] a suivi un entraînement militaire de base et appris les rudiments de la survie.</description>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>Expedition33</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>2</Shooting>
+			<Melee>2</Melee>
+			<Medicine>1</Medicine>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+		</workDisables>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>Expedition33_Officer</defName>
+		<title>officier d'expédition</title>
+		<titleShort>officier</titleShort>
+		<description>[PAWN_nameDef] a gravi les échelons de l'Expédition 33 grâce à [PAWN_possessive] leadership naturel et [PAWN_possessive] compréhension tactique. [PAWN_pronoun] a mené plusieurs missions contre les forces du Gommage.</description>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>Expedition33</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>3</Melee>
+			<Social>3</Social>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>Expedition33_Engineer</defName>
+		<title>ingénieur d'expédition</title>
+		<titleShort>ingénieur</titleShort>
+		<description>[PAWN_nameDef] était responsable de la maintenance et de la création d'équipements pour l'Expédition 33. [PAWN_possessive] expertise technique était cruciale pour les missions en territoire hostile.</description>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>Expedition33</li>
+		</spawnCategories>
+		<skillGains>
+			<Construction>4</Construction>
+			<Crafting>4</Crafting>
+			<Mining>2</Mining>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Crafting</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+	<BackstoryDef>
+		<defName>Expedition33_Paintress</defName>
+		<title>la Paintress</title>
+		<titleShort>Paintress</titleShort>
+		<description>[PAWN_nameDef] est l'entité mystérieuse responsable du Gommage. [PAWN_possessive] pouvoir de manipulation de la réalité [PAWN_objective] rend quasi-invincible. [PAWN_pronoun] efface les êtres de l'existence d'un simple geste.</description>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>Expedition33</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Melee>8</Melee>
+			<Social>6</Social>
+			<Intellectual>7</Intellectual>
+			<Artistic>10</Artistic>
+		</skillGains>
+		<!--<TraitGains>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</TraitGains>
+		-->
+	</BackstoryDef>
+
+	
+	<BackstoryDef>
+		<defName>Expedition33_Scout</defName>
+		<title>éclaireur vétéran</title>
+		<titleShort>éclaireur</titleShort>
+		<description>[PAWN_nameDef] a survécu à de nombreuses missions de reconnaissance en territoire gommé. [PAWN_possessive] expérience [PAWN_objective] a appris à détecter les signes avant-coureurs du Gommage.</description>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>Expedition33</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Animals>3</Animals>
+			<Medicine>2</Medicine>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+	
+	
+</Defs>

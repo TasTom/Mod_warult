@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<AbilityDef>
+		<defName>Expedition33_MeteorsOfTheAbyss</defName>
+		<label>météores du néant</label>
+		<description>La Panteresse invoque une pluie de météores sur ses ennemis.</description>
+
+		<cooldownTicksRange>600</cooldownTicksRange>
+
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>30</range>
+			<warmupTime>2</warmupTime>
+		</verbProperties>
+
+		<!-- SUPPRIME jobDef et hotKey problématiques -->
+		<iconPath>UI/Commands/Attack</iconPath>
+
+	</AbilityDef>
+</Defs>

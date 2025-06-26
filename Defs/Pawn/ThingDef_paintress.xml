@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>Expedition33_PaintressMonster</defName>
+		<label>la Paintress</label>
+		<description>Une entité monstrueuse qui manipule la réalité avec son pinceau mystique.</description>
+
+		<statBases>
+			<MoveSpeed>1.5</MoveSpeed>
+			<MarketValue>5000</MarketValue>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<LeatherAmount>0</LeatherAmount>
+			<MeatAmount>0</MeatAmount>
+		</statBases>
+
+		<comps>
+			<li Class="Mod_warult.CompProperties_PaintressDeath">
+				<compClass>Mod_warult.CompPaintressDeath</compClass>
+			</li>
+		</comps>
+		
+		<tools>
+			<li>
+				<label>pinceau mystique</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>35</power>
+				<cooldownTime>1.2</cooldownTime>
+			</li>
+		</tools>
+
+		<race>
+			<body>Human</body>
+			<baseBodySize>5.0</baseBodySize>
+			<baseHealthScale>8.0</baseHealthScale>
+			<baseHungerRate>0.0</baseHungerRate>
+			
+			
+			<!-- CORRECTION - Mange de la viande pour éviter l'erreur -->
+			<foodType>CarnivoreAnimal</foodType>
+			<leatherDef>Leather_Human</leatherDef>
+			<manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+			<wildness>1.0</wildness>
+			<predator>true</predator>
+			<maxPreyBodySize>10</maxPreyBodySize>
+			<lifeExpectancy>1000</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<!-- CORRECTION - Sons existants -->
+					<soundWounded>Pawn_Melee_Punch_HitPawn</soundWounded>
+					<soundDeath>Pawn_Melee_Punch_Miss</soundDeath>
+					<soundCall>Pawn_Melee_Punch_Miss</soundCall>
+					<soundAngry>Pawn_Melee_Punch_HitPawn</soundAngry>
+				</li>
+			</lifeStageAges>
+			<!-- CORRECTION - Sons existants -->
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+</Defs>

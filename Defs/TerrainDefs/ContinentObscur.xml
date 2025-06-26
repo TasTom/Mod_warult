@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Pierre sculptée -->
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Expedition33_SculptedStone</defName>
+		<label>pierre sculptée</label>
+		<description>Des formations rocheuses aux motifs géométriques impossibles, comme ciselées par des artisans invisibles.</description>
+		<texturePath>Terrain/Surfaces/SculptedStone</texturePath>
+		<edgeType>Hard</edgeType>
+		<renderPrecedence>360</renderPrecedence>
+		<pathCost>3</pathCost>
+		<statBases>
+			<Beauty>3</Beauty>
+			<Cleanliness>0</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<fertility>0.1</fertility>
+		<color>(0.4, 0.3, 0.5)</color>
+	</TerrainDef>
+
+	<!-- Vallon mystique -->
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Expedition33_MysticalValley</defName>
+		<label>vallon mystique</label>
+		<description>Un sol sombre et fertile où poussent des plantes aux couleurs impossibles.</description>
+		<texturePath>Terrain/Surfaces/MysticalValley</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>2</Beauty>
+			<Cleanliness>0</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<takeFootprints>true</takeFootprints>
+		<fertility>0.6</fertility>
+		<color>(0.3, 0.2, 0.3)</color>
+	</TerrainDef>
+
+	<!-- Sol fleuri -->
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Expedition33_FloweringGround</defName>
+		<label>sol fleuri</label>
+		<description>Une terre riche tapissée de fleurs aux teintes cramoisies et dorées.</description>
+		<texturePath>Terrain/Surfaces/FloweringGround</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>345</renderPrecedence>
+		<pathCost>1</pathCost>
+		<statBases>
+			<Beauty>5</Beauty>
+			<Cleanliness>1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<takeFootprints>true</takeFootprints>
+		<fertility>1.0</fertility>
+		<color>(0.6, 0.3, 0.4)</color>
+	</TerrainDef>
+</Defs>
