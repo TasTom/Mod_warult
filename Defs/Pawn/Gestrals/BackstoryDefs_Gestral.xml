@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <BackstoryDef>
+        <defName>Expedition33_GestralTribalChild</defName>
+        <title>jeune gestral</title>
+        <titleShort>jeune</titleShort>
+        <description>[PAWN_nameDef] a grandi parmi la tribu des Gestrals, apprenant les traditions de [PAWN_possessive] peuple-marionnette et développant [PAWN_possessive] connexion avec la nature.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>GestralTribal</li> <!-- Catégorie spécifique aux Gestrals -->
+        </spawnCategories>
+        <skillGains>
+            <Melee>1</Melee>
+            <Artistic>2</Artistic>
+            <Plants>1</Plants>
+        </skillGains>
+        <workDisables>
+            <li>Intellectual</li>
+        </workDisables>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>Expedition33_GestralWarrior</defName>
+        <title>guerrier gestral</title>
+        <titleShort>guerrier</titleShort>
+        <description>[PAWN_nameDef] a consacré sa vie à maîtriser l'art du combat au corps à corps, respectant la tradition gestrale qui honore les puissants guerriers.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>GestralTribal</li>
+        </spawnCategories>
+        <skillGains>
+            <Melee>6</Melee>
+            <Crafting>2</Crafting>
+        </skillGains>
+        <workDisables>
+            <li>Intellectual</li>
+            <li>Shooting</li> <!-- Les Gestrals préfèrent le combat rapproché -->
+        </workDisables>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>Expedition33_GestralArtisan</defName>
+        <title>artisan gestral</title>
+        <titleShort>artisan</titleShort>
+        <description>[PAWN_nameDef] utilise [PAWN_possessive] pinceau naturel pour créer des œuvres magnifiques, perpétuant la tradition artistique millénaire des Gestrals.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>GestralTribal</li>
+        </spawnCategories>
+        <skillGains>
+            <Artistic>6</Artistic>
+            <Crafting>4</Crafting>
+            <Social>2</Social>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Artistic</li>
+        </requiredWorkTags>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>Expedition33_GestralWiseOne</defName>
+        <title>sage gestral</title>
+        <titleShort>sage</titleShort>
+        <description>[PAWN_nameDef] est un philosophe gestral qui a médité sur les mystères de la renaissance et de la Rivière Sacrée, acquérant une sagesse profonde.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>GestralTribal</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>4</Social>
+            <Artistic>3</Artistic>
+            <Medicine>2</Medicine>
+        </skillGains>
+        <workDisables>
+            <li>Violent</li> <!-- Les sages évitent la violence -->
+        </workDisables>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>Expedition33_GestralTrader</defName>
+        <title>marchand gestral</title>
+        <titleShort>marchand</titleShort>
+        <description>[PAWN_nameDef] voyage entre les tribus, échangeant des biens et des histoires, utilisant [PAWN_possessive] charme naturel pour négocier.</description>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>GestralTribal</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>6</Social>
+            <Intellectual>2</Intellectual>
+            <Animals>3</Animals>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Social</li>
+        </requiredWorkTags>
+    </BackstoryDef>
+</Defs>

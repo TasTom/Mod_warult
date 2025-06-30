@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Base abstraite pour les Gestrals -->
+    <ThingDef Name="BaseGestralPawn" ParentName="BasePawn" Abstract="True">
+        <statBases>
+            <Mass>70</Mass>
+        </statBases>
+        <inspectorTabs></inspectorTabs>
+        <comps></comps>
+    </ThingDef>
+
+    <AlienRace.ThingDef_AlienRace ParentName="BaseGestralPawn">
+        <defName>Expedition33_Gestral</defName>
+        <label>gestral</label>
+        <description>Les Gestrals sont des êtres uniques ressemblant à des marionnettes en bois avec des pinceaux en guise de tête. Amicaux mais simples d'esprit, ils adorent se battre et respectent les puissants guerriers. Leur capacité de renaissance à la Rivière Sacrée les rend insouciants face au danger.</description>
+        
+        <alienRace>
+            <!-- Configuration graphique simplifiée -->
+            <graphicPaths>
+                <head>
+                    <path>Things/Pawn/Humanlike/Heads/Gestral/</path>
+                    <headtypeGraphics>
+                        <GestralNormal>Things/Pawn/Humanlike/Heads/Gestral/Average_Normal/GestralHead</GestralNormal>
+                    </headtypeGraphics>
+                </head>
+                <body>
+                    <path>Things/Pawn/Humanlike/Bodies/Gestral/BodyGestral</path>
+                </body>
+            </graphicPaths>
+
+            <generalSettings>
+                <humanRecipeImport>true</humanRecipeImport>
+                <maleGenderProbability>0.5</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <maxDamageForSocialfight>8</maxDamageForSocialfight>
+                
+                <alienPartGenerator>
+                    <borderScale>1</borderScale>
+                    <atlasScale>4</atlasScale>
+                    <headTypes>
+                        <li>GestralNormal</li>
+                    </headTypes>
+                
+                  
+                    
+                    <bodyTypes>
+                        <li>Male</li>
+                        <li>Female</li>
+                        <li>Thin</li>
+                        <li>Fat</li>
+                        <li>Hulk</li>
+                    </bodyTypes>
+                    
+                    <colorChannels Inherit="False">
+                        <li>
+                            <name>skin</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>15</weight>
+                                        <only>RGBA(153,102,51,255)</only>
+                                    </li>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>RGBA(128,77,26,255)</only>
+                                    </li>
+                                    <li>
+                                        <weight>8</weight>
+                                        <only>RGBA(102,51,25,255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                        <li>
+                            <name>hair</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>RGBA(204,204,204,255)</only>
+                                    </li>
+                                    <li>
+                                        <weight>8</weight>
+                                        <only>RGBA(153,153,153,255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                    </colorChannels>
+
+                    
+                    
+                    <customDrawSize>(1, 1)</customDrawSize>
+                    <customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize>
+                    <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+                </alienPartGenerator>
+            </generalSettings>
+            
+            <!-- SUPPRIMÉ relationSettings (cause des erreurs) -->
+            
+            <styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            
+            <thoughtSettings>
+                <cannotReceiveThoughts>
+                    <li>AteRawFood</li>
+                </cannotReceiveThoughts>
+            </thoughtSettings>
+            
+            <raceRestriction>
+                <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+                <whiteApparelList>
+                    <!-- Liste vide = pas de vêtements -->
+                </whiteApparelList>
+            </raceRestriction>
+        </alienRace>
+        
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <CarryingCapacity>70</CarryingCapacity>
+            <GlobalLearningFactor>0.8</GlobalLearningFactor>
+            <PsychicSensitivity>0.6</PsychicSensitivity>
+            <RestRateMultiplier>1.0</RestRateMultiplier>
+            <WorkSpeedGlobal>1.0</WorkSpeedGlobal>
+            <MoveSpeed>4.2</MoveSpeed>
+            <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
+            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+            <ComfyTemperatureMax>40</ComfyTemperatureMax>
+            <LeatherAmount>0</LeatherAmount>
+            <MeatAmount>0</MeatAmount>
+            <Flammability>1.2</Flammability>
+            <PainShockThreshold>0.9</PainShockThreshold>
+            <MentalBreakThreshold>0.25</MentalBreakThreshold>
+            <MeleeDodgeChance>8</MeleeDodgeChance>
+            <MeleeHitChance>1.1</MeleeHitChance>
+        </statBases>
+        
+        <tools>
+            <li>
+                <label>Left wooden fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>Right wooden fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        
+        <race>
+            <renderTree>Humanlike</renderTree>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>200</lifeExpectancy>
+            <bloodDef>Filth_Blood</bloodDef>
+            <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
+            <leatherDef>Leather_Human</leatherDef>
+            <fleshType>Normal</fleshType>
+            <nameCategory>HumanStandard</nameCategory>
+            <body>Gestral</body>
+            <meatColor>(139, 69, 19)</meatColor>
+            <baseHealthScale>1.3</baseHealthScale>
+            <foodType>OmnivoreHuman</foodType>
+            <gestationPeriodDays>60</gestationPeriodDays>
+            <manhunterOnDamageChance>0.05</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>
+
+           
+ 
+            <!-- ✅ OBLIGATOIRE : Définition des stades de vie -->
+            <lifeStageAges>
+                <!-- Stade bébé (0-3 ans) -->
+                <li>
+                    <def>HumanlikeBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                
+                <!-- Stade enfant (3-13 ans) -->
+                <li>
+                    <def>HumanlikeChild</def>
+                    <minAge>3</minAge>
+                </li>
+                
+                <!-- Stade adolescent (13-18 ans) -->
+                <li>
+                    <def>HumanlikeTeenager</def>
+                    <minAge>13</minAge>
+                </li>
+                
+                <!-- Stade adulte (18+ ans) -->
+                <li>
+                    <def>HumanlikeAdult</def>
+                    <minAge>18</minAge>
+                </li>
+            </lifeStageAges>
+            
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Generic</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+            
+            <ageGenerationCurve>
+                <points>
+                    <li>(14, 0)</li>
+                    <li>(16, 60)</li>
+                    <li>(25, 100)</li>
+                    <li>(60, 100)</li>
+                    <li>(80, 30)</li>
+                    <li>(120, 10)</li>
+                    <li>(200, 0)</li>
+                </points>
+            </ageGenerationCurve>
+            
+            <hediffGiverSets>       
+                <li>OrganicStandard</li>
+                <li>Human</li>
+                <li>GestralAgeEffects</li> <!-- Votre set personnalisé -->
+            </hediffGiverSets>
+        </race>
+        
+        <recipes>
+            <li>ExciseCarcinoma</li>
+            <li>AdministerMechSerumHealer</li>
+            <li>RemoveBodyPart</li>
+            <li>Euthanize</li>
+            <li>Anesthetize</li>
+            <li>CureScaria</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+        </recipes>
+    </AlienRace.ThingDef_AlienRace>
+</Defs>

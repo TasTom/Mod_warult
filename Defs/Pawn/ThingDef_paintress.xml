@@ -51,10 +51,10 @@
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
 					<!-- CORRECTION - Sons existants -->
-					<soundWounded>Pawn_Melee_Punch_HitPawn</soundWounded>
-					<soundDeath>Pawn_Melee_Punch_Miss</soundDeath>
-					<soundCall>Pawn_Melee_Punch_Miss</soundCall>
-					<soundAngry>Pawn_Melee_Punch_HitPawn</soundAngry>
+					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+					<soundDeath>Pawn_Megascarab_Death</soundDeath>
+					<soundCall>Pawn_Megascarab_Call</soundCall>
+					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
 			<!-- CORRECTION - Sons existants -->

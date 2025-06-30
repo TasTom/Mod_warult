@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <BodyDef>
+        <defName>Gestral</defName>
+        <label>corps gestral</label>
+        <corePart>
+            <def>Torso</def>
+            <height>Middle</height>
+            <depth>Outside</depth>
+            <coverage>1</coverage>
+            <groups>
+                <li>Torso</li>
+            </groups>
+            <parts>
+                <!-- Cou et tête avec pinceau -->
+                <li>
+                    <def>Neck</def>
+                    <coverage>0.07</coverage>
+                    <height>Top</height>
+                    <parts>
+                        <li>
+                            <def>Head</def>
+                            <coverage>0.80</coverage>
+                            <groups>
+                                <li>HeadAttackTool</li>
+                                <li>FullHead</li>
+                            </groups>
+                            <parts>
+                                <!-- Pinceau caractéristique des Gestrals -->
+                                <li>
+                                    <def>Eye</def>
+                                    <customLabel>pinceau</customLabel>
+                                    <coverage>0.15</coverage>
+                                    <groups>
+                                        <li>Eyes</li>
+                                    </groups>
+                                </li>
+                                <!-- Pas d'autres parties faciales -->
+                            </parts>
+                        </li>
+                    </parts>
+                </li>
+                
+                <!-- Structure interne simplifiée -->
+                <li>
+                    <def>Ribcage</def>
+                    <coverage>0.020</coverage>
+                    <depth>Inside</depth>
+                    <parts>
+                        <!-- Organes vitaux basiques -->
+                        <li>
+                            <def>Heart</def>
+                            <coverage>0.05</coverage>
+                        </li>
+                        <li>
+                            <def>Lung</def>
+                            <customLabel>soufflet de bois</customLabel>
+                            <coverage>0.05</coverage>
+                        </li>
+                        <li>
+                            <def>Lung</def>
+                            <customLabel>soufflet de bois</customLabel>
+                            <coverage>0.05</coverage>
+                        </li>
+                    </parts>
+                </li>
+                
+                <!-- Colonne vertébrale -->
+                <li>
+                    <def>Spine</def>
+                    <coverage>0.035</coverage>
+                    <depth>Inside</depth>
+                </li>
+                
+                <!-- Bras en bois -->
+                <li>
+                    <def>Shoulder</def>
+                    <coverage>0.13</coverage>
+                    <groups>
+                        <li>Shoulders</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>Arm</def>
+                            <coverage>0.77</coverage>
+                            <groups>
+                                <li>Arms</li>
+                            </groups>
+                            <parts>
+                                <li>
+                                    <def>Hand</def>
+                                    <coverage>0.15</coverage>
+                                    <groups>
+                                        <li>Hands</li>
+                                        <li>LeftHand</li>
+                                    </groups>
+                                </li>
+                            </parts>
+                        </li>
+                    </parts>
+                </li>
+                <li>
+                    <def>Shoulder</def>
+                    <coverage>0.13</coverage>
+                    <groups>
+                        <li>Shoulders</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>Arm</def>
+                            <coverage>0.77</coverage>
+                            <groups>
+                                <li>Arms</li>
+                            </groups>
+                            <parts>
+                                <li>
+                                    <def>Hand</def>
+                                    <coverage>0.15</coverage>
+                                    <groups>
+                                        <li>Hands</li>
+                                        <li>RightHand</li>
+                                    </groups>
+                                </li>
+                            </parts>
+                        </li>
+                    </parts>
+                </li>
+                
+                <!-- Jambes en bois -->
+                <li>
+                    <def>Leg</def>
+                    <coverage>0.14</coverage>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>Foot</def>
+                            <coverage>0.1</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+                        </li>
+                    </parts>
+                </li>
+                <li>
+                    <def>Leg</def>
+                    <coverage>0.14</coverage>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>Foot</def>
+                            <coverage>0.1</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+                        </li>
+                    </parts>
+                </li>
+            </parts>
+        </corePart>
+    </BodyDef>
+</Defs>

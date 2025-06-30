@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- Pierre sculptée -->
 	<TerrainDef ParentName="NaturalTerrainBase">
 		<defName>Expedition33_SculptedStone</defName>
 		<label>pierre sculptée</label>
 		<description>Des formations rocheuses aux motifs géométriques impossibles, comme ciselées par des artisans invisibles.</description>
 		<texturePath>Terrain/Surfaces/SculptedStone</texturePath>
-		<edgeType>Hard</edgeType>
+		<!-- ✅ CORRECT -->
+		<edgeType>FadeRough</edgeType>
 		<renderPrecedence>360</renderPrecedence>
 		<pathCost>3</pathCost>
 		<statBases>
@@ -18,12 +18,12 @@
 		<color>(0.4, 0.3, 0.5)</color>
 	</TerrainDef>
 
-	<!-- Vallon mystique -->
 	<TerrainDef ParentName="NaturalTerrainBase">
 		<defName>Expedition33_MysticalValley</defName>
 		<label>vallon mystique</label>
 		<description>Un sol sombre et fertile où poussent des plantes aux couleurs impossibles.</description>
 		<texturePath>Terrain/Surfaces/MysticalValley</texturePath>
+		<!-- ✅ CORRECT -->
 		<edgeType>FadeRough</edgeType>
 		<renderPrecedence>340</renderPrecedence>
 		<pathCost>2</pathCost>
@@ -37,12 +37,12 @@
 		<color>(0.3, 0.2, 0.3)</color>
 	</TerrainDef>
 
-	<!-- Sol fleuri -->
 	<TerrainDef ParentName="NaturalTerrainBase">
 		<defName>Expedition33_FloweringGround</defName>
 		<label>sol fleuri</label>
 		<description>Une terre riche tapissée de fleurs aux teintes cramoisies et dorées.</description>
 		<texturePath>Terrain/Surfaces/FloweringGround</texturePath>
+		<!-- ✅ CORRECT -->
 		<edgeType>FadeRough</edgeType>
 		<renderPrecedence>345</renderPrecedence>
 		<pathCost>1</pathCost>
@@ -54,5 +54,57 @@
 		<takeFootprints>true</takeFootprints>
 		<fertility>1.0</fertility>
 		<color>(0.6, 0.3, 0.4)</color>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Expedition33_DarkSoil</defName>
+		<label>terre sombre</label>
+		<description>Terre sombre avec des teintes violettes.</description>
+		<texturePath>Terrain/Surfaces/DarkSoil</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>300</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>1</Beauty>
+			<Cleanliness>0</Cleanliness>
+		</statBases>
+		<scatterType>Soil</scatterType>
+		<fertility>0.6</fertility>
+		<takeFootprints>true</takeFootprints>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Expedition33_ObscurGravel</defName>
+		<label>gravier mystique</label>
+		<description>Gravier sombre et mystique.</description>
+		<texturePath>Terrain/Surfaces/ObscurGravel</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>320</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>1</Beauty>
+			<Cleanliness>0</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<fertility>0.2</fertility>
+		<takeFootprints>true</takeFootprints>
+	</TerrainDef>
+
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>Expedition33_CraggedStone</defName>
+		<label>sol rocailleux sombre</label>
+		<description>Sol rocailleux sombre et sculpté.</description>
+		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>350</renderPrecedence>
+		<pathCost>3</pathCost>
+		<statBases>
+			<Beauty>2</Beauty>
+			<Cleanliness>0</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<fertility>0</fertility>
+		<takeFootprints>true</takeFootprints>
 	</TerrainDef>
 </Defs>

@@ -3,7 +3,7 @@
 	<name>Rim Expedition 33 Faction and others</name>
 	<author>Warult</author>
 	<packageId>warult.expedition33faction</packageId>
-	<modIconPath>Textures/UI/Icons/Expedition33Icon</modIconPath>
+	<modIconPath>UI/Icons/Expedition33Icon</modIconPath>
 	<description>
 		🎨 EXPÉDITION 33 - CLAIR OBSCUR 🎨
 
@@ -33,9 +33,17 @@
 			<displayName>Humanoid Alien Races</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
 		</li>
+			<li>
+			<packageId>redmattis.betterprerequisites</packageId>
+			<displayName>Big and Small - Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2925432336</steamWorkshopUrl>
+		</li>
 	</modDependencies>
 
 	<loadAfter>
 		<li>erdelf.HumanoidAlienRaces</li>
 	</loadAfter>
+	<loadBefore>
+		<li>VanillaExpandedFramework</li>
+	</loadBefore>
 </ModMetaData>

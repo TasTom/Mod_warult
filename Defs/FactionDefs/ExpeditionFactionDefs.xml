@@ -19,6 +19,8 @@
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		
+		<mustStartOneEnemy>false</mustStartOneEnemy>
+
 		<leaderTitle>commandant</leaderTitle>
 		<techLevel>Industrial</techLevel>
 		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
@@ -46,6 +48,11 @@
 		
 		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
 		<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+
+		<!-- <naturalColonyGoodwill>
+			<min>0</min>
+			<max>50</max>
+		</naturalColonyGoodwill> -->
 		
 		<maxPawnCostPerTotalPointsCurve>
 			<points>

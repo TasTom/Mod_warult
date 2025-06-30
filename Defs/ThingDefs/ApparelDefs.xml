@@ -75,12 +75,6 @@
 			<texPath>Things/Pawn/Humanlike/Apparel/Shield/AntiGommageShield</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<modExtensions>
-			<li Class="OversizedApparel.Extension">
-				<drawSize>(0.5, 0.5)</drawSize>
-				<!-- 50% largeur et hauteur -->
-			</li>
-		</modExtensions>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<Mass>3.0</Mass>

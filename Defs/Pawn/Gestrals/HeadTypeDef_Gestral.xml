@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HeadTypeDef>
+        <defName>GestralNormal</defName>
+        <label>tête gestral normale</label>
+        <graphicPath>Things/Pawn/Humanlike/Heads/Gestral/Average_Normal/GestralHead</graphicPath>
+    </HeadTypeDef>
+</Defs>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Fleur cramoisie -->
+	<ThingDef ParentName="PlantBase">
+		<defName>Expedition33_CrimsonBlossom</defName>
+		<label>fleur cramoisie</label>
+		<description>Une fleur d'un rouge profond qui semble pulser d'une lumière intérieure.</description>
+		<graphicData>
+			<texPath>Things/Plant/CrimsonBlossom</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<statBases>
+			<Beauty>3</Beauty>
+			<MaxHitPoints>85</MaxHitPoints>
+		</statBases>
+		<plant>
+			<fertilityMin>0.4</fertilityMin>
+			<fertilitySensitivity>0.3</fertilitySensitivity>
+			<growDays>8</growDays>
+			<visualSizeRange>0.3~0.6</visualSizeRange>
+			<wildOrder>1</wildOrder>
+		</plant>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+	</ThingDef>
+
+	<!-- Buisson étrange à baies -->
+	<ThingDef ParentName="PlantBase">
+		<defName>Expedition33_StrangeBush</defName>
+		<label>buisson étrange à baies</label>
+		<description>Un buisson mystérieux aux feuilles mauves portant des baies rouges profondes qui semblent pulser d'une lumière intérieure. Il prospère dans l'atmosphère sombre du Continent Obscur.</description>
+		<graphicData>
+			<texPath>Things/Plant/StrangeBush</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<!-- ✅ CORRIGÉ -->
+			<shadowData>
+				<volume>(0.24, 0.3, 0.15)</volume>
+				<offset>(0,0,-0.38)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<selectable>true</selectable>
+		<fillPercent>0.35</fillPercent>
+		<passability>PassThroughOnly</passability>
+		<pathCost>130</pathCost>
+		<rotatable>false</rotatable>
+		<blockWind>true</blockWind>
+		<statBases>
+			<Beauty>4</Beauty>
+			<MaxHitPoints>95</MaxHitPoints>
+		</statBases>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<plant>
+			<fertilityMin>0.3</fertilityMin>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<growDays>12</growDays>
+			<harvestWork>120</harvestWork>
+			<harvestYield>6</harvestYield>
+			<harvestTag>Standard</harvestTag>
+			<soundHarvesting>Harvest_Tree</soundHarvesting>
+			<soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+			<harvestAfterGrowth>0.6</harvestAfterGrowth>
+			<harvestedThingDef>RawBerries</harvestedThingDef>
+			<visualSizeRange>0.4~0.7</visualSizeRange>
+			<wildOrder>1</wildOrder>
+			<topWindExposure>0.3</topWindExposure>
+		</plant>
+	</ThingDef>
+
+	<!-- Fougère des ombres -->
+	<ThingDef ParentName="PlantBase">
+		<defName>Expedition33_ShadowFern</defName>
+		<label>fougère des ombres</label>
+		<description>Une fougère aux frondes presque noires qui prospère dans l'obscurité.</description>
+		<graphicData>
+			<texPath>Things/Plant/ShadowFern</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>120</MaxHitPoints>
+		</statBases>
+		<plant>
+			<fertilityMin>0.2</fertilityMin>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<growDays>12</growDays>
+			<visualSizeRange>0.4~0.8</visualSizeRange>
+			<wildOrder>1</wildOrder>
+		</plant>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+	</ThingDef>
+
+	<!-- Fougère + plants -->
+	<ThingDef ParentName="PlantBase">
+		<defName>Expedition33_FlowerFern</defName>
+		<label>fougère fleurie</label>
+		<!-- ✅ LABEL CORRIGÉ -->
+		<description>Une petite fougère aux frondes presque noires regroupé avec des fleurs étranges.</description>
+		<graphicData>
+			<texPath>Things/Plant/FlowerFern</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>120</MaxHitPoints>
+		</statBases>
+		<plant>
+			<fertilityMin>0.2</fertilityMin>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<growDays>10</growDays>
+			<visualSizeRange>0.4~0.8</visualSizeRange>
+			<wildOrder>1</wildOrder>
+		</plant>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+	</ThingDef>
+
+	<!-- Arbre sculpté -->
+	<ThingDef ParentName="TreeBase">
+		<defName>Expedition33_SculptedTree</defName>
+		<label>arbre sculpté</label>
+		<description>Un arbre aux branches étrangement géométriques, comme taillé par des artisans invisibles. Son feuillage mauve mystérieux contraste avec son tronc brun naturel. Il produit un bois sombre aux propriétés uniques, prisé par les artisans du Continent Obscur.\n\nDétails de la plante : L'Arbre Sculpté est une plante cultivable qui apparaît aussi à l'état sauvage, nécessitant une fertilité minimale de 0.3. Peut être récolté pour du bois sculpté.</description>
+		<descriptionHyperlinks>
+			<ThingDef>WoodLog</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.7</Flammability>
+			<Nutrition>0.1</Nutrition>
+			<Mass>180</Mass>
+			<Beauty>4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/SculptedTree</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.28, 0.35, 0.20)</volume>
+				<offset>(0,0,-0.35)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<selectable>true</selectable>
+		<fillPercent>0.40</fillPercent>
+		<minifiedDef>MinifiedTree</minifiedDef>
+		<passability>PassThroughOnly</passability>
+		<pathCost>140</pathCost>
+		<rotatable>false</rotatable>
+		<blockWind>true</blockWind>
+		<ingestible>
+			<foodType>Tree</foodType>
+			<preferability>RawBad</preferability>
+		</ingestible>
+		<plant>
+			<fertilityMin>0.3</fertilityMin>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<growDays>25</growDays>
+			<treeCategory>Full</treeCategory>
+			<soundHarvesting>Harvest_Tree</soundHarvesting>
+			<soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+			<harvestWork>400</harvestWork>
+			<harvestedThingDef>WoodLog</harvestedThingDef>
+			<harvestTag>Wood</harvestTag>
+			<harvestYield>15</harvestYield>
+			<harvestMinGrowth>0.3</harvestMinGrowth>
+			<harvestFailable>false</harvestFailable>
+			<visualSizeRange>2.0~2.8</visualSizeRange>
+			<topWindExposure>0.25</topWindExposure>
+			<sowResearchPrerequisites>
+				<li>TreeSowing</li>
+			</sowResearchPrerequisites>
+			<mustBeWildToSow>true</mustBeWildToSow>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			<wildOrder>2</wildOrder>
+		</plant>
+	</ThingDef>
+</Defs>

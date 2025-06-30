@@ -57,6 +57,7 @@
 		<Compile Include="Sources/IncidentWorker.cs" />
 		<Compile Include="Sources/MapComponent.cs" />
 		<Compile Include="Sources/Alert.cs" />
+		<Compile Include="Sources/BiomeWorker_ContinentObscur.cs" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
 
 	</ItemGroup>

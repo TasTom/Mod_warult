@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffGiverSetDef>
+        <defName>GestralAgeEffects</defName>
+        <hediffGivers>
+            <!-- UN SEUL hediff qui s'applique une fois -->
+            <li Class="HediffGiver_Birthday">
+                <hediff>Expedition33_GestralGrowthStages</hediff>
+                <ageFractionChanceCurve>
+                    <points>
+                        <li>(0.01, 1.0)</li>  <!-- S'applique dès 2 ans -->
+                        <li>(1.0, 1.0)</li>   <!-- Reste actif toute la vie -->
+                    </points>
+                </ageFractionChanceCurve>
+            </li>
+        </hediffGivers>
+    </HediffGiverSetDef>
+</Defs>

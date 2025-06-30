@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TraitDef>
+        <defName>Expedition33_CombatLover</defName>
+        <commonality>0.8</commonality>
+        <label>amateur de combat</label>
+        <description>Ce Gestral adore se battre et respecte les puissants guerriers, comme ses ancêtres marionnettes.</description>
+        <degreeDatas>
+            <li>
+                <label>amateur de combat</label>
+                <description>Adore se battre et respecte la force.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <MeleeHitChance>2</MeleeHitChance>
+                    <MeleeDodgeChance>1</MeleeDodgeChance>
+                </statOffsets>
+                <skillGains>
+                    <Melee>2</Melee>
+                </skillGains>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>Expedition33_WoodSpirit</defName>
+        <commonality>0.7</commonality>
+        <label>esprit de bois</label>
+        <description>Ce Gestral ressent une connexion profonde avec la nature et les arbres, reflétant sa nature ligneuse.</description>
+        <degreeDatas>
+            <li>
+                <label>esprit de bois</label>
+                <description>Ressent les arbres et la nature.</description>
+                <degree>0</degree>
+                <statOffsets>
+                    <PlantWorkSpeed>0.2</PlantWorkSpeed>
+                    <AnimalGatherSpeed>0.15</AnimalGatherSpeed>
+                </statOffsets>
+                <skillGains>
+                    <Plants>2</Plants>
+                    <Animals>1</Animals>
+                </skillGains>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+</Defs>

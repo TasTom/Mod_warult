@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Gestral tribal de base -->
+    <PawnKindDef>
+        <defName>Expedition33_GestralTribal</defName>
+        <label>gestral tribal</label>
+        <race>Expedition33_Gestral</race>
+        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <combatPower>65</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        <factionLeader>false</factionLeader>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Gestral/BodyGestral</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+            <li>NeolithicMeleeAdvanced</li>
+        </weaponTags>
+        <apparelTags>
+            <!-- Liste vide pour aucun vêtement -->
+        </apparelTags>
+        <initialResistanceRange>8~14</initialResistanceRange>
+        <initialWillRange>1~3</initialWillRange>
+        <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    </PawnKindDef>
+
+    <!-- Guerrier Gestral -->
+    <PawnKindDef>
+        <defName>Expedition33_GestralWarrior</defName>
+        <label>guerrier gestral</label>
+        <race>Expedition33_Gestral</race>
+        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <combatPower>80</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        <factionLeader>false</factionLeader>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Gestral/BodyGestral</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+            <li>NeolithicMeleeAdvanced</li>
+            <li>NeolithicMeleeDecent</li>
+        </weaponTags>
+        <apparelTags>
+            <!-- Liste vide pour aucun vêtement -->
+        </apparelTags>
+        <initialResistanceRange>12~18</initialResistanceRange>
+        <initialWillRange>2~4</initialWillRange>
+        <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    </PawnKindDef>
+
+    <!-- Champion Gestral -->
+    <PawnKindDef>
+        <defName>Expedition33_GestralChampion</defName>
+        <label>champion gestral</label>
+        <race>Expedition33_Gestral</race>
+        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <combatPower>120</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>true</canBeSapper>
+        <factionLeader>true</factionLeader>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Gestral/BodyGestral</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>NeolithicMeleeAdvanced</li>
+            <li>NeolithicMeleeDecent</li>
+        </weaponTags>
+        <apparelTags>
+            <!-- Liste vide pour aucun vêtement -->
+        </apparelTags>
+        <initialResistanceRange>15~22</initialResistanceRange>
+        <initialWillRange>3~5</initialWillRange>
+        <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    </PawnKindDef>
+
+    <!-- Philosophe Gestral -->
+    <PawnKindDef>
+        <defName>Expedition33_GestralPhilosopher</defName>
+        <label>philosophe gestral</label>
+        <race>Expedition33_Gestral</race>
+        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <combatPower>45</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        <factionLeader>false</factionLeader>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Gestral/BodyGestral</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+        <apparelTags>
+            <!-- Liste vide pour aucun vêtement -->
+        </apparelTags>
+        <initialResistanceRange>6~12</initialResistanceRange>
+        <initialWillRange>2~4</initialWillRange>
+        <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    </PawnKindDef>
+
+    <!-- Commerçant Gestral -->
+    <PawnKindDef>
+        <defName>Expedition33_GestralTrader</defName>
+        <label>commerçant gestral</label>
+        <race>Expedition33_Gestral</race>
+        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <combatPower>60</combatPower>
+        <trader>true</trader>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        <factionLeader>false</factionLeader>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Gestral/BodyGestral</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+        <apparelTags>
+            <!-- Liste vide pour aucun vêtement -->
+        </apparelTags>
+        <initialResistanceRange>8~14</initialResistanceRange>
+        <initialWillRange>1~3</initialWillRange>
+        <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    </PawnKindDef>
+</Defs>
