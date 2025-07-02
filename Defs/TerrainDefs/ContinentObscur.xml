@@ -16,6 +16,11 @@
 		<scatterType>Rocky</scatterType>
 		<fertility>0.1</fertility>
 		<color>(0.4, 0.3, 0.5)</color>
+		<affordances>
+			<li>Light</li>   <!-- meubles légers, production simple -->
+			<li>Medium</li>  <!-- murs, tables de travail -->
+			<li>Heavy</li>   <!-- générateurs, grandes structures -->
+		</affordances>
 	</TerrainDef>
 
 	<TerrainDef ParentName="NaturalTerrainBase">
@@ -35,6 +40,11 @@
 		<takeFootprints>true</takeFootprints>
 		<fertility>0.6</fertility>
 		<color>(0.3, 0.2, 0.3)</color>
+				<affordances>
+			<li>Light</li>   <!-- meubles légers, production simple -->
+			<li>Medium</li>  <!-- murs, tables de travail -->
+			<li>Heavy</li>   <!-- générateurs, grandes structures -->
+		</affordances>
 	</TerrainDef>
 
 	<TerrainDef ParentName="NaturalTerrainBase">
@@ -54,7 +64,14 @@
 		<takeFootprints>true</takeFootprints>
 		<fertility>1.0</fertility>
 		<color>(0.6, 0.3, 0.4)</color>
+		<affordances>
+			<li>Light</li>   <!-- meubles légers, production simple -->
+			<li>Medium</li>  <!-- murs, tables de travail -->
+			<li>Heavy</li>   <!-- générateurs, grandes structures -->
+		</affordances>
+		
 	</TerrainDef>
+
 	
 	<TerrainDef ParentName="NaturalTerrainBase">
 		<defName>Expedition33_DarkSoil</defName>
@@ -71,6 +88,11 @@
 		<scatterType>Soil</scatterType>
 		<fertility>0.6</fertility>
 		<takeFootprints>true</takeFootprints>
+		<affordances>
+			<li>Light</li>   <!-- meubles légers, production simple -->
+			<li>Medium</li>  <!-- murs, tables de travail -->
+			<li>Heavy</li>   <!-- générateurs, grandes structures -->
+		</affordances>
 	</TerrainDef>
 
 	<TerrainDef ParentName="NaturalTerrainBase">
@@ -88,6 +110,11 @@
 		<scatterType>Rocky</scatterType>
 		<fertility>0.2</fertility>
 		<takeFootprints>true</takeFootprints>
+		<affordances>
+			<li>Light</li>   <!-- meubles légers, production simple -->
+			<li>Medium</li>  <!-- murs, tables de travail -->
+			<li>Heavy</li>   <!-- générateurs, grandes structures -->
+		</affordances>
 	</TerrainDef>
 
 
@@ -106,5 +133,11 @@
 		<scatterType>Rocky</scatterType>
 		<fertility>0</fertility>
 		<takeFootprints>true</takeFootprints>
+		<affordances>
+			<li>Light</li>   <!-- meubles légers, production simple -->
+			<li>Medium</li>  <!-- murs, tables de travail -->
+			<li>Heavy</li>   <!-- générateurs, grandes structures -->
+		</affordances>
 	</TerrainDef>
+	
 </Defs>

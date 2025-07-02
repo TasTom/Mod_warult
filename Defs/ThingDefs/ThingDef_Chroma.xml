@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>Expedition33_Chroma</defName>
+        <label>chroma</label>
+        <description>Une substance cristalline aux reflets irisés, résidu d'énergie créative pure. Le Chroma est la base de toute manipulation Picto et permet de forger des artefacts magiques.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Chroma</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <stackLimit>75</stackLimit>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <Mass>0.05</Mass>
+            <Flammability>0</Flammability>
+            <Beauty>2</Beauty>
+        </statBases>
+        <thingCategories>
+            <li>Expedition33_ChromaticMaterials</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>1</glowRadius>
+                <glowColor>(180, 142, 173, 0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingCategoryDef>
+        <defName>Expedition33_ChromaticMaterials</defName>
+        <label>matériaux chromatiques</label>
+        <parent>Root</parent>
+        <!-- <iconPath>UI/Icons/ThingCategories/Expedition33_Chroma</iconPath> -->
+    </ThingCategoryDef>
+
+     <!-- ChromaRaw comme ressource récupérable (plus minerai) -->
+    <ThingDef ParentName="ResourceBase">
+        <defName>Expedition33_ChromaRaw</defName>
+        <label>chroma brut</label>
+        <description>Cristaux de Chroma bruts extraits des restes de créatures corrompues par Le Gommage. Ces fragments d'énergie corrompue peuvent être purifiés pour créer du Chroma utilisable.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ChromaRaw</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <stackLimit>75</stackLimit>
+        <statBases>
+            <MarketValue>6</MarketValue>
+            <Mass>0.05</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Expedition33_ChromaticMaterials</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>0.5</glowRadius>
+                <glowColor>(120, 80, 100, 0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

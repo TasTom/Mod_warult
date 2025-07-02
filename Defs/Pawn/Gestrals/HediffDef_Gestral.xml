@@ -12,16 +12,15 @@
         <makesSickThought>false</makesSickThought>
         <initialSeverity>0.1</initialSeverity>
         <maxSeverity>4.0</maxSeverity>
-        
         <stages>
             <!-- Stage 0: Jeune (severity 0-1) -->
             <li>
                 <minSeverity>0</minSeverity>
                 <label>jeune gestral</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>-0.3</SM_BodySizeOffset>
+                    <SM_BodySizeOffset>-0.5</SM_BodySizeOffset>
                     <Mass>-20</Mass>
-                    <CarryingCapacity>-15</CarryingCapacity>
+                    <CarryingCapacity>-20</CarryingCapacity>
                     <MoveSpeed>0.2</MoveSpeed>
                 </statOffsets>
                 <statFactors>
@@ -44,7 +43,7 @@
                 <minSeverity>2.0</minSeverity>
                 <label>gestral ancien</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>0.5</SM_BodySizeOffset>
+                    <SM_BodySizeOffset>1.0</SM_BodySizeOffset>
                     <Mass>30</Mass>
                     <CarryingCapacity>25</CarryingCapacity>
                     <MoveSpeed>-0.3</MoveSpeed>
@@ -61,8 +60,8 @@
                 <minSeverity>3.0</minSeverity>
                 <label>gestral-arbre</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>1.0</SM_BodySizeOffset>
-                    <Mass>50</Mass>
+                    <SM_BodySizeOffset>2.0</SM_BodySizeOffset>
+                    <Mass>60</Mass>
                     <CarryingCapacity>50</CarryingCapacity>
                     <MoveSpeed>-0.5</MoveSpeed>
                     <MeleeHitChance>4</MeleeHitChance>
@@ -75,10 +74,50 @@
             </li>
         </stages>
         
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>0</severityPerDay>
+   <comps>
+            <!-- Remplacez votre comp existant par celui-ci -->
+            <li Class="Mod_warult.HediffCompProperties_GestralAging">
+                <adultAge>18</adultAge>    <!-- Âge pour devenir adulte -->
+                <elderAge>50</elderAge>    <!-- Âge pour devenir ancien -->
+                <ancientAge>100</ancientAge> <!-- Âge pour devenir vénérable -->
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef>
+    <defName>Expedition33_AncestralBlessing</defName>
+    <label>bénédiction ancestrale</label>
+    <description>Ce Gestral ressent la présence bienveillante de ses ancêtres, lui donnant force et sagesse.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.9, 0.6)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    
+    <stages>
+        <li>
+            <statOffsets>
+                <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+                <MoveSpeed>0.2</MoveSpeed>
+                <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+            </statOffsets>
+            <capMods>
+                <li>
+                    <capacity>Consciousness</capacity>
+                    <offset>0.1</offset>
+                </li>
+            </capMods>
+        </li>
+    </stages>
+    
+    <comps>
+        <li Class="HediffCompProperties_Disappears">
+            <disappearsAfterTicks>
+                <min>300000</min><!-- 5 jours -->
+                <max>600000</max><!-- 10 jours -->
+            </disappearsAfterTicks>
+        </li>
+    </comps>
+</HediffDef>
+
 </Defs>

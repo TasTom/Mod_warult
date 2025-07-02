@@ -84,9 +84,11 @@
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
+                    <Expedition33_GestralTribal>20</Expedition33_GestralTribal> 
                     <Expedition33_GestralWarrior>15</Expedition33_GestralWarrior>
                     <Expedition33_GestralChampion>8</Expedition33_GestralChampion>
                     <Expedition33_GestralPhilosopher>3</Expedition33_GestralPhilosopher>
+                    <Expedition33_GestralTrader>5</Expedition33_GestralTrader>
                 </options>
             </li>
             <li>
@@ -95,8 +97,29 @@
                 <options>
                     <Expedition33_GestralTrader>10</Expedition33_GestralTrader>
                     <Expedition33_GestralPhilosopher>5</Expedition33_GestralPhilosopher>
+                     <Expedition33_GestralWarrior>15</Expedition33_GestralWarrior>
                 </options>
             </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Expedition33_GestralTribal>10</Expedition33_GestralTribal>
+                    <Expedition33_GestralWarrior>10</Expedition33_GestralWarrior>
+                    <Expedition33_GestralTrader>8</Expedition33_GestralTrader>
+                    <Expedition33_GestralPhilosopher>5</Expedition33_GestralPhilosopher>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Expedition33_GestralTrader>20</Expedition33_GestralTrader>
+                    <Expedition33_GestralPhilosopher>10</Expedition33_GestralPhilosopher>
+                    <Expedition33_GestralWarrior>15</Expedition33_GestralWarrior>
+                </options>
+            </li>
+
         </pawnGroupMakers>
         <fixedName>Tribu des Gestrals Guerriers</fixedName>
     </FactionDef>

@@ -13,7 +13,7 @@ using Verse.Sound;
 
 namespace Mod_warult
 {
-    // Incident du "Gommage" - disparition mystérieuse - VERSION CORRIGÉE
+    // Incident du "Gommage" - disparition mystï¿½rieuse - VERSION CORRIGï¿½E
     public class IncidentWorker_Gommage : IncidentWorker
     {
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -24,37 +24,37 @@ namespace Mod_warult
             var gameComp = Current.Game.GetComponent<GameComponent_PaintressMonolith>();
             if (gameComp == null || gameComp.currentPaintedAge == -1) return false;
 
-            // Trouve tous les colons de l'âge peint
+            // Trouve tous les colons de l'ï¿½ge peint
             var cursedColonists = map.mapPawns.FreeColonists
-                .Where(p => p.ageTracker.AgeBiologicalYears == gameComp.currentPaintedAge)
+                .Where(p => p.ageTracker.AgeBiologicalYears >= gameComp.currentPaintedAge) // >= au lieu de ==
                 .ToList();
 
-            // Filtre les colons protégés
+            // Filtre les colons protï¿½gï¿½s
             var unprotectedColonists = cursedColonists
                 .Where(p => !IsProtectedFromGommage(p))
                 .ToList();
 
-            // Applique le traumatisme aux témoins AVANT le Gommage
+            // Applique le traumatisme aux tï¿½moins AVANT le Gommage
             ApplyGommageTrauma(map, cursedColonists.Count);
 
             if (!unprotectedColonists.Any())
             {
-                // Tous les colons sont protégés !
+                // Tous les colons sont protï¿½gï¿½s !
                 HandleCompleteProtection(gameComp.currentPaintedAge, cursedColonists.Count);
                 return true;
             }
 
-            // Consomme les charges des boucliers utilisés
+            // Consomme les charges des boucliers utilisï¿½s
             ConsumeProtectionCharges(cursedColonists.Except(unprotectedColonists));
 
-            // Gomme seulement les colons non protégés
+            // Gomme seulement les colons non protï¿½gï¿½s
             foreach (var victim in unprotectedColonists)
             {
                 GommageEffects.CreateGommageEffect(victim.Position, map);
                 victim.Destroy();
             }
 
-            // Message adapté selon le nombre de survivants
+            // Message adaptï¿½ selon le nombre de survivants
             HandlePartialGommage(gameComp.currentPaintedAge, unprotectedColonists.Count,
                 cursedColonists.Count - unprotectedColonists.Count);
 
@@ -63,17 +63,17 @@ namespace Mod_warult
 
         private bool IsProtectedFromGommage(Pawn pawn)
         {
-            // Vérifie la protection par bouclier personnel
+            // Vï¿½rifie la protection par bouclier personnel
             var shieldProtection = pawn.health.hediffSet.GetFirstHediffOfDef(
                 DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_GommageProtection")
             );
 
-            // Vérifie la protection par champ
+            // Vï¿½rifie la protection par champ
             var fieldProtection = pawn.health.hediffSet.GetFirstHediffOfDef(
                 DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_FieldProtection")
             );
 
-            // Vérifie la résistance naturelle
+            // Vï¿½rifie la rï¿½sistance naturelle
             var resistance = pawn.health.hediffSet.GetFirstHediffOfDef(
                 DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_GommageResistance")
             );
@@ -83,14 +83,14 @@ namespace Mod_warult
 
         private void ApplyGommageTrauma(Map map, int victimsCount)
         {
-            // Applique le traumatisme aux témoins du Gommage
+            // Applique le traumatisme aux tï¿½moins du Gommage
             var witnesses = map.mapPawns.FreeColonists
                 .Where(p => p.Spawned && !p.Dead)
                 .ToList();
 
             foreach (var witness in witnesses)
             {
-                // Plus il y a de victimes, plus le traumatisme est sévère
+                // Plus il y a de victimes, plus le traumatisme est sï¿½vï¿½re
                 float traumaSeverity = 0.3f + (victimsCount * 0.1f);
 
                 var trauma = HediffMaker.MakeHediff(
@@ -104,7 +104,7 @@ namespace Mod_warult
                     witness.health.AddHediff(trauma);
                 }
 
-                // Chance d'inspiration artistique pour certains colons créatifs
+                // Chance d'inspiration artistique pour certains colons crï¿½atifs
                 if (witness.skills.GetSkill(SkillDefOf.Artistic).Level >= 8 && Rand.Chance(0.2f))
                 {
                     ApplyArtisticInspiration(witness);
@@ -124,7 +124,7 @@ namespace Mod_warult
                 {
                     shield.ConsumeCharge();
 
-                    // Si le bouclier est épuisé, applique l'effet d'épuisement
+                    // Si le bouclier est ï¿½puisï¿½, applique l'effet d'ï¿½puisement
                     if (!shield.isActive)
                     {
                         var exhaustion = HediffMaker.MakeHediff(
@@ -153,7 +153,7 @@ namespace Mod_warult
                 pawn.health.AddHediff(inspiration);
 
                 Messages.Message(
-                    $"{pawn.Name.ToStringShort} est inspiré(e) par la lutte contre le Gommage !",
+                    $"{pawn.Name.ToStringShort} est inspirï¿½(e) par la lutte contre le Gommage !",
                     MessageTypeDefOf.PositiveEvent
                 );
             }
@@ -162,9 +162,9 @@ namespace Mod_warult
         private void HandleCompleteProtection(int age, int protectedCount)
         {
             Find.LetterStack.ReceiveLetter(
-                "GOMMAGE BLOQUÉ !",
-                $"Le Gommage a tenté de frapper vos {protectedCount} colon(s) de {age} ans, " +
-                $"mais ils étaient tous protégés par vos technologies anti-Gommage !\n\n" +
+                "GOMMAGE BLOQUï¿½ !",
+                $"Le Gommage a tentï¿½ de frapper vos {protectedCount} colon(s) de {age} ans, " +
+                $"mais ils ï¿½taient tous protï¿½gï¿½s par vos technologies anti-Gommage !\n\n" +
                 $"La Paintress rugit de frustration...\n\n" +
                 $"Vos recherches portent leurs fruits !",
                 LetterDefOf.PositiveEvent
@@ -173,9 +173,9 @@ namespace Mod_warult
 
         private void HandlePartialGommage(int age, int gommageCount, int protectedCount)
         {
-            string letterText = $"LE GOMMAGE A PARTIELLEMENT FRAPPÉ !\n\n" +
-                                $"{gommageCount} colon(s) de {age} ans ont été gommés, " +
-                                $"mais {protectedCount} ont survécu grâce à vos protections !\n\n";
+            string letterText = $"LE GOMMAGE A PARTIELLEMENT FRAPPï¿½ !\n\n" +
+                                $"{gommageCount} colon(s) de {age} ans ont ï¿½tï¿½ gommï¿½s, " +
+                                $"mais {protectedCount} ont survï¿½cu grï¿½ce ï¿½ vos protections !\n\n";
 
             if (protectedCount > 0)
             {
@@ -191,7 +191,7 @@ namespace Mod_warult
     }
 
 
-    // Incident de mission d'expédition - VERSION CORRIGÉE
+    // Incident de mission d'expï¿½dition - VERSION CORRIGï¿½E
     public class IncidentWorker_ExpeditionMission : IncidentWorker
     {
         protected override bool CanFireNowSub(IncidentParms parms)
@@ -207,33 +207,33 @@ namespace Mod_warult
 
             string[] missionTypes =
             {
-                "Reconnaissance en territoire gommé",
-                "Récupération d'artefacts perdus",
-                "Sauvetage d'expéditionnaires disparus",
+                "Reconnaissance en territoire gommï¿½",
+                "Rï¿½cupï¿½ration d'artefacts perdus",
+                "Sauvetage d'expï¿½ditionnaires disparus",
                 "Investigation d'anomalies temporelles",
                 "Surveillance des signes de la Panteresse",
-                "Collecte de témoignages sur le Gommage"
+                "Collecte de tï¿½moignages sur le Gommage"
             };
 
             string mission = missionTypes[Rand.Range(0, missionTypes.Length)];
 
-            string letterText = $"Un message radio crypté de l'Expédition 33 arrive :\n\n" +
-                                $"\"Mission assignée : {mission}\"\n\n" +
-                                $"Les rapports indiquent une activité suspecte dans la région. " +
-                                $"Cette mission pourrait révéler des informations cruciales sur Le Gommage, " +
-                                $"mais elle comporte également des risques considérables.\n\n" +
-                                $"Préparez vos expéditionnaires et vos équipements. La vérité sur la Panteresse vous attend.";
+            string letterText = $"Un message radio cryptï¿½ de l'Expï¿½dition 33 arrive :\n\n" +
+                                $"\"Mission assignï¿½e : {mission}\"\n\n" +
+                                $"Les rapports indiquent une activitï¿½ suspecte dans la rï¿½gion. " +
+                                $"Cette mission pourrait rï¿½vï¿½ler des informations cruciales sur Le Gommage, " +
+                                $"mais elle comporte ï¿½galement des risques considï¿½rables.\n\n" +
+                                $"Prï¿½parez vos expï¿½ditionnaires et vos ï¿½quipements. La vï¿½ritï¿½ sur la Panteresse vous attend.";
 
             Find.LetterStack.ReceiveLetter(
-                "Mission d'Expédition",
+                "Mission d'Expï¿½dition",
                 letterText,
                 LetterDefOf.NeutralEvent
             );
 
-            // CORRIGÉ - Boost de moral sans TraitDefOf.Brave
+            // CORRIGï¿½ - Boost de moral sans TraitDefOf.Brave
             foreach (Pawn pawn in map.mapPawns.FreeColonists)
             {
-                // Méthode sécurisée avec DefDatabase
+                // Mï¿½thode sï¿½curisï¿½e avec DefDatabase
                 TraitDef sanguineTrait = DefDatabase<TraitDef>.GetNamedSilentFail("Sanguine");
                 TraitDef brawlerTrait = DefDatabase<TraitDef>.GetNamedSilentFail("Brawler");
 
@@ -261,16 +261,16 @@ namespace Mod_warult
         }
     }
 
-    // Incident d'apparition de La Panteresse - VERSION CORRIGÉE
+    // Incident d'apparition de La Panteresse - VERSION CORRIGï¿½E
     public class IncidentWorker_PainterSighting : IncidentWorker
     {
-        protected override bool CanFireNowSub(IncidentParms parms) // CORRIGÉ - protected
+        protected override bool CanFireNowSub(IncidentParms parms) // CORRIGï¿½ - protected
         {
             Map map = (Map)parms.target;
             return map != null && map.mapPawns.FreeColonistsCount > 0;
         }
 
-        protected override bool TryExecuteWorker(IncidentParms parms) // CORRIGÉ - protected
+        protected override bool TryExecuteWorker(IncidentParms parms) // CORRIGï¿½ - protected
         {
             Map map = (Map)parms.target;
             if (map == null) return false;
@@ -280,7 +280,7 @@ namespace Mod_warult
 
             Pawn witness = colonists.RandomElement();
 
-            // Spawn réel de la Panteresse (si PawnKindDef existe)
+            // Spawn rï¿½el de la Panteresse (si PawnKindDef existe)
             PawnKindDef paintressKind = DefDatabase<PawnKindDef>.GetNamedSilentFail("Expedition33_PaintressBoss");
 
             if (paintressKind != null)
@@ -300,11 +300,11 @@ namespace Mod_warult
                     GenSpawn.Spawn(paintress, spawnSpot, map);
                     paintress.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
 
-                    string letterText = $"La terrifiante Painteress est apparue près de votre colonie !\n\n" +
-                                        $"Cette entité mystérieuse manipule la réalité avec son pinceau magique. " +
-                                        $"Elle semble hostile et extrêmement dangereuse. Ses yeux brillent d'une lueur " +
-                                        $"artistique malveillante alors qu'elle évalue votre colonie comme sa prochaine toile.\n\n" +
-                                        $"Préparez vos défenses ! Un Gommage massif pourrait suivre...";
+                    string letterText = $"La terrifiante Painteress est apparue prï¿½s de votre colonie !\n\n" +
+                                        $"Cette entitï¿½ mystï¿½rieuse manipule la rï¿½alitï¿½ avec son pinceau magique. " +
+                                        $"Elle semble hostile et extrï¿½mement dangereuse. Ses yeux brillent d'une lueur " +
+                                        $"artistique malveillante alors qu'elle ï¿½value votre colonie comme sa prochaine toile.\n\n" +
+                                        $"Prï¿½parez vos dï¿½fenses ! Un Gommage massif pourrait suivre...";
 
                     Find.LetterStack.ReceiveLetter(
                         "Apparition de la Painteress",
@@ -318,12 +318,12 @@ namespace Mod_warult
             }
 
             // Fallback : Apparition narrative
-            string narrativeText = $"{witness.Name.ToStringShort} rapporte avoir aperçu une silhouette étrange " +
-                                   $"dans la brume - une figure féminine imposante tenant ce qui ressemble à un pinceau géant.\n\n" +
-                                   $"\"C'était Elle... La Painteress,\" murmure {witness.Name.ToStringShort} en tremblant. " +
+            string narrativeText = $"{witness.Name.ToStringShort} rapporte avoir aperï¿½u une silhouette ï¿½trange " +
+                                   $"dans la brume - une figure fï¿½minine imposante tenant ce qui ressemble ï¿½ un pinceau gï¿½ant.\n\n" +
+                                   $"\"C'ï¿½tait Elle... La Painteress,\" murmure {witness.Name.ToStringShort} en tremblant. " +
                                    $"\"Elle observait notre colonie, comme si elle choisissait sa prochaine toile. " +
-                                   $"Ses yeux... ils brillaient d'une lumière qui n'appartient pas à ce monde...\"\n\n" +
-                                   $"Cette apparition ne présage rien de bon. Un Gommage pourrait survenir bientôt.";
+                                   $"Ses yeux... ils brillaient d'une lumiï¿½re qui n'appartient pas ï¿½ ce monde...\"\n\n" +
+                                   $"Cette apparition ne prï¿½sage rien de bon. Un Gommage pourrait survenir bientï¿½t.";
 
             Find.LetterStack.ReceiveLetter(
                 "Apparition de la Painteress",
@@ -338,16 +338,16 @@ namespace Mod_warult
         }
     }
 
-    // Test Event - CORRIGÉ
+    // Test Event - CORRIGï¿½
     public class IncidentWorker_TestEvent : IncidentWorker
     {
-        protected override bool TryExecuteWorker(IncidentParms parms) // CORRIGÉ - protected
+        protected override bool TryExecuteWorker(IncidentParms parms) // CORRIGï¿½ - protected
         {
-            Log.Message("=== TEST EXPÉDITION 33 FONCTIONNE ! ===");
+            Log.Message("=== TEST EXPï¿½DITION 33 FONCTIONNE ! ===");
 
             Find.LetterStack.ReceiveLetter(
-                "Test Expédition 33",
-                "Si tu vois ce message, tes événements fonctionnent parfaitement ! Le système d'incidents de ton mod Expédition 33 est opérationnel.",
+                "Test Expï¿½dition 33",
+                "Si tu vois ce message, tes ï¿½vï¿½nements fonctionnent parfaitement ! Le systï¿½me d'incidents de ton mod Expï¿½dition 33 est opï¿½rationnel.",
                 LetterDefOf.PositiveEvent
             );
 
@@ -355,7 +355,7 @@ namespace Mod_warult
         }
     }
 
-    // Pensée liée à la peur du Gommage
+    // Pensï¿½e liï¿½e ï¿½ la peur du Gommage
     public class ThoughtWorker_GommageAnxiety : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
@@ -400,15 +400,15 @@ namespace Mod_warult
             Map map = (Map)parms.target;
             if (map == null) return false;
 
-            // CORRECTION - Utilise le bon nom qui correspond à ton XML
+            // CORRECTION - Utilise le bon nom qui correspond ï¿½ ton XML
             PawnKindDef paintressKind = DefDatabase<PawnKindDef>.GetNamedSilentFail("Expedition33_PaintressMonster");
             if (paintressKind == null)
             {
-                Log.Error("PawnKindDef Expedition33_PaintressMonster non trouvé !");
+                Log.Error("PawnKindDef Expedition33_PaintressMonster non trouvï¿½ !");
                 return false;
             }
 
-            Log.Message($"PawnKindDef trouvé : {paintressKind.defName}");
+            Log.Message($"PawnKindDef trouvï¿½ : {paintressKind.defName}");
 
             // Position centrale
             IntVec3 spawnPos = map.Center;
@@ -419,7 +419,7 @@ namespace Mod_warult
                 return false;
             }
 
-            // Génère et spawn la Paintress
+            // Gï¿½nï¿½re et spawn la Paintress
             Faction expedition33 = Find.FactionManager.FirstFactionOfDef(
                 DefDatabase<FactionDef>.GetNamedSilentFail("Expedition33")
             );
@@ -427,17 +427,17 @@ namespace Mod_warult
             Pawn paintress = PawnGenerator.GeneratePawn(paintressKind, expedition33);
             if (paintress == null)
             {
-                Log.Error("Impossible de générer la Paintress !");
+                Log.Error("Impossible de gï¿½nï¿½rer la Paintress !");
                 return false;
             }
 
             GenSpawn.Spawn(paintress, spawnPos, map);
             paintress.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
 
-            Log.Message($"Paintress spawnée avec succès à {spawnPos}");
+            Log.Message($"Paintress spawnï¿½e avec succï¿½s ï¿½ {spawnPos}");
 
             string letterText = "Vous avez atteint le Monolithe de la Paintress !\n\n" +
-                               "La terrifiante entité artistique se dresse devant vous, " +
+                               "La terrifiante entitï¿½ artistique se dresse devant vous, " +
                                "pinceau mystique en main. Comme dans Clair Obscur: Expedition 33, " +
                                "elle garde jalousement son monolithe au sommet.\n\n" +
                                "C'est votre seule chance de briser le cycle du Gommage !";

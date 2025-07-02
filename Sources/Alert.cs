@@ -12,12 +12,12 @@ using Verse.Sound;
 
 namespace Mod_warult
 {
-    // Système d'alerte
+    // Systï¿½me d'alerte
     public class Alert_CurrentPaintedAge : Alert
     {
         public Alert_CurrentPaintedAge()
         {
-            this.defaultLabel = "Âge Maudit Actuel";
+            this.defaultLabel = "ï¿½ge Maudit Actuel";
             this.defaultPriority = AlertPriority.Critical;
         }
 
@@ -29,7 +29,7 @@ namespace Mod_warult
             if (gameComp == null || !gameComp.paintressAlive || gameComp.currentPaintedAge == -1)
                 return AlertReport.Inactive;
 
-            // SUPPRIME les logs pour éviter le spam
+            // SUPPRIME les logs pour ï¿½viter le spam
             // Log.Message($"Alert_CurrentPaintedAge: Found {cursedColonists.Count} cursed colonists of age {gameComp.currentPaintedAge}");
 
             var maps = Find.Maps?.Where(m => m.IsPlayerHome);
@@ -42,7 +42,7 @@ namespace Mod_warult
                 {
                     foreach (Pawn pawn in map.mapPawns.FreeColonists)
                     {
-                        if (pawn.ageTracker.AgeBiologicalYears == gameComp.currentPaintedAge)
+                        if (pawn.ageTracker.AgeBiologicalYears >= gameComp.currentPaintedAge) // >= au lieu de ==
                         {
                             cursedColonists.Add(pawn);
                         }
@@ -67,8 +67,8 @@ namespace Mod_warult
                     ? (gameComp.nextPaintingTick - Find.TickManager.TicksGame) / 60000
                     : 999;
 
-                return $"ÂGE PEINT SUR LE MONOLITHE : {gameComp.currentPaintedAge} ANS\n\n" +
-                       $"Tous vos colons de cet âge exact risquent d'être gommés à tout moment.\n\n" +
+                return $"ï¿½GE PEINT SUR LE MONOLITHE : {gameComp.currentPaintedAge} ANS\n\n" +
+                       $"Tous vos colons de cet ï¿½ge exact risquent d'ï¿½tre gommï¿½s ï¿½ tout moment.\n\n" +
                        $"Prochaine peinture dans : {Math.Max(0, daysUntilNext)} jours\n\n" +
                        $"Seule la mort de la Paintress peut briser ce cycle maudit.";
             }
@@ -82,10 +82,10 @@ namespace Mod_warult
 
             if (gameComp?.currentPaintedAge != null && gameComp.currentPaintedAge != -1)
             {
-                return $"Âge Maudit : {gameComp.currentPaintedAge} ans";
+                return $"ï¿½ge Maudit : {gameComp.currentPaintedAge} ans";
             }
 
-            return "Âge Maudit Actuel";
+            return "ï¿½ge Maudit Actuel";
         }
     }
 

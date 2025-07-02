@@ -5,17 +5,12 @@
 		<defName>Expedition33_Headquarters</defName>
 		<label>quartier général d'expédition</label>
 		<description>Un bâtiment de commandement utilisé par l'Expédition 33 pour planifier leurs missions contre Le Gommage. Contient des cartes, des dossiers secrets et des équipements de communication. Permet de rechercher les technologies anti-Gommage.</description>
-		<thingClass>Building_WorkTable</thingClass>
+		<!-- CORRIGÉ : Utilisez votre classe personnalisée -->
+		<thingClass>Mod_warult.Building_Headquarters</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/ExpeditionHQ</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3,2)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
 		</graphicData>
 		<castEdgeShadows>true</castEdgeShadows>
 		<staticSunShadowHeight>0.20</staticSunShadowHeight>
@@ -26,11 +21,13 @@
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.5</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<WorkToBuild>8000</WorkToBuild>
 			<MaxHitPoints>300</MaxHitPoints>
-			<Flammability>1.0</Flammability>
+			<Flammability>0.7</Flammability>
 			<ResearchSpeedFactor>1.2</ResearchSpeedFactor>
 		</statBases>
 		<size>(3,2)</size>
@@ -40,28 +37,25 @@
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
-		<inspectorTabs>
+		
+		<!-- SUPPRIMÉ : Pas d'onglet ITab_Bills pour le QG -->
+		<!-- <inspectorTabs>
 			<li>ITab_Bills</li>
-		</inspectorTabs>
+		</inspectorTabs> -->
+		
 		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<buildingTags>
-				<li>Production</li>
 				<li>Expedition33</li>
-				<li>Research</li>
+				<li>Command</li>
 			</buildingTags>
 		</building>
 		<comps>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>ToolCabinet</li>
-					<li>MultiAnalyzer</li>
-				</linkableFacilities>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
 			</li>
+			<li Class="CompProperties_Flickable"/>
 		</comps>
-		<placeWorkers>
-			<li>PlaceWorker_ShowFacilitiesConnections</li>
-		</placeWorkers>
 		<researchPrerequisites>
 			<li>Expedition33_GommageAnalysis</li>
 		</researchPrerequisites>
@@ -198,7 +192,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>Expedition33_Armory</defName>
 		<label>armurerie d'expédition</label>
-		<description>Un atelier spécialisé pour fabriquer les équipements uniques de l'Expédition 33. Les artisans qui y travaillent connaissent les secrets de fabrication des armes anti-Gommage, boucliers de protection et armes artistiques.</description>
+		<description>Un atelier spécialisé pour fabriquer les équipements uniques de l'Expédition 33. Les artisans qui y travaillent connaissent les secrets de fabrication des armes anti-Gommage, boucliers de protection, armes artistiques et Pictos chromatiques.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/ExpeditionArmory</texPath>
@@ -262,6 +256,15 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
+		<recipes>
+        <!-- Vos recettes d'armes existantes -->
+        <li>Expedition33_CraftPictoGuardian</li>
+        <li>Expedition33_CraftPictoStriker</li>
+        <li>Expedition33_CraftPictoHealer</li>
+        <li>Expedition33_CraftPictoScholar</li>
+        <li>Expedition33_ProcessChromaRaw</li>
+    </recipes>
+
 		<researchPrerequisites>
 			<li>Expedition33_BasicProtection</li>
 			<li>Smithing</li>

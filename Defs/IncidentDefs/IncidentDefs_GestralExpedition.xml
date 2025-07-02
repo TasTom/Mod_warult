@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <IncidentDef>
+        <defName>Expedition33_GestralAwakening</defName>
+        <label>réveil des anciens gestrals</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_GestralAwakening</workerClass>
+        <baseChance>2.0</baseChance> <!-- Augmenté -->
+        <minRefireDays>1</minRefireDays> <!-- Réduit pour test -->
+
+        <minPopulation>1</minPopulation>
+    
+
+
+        <letterLabel>Réveil des Anciens</letterLabel>
+        <letterText>D'anciens Gestrals-arbres se réveillent dans la région, attirés par la présence de leurs descendants. Ils apportent avec eux d'anciennes connaissances et des artefacts de l'Expédition 33.</letterText>
+        <letterDef>PositiveEvent</letterDef>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>Expedition33_SacredRiverPilgrimage</defName>
+        <label>pèlerinage à la rivière sacrée</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_SacredRiverPilgrimage</workerClass>
+        <baseChance>1.2</baseChance>
+        <minRefireDays>30</minRefireDays>
+        <letterLabel>Pèlerinage Gestral</letterLabel>
+        <letterText>Vos Gestrals ressentent l'appel de la Rivière Sacrée. Un groupe souhaite entreprendre un pèlerinage pour honorer leurs ancêtres et récupérer des fragments de mémoire ancienne.</letterText>
+        <letterDef>NeutralEvent</letterDef>
+    </IncidentDef>
+</Defs>

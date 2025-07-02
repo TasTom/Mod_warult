@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Nevron avec TAILLE AUGMENTÉE -->
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>Expedition33_Nevron</defName>
+        <label>nevron</label>
+        <description>Une créature autrefois vivante, désormais corrompue par Le Gommage...</description>
+        
+        <graphicData>
+            <texPath>Things/Pawn/Animal/Nevrons/lancier</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2.5, 2.5)</drawSize> <!-- AUGMENTÉ de (2.0, 2.0) -->
+        </graphicData>
+
+        <statBases>
+            <MoveSpeed>4.5</MoveSpeed>
+            <MarketValue>200</MarketValue>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <LeatherAmount>0</LeatherAmount>
+            <MeatAmount>0</MeatAmount>
+        </statBases>
+        
+        <race>
+            <body>Expedition33_NevronBody</body>
+            <baseBodySize>2.0</baseBodySize> <!-- AUGMENTÉ de 1.5 -->
+            <baseHealthScale>1.5</baseHealthScale> <!-- AUGMENTÉ -->
+            <lifeExpectancy>100</lifeExpectancy>
+            <predator>true</predator>
+            <herdAnimal>false</herdAnimal>
+            <foodType>CarnivoreAnimal</foodType>
+            <leatherDef>Leather_Heavy</leatherDef>
+            <useMeatFrom>Megasloth</useMeatFrom>
+            <manhunterOnDamageChance>0.8</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
+            <wildness>1.0</wildness>
+            <petness>0</petness>
+            <trainability>None</trainability>
+            <intelligence>Animal</intelligence>
+            <hasGenders>false</hasGenders>
+            <gestationPeriodDays>-1</gestationPeriodDays>
+            
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0</minAge>
+
+                    <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+                    <soundDeath>Pawn_Megascarab_Death</soundDeath>
+                    <soundCall>Pawn_Megascarab_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            
+            <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+        </race>
+        
+        <!-- OUTILS AVEC DÉGÂTS AUGMENTÉS (proportionnels à la taille) -->
+        <tools>
+            <li>
+                <label>griffes chromatiques</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>15</power> <!-- AUGMENTÉ de 12 -->
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>morsure corrosive</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>20</power> <!-- AUGMENTÉ de 16 -->
+                <cooldownTime>2.6</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.7</chanceFactor>
+            </li>
+            <li>
+                <label>charge chromatique</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>14</power> <!-- AUGMENTÉ de 10 -->
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        
+        <!-- LUMINESCENCE -->
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>4</glowRadius> <!-- AUGMENTÉ de 3 -->
+                <glowColor>(180,120,200,0)</glowColor>
+            </li>
+        </comps>
+        
+        <butcherProducts>
+            <Expedition33_ChromaRaw>3</Expedition33_ChromaRaw> <!-- AUGMENTÉ de 2 -->
+        </butcherProducts>
+        
+        <tradeTags>
+            <li>AnimalExotic</li>
+            <li>AnimalFighter</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- Pitank avec TAILLE ENCORE PLUS GRANDE -->
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>Expedition33_Pitank</defName>
+        <label>pitank</label>
+        <description>Un Nevron évolué, fusion de plusieurs créatures corrompues...</description>
+
+        <graphicData>
+            <texPath>Things/Pawn/Animal/Nevrons/petanque</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3.5, 3.5)</drawSize> <!-- TRÈS GRAND -->
+        </graphicData>
+
+        <statBases>
+            <MoveSpeed>3.2</MoveSpeed> <!-- RÉDUIT pour compenser la taille -->
+            <MarketValue>800</MarketValue>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+        </statBases>
+        
+        <race>
+            <body>Expedition33_NevronBody</body>
+            <baseBodySize>3.0</baseBodySize> <!-- ÉNORME -->
+            <baseHealthScale>3.5</baseHealthScale> <!-- TRÈS RÉSISTANT -->
+            <lifeExpectancy>200</lifeExpectancy>
+            <predator>true</predator>
+            <herdAnimal>false</herdAnimal>
+            <foodType>CarnivoreAnimal</foodType>
+            <leatherDef>Leather_Heavy</leatherDef>
+            <useMeatFrom>Megasloth</useMeatFrom>
+            <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
+            <wildness>1.0</wildness>
+            <petness>0</petness>
+            <trainability>None</trainability>
+            <intelligence>Animal</intelligence>
+            <hasGenders>false</hasGenders>
+            <gestationPeriodDays>-1</gestationPeriodDays>
+            
+
+
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0</minAge>
+                    
+                    <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+                    <soundDeath>Pawn_Megascarab_Death</soundDeath>
+                    <soundCall>Pawn_Megascarab_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        
+        <!-- OUTILS DÉVASTATEURS -->
+        <tools>
+            <li>
+                <label>griffes massives</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>25</power> <!-- TRÈS PUISSANT -->
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>mâchoires broyeuses</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>35</power> <!-- DÉVASTATEUR -->
+                <cooldownTime>3</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.8</chanceFactor>
+            </li>
+            <li>
+                <label>charge dévastatrice</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>28</power> <!-- TRÈS PUISSANT -->
+                <cooldownTime>4</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.3</chanceFactor>
+            </li>
+        </tools>
+        
+        <!-- LUMINESCENCE TRÈS FORTE -->
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>6</glowRadius> <!-- TRÈS VISIBLE -->
+                <glowColor>(200,100,220,0)</glowColor>
+            </li>
+        </comps>
+        
+        <butcherProducts>
+            <Expedition33_ChromaRaw>8</Expedition33_ChromaRaw> <!-- BEAUCOUP -->
+        </butcherProducts>
+        
+        <tradeTags>
+            <li>AnimalExotic</li>
+            <li>AnimalFighter</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

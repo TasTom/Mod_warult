@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Nevron Basique CORRIGÉ -->
+    <PawnKindDef>
+        <defName>Expedition33_Nevron_Basic</defName>
+        <label>nevron basique</label>
+        <race>Expedition33_Nevron</race>
+        <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+        
+        <!-- COMBAT STATS -->
+        <combatPower>150</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        <factionLeader>false</factionLeader>
+  
+        <!-- EQUIPMENT (Créatures = pas d'équipement) -->
+        <weaponMoney>0~0</weaponMoney>
+        <apparelMoney>0~0</apparelMoney>
+        <techHediffsMoney>0~0</techHediffsMoney>
+        
+        <!-- BACKSTORY POUR CRÉATURES -->
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFiltersOverride>
+         <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Animal/Nevrons/lancier</texPath> <!-- TEMPORAIRE: utilisez des textures vanilla -->
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>3.0</drawSize>
+                <!-- <color>(0.5, 0.3, 0.4)</color> Couleur corrompue -->
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+                <texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>3.0</drawSize>
+            </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+        
+        <!-- SUPPRIMÉ: lifeStages (appartient au ThingDef de la race) -->
+    </PawnKindDef>
+
+    <!-- Pitank CORRIGÉ -->
+    <PawnKindDef>
+        <defName>Expedition33_Pitank</defName>
+        <label>pitank</label>
+        <race>Expedition33_Nevron</race>
+        <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+        
+        <!-- COMBAT STATS (Plus fort) -->
+        <combatPower>400</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
+        <canBeSapper>true</canBeSapper> <!-- Peut percer les murs -->
+        <factionLeader>false</factionLeader>
+        
+        <!-- EQUIPMENT -->
+        <weaponMoney>0~0</weaponMoney>
+        <apparelMoney>0~0</apparelMoney>
+        <techHediffsMoney>0~0</techHediffsMoney>
+        
+        <!-- BACKSTORY -->
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFiltersOverride>
+                 <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Animal/Nevrons/petanque</texPath> <!-- TEMPORAIRE: utilisez des textures vanilla -->
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>2.0</drawSize>
+                <!-- <color>(0.5, 0.3, 0.4)</color> Couleur corrompue -->
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+                <texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>2.0</drawSize>
+            </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!-- Amphorien CORRIGÉ -->
+    <PawnKindDef>
+        <defName>Expedition33_Amphorien</defName>
+        <label>névron amphorien</label>
+        <race>Expedition33_Nevron</race>
+        <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+        
+        <!-- COMBAT STATS -->
+        <combatPower>250</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        <factionLeader>false</factionLeader> <!-- CHANGÉ: pas de leader pour éviter les erreurs -->
+        
+        <!-- EQUIPMENT -->
+        <weaponMoney>0~0</weaponMoney>
+        <apparelMoney>0~0</apparelMoney>
+        <techHediffsMoney>0~0</techHediffsMoney>
+        
+        <!-- BACKSTORY -->
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFiltersOverride>
+                <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Animal/Nevrons/amphorien</texPath> <!-- TEMPORAIRE: utilisez des textures vanilla -->
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>2.5</drawSize>
+                <!-- <color>(0.5, 0.3, 0.4)</color> Couleur corrompue -->
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+                <texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>2.5</drawSize>
+            </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!-- Nouveau PawnKindDef pour un leader humanoïde -->
+    <!-- <PawnKindDef>
+        <defName>Expedition33_Nevron_Leader</defName>
+        <label>maître du gommage</label>
+        <race>Human</race>
+        <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+        
+        <combatPower>200</combatPower>
+        <factionLeader>true</factionLeader> 
+        
+      
+        <weaponMoney>100~300</weaponMoney>
+        <apparelMoney>200~500</apparelMoney>
+        
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFiltersOverride>
+    </PawnKindDef> -->
+</Defs>

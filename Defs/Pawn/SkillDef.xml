@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SkillDef>
+        <defName>Expedition33_Picto</defName>
+        <label>Picto</label>
+        <description>Capacité à manipuler les forces créatives pour modifier la réalité peinte.</description>
+    </SkillDef>
+
+    <SkillDef>
+        <defName>Expedition33_Lumina</defName>
+        <label>Lumina</label>
+        <description>Maîtrise de l'énergie lumineuse pour combattre les ombres du Gommage.</description>
+    </SkillDef>
+
+</Defs>

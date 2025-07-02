@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Recette : Picto Gardien -->
+    <RecipeDef>
+        <defName>Expedition33_CraftPictoGuardian</defName>
+        <label>forger picto gardien</label>
+        <description>Forger un Picto Gardien à partir de Chroma et de matériaux nobles. Ce Picto confère une protection magique et peut débloquer la Lumina "Égide Cristalline".</description>
+        <jobString>Forge un Picto Gardien</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>8000</workAmount>
+        <targetCountAdjustment>1</targetCountAdjustment>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+            <Artistic>6</Artistic>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Expedition33_Chroma</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <Expedition33_Picto_Guardian>1</Expedition33_Picto_Guardian>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>Expedition33_Armory</li>
+        </recipeUsers>
+        <researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+    </RecipeDef>
+
+    <!-- Recette : Picto Frappeur -->
+    <RecipeDef>
+        <defName>Expedition33_CraftPictoStriker</defName>
+        <label>forger picto frappeur</label>
+        <description>Forger un Picto Frappeur à partir de Chroma et de métaux purs. Ce Picto augmente les capacités offensives et peut débloquer la Lumina "Lame Chromatique".</description>
+        <jobString>Forge un Picto Frappeur</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>7500</workAmount>
+        <targetCountAdjustment>1</targetCountAdjustment>
+        <skillRequirements>
+            <Crafting>7</Crafting>
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Expedition33_Chroma</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <Expedition33_Picto_Striker>1</Expedition33_Picto_Striker>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>Expedition33_Armory</li>
+        </recipeUsers>
+        <researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+    </RecipeDef>
+
+    <!-- Recette : Picto Soigneur -->
+    <RecipeDef>
+        <defName>Expedition33_CraftPictoHealer</defName>
+        <label>forger picto soigneur</label>
+        <description>Forger un Picto Soigneur à partir de Chroma et de pierres précieuses. Ce Picto accélère la guérison et peut débloquer la Lumina "Restauration Vitale".</description>
+        <jobString>Forge un Picto Soigneur</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>7000</workAmount>
+        <targetCountAdjustment>1</targetCountAdjustment>
+        <skillRequirements>
+            <Crafting>6</Crafting>
+            <Artistic>7</Artistic>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Expedition33_Chroma</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Jade</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <Expedition33_Picto_Healer>1</Expedition33_Picto_Healer>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>Expedition33_Armory</li>
+        </recipeUsers>
+        <researchPrerequisite>Expedition33_ArtisticWeapons</researchPrerequisite>
+    </RecipeDef>
+
+    <!-- Recette : Traitement du Chroma brut -->
+    <RecipeDef>
+        <defName>Expedition33_ProcessChromaRaw</defName>
+        <label>raffiner chroma brut</label>
+        <description>Traiter le Chroma brut collecté pour obtenir du Chroma pur utilisable dans la fabrication de Pictos.</description>
+        <jobString>Raffine du Chroma</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <workAmount>2000</workAmount>
+        <targetCountAdjustment>1</targetCountAdjustment>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Expedition33_ChromaRaw</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <Expedition33_Chroma>2</Expedition33_Chroma>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>Expedition33_Armory</li>
+        </recipeUsers>
+        <researchPrerequisite>Expedition33_GommageDetection</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef>
+    <defName>Expedition33_CraftPictoScholar</defName>
+    <label>forger picto érudit</label>
+    <description>Forger un Picto Érudit à partir de Chroma et de matériaux nobles. Ce Picto améliore l'intellect et peut débloquer la Lumina "Perspicacité Chromatique".</description>
+    <jobString>Forge un Picto Érudit</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>9000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <skillRequirements>
+        <Crafting>9</Crafting>
+        <Intellectual>8</Intellectual>
+        <Artistic>6</Artistic>
+    </skillRequirements>
+    <ingredients>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>Expedition33_Chroma</li>
+                </thingDefs>
+            </filter>
+            <count>18</count>
+        </li>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>Plasteel</li>
+                </thingDefs>
+            </filter>
+            <count>15</count>
+        </li>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>ComponentIndustrial</li>
+                </thingDefs>
+            </filter>
+            <count>3</count>
+        </li>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>Gold</li>
+                </thingDefs>
+            </filter>
+            <count>10</count>
+        </li>
+    </ingredients>
+    <products>
+        <Expedition33_Picto_Scholar>1</Expedition33_Picto_Scholar>
+    </products>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+        <li>Expedition33_Armory</li>
+    </recipeUsers>
+    <researchPrerequisite>Expedition33_CounterPaintBrush</researchPrerequisite>
+</RecipeDef>
+</Defs>

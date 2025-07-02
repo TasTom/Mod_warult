@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchTabDef>
+        <defName>Expedition33_ResearchTab</defName>
+        <label>Expédition 33</label>
+        <description>Technologies développées par l'Expédition 33 pour combattre Le Gommage et survivre dans un monde où la réalité est peinte.</description>
+        <!-- <icon>UI/Icons/Expedition33_TabIcon</icon>
+        <iconColor>(0.8, 0.6, 0.4)</iconColor> -->
+    </ResearchTabDef>
+</Defs>

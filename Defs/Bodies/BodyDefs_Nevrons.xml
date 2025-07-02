@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- BodyDef Nevron CORRIGÉ -->
+    <BodyDef>
+        <defName>Expedition33_NevronBody</defName>
+        <label>corps de nevron</label>
+        <corePart>
+            <def>Torso</def>
+            <height>Middle</height>
+            <depth>Outside</depth>
+            <coverage>1</coverage> <!-- TORSO = 100% de base -->
+            <parts>
+                <!-- TÊTE (15% du total) -->
+                <li>
+                    <def>Head</def>
+                    <customLabel>tête chromatique</customLabel>
+                    <height>Top</height>
+                    <depth>Outside</depth>
+                    <coverage>0.15</coverage> <!-- RÉDUIT -->
+                    <parts>
+                        <li>
+                            <def>Brain</def>
+                            <customLabel>noyau chromatique</customLabel>
+                            <height>Top</height>
+                            <depth>Inside</depth>
+                            <coverage>0.05</coverage> <!-- 1/3 de la tête -->
+                        </li>
+                        <li>
+                            <def>Eye</def>
+                            <customLabel>œil luisant</customLabel>
+                            <height>Top</height>
+                            <depth>Outside</depth>
+                            <coverage>0.02</coverage>
+                            <groups>
+                                <li>Eyes</li>
+                            </groups>
+                        </li>
+                        <li>
+                            <def>Eye</def>
+                            <customLabel>œil luisant</customLabel>
+                            <height>Top</height>
+                            <depth>Outside</depth>
+                            <coverage>0.02</coverage>
+                            <groups>
+                                <li>Eyes</li>
+                            </groups>
+                        </li>
+                        <li>
+                            <def>Jaw</def>
+                            <customLabel>mâchoire corrosive</customLabel>
+                            <height>Top</height>
+                            <depth>Outside</depth>
+                            <coverage>0.06</coverage> <!-- Complète la tête -->
+                            <groups>
+                                <li>Teeth</li>
+                                <li>HeadAttackTool</li>
+                            </groups>
+                        </li>
+                    </parts>
+                    <groups>
+                        <li>HeadAttackTool</li>
+                        <li>FullHead</li>
+                    </groups>
+                </li>
+
+                <!-- COU (3% du total) -->
+                <li>
+                    <def>Neck</def>
+                    <customLabel>cou chromatique</customLabel>
+                    <height>Top</height>
+                    <depth>Outside</depth>
+                    <coverage>0.03</coverage>
+                </li>
+
+                <!-- PATTES AVANT (12% chacune = 24% total) -->
+                <li>
+                    <def>Shoulder</def>
+                    <customLabel>épaule avant gauche</customLabel>
+                    <height>Middle</height>
+                    <depth>Outside</depth>
+                    <coverage>0.12</coverage>
+                    <parts>
+                        <li>
+                            <def>Arm</def>
+                            <customLabel>membre avant gauche</customLabel>
+                            <height>Middle</height>
+                            <depth>Outside</depth>
+                            <coverage>0.08</coverage>
+                            <parts>
+                                <li>
+                                    <def>Hand</def>
+                                    <customLabel>patte griffue</customLabel>
+                                    <height>Middle</height>
+                                    <depth>Outside</depth>
+                                    <coverage>0.04</coverage>
+                                    <groups>
+                                        <li>FrontLeftPaw</li>
+                                    </groups>
+                                </li>
+                            </parts>
+                        </li>
+                    </parts>
+                    <groups>
+                        <li>Arms</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>Shoulder</def>
+                    <customLabel>épaule avant droite</customLabel>
+                    <height>Middle</height>
+                    <depth>Outside</depth>
+                    <coverage>0.12</coverage>
+                    <parts>
+                        <li>
+                            <def>Arm</def>
+                            <customLabel>membre avant droit</customLabel>
+                            <height>Middle</height>
+                            <depth>Outside</depth>
+                            <coverage>0.08</coverage>
+                            <parts>
+                                <li>
+                                    <def>Hand</def>
+                                    <customLabel>patte griffue</customLabel>
+                                    <height>Middle</height>
+                                    <depth>Outside</depth>
+                                    <coverage>0.04</coverage>
+                                    <groups>
+                                        <li>FrontRightPaw</li>
+                                    </groups>
+                                </li>
+                            </parts>
+                        </li>
+                    </parts>
+                    <groups>
+                        <li>Arms</li>
+                    </groups>
+                </li>
+
+                <!-- PATTES ARRIÈRE (15% chacune = 30% total) -->
+                <li>
+                    <def>Leg</def>
+                    <customLabel>patte arrière gauche</customLabel>
+                    <height>Bottom</height>
+                    <depth>Outside</depth>
+                    <coverage>0.15</coverage>
+                    <parts>
+                        <li>
+                            <def>Foot</def>
+                            <customLabel>sabot corrompu</customLabel>
+                            <height>Bottom</height>
+                            <depth>Outside</depth>
+                            <coverage>0.05</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+                        </li>
+                    </parts>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>Leg</def>
+                    <customLabel>patte arrière droite</customLabel>
+                    <height>Bottom</height>
+                    <depth>Outside</depth>
+                    <coverage>0.15</coverage>
+                    <parts>
+                        <li>
+                            <def>Foot</def>
+                            <customLabel>sabot corrompu</customLabel>
+                            <height>Bottom</height>
+                            <depth>Outside</depth>
+                            <coverage>0.05</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+                        </li>
+                    </parts>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+                </li>
+
+                <!-- TORSO CENTRAL (25% - Permet aux attaques de toucher le corps) -->
+                <li>
+                    <def>Ribcage</def>
+                    <customLabel>cage thoracique</customLabel>
+                    <height>Middle</height>
+                    <depth>Inside</depth>
+                    <coverage>0.25</coverage> <!-- AUGMENTÉ pour permettre les touches -->
+                    <parts>
+                        <li>
+                            <def>Heart</def>
+                            <customLabel>cœur chromatique</customLabel>
+                            <height>Middle</height>
+                            <depth>Inside</depth>
+                            <coverage>0.08</coverage>
+                        </li>
+                        <li>
+                            <def>Lung</def>
+                            <customLabel>poumon gauche</customLabel>
+                            <height>Middle</height>
+                            <depth>Inside</depth>
+                            <coverage>0.08</coverage>
+                        </li>
+                        <li>
+                            <def>Lung</def>
+                            <customLabel>poumon droit</customLabel>
+                            <height>Middle</height>
+                            <depth>Inside</depth>
+                            <coverage>0.08</coverage>
+                        </li>
+                    </parts>
+                </li>
+            </parts>
+            <groups>
+                <li>Torso</li>
+            </groups>
+        </corePart>
+    </BodyDef>
+
+    <!-- Groupes de parties du corps -->
+    <BodyPartGroupDef>
+        <defName>FrontLeftPaw</defName>
+        <label>patte avant gauche</label>
+    </BodyPartGroupDef>
+    
+    <BodyPartGroupDef>
+        <defName>FrontRightPaw</defName>
+        <label>patte avant droite</label>
+    </BodyPartGroupDef>
+</Defs>
