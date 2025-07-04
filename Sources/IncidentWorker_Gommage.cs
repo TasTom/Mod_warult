@@ -300,11 +300,11 @@ namespace Mod_warult
                     GenSpawn.Spawn(paintress, spawnSpot, map);
                     paintress.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
 
-                    string letterText = $"La terrifiante Painteress est apparue pr�s de votre colonie !\n\n" +
-                                        $"Cette entit� myst�rieuse manipule la r�alit� avec son pinceau magique. " +
-                                        $"Elle semble hostile et extr�mement dangereuse. Ses yeux brillent d'une lueur " +
-                                        $"artistique malveillante alors qu'elle �value votre colonie comme sa prochaine toile.\n\n" +
-                                        $"Pr�parez vos d�fenses ! Un Gommage massif pourrait suivre...";
+                    string letterText = $"La terrifiante Painteress est apparue près de votre colonie !\n\n" +
+                                        $"Cette entité mystérieuse manipule la réalité avec son pinceau magique. " +
+                                        $"Elle semble hostile et extrèmement dangereuse. Ses yeux brillent d'une lueur " +
+                                        $"artistique malveillante alors qu'elle évalue votre colonie comme sa prochaine toile.\n\n" +
+                                        $"Préparez vos défenses ! Un Gommage massif pourrait suivre...";
 
                     Find.LetterStack.ReceiveLetter(
                         "Apparition de la Painteress",

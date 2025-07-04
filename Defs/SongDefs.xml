@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SongDef>
+    <defName>ContinuerAimerPiano</defName>
+    <clipPath>ContinuerAimerPiano</clipPath>
+      <allowedTimeOfDay>Any</allowedTimeOfDay>
+      <playOnMap>false</playOnMap>
+        <allowedSeasons>
+            <li>Undefined</li>
+            <li>Spring</li>
+            <li>Summer</li>
+            <li>Fall</li>
+            <li>Winter</li>
+        </allowedSeasons>
+        <commonality>999</commonality> 
+        <volume>0.5</volume>
+    </SongDef>
+</Defs>

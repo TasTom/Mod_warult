@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-    <ApparelLayerDef>
-        <defName>Expedition33_Accessories</defName>
-        <label>accessoires</label>
-        <drawOrder>350</drawOrder> <!-- Entre Belt (300) et Overhead (400) -->
-    </ApparelLayerDef>
-</Defs>

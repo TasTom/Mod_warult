@@ -258,11 +258,11 @@
 		</placeWorkers>
 		<recipes>
         <!-- Vos recettes d'armes existantes -->
-        <li>Expedition33_CraftPictoGuardian</li>
+        <!-- <li>Expedition33_CraftPictoGuardian</li>
         <li>Expedition33_CraftPictoStriker</li>
         <li>Expedition33_CraftPictoHealer</li>
         <li>Expedition33_CraftPictoScholar</li>
-        <li>Expedition33_ProcessChromaRaw</li>
+        <li>Expedition33_ProcessChromaRaw</li> -->
     </recipes>
 
 		<researchPrerequisites>

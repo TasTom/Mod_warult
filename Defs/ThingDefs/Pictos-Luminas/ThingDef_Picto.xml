@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ✅ CATEGORY EN PREMIER -->
+    <ThingCategoryDef>
+        <defName>Expedition33_Pictos</defName>
+        <label>pictos</label>
+        <parent>Apparel</parent>
+        <iconPath>UI/Icons/ThingCategories/Expedition33_Picto</iconPath>
+    </ThingCategoryDef>
+
+    <!-- ✅ APPAREL LAYER UNE SEULE FOIS -->
+    <ApparelLayerDef>
+        <defName>Expedition33_Accessories</defName>
+        <label>accessoires</label>
+        <drawOrder>350</drawOrder>
+    </ApparelLayerDef>
+
+    <!-- ✅ PICTO BASE CONCRET (pas parent) -->
+    <ThingDef ParentName="ApparelBase">
+        <defName>Expedition33_PictoBase</defName>
+        <label>picto chromatique</label>
+        <description>Un artefact mystique qui octroie des pouvoirs au porteur. Après 4 combats, ses secrets deviennent accessibles à toute l'équipe.</description>
+        
+        <!-- ✅ THINGCLASS EXPLICITE -->
+        <thingClass>Apparel</thingClass>
+        
+        <!-- ✅ GRAPHICDATA COMPLÈTE -->
+        <graphicData>
+            <texPath>UI/Icons/ThingCategories/Expedition33_Picto</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(0.8, 0.3, 0.9)</color>
+            <drawSize>0.5</drawSize>  
+        </graphicData>
+        
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>0.1</Mass>
+            <MarketValue>500</MarketValue>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <smeltProducts>
+            <Steel>5</Steel>
+        </smeltProducts>
+        
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <!-- <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</wornGraphicPath> -->
+            <layers>
+                <li>Belt</li>
+            </layers>
+        </apparel>
+        
+        <thingCategories>
+            <li>Expedition33_Pictos</li>
+        </thingCategories>
+        
+        <!-- ✅ COMPOSANTS SEULEMENT SI NÉCESSAIRES -->
+        <comps>
+            <li Class="Mod_warult.CompProperties_Picto">
+                <compClass>Mod_warult.CompPicto</compClass>
+                <combatsToLearn>4</combatsToLearn>
+                <pictoType>Vitality</pictoType>
+                <statBonus1>MaxHitPoints</statBonus1>
+                <bonusValue1>20</bonusValue1>
+                <statBonus2>MoveSpeed</statBonus2>
+                <bonusValue2>0.1</bonusValue2>
+                <passiveAbility>RegenerationBoost</passiveAbility>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ✅ PICTOS MANQUANTS AJOUTÉS -->
+    <ThingDef ParentName="ApparelBase">
+        <defName>Expedition33_Picto_Guardian</defName>
+        <label>picto gardien</label>
+        <description>Un artefact chromatique en forme de bouclier stylisé.</description>
+        
+        <thingClass>Apparel</thingClass>
+        
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoGuardian</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(0.1, 0.6, 0.1)</color>
+            <drawSize>0.5</drawSize>  
+        </graphicData>
+        
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Mass>0.3</Mass>
+            <MarketValue>400</MarketValue>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <smeltProducts>
+    <Steel>5</Steel>
+</smeltProducts>
+        
+        <apparel>
+            <bodyPartGroups>
+                <li>Waist</li>
+            </bodyPartGroups>
+            <!-- <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoGuardian</wornGraphicPath> -->
+            <layers>
+                <li>Belt</li>
+            </layers>
+        </apparel>
+        
+        <thingCategories>
+            <li>Expedition33_Pictos</li>
+        </thingCategories>
+        
+        <comps>
+            <li Class="Mod_warult.CompProperties_Picto">
+                <compClass>Mod_warult.CompPicto</compClass>
+                <combatsToLearn>4</combatsToLearn>
+                <pictoType>Guardian</pictoType>
+                <statBonus1>ArmorRating_Sharp</statBonus1>
+                <bonusValue1>0.2</bonusValue1>
+                <statBonus2>ArmorRating_Blunt</statBonus2>
+                <bonusValue2>0.15</bonusValue2>
+                <passiveAbility>CrystallineAegis</passiveAbility>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelBase">
+        <defName>Expedition33_Picto_Striker</defName>
+        <label>picto frappeur</label>
+        <description>Un cristal taillé en forme d'épée lumineuse.</description>
+        
+        <thingClass>Apparel</thingClass>
+        
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoStriker</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(0.9, 0.1, 0.1)</color>
+            <drawSize>0.5</drawSize>  
+        </graphicData>
+        
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Mass>0.2</Mass>
+            <MarketValue>350</MarketValue>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <smeltProducts>
+    <Steel>5</Steel>
+</smeltProducts>
+        
+        <apparel>
+            <bodyPartGroups>
+                <li>Arms</li>
+            </bodyPartGroups>
+            <!-- <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoStriker</wornGraphicPath> -->
+            <layers>
+                <li>Belt</li>
+            </layers>
+        </apparel>
+        
+        <thingCategories>
+            <li>Expedition33_Pictos</li>
+        </thingCategories>
+        
+        <comps>
+            <li Class="Mod_warult.CompProperties_Picto">
+                <compClass>Mod_warult.CompPicto</compClass>
+                <combatsToLearn>4</combatsToLearn>
+                <pictoType>Striker</pictoType>
+                <statBonus1>MeleeDamageFactor</statBonus1>
+                <bonusValue1>0.2</bonusValue1>
+                <statBonus2>MeleeHitChance</statBonus2>
+                <bonusValue2>5</bonusValue2>
+                <passiveAbility>ChromaticBlade</passiveAbility>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelBase">
+        <defName>Expedition33_Picto_Healer</defName>
+        <label>picto soigneur</label>
+        <description>Un artefact en forme de coeur stylisé, pulsant d'une douce lumière.</description>
+        
+        <thingClass>Apparel</thingClass>
+        
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoHealer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(0.1, 0.8, 0.8)</color>
+            <drawSize>0.5</drawSize>  
+        </graphicData>
+        
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MaxHitPoints>90</MaxHitPoints>
+            <Mass>0.25</Mass>
+            <MarketValue>320</MarketValue>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <smeltProducts>
+    <Steel>5</Steel>
+</smeltProducts>
+        
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <!-- <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoHealer</wornGraphicPath> -->
+            <layers>
+                <li>Belt</li>
+            </layers>
+        </apparel>
+        
+        <thingCategories>
+            <li>Expedition33_Pictos</li>
+        </thingCategories>
+        
+        <comps>
+            <li Class="Mod_warult.CompProperties_Picto">
+                <compClass>Mod_warult.CompPicto</compClass>
+                <combatsToLearn>4</combatsToLearn>
+                <pictoType>Healer</pictoType>
+                <statBonus1>InjuryHealingFactor</statBonus1>
+                <bonusValue1>0.3</bonusValue1>
+                <statBonus2>ImmunityGainSpeed</statBonus2>
+                <bonusValue2>0.4</bonusValue2>
+                <passiveAbility>VitalRestoration</passiveAbility>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelBase">
+        <defName>Expedition33_Picto_Scholar</defName>
+        <label>picto érudit</label>
+        <description>Un artefact chromatique en forme de livre ouvert stylisé.</description>
+        
+        <thingClass>Apparel</thingClass>
+        
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoScholar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(0.8, 0.8, 0.1)</color>
+            <drawSize>0.5</drawSize>  
+        </graphicData>
+        
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <Mass>0.15</Mass>
+            <MarketValue>450</MarketValue>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <smeltProducts>
+    <Steel>5</Steel>
+</smeltProducts>
+        
+        <apparel>
+            <bodyPartGroups>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <!-- <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Pictos/PictoScholar</wornGraphicPath> -->
+            <layers>
+                <li>Belt</li>
+            </layers>
+        </apparel>
+        
+        <thingCategories>
+            <li>Expedition33_Pictos</li>
+        </thingCategories>
+        
+        <comps>
+            <li Class="Mod_warult.CompProperties_Picto">
+                <compClass>Mod_warult.CompPicto</compClass>
+                <combatsToLearn>4</combatsToLearn>
+                <pictoType>Scholar</pictoType>
+                <statBonus1>ResearchSpeed</statBonus1>
+                <bonusValue1>0.4</bonusValue1>
+                <statBonus2>GlobalLearningFactor</statBonus2>
+                <bonusValue2>0.3</bonusValue2>
+                <passiveAbility>ChromaticInsight</passiveAbility>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

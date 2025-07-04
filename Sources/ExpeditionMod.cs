@@ -9,18 +9,26 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse.Sound;
+using HarmonyLib;
+
 
 
 namespace Mod_warult
 {
+    
+
+
     [StaticConstructorOnStartup]
-    public static class Expedition33Mod
+    public class Expedition33Mod : Mod
     {
-        static Expedition33Mod()
+        public Expedition33Mod(ModContentPack content) : base(content)
         {
             Log.Message("Hello World!");
-            Log.Message("ExpÈdition 33 - Mod chargÈ avec succËs !");
-            Log.Message("Le Gommage guette... Restez vigilants, expÈditionnaires.");
+            Log.Message("Exp√©dition 33 - Mod charg√© avec succ√®s !");
+            Log.Message("Le Gommage guette... Restez vigilants, exp√©ditionnaires.");
+            var h = new Harmony("warult.expedition33");
+            h.PatchAll();                              // ‚Üê indispensable
+            Log.Message("[Expedition33] Harmony PatchAll ex√©cut√©");
         }
     }
 
@@ -29,7 +37,7 @@ namespace Mod_warult
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            // Logique de la pensÈe liÈe aux missions d'expÈdition
+            // Logique de la pensÔøΩe liÔøΩe aux missions d'expÔøΩdition
             var gameComp = Current.Game.GetComponent<GameComponent_ExpeditionStats>();
             if (gameComp != null && gameComp.completedMissions > 0)
             {
@@ -46,10 +54,10 @@ namespace Mod_warult
     {
         public static void CreateGommageEffect(IntVec3 position, Map map)
         {
-            // Effet de fumÈe grise mystÈrieuse
+            // Effet de fumÔøΩe grise mystÔøΩrieuse
             FleckMaker.ThrowSmoke(position.ToVector3(), map, 3f);
 
-            // CORRIG… - ThrowDustPuff sans paramËtre Color
+            // CORRIGÔøΩ - ThrowDustPuff sans paramÔøΩtre Color
             FleckMaker.ThrowDustPuff(position.ToVector3(), map, 2f);
 
             // Particules artistiques (simule des coups de pinceau)
@@ -60,11 +68,11 @@ namespace Mod_warult
                     0f,
                     Rand.Range(-1f, 1f)
                 );
-                // CORRIG… - ThrowDustPuff sans Color
+                // CORRIGÔøΩ - ThrowDustPuff sans Color
                 FleckMaker.ThrowDustPuff(randomPos, map, 1f);
             }
 
-            // Son mystÈrieux
+            // Son mystÔøΩrieux
             PlaySoundAt(SoundDefOf.Psycast_Skip_Exit, position, map);
         }
 
@@ -76,7 +84,7 @@ namespace Mod_warult
             }
             catch
             {
-                // Ignore silencieusement si le son ne peut pas Ítre jouÈ
+                // Ignore silencieusement si le son ne peut pas ÔøΩtre jouÔøΩ
             }
         }
     }
@@ -118,57 +126,9 @@ namespace Mod_warult
 
 
 
-    public class CompPaintressDeath : ThingComp
-    {
-        public override void PostDestroy(DestroyMode mode, Map previousMap)
-        {
-            if (mode == DestroyMode.KillFinalize && parent is Pawn pawn)
-            {
-                if (pawn.kindDef?.defName == "Expedition33_PaintressMonster")
-                {
-                    // La Paintress a ÈtÈ tuÈe !
-                    OnPaintressKilled();
-                }
-            }
-            base.PostDestroy(mode, previousMap);
-        }
+    
 
-        private void OnPaintressKilled()
-        {
-            var gameComp = Current.Game.GetComponent<GameComponent_PaintressMonolith>();
-            if (gameComp != null)
-            {
-                gameComp.OnPaintressKilled();
-            }
 
-            // Message de victoire Èpique
-            string letterText = "LA PAINTRESS A …T… VAINCUE !\n\n" +
-                                "L'entitÈ colossale s'effondre dans un fracas assourdissant. " +
-                                "Son monolithe mystique se fissure et s'effrite en poussiËre.\n\n" +
-                                "Le cycle du Gommage est BRIS… ‡ jamais ! " +
-                                "Plus jamais les gens ne disparaÓtront ‡ cause de leur ‚ge.\n\n" +
-                                "L'ExpÈdition 33 a accompli l'impossible. " +
-                                "Vous Ítes les hÈros qui ont sauvÈ l'humanitÈ de cette terreur artistique !\n\n" +
-                                "La paix rËgne enfin sur le monde.";
-
-            Find.LetterStack.ReceiveLetter(
-                "VICTOIRE ! LE GOMMAGE EST VAINCU !",
-                letterText,
-                LetterDefOf.PositiveEvent
-            );
-
-            Log.Message("=== PAINTRESS VAINCUE - CYCLE DU GOMMAGE BRIS… ===");
-        }
-    }
-
-    // PropriÈtÈs du composant
-    public class CompProperties_PaintressDeath : CompProperties
-    {
-        public CompProperties_PaintressDeath()
-        {
-            this.compClass = typeof(CompPaintressDeath);
-        }
-    }
 
 
     public class Site_PersistentMonolith : Site
@@ -177,7 +137,7 @@ namespace Mod_warult
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            // VÈrifie si la Panteresse est encore vivante sur cette carte
+            // VÔøΩrifie si la Panteresse est encore vivante sur cette carte
             if (Map != null)
             {
                 var paintress = Map.mapPawns.AllPawns
@@ -188,12 +148,12 @@ namespace Mod_warult
 
             if (paintressAlive)
             {
-                // EMP CHE la suppression tant que la Panteresse vit
+                // EMPÔøΩCHE la suppression tant que la Panteresse vit
                 alsoRemoveWorldObject = false;
                 return false;
             }
 
-            // Permet la suppression aprËs la mort de la Panteresse
+            // Permet la suppression aprÔøΩs la mort de la Panteresse
             alsoRemoveWorldObject = true;
             return true;
         }
@@ -206,7 +166,7 @@ namespace Mod_warult
             }
             else
             {
-                return "Ancien Monolithe - Le cycle du Gommage est brisÈ";
+                return "Ancien Monolithe - Le cycle du Gommage est brisÔøΩ";
             }
         }
     }
@@ -220,11 +180,11 @@ namespace Mod_warult
         {
             base.CompPostTick(ref severityAdjustment);
 
-            // La corruption augmente prËs de la Paintress
+            // La corruption augmente prÔøΩs de la Paintress
             var gameComp = Current.Game.GetComponent<GameComponent_PaintressMonolith>();
             if (gameComp != null && gameComp.paintressAlive)
             {
-                // CORRIG… - Cherche la Paintress sur la carte actuelle
+                // CORRIGÔøΩ - Cherche la Paintress sur la carte actuelle
                 if (Pawn?.Map != null)
                 {
                     var paintress = Pawn.Map.mapPawns.AllPawns
@@ -235,7 +195,7 @@ namespace Mod_warult
                         float distance = Pawn.Position.DistanceTo(paintress.Position);
                         if (distance < 50) // Dans un rayon de 50 cases
                         {
-                            severityAdjustment += 0.001f; // Corruption accÈlÈrÈe
+                            severityAdjustment += 0.001f; // Corruption accÔøΩlÔøΩrÔøΩe
                         }
                     }
                 }
@@ -247,7 +207,7 @@ namespace Mod_warult
             base.CompPostPostAdd(dinfo);
 
             Messages.Message(
-                $"{Pawn.Name.ToStringShort} dÈveloppe une corruption artistique...",
+                $"{Pawn.Name.ToStringShort} dÔøΩveloppe une corruption artistique...",
                 MessageTypeDefOf.NegativeHealthEvent
             );
         }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HeadTypeDef>
+        <defName>NevronNormal</defName>
+        <label>tête nevron normale</label>
+        <graphicPath>Things/Pawn/Humanlike/Heads/Nevron/nevronDechut/Average_Normal/nevronDechutHead</graphicPath>
+    </HeadTypeDef>
+</Defs>

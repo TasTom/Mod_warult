@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- RAID MASSIF - utilise la faction par défaut -->
+    <IncidentDef>
+        <defName>Expedition33_NevronMassRaid</defName>
+        <label>marée du gommage</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_NevronMassRaid</workerClass>
+        <baseChance>0.5</baseChance>
+        <minPopulation>4</minPopulation>
+        <earliestDay>10</earliestDay>
+        <minThreatPoints>800</minThreatPoints> <!-- AUGMENTÉ pour plus d'unités -->
+        <letterText>Une vague de Nevrons corrompus par la Paintress déferle sur votre colonie, guidée par une volonté collective mystérieuse. Leur nombre et leur férocité sont inhabituels.</letterText>
+        <letterLabel>Marée du Gommage</letterLabel>
+        <letterDef>ThreatBig</letterDef>
+        <!-- ✅ SUPPRIMÉ: pawnGroupMaker (invalide) -->
+    </IncidentDef>
+
+    <!-- DÉCOUVERTE NID (Custom worker - OK) -->
+    <IncidentDef>
+        <defName>Expedition33_NevronNestDiscovery</defName>
+        <label>nid chromatique découvert</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_NevronNestDiscovery</workerClass>
+        <baseChance>0.3</baseChance>
+        <minPopulation>2</minPopulation>
+        <earliestDay>5</earliestDay>
+        <letterText>Vos colons tombent sur un amas de matière chromatique palpitante. À l'intérieur, des œufs de Nevrons et des fragments d'artefacts du Gommage attendent d'être étudiés... ou détruits.</letterText>
+        <letterLabel>Nid du Gommage</letterLabel>
+        <letterDef>NeutralEvent</letterDef>
+    </IncidentDef>
+
+    <!-- ATTAQUE PITANK ALPHA - utilise la faction par défaut -->
+    <IncidentDef>
+        <defName>Expedition33_PitankAlphaAttack</defName>
+        <label>attaque du pitank alpha</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_PitankAlphaAttack</workerClass>
+        <baseChance>0.15</baseChance>
+        <earliestDay>20</earliestDay>
+        <minThreatPoints>1500</minThreatPoints> <!-- AUGMENTÉ pour plus de chance d'avoir des Pitanks -->
+        <letterText>Un Pitank Alpha, colosse du Gommage, mène une horde de Nevrons. Sa présence déforme la réalité et galvanise ses congénères.</letterText>
+        <letterLabel>Pitank Alpha</letterLabel>
+        <letterDef>ThreatBig</letterDef>
+        <!-- ✅ SUPPRIMÉ: pawnGroupMaker (invalide) -->
+    </IncidentDef>
+
+    <!-- ARTEFACT CHROMATIQUE (Custom worker - OK) -->
+    <IncidentDef>
+        <defName>Expedition33_ChromaticArtifactDiscovery</defName>
+        <label>artefact chromatique</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_ChromaticArtifactCrash</workerClass>
+        <baseChance>0.4</baseChance>
+        <earliestDay>12</earliestDay>
+        <letterText>Un artefact étrange, vibrant d'énergie chromatique, a été repéré non loin de votre colonie. Les Nevrons semblent irrésistiblement attirés par sa présence.</letterText>
+        <letterLabel>Artefact Chromatique</letterLabel>
+        <letterDef>PositiveEvent</letterDef>
+    </IncidentDef>
+
+    <!-- MIGRATION NEVRONS (Custom worker - OK) -->
+    <IncidentDef>
+        <defName>Expedition33_NevronMigration</defName>
+        <label>migration de névrons</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>Mod_warult.IncidentWorker_NevronMigration</workerClass>
+        <baseChance>0.25</baseChance>
+        <earliestDay>8</earliestDay>
+        <letterText>Un troupeau de Nevrons traverse la région, fuyant une menace inconnue. Certains pourraient devenir agressifs si approchés.</letterText>
+        <letterLabel>Migration Chromatique</letterLabel>
+        <letterDef>NeutralEvent</letterDef>
+    </IncidentDef>
+</Defs>

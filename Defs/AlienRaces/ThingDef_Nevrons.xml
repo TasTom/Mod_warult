@@ -9,7 +9,7 @@
         <graphicData>
             <texPath>Things/Pawn/Animal/Nevrons/lancier</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(2.5, 2.5)</drawSize> <!-- AUGMENTÉ de (2.0, 2.0) -->
+            <drawSize>(2.5, 2.5)</drawSize>
         </graphicData>
 
         <statBases>
@@ -23,8 +23,8 @@
         
         <race>
             <body>Expedition33_NevronBody</body>
-            <baseBodySize>2.0</baseBodySize> <!-- AUGMENTÉ de 1.5 -->
-            <baseHealthScale>1.5</baseHealthScale> <!-- AUGMENTÉ -->
+            <baseBodySize>2.0</baseBodySize>
+            <baseHealthScale>1.5</baseHealthScale>
             <lifeExpectancy>100</lifeExpectancy>
             <predator>true</predator>
             <herdAnimal>false</herdAnimal>
@@ -44,7 +44,6 @@
                 <li>
                     <def>AnimalAdult</def>
                     <minAge>0</minAge>
-
                     <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
                     <soundDeath>Pawn_Megascarab_Death</soundDeath>
                     <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -56,14 +55,13 @@
             <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
         </race>
         
-        <!-- OUTILS AVEC DÉGÂTS AUGMENTÉS (proportionnels à la taille) -->
         <tools>
             <li>
                 <label>griffes chromatiques</label>
                 <capacities>
                     <li>Scratch</li>
                 </capacities>
-                <power>15</power> <!-- AUGMENTÉ de 12 -->
+                <power>15</power>
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
             </li>
@@ -72,7 +70,7 @@
                 <capacities>
                     <li>Bite</li>
                 </capacities>
-                <power>20</power> <!-- AUGMENTÉ de 16 -->
+                <power>20</power>
                 <cooldownTime>2.6</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <chanceFactor>0.7</chanceFactor>
@@ -82,7 +80,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>14</power> <!-- AUGMENTÉ de 10 -->
+                <power>14</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -90,16 +88,15 @@
             </li>
         </tools>
         
-        <!-- LUMINESCENCE -->
         <comps>
             <li Class="CompProperties_Glower">
-                <glowRadius>4</glowRadius> <!-- AUGMENTÉ de 3 -->
+                <glowRadius>4</glowRadius>
                 <glowColor>(180,120,200,0)</glowColor>
             </li>
         </comps>
         
         <butcherProducts>
-            <Expedition33_ChromaRaw>3</Expedition33_ChromaRaw> <!-- AUGMENTÉ de 2 -->
+            <Expedition33_ChromaRaw>3</Expedition33_ChromaRaw>
         </butcherProducts>
         
         <tradeTags>
@@ -117,11 +114,11 @@
         <graphicData>
             <texPath>Things/Pawn/Animal/Nevrons/petanque</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(3.5, 3.5)</drawSize> <!-- TRÈS GRAND -->
+            <drawSize>(3.5, 3.5)</drawSize>
         </graphicData>
 
         <statBases>
-            <MoveSpeed>3.2</MoveSpeed> <!-- RÉDUIT pour compenser la taille -->
+            <MoveSpeed>3.2</MoveSpeed>
             <MarketValue>800</MarketValue>
             <ComfyTemperatureMin>-40</ComfyTemperatureMin>
             <ComfyTemperatureMax>50</ComfyTemperatureMax>
@@ -129,8 +126,8 @@
         
         <race>
             <body>Expedition33_NevronBody</body>
-            <baseBodySize>3.0</baseBodySize> <!-- ÉNORME -->
-            <baseHealthScale>3.5</baseHealthScale> <!-- TRÈS RÉSISTANT -->
+            <baseBodySize>3.0</baseBodySize>
+            <baseHealthScale>3.5</baseHealthScale>
             <lifeExpectancy>200</lifeExpectancy>
             <predator>true</predator>
             <herdAnimal>false</herdAnimal>
@@ -145,14 +142,11 @@
             <intelligence>Animal</intelligence>
             <hasGenders>false</hasGenders>
             <gestationPeriodDays>-1</gestationPeriodDays>
-            
-
 
             <lifeStageAges>
                 <li>
                     <def>AnimalAdult</def>
                     <minAge>0</minAge>
-                    
                     <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
                     <soundDeath>Pawn_Megascarab_Death</soundDeath>
                     <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -164,14 +158,13 @@
             <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
         </race>
         
-        <!-- OUTILS DÉVASTATEURS -->
         <tools>
             <li>
                 <label>griffes massives</label>
                 <capacities>
                     <li>Scratch</li>
                 </capacities>
-                <power>25</power> <!-- TRÈS PUISSANT -->
+                <power>25</power>
                 <cooldownTime>2.2</cooldownTime>
                 <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
             </li>
@@ -180,7 +173,7 @@
                 <capacities>
                     <li>Bite</li>
                 </capacities>
-                <power>35</power> <!-- DÉVASTATEUR -->
+                <power>35</power>
                 <cooldownTime>3</cooldownTime>
                 <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
                 <chanceFactor>0.8</chanceFactor>
@@ -190,7 +183,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>28</power> <!-- TRÈS PUISSANT -->
+                <power>28</power>
                 <cooldownTime>4</cooldownTime>
                 <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -198,16 +191,15 @@
             </li>
         </tools>
         
-        <!-- LUMINESCENCE TRÈS FORTE -->
         <comps>
             <li Class="CompProperties_Glower">
-                <glowRadius>6</glowRadius> <!-- TRÈS VISIBLE -->
+                <glowRadius>6</glowRadius>
                 <glowColor>(200,100,220,0)</glowColor>
             </li>
         </comps>
         
         <butcherProducts>
-            <Expedition33_ChromaRaw>8</Expedition33_ChromaRaw> <!-- BEAUCOUP -->
+            <Expedition33_ChromaRaw>8</Expedition33_ChromaRaw>
         </butcherProducts>
         
         <tradeTags>
@@ -215,4 +207,204 @@
             <li>AnimalFighter</li>
         </tradeTags>
     </ThingDef>
+
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+        <defName>Expedition33_NevronDechutRace</defName>
+        <label>nevron déchu</label>
+        <description>Un humain corrompu par Le Gommage, transformé en créature bestiale mais conservant son intelligence...</description>
+        
+        <alienRace>
+            <graphicPaths>
+                <head>
+                    <path>Things/Pawn/Humanlike/Heads/Nevron/nevronDechut/</path>
+                    <headtypeGraphics>
+                        <NevronNormal>Things/Pawn/Humanlike/Heads/Nevron/nevronDechut/Average_Normal/nevronDechutHead</NevronNormal>
+                    </headtypeGraphics>
+                </head>
+                <body>
+                    <path>Things/Pawn/Humanlike/Bodies/Nevron/nevronDechut</path>
+                </body>
+            </graphicPaths>
+
+            <generalSettings>
+                <humanRecipeImport>true</humanRecipeImport>
+                <maleGenderProbability>1.0</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <maxDamageForSocialfight>12</maxDamageForSocialfight>
+                <alienPartGenerator>
+                    <headTypes>
+                        <li>NevronNormal</li> <!-- Correspond à tes fichiers renommés -->
+                    </headTypes>
+                    <bodyTypes>
+                        <li>Male</li>
+                    </bodyTypes>
+
+
+                         
+                    <customDrawSize>(2, 2)</customDrawSize>
+                    <customHeadDrawSize>(2.0, 2.0)</customHeadDrawSize>
+                    <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+                </alienPartGenerator>
+               
+                
+            </generalSettings>
+            
+            <styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            
+            <thoughtSettings>
+                <cannotReceiveThoughts>
+                    <li>AteRawFood</li>
+                    <li>SleptInCold</li>
+                    <li>SleptInHeat</li>
+                </cannotReceiveThoughts>
+            </thoughtSettings>
+            
+            <raceRestriction>
+                <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+            </raceRestriction>
+        </alienRace>
+        
+        <statBases>
+            <MarketValue>1500</MarketValue>
+            <CarryingCapacity>80</CarryingCapacity>
+            <GlobalLearningFactor>0.6</GlobalLearningFactor>
+            <PsychicSensitivity>0.3</PsychicSensitivity>
+            <RestRateMultiplier>0.8</RestRateMultiplier>
+            <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+            <MoveSpeed>4.0</MoveSpeed>
+            <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <LeatherAmount>0</LeatherAmount>
+            <MeatAmount>0</MeatAmount>
+            <Flammability>0.8</Flammability>
+            <PainShockThreshold>1.2</PainShockThreshold>
+            <MentalBreakThreshold>0.15</MentalBreakThreshold>
+            <MeleeDodgeChance>12</MeleeDodgeChance>
+            <MeleeHitChance>1.3</MeleeHitChance>
+        </statBases>
+        
+        <tools>
+            <li>
+                <label>griffes corrompues gauches</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>16</power>
+                <cooldownTime>1.6</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>griffes corrompues droites</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>16</power>
+                <cooldownTime>1.6</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>morsure bestiale</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>22</power>
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.5</chanceFactor>
+            </li>
+        </tools>
+        
+        <race>
+            <renderTree>Humanlike</renderTree>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>120</lifeExpectancy>
+            <bloodDef>Filth_Blood</bloodDef>
+            <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
+            <leatherDef>Leather_Human</leatherDef>  <!-- ✅ CORRIGÉ: leatherDef au lieu de leaderDef -->
+            <fleshType>Normal</fleshType>
+            <hasGenders>true</hasGenders>
+            <nameCategory>HumanStandard</nameCategory>
+            <body>Human</body>
+            <meatColor>(102, 51, 76)</meatColor>
+            <baseHealthScale>1.5</baseHealthScale>
+            <baseBodySize>3.0</baseBodySize>
+            <foodType>OmnivoreHuman</foodType>
+            <gestationPeriodDays>45</gestationPeriodDays>
+            <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+
+            <lifeStageAges>
+                <li>
+                    <def>HumanlikeBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeChild</def>
+                    <minAge>3</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeTeenager</def>
+                    <minAge>13</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeAdult</def>
+                    <minAge>18</minAge>
+                </li>
+            </lifeStageAges>
+            
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Generic</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+        <!-- ✅ CORRECT -->
+            <ageGenerationCurve>
+                <points>
+                    <li>(0, 0)</li>     <!-- ✅ Commence à y=0 -->
+                    <li>(18, 0)</li>    <!-- ✅ Pas de génération avant 18 ans -->
+                    <li>(20, 100)</li>  <!-- ✅ Pic de génération à 20 ans -->
+                    <li>(30, 100)</li>
+                    <li>(50, 80)</li>
+                    <li>(80, 30)</li>
+                    <li>(120, 0)</li>   <!-- ✅ Finit à y=0 -->
+                </points>
+            </ageGenerationCurve>
+            <hediffGiverSets>
+                <li>OrganicStandard</li>
+                <li>Human</li>
+            </hediffGiverSets>
+        </race>
+        
+        <recipes>
+            <li>ExciseCarcinoma</li>
+            <li>AdministerMechSerumHealer</li>
+            <li>RemoveBodyPart</li>
+            <li>Euthanize</li>
+            <li>Anesthetize</li>
+            <li>CureScaria</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+        </recipes>
+    </AlienRace.ThingDef_AlienRace>
 </Defs>

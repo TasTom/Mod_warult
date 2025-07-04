@@ -5,36 +5,86 @@
 		<label>la Paintress</label>
 		<description>Une entité monstrueuse qui manipule la réalité avec son pinceau mystique.</description>
 
+		<graphicData>
+            <texPath>Things/Pawn/Animal/Nevrons/Paintress/Paintress</texPath> <!-- Utilise tes textures -->
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(6.0, 6.0)</drawSize> <!-- ÉNORME -->
+        </graphicData>
+
+
 		<statBases>
-			<MoveSpeed>1.5</MoveSpeed>
-			<MarketValue>5000</MarketValue>
+			<MoveSpeed>2.0</MoveSpeed>
+			<MarketValue>50000</MarketValue>
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>60</ComfyTemperatureMax>
 			<LeatherAmount>0</LeatherAmount>
 			<MeatAmount>0</MeatAmount>
+			<MeleeDodgeChance>30</MeleeDodgeChance>
+            <MeleeHitChance>150</MeleeHitChance>
+            <PainShockThreshold>2.0</PainShockThreshold>
 		</statBases>
 
 		<comps>
 			<li Class="Mod_warult.CompProperties_PaintressDeath">
 				<compClass>Mod_warult.CompPaintressDeath</compClass>
 			</li>
+			<!-- ✅ AJOUTÉ: Capacités de boss -->
+            <li Class="Mod_warult.CompProperties_BossAbilities">
+                <compClass>Mod_warult.CompBossAbilities</compClass>
+            </li>
+            <!-- ✅ AJOUTÉ: Aura lumineuse -->
+            <li Class="CompProperties_Glower">
+                <glowRadius>15</glowRadius>
+                <glowColor>(200,50,255,0)</glowColor>
+            </li>
 		</comps>
 		
-		<tools>
-			<li>
-				<label>pinceau mystique</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>35</power>
-				<cooldownTime>1.2</cooldownTime>
-			</li>
-		</tools>
+		 <tools>
+            <li>
+                <label>pinceau mystique</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>45</power>
+                <cooldownTime>1.0</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup> <!-- ✅ CORRIGÉ -->
+            </li>
+            <li>
+                <label>griffes réalité</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>1.2</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup> <!-- ✅ CORRIGÉ -->
+            </li>
+            <li>
+                <label>morsure du gommage</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>60</power>
+                <cooldownTime>2.0</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup> <!-- ✅ OK -->
+                <chanceFactor>0.3</chanceFactor>
+            </li>
+            <li>
+                <label>charge chromatique</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>80</power>
+                <cooldownTime>4.0</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup> <!-- ✅ OK -->
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.1</chanceFactor>
+            </li>
+        </tools>
 
 		<race>
 			<body>Human</body>
-			<baseBodySize>5.0</baseBodySize>
-			<baseHealthScale>8.0</baseHealthScale>
+			<baseBodySize>6.0</baseBodySize>
+			<baseHealthScale>12.0</baseHealthScale>
 			<baseHungerRate>0.0</baseHungerRate>
 			
 			
@@ -46,21 +96,31 @@
 			<predator>true</predator>
 			<maxPreyBodySize>10</maxPreyBodySize>
 			<lifeExpectancy>1000</lifeExpectancy>
+
+			  <!-- INTELLIGENCE AMÉLIORÉE -->
+            <intelligence>ToolUser</intelligence> <!-- Plus smart que Animal -->
+            <trainability>Advanced</trainability> <!-- Peut utiliser des tactiques -->
+
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
 					<!-- CORRECTION - Sons existants -->
-					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
-					<soundDeath>Pawn_Megascarab_Death</soundDeath>
-					<soundCall>Pawn_Megascarab_Call</soundCall>
-					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
-				</li>
+				    <soundWounded>Pawn_Thrumbo_Pain</soundWounded> <!-- Plus grand -->
+                    <soundDeath>Pawn_Thrumbo_Death</soundDeath>
+                    <soundCall>Pawn_Thrumbo_Call</soundCall>
+                    <soundAngry>Pawn_Thrumbo_Angry</soundAngry>
+                </li>
 			</lifeStageAges>
 			<!-- CORRECTION - Sons existants -->
-			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		</race>
+		<butcherProducts>
+            <Expedition33_ChromaRaw>25</Expedition33_ChromaRaw> <!-- ÉNORME récompense -->
+            <Gold>15</Gold> <!-- Bonus précieux -->
+        </butcherProducts>
+
 	</ThingDef>
 </Defs>

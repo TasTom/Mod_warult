@@ -13,14 +13,63 @@ namespace Mod_warult
 {
     public class ExpeditionProgressionManager : IExposable
     {
+        // ✅ AJOUT DU PATTERN SINGLETON
+        private static ExpeditionProgressionManager _instance;
+        private static readonly object _lock = new object();
+
+        public static ExpeditionProgressionManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_lock)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new ExpeditionProgressionManager();
+                        }
+                    }
+                }
+                return _instance;
+            }
+        }
+
         private List<ExpeditionMission> missions;
         private int currentMissionIndex = 0;
         private Dictionary<string, bool> completedObjectives;
+
+        // ✅ AJOUT: HashSet pour les capacités débloquées
+        private HashSet<string> unlockedAbilities = new HashSet<string>();
 
         public ExpeditionProgressionManager()
         {
             InitializeMissions();
             completedObjectives = new Dictionary<string, bool>();
+            unlockedAbilities = new HashSet<string>();
+            _instance = this; // Assigne l'instance
+        }
+
+        // ✅ NOUVELLE MÉTHODE: UnlockAbility pour CompExpeditionProgression
+        public void UnlockAbility(string abilityType)
+        {
+            if (string.IsNullOrEmpty(abilityType)) return;
+
+            if (unlockedAbilities.Add(abilityType))
+            {
+                Log.Message($"✅ Ability unlocked globally: {abilityType}");
+
+                Messages.Message(
+                    $"Capacité débloquée pour toute l'équipe : {abilityType}",
+                    MessageTypeDefOf.PositiveEvent
+                );
+            }
+        }
+
+        // ✅ NOUVELLE MÉTHODE: IsAbilityUnlocked
+        public bool IsAbilityUnlocked(string abilityType)
+        {
+            return !string.IsNullOrEmpty(abilityType) && unlockedAbilities.Contains(abilityType);
         }
 
         private void InitializeMissions()
@@ -89,6 +138,8 @@ namespace Mod_warult
             };
         }
 
+        // ... (garde toutes tes autres méthodes existantes) ...
+
         public ExpeditionMission GetCurrentMission()
         {
             if (currentMissionIndex < missions.Count)
@@ -106,7 +157,6 @@ namespace Mod_warult
             var currentMission = GetCurrentMission();
             if (currentMission == null) return;
 
-            // Vérifications automatiques des objectifs
             foreach (string objective in currentMission.objectives)
             {
                 if (!IsObjectiveCompleted(objective))
@@ -115,8 +165,6 @@ namespace Mod_warult
                 }
             }
         }
-
-
 
         private void CheckSpecificObjective(string objective)
         {
@@ -135,7 +183,6 @@ namespace Mod_warult
                         break;
 
                     case "rechercher 'détection du gommage'":
-                        // PROTECTION CONTRE NULL
                         try
                         {
                             var researchDef = DefDatabase<ResearchProjectDef>.GetNamedSilentFail("Expedition33_GommageDetection");
@@ -148,38 +195,9 @@ namespace Mod_warult
                         }
                         break;
 
-
-                    case "éliminer 10 entités du gommage":
-                        // TODO: Implémenter le comptage des ennemis tués
-                        break;
-
-                    case "collecter 5 échantillons de corruption":
-                        // TODO: Implémenter le comptage des échantillons
-                        break;
-
-                    case "survivre 3 jours dans une zone contaminée":
-                        // TODO: Implémenter le comptage du temps de survie
-                        break;
-
                     case "fabriquer 3 dispositifs de purification":
                         if (CountItemsOfType("Expedition33_PurificationDevice") >= 3)
                             CompleteObjective(objective);
-                        break;
-
-                    case "purifier une zone corrompue":
-                        // TODO: Implémenter la vérification de purification
-                        break;
-
-                    case "protéger les dispositifs pendant 2 jours":
-                        // TODO: Implémenter le comptage de protection
-                        break;
-
-                    case "localiser l'avatar du gommage":
-                        // TODO: Implémenter la détection de boss
-                        break;
-
-                    case "vaincre l'avatar en combat":
-                        // TODO: Implémenter la vérification de victoire
                         break;
 
                     case "récupérer son essence corrompue":
@@ -217,7 +235,7 @@ namespace Mod_warult
         public bool CompleteObjective(string objectiveId)
         {
             if (completedObjectives.ContainsKey(objectiveId) && completedObjectives[objectiveId])
-                return false; // Déjà complété
+                return false;
 
             completedObjectives[objectiveId] = true;
 
@@ -235,16 +253,12 @@ namespace Mod_warult
             var completedMission = missions[currentMissionIndex];
             currentMissionIndex++;
 
-            // Déclencher des récompenses et événements
             TriggerMissionRewards(completedMission);
-
-            // Envoyer une lettre de progression
             SendProgressionLetter(completedMission);
         }
 
         private void TriggerMissionRewards(ExpeditionMission mission)
         {
-            // Implémenter les récompenses selon la mission
             switch (mission.id)
             {
                 case "mission_01_awakening":
@@ -257,7 +271,6 @@ namespace Mod_warult
                     UnlockResearch("Expedition33_AdvancedPurification");
                     break;
                 case "mission_04_boss_mineur":
-                    // Donner des artefacts spéciaux
                     GrantSpecialRewards();
                     break;
             }
@@ -266,22 +279,19 @@ namespace Mod_warult
         private void UnlockResearch(string researchDefName)
         {
             var researchDef = ResearchProjectDef.Named(researchDefName);
-            if (researchDef != null && !researchDef.IsFinished) // CORRIGÉ
+            if (researchDef != null && !researchDef.IsFinished)
             {
                 Find.ResearchManager.FinishProject(researchDef);
             }
         }
-   
 
         private void GrantSpecialRewards()
         {
-            // Donner des objets spéciaux ou des bonus
             Map playerMap = Find.AnyPlayerHomeMap;
             if (playerMap != null)
             {
-                DropCellFinder.FindSafeLandingSpot(out IntVec3 dropSpot, null, playerMap); 
-                
-                // Créer des récompenses spéciales
+                DropCellFinder.FindSafeLandingSpot(out IntVec3 dropSpot, null, playerMap);
+
                 Thing silver = ThingMaker.MakeThing(ThingDefOf.Silver);
                 silver.stackCount = 1000;
                 GenPlace.TryPlaceThing(silver, dropSpot, playerMap, ThingPlaceMode.Near);
@@ -336,17 +346,25 @@ namespace Mod_warult
             Scribe_Collections.Look(ref missions, "missions", LookMode.Deep);
             Scribe_Values.Look(ref currentMissionIndex, "currentMissionIndex", 0);
             Scribe_Collections.Look(ref completedObjectives, "completedObjectives", LookMode.Value, LookMode.Value);
-            
+            // ✅ AJOUT: Sauvegarde des capacités débloquées
+            Scribe_Collections.Look(ref unlockedAbilities, "unlockedAbilities");
+
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if (missions == null)
                     InitializeMissions();
                 if (completedObjectives == null)
                     completedObjectives = new Dictionary<string, bool>();
+                if (unlockedAbilities == null)
+                    unlockedAbilities = new HashSet<string>();
+
+                // ✅ RÉASSIGNE L'INSTANCE APRÈS CHARGEMENT
+                _instance = this;
             }
         }
     }
 
+    // ✅ CLASSE MANQUANTE: ExpeditionMission
     public class ExpeditionMission : IExposable
     {
         public string id;
@@ -362,12 +380,16 @@ namespace Mod_warult
             rewards = new List<string>();
         }
 
+        // ✅ AMÉLIORATION dans ExpeditionMission
         public bool IsCompleted(Dictionary<string, bool> completedObjectives)
         {
-            if (objectives == null || objectives.Count == 0) return false;
-            return objectives.All(obj => completedObjectives.ContainsKey(obj) && completedObjectives[obj]);
+            if (objectives?.Count == 0) return false;
+            
+            return objectives.All(obj => 
+                !string.IsNullOrEmpty(obj) && 
+                completedObjectives.ContainsKey(obj) && 
+                completedObjectives[obj]);
         }
-
         public int GetCompletedObjectivesCount(Dictionary<string, bool> completedObjectives)
         {
             if (objectives == null) return 0;
@@ -393,6 +415,8 @@ namespace Mod_warult
         }
     }
 
+
+    // ✅ CLASSE MANQUANTE: GameComponent_ExpeditionProgress
     public class GameComponent_ExpeditionProgress : GameComponent
     {
         private int tickCounter = 0;
@@ -402,24 +426,24 @@ namespace Mod_warult
 
         public override void GameComponentTick()
         {
-            // tickCounter++;
-            // if (tickCounter >= CHECK_INTERVAL)
-            // {
-            //     tickCounter = 0;
-            //     CheckExpeditionProgress();
-            // }
+            tickCounter++;
+            if (tickCounter >= CHECK_INTERVAL)
+            {
+                tickCounter = 0;
+                CheckExpeditionProgress();
+            }
         }
 
         private void CheckExpeditionProgress()
         {
-            // Trouver tous les QG et vérifier leur progression
-            foreach (Map map in Find.Maps)
+            // Vérification automatique des objectifs
+            try
             {
-                var headquarters = map.listerBuildings.allBuildingsColonist
-                    .OfType<Building_Headquarters>()
-                    .FirstOrDefault();
-                
-                headquarters?.progressionManager?.CheckAllObjectives();
+                ExpeditionProgressionManager.Instance?.CheckAllObjectives();
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"Error in CheckExpeditionProgress: {ex.Message}");
             }
         }
 
@@ -429,4 +453,5 @@ namespace Mod_warult
             Scribe_Values.Look(ref tickCounter, "tickCounter", 0);
         }
     }
+    // ... (garde tes autres classes ExpeditionMission et GameComponent_ExpeditionProgress) ...
 }

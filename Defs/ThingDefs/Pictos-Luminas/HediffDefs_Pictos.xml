@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Conteneur neutre utilisé par tous les Pictos pour stocker leurs bonus -->
+  <!-- <HediffDef>
+    <defName>Expedition33_PictoBonus</defName>
+    <label>empreinte de picto</label>
+    <description>Effets passifs conférés par les artefacts chromatiques.</description>
+
+  
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+
+        <stages>
+        <li>
+        <statOffsets>
+      
+            <MaxHitPoints>1</MaxHitPoints>
+            <MoveSpeed>1</MoveSpeed>
+            <ArmorRating_Sharp>1</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1</ArmorRating_Blunt>
+            <MeleeHitChance>1</MeleeHitChance>
+            <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+            <MeleeDamageFactor>1</MeleeDamageFactor>
+            <InjuryHealingFactor>1</InjuryHealingFactor>
+            <ImmunityGainSpeed>1</ImmunityGainSpeed>
+            <ResearchSpeed>1</ResearchSpeed>
+            <GlobalLearningFactor>1</GlobalLearningFactor>
+        </statOffsets>
+        </li>
+  </stages>
+  </HediffDef> -->
+    <!-- ✅ HEDIFF POUR PICTO VITALITY -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Vitality</defName>
+        <label>empreinte de picto - vitalité</label>
+        <description>Bonus conféré par un picto de vitalité.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MaxHitPoints>20</MaxHitPoints>
+                    <MoveSpeed>0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ✅ HEDIFF POUR PICTO DEFENSE -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Defense</defName>
+        <label>empreinte de picto - défense</label>
+        <description>Bonus conféré par un picto de défense.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ✅ HEDIFF POUR PICTO CRITICAL -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Critical</defName>
+        <label>empreinte de picto - critique</label>
+        <description>Bonus conféré par un picto critique.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeHitChance>0.2</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ✅ HEDIFF POUR PICTO GUARDIAN -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Guardian</defName>
+        <label>empreinte de picto - gardien</label>
+        <description>Bonus conféré par un picto gardien.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ✅ HEDIFF POUR PICTO STRIKER -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Striker</defName>
+        <label>empreinte de picto - frappeur</label>
+        <description>Bonus conféré par un picto frappeur.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeDamageFactor>0.20</MeleeDamageFactor>
+                    <MeleeHitChance>5.0</MeleeHitChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ✅ HEDIFF POUR PICTO HEALER -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Healer</defName>
+        <label>empreinte de picto - soigneur</label>
+        <description>Bonus conféré par un picto soigneur.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <InjuryHealingFactor>0.30</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.40</ImmunityGainSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- ✅ HEDIFF POUR PICTO SCHOLAR -->
+    <HediffDef>
+        <defName>Expedition33_PictoBonus_Scholar</defName>
+        <label>empreinte de picto - érudit</label>
+        <description>Bonus conféré par un picto érudit.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ResearchSpeed>0.40</ResearchSpeed>
+                    <GlobalLearningFactor>0.30</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

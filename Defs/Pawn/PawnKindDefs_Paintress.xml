@@ -5,7 +5,8 @@
 		<label>la Paintress</label>
 		<!-- CRUCIAL - Utilise ta race monstre, pas AlienRace -->
 		<race>Expedition33_PaintressMonster</race>
-		
+        <canBeSapper>true</canBeSapper> <!-- Peut détruire les murs -->
+		<defaultFactionType>Expedition33_Nevrons</defaultFactionType>
 		<combatPower>5000</combatPower>
 		<fixedGender>Female</fixedGender>
 		<ecoSystemWeight>2.0</ecoSystemWeight>
@@ -13,7 +14,7 @@
 			<li>
 				<bodyGraphicData>
 					<!-- CORRECTION - Chemin pour animal, pas humanoïde -->
-					<texPath>Things/Pawn/Animal/Paintress/Paintress</texPath>
+					<texPath>Things/Pawn/Animal/Nevrons/Paintress/Paintress</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>8.0</drawSize>
 					<shaderType>CutoutComplex</shaderType>

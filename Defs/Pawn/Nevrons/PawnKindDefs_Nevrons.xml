@@ -8,7 +8,7 @@
         <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
         
         <!-- COMBAT STATS -->
-        <combatPower>150</combatPower>
+        <combatPower>40</combatPower>
         <canArriveManhunter>true</canArriveManhunter>
         <canBeSapper>false</canBeSapper>
         <factionLeader>false</factionLeader>
@@ -50,11 +50,11 @@
     <PawnKindDef>
         <defName>Expedition33_Pitank</defName>
         <label>pitank</label>
-        <race>Expedition33_Nevron</race>
+        <race>Expedition33_Pitank</race>
         <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
         
         <!-- COMBAT STATS (Plus fort) -->
-        <combatPower>400</combatPower>
+        <combatPower>50</combatPower>
         <canArriveManhunter>true</canArriveManhunter>
         <canBeSapper>true</canBeSapper> <!-- Peut percer les murs -->
         <factionLeader>false</factionLeader>
@@ -90,6 +90,46 @@
         </lifeStages>
     </PawnKindDef>
 
+    <!-- Pitank Alpha pour raids spéciaux -->
+    <PawnKindDef>
+        <defName>Expedition33_PitankAlpha</defName>
+        <label>pitank alpha</label>
+        <race>Expedition33_Pitank</race>
+        <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+        <combatPower>100</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
+        <canBeSapper>true</canBeSapper>
+        <factionLeader>false</factionLeader>
+        <weaponMoney>0~0</weaponMoney>
+        <apparelMoney>0~0</apparelMoney>
+        <techHediffsMoney>0~0</techHediffsMoney>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFiltersOverride>
+
+        <lifeStages>
+        <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Animal/Nevrons/petanque</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>4.0</drawSize>
+                <color>(0.3, 0.1, 0.2)</color>
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+                <texPath>Things/Pawn/Animal/Thrumbo/Dessicated_Thrumbo</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>4.0</drawSize>
+            </dessicatedBodyGraphicData>
+        </li>
+    </lifeStages>
+    </PawnKindDef>
+
+
     <!-- Amphorien CORRIGÉ -->
     <PawnKindDef>
         <defName>Expedition33_Amphorien</defName>
@@ -98,7 +138,7 @@
         <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
         
         <!-- COMBAT STATS -->
-        <combatPower>250</combatPower>
+        <combatPower>60</combatPower>
         <canArriveManhunter>true</canArriveManhunter>
         <canBeSapper>false</canBeSapper>
         <factionLeader>false</factionLeader> <!-- CHANGÉ: pas de leader pour éviter les erreurs -->
@@ -117,7 +157,7 @@
                 <commonality>1</commonality>
             </li>
         </backstoryFiltersOverride>
-                <lifeStages>
+            <lifeStages>
             <li>
             <bodyGraphicData>
                 <texPath>Things/Pawn/Animal/Nevrons/amphorien</texPath> <!-- TEMPORAIRE: utilisez des textures vanilla -->
@@ -134,27 +174,63 @@
         </lifeStages>
     </PawnKindDef>
 
-    <!-- Nouveau PawnKindDef pour un leader humanoïde -->
-    <!-- <PawnKindDef>
-        <defName>Expedition33_Nevron_Leader</defName>
-        <label>maître du gommage</label>
-        <race>Human</race>
+    <!-- Guerrier corrompu -->
+    <!-- NevronDechut - Approche Simple et Stable -->
+    <PawnKindDef>
+        <defName>Expedition33_NevronDechut</defName>
+        <label>nevron déchu</label>
+        <race>Expedition33_NevronDechutRace</race> 
         <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
         
-        <combatPower>200</combatPower>
-        <factionLeader>true</factionLeader> 
+        <combatPower>60</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <factionLeader>true</factionLeader>
+        <!-- EQUIPMENT MINIMAL (Corrompus = déguenillés) -->
+        <weaponMoney>0</weaponMoney>
+        <apparelMoney>0</apparelMoney>
+        <techHediffsMoney>0</techHediffsMoney>
         
-      
-        <weaponMoney>100~300</weaponMoney>
-        <apparelMoney>200~500</apparelMoney>
+
+        <!-- PROPRIÉTÉS HUMAINES REQUISES -->
+        <initialResistanceRange>3~10</initialResistanceRange> <!-- Volonté faible -->
+        <initialWillRange>1~3</initialWillRange>
         
+        <!-- WEAPONS/APPAREL BASIQUES -->
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+        
+        <apparelTags>
+            <li>Neolithic</li>
+        </apparelTags>
+        
+        <!-- BACKSTORY SIMPLE -->
         <backstoryFiltersOverride>
             <li>
                 <categories>
+                    <li>Tribal</li>
                     <li>Outlander</li>
                 </categories>
-                <commonality>1</commonality>
             </li>
         </backstoryFiltersOverride>
-    </PawnKindDef> -->
+        
+        <!-- TON SKIN CUSTOM APPLIQUÉ -->
+        <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Animal/Nevrons/nevronDechut</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>5.0</drawSize>
+            </bodyGraphicData>
+
+                <!-- <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Dessicated_Thin</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.5</drawSize>
+                </dessicatedBodyGraphicData> -->
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+
 </Defs>

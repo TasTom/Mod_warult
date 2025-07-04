@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Bonus de Vitalité -->
+    <HediffDef>
+        <defName>Expedition33_VitalityBonus</defName>
+        <label>vitalité améliorée</label>
+        <description>Bonus permanent de vitalité obtenu par progression de niveau.</description>
+        <hediffClass>Hediff</hediffClass>
+        <maxSeverity>9.0</maxSeverity>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.1</minSeverity>
+                <statOffsets>
+                    <MaxHitPoints>10</MaxHitPoints>
+                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>1.0</minSeverity>
+                <statOffsets>
+                    <MaxHitPoints>25</MaxHitPoints>
+                    <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+                    <PainShockThreshold>0.1</PainShockThreshold>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>3.0</minSeverity>
+                <statOffsets>
+                    <MaxHitPoints>50</MaxHitPoints>
+                    <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+                    <PainShockThreshold>0.2</PainShockThreshold>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>6.0</minSeverity>
+                <statOffsets>
+                    <MaxHitPoints>100</MaxHitPoints>
+                    <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+                    <PainShockThreshold>0.3</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <!-- Bonus de Dextérité -->
+    <HediffDef>
+        <defName>Expedition33_DexterityBonus</defName>
+        <label>dextérité améliorée</label>
+        <description>Bonus permanent de dextérité obtenu par progression de niveau.</description>
+        <hediffClass>Hediff</hediffClass>
+        <maxSeverity>9.0</maxSeverity>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.1</minSeverity>
+                <statOffsets>
+                    <MeleeHitChance>0.05</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>1.0</minSeverity>
+                <statOffsets>
+                    <MeleeHitChance>0.1</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.08</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>2</MeleeDodgeChance>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>3.0</minSeverity>
+                <statOffsets>
+                    <MeleeHitChance>0.2</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>5</MeleeDodgeChance>
+                    <MoveSpeed>0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>6.0</minSeverity>
+                <statOffsets>
+                    <MeleeHitChance>0.35</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>10</MeleeDodgeChance>
+                    <MoveSpeed>0.2</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <!-- Bonus de Chance -->
+    <HediffDef>
+        <defName>Expedition33_ChanceBonus</defName>
+        <label>chance améliorée</label>
+        <description>Bonus permanent de chance obtenu par progression de niveau.</description>
+        <hediffClass>Hediff</hediffClass>
+        <maxSeverity>9.0</maxSeverity>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.1</minSeverity>
+                <statOffsets>
+                    <TradePriceImprovement>0.03</TradePriceImprovement>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>1.0</minSeverity>
+                <statOffsets>
+                    <TradePriceImprovement>0.08</TradePriceImprovement>
+                    <PlantHarvestYield>0.1</PlantHarvestYield>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>3.0</minSeverity>
+                <statOffsets>
+                    <TradePriceImprovement>0.15</TradePriceImprovement>
+                    <PlantHarvestYield>0.2</PlantHarvestYield>
+                    <MiningYield>0.1</MiningYield>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>6.0</minSeverity>
+                <statOffsets>
+                    <TradePriceImprovement>0.25</TradePriceImprovement>
+                    <PlantHarvestYield>0.3</PlantHarvestYield>
+                    <MiningYield>0.2</MiningYield>
+                    <ResearchSpeed>0.15</ResearchSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <!-- Bonus de niveau général -->
+    <HediffDef>
+        <defName>Expedition33_LevelBonus</defName>
+        <label>expérience de l'expédition</label>
+        <description>Sagesse acquise par l'expérience de l'Expédition 33.</description>
+        <hediffClass>Hediff</hediffClass>
+        <maxSeverity>5.0</maxSeverity>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.25</minSeverity>
+                <statOffsets>
+                    <GlobalLearningFactor>0.05</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>1.0</minSeverity>
+                <statOffsets>
+                    <GlobalLearningFactor>0.1</GlobalLearningFactor>
+                    <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>2.5</minSeverity>
+                <statOffsets>
+                    <GlobalLearningFactor>0.2</GlobalLearningFactor>
+                    <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+                    <PsychicSensitivity>-0.1</PsychicSensitivity>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>4.5</minSeverity>
+                <statOffsets>
+                    <GlobalLearningFactor>0.3</GlobalLearningFactor>
+                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+                    <PsychicSensitivity>-0.2</PsychicSensitivity>
+                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>
