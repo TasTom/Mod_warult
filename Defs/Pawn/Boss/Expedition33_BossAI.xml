@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ───────────────────────── 1. Arbre générique ───────────────────────── -->
+  <ThinkTreeDef Name="Expedition33_BaseBoss_AI" Abstract="True">
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- États spéciaux -->
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <subNodes>
+            <li Class="JobGiver_KeepLyingDown"/>
+          </subNodes>
+        </li>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="ThinkNode_QueuedJob"/>
+
+        <!-- Capacités de boss -->
+        <li Class="Mod_warult.ThinkNode_AbilityUser"/>
+
+        <!-- Combat direct -->
+        <li Class="JobGiver_ConfigurableHostilityResponse"/>
+        <li Class="JobGiver_AIFightEnemies"/>
+
+        <!-- Déplacements -->
+        <li Class="JobGiver_WanderAnywhere">
+          <wanderRadius>10</wanderRadius>
+          <ticksBetweenWandersRange>125~200</ticksBetweenWandersRange>
+          <maxDanger>Deadly</maxDanger>
+        </li>
+
+        <li Class="JobGiver_IdleError"/>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+
+  <!-- ───────────────────────── 2. Arbres spécifiques ─────────────────────── -->
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Eveque_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Goblu_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_SakapatateRobuste_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_SakapatateUltime_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Francois_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_MaitreDesLampes_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Dualiste_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Renoir_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Sirene_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Visages_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Peintresse_AI</defName>
+  </ThinkTreeDef>
+
+    <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Verso_AI</defName>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef ParentName="Expedition33_BaseBoss_AI">
+    <defName>Expedition33_Mime_AI</defName>
+  </ThinkTreeDef>
+
+
+</Defs>

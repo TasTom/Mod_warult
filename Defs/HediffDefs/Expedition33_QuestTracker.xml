@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>Expedition33_QuestTracker</defName>
+    <label>suivi de quête Expedition 33</label>
+    <description>Suit la progression narrative principale d'Expedition 33.</description>
+    <hediffClass>Mod_warult.Hediff_QuestTracker</hediffClass>
+    <defaultLabelColor>(0.7, 0.7, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    <lethalSeverity>-1</lethalSeverity>
+    <makesSickThought>false</makesSickThought>
+    <tendable>false</tendable>
+    <!-- Suppression des propriétés en double qui causent l'erreur -->
+  </HediffDef>
+
+</Defs>

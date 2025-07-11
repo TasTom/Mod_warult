@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- INCIDENTS DE GÉNÉRATION DE SITES BOSS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<!-- Dans AllBossIncidents.xml -->
+<IncidentDef>
+  <defName>Expedition33_SpawnEvequeSite</defName>
+  <label>découverte du Sanctuaire de l'Evêque</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_EvequeSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Eveque</bossDefName>
+      <questId>ActeI_VallonsFleuris</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+
+<IncidentDef>
+  <defName>Expedition33_SpawnGobluSite</defName>
+  <label>découverte des Vallons Fleuris</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_GobluSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Goblu</bossDefName>
+      <questId>ActeI_VallonsFleuris</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnSakapatateRobusteSite</defName>
+  <label>découverte de l'Océan Suspendu</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_SakapatateRobusteSitePart</sitePartDefName>
+      <bossDefName>Expedition33_SakapatateRobuste</bossDefName>
+      <questId>ActeI_OceanSuspendu</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnSakapatateUltimeSite</defName>
+  <label>découverte du Sanctuaire Ancien</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_SakapatateUltimeSitePart</sitePartDefName>
+      <bossDefName>Expedition33_SakapatateUltime</bossDefName>
+      <questId>ActeI_SanctuaireAncien</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnFrancoisSite</defName>
+  <label>découverte du Nid d'Esquie</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_FrancoisSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Francois</bossDefName>
+      <questId>ActeI_NidEsquie</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnMaitreDesLampesSite</defName>
+  <label>découverte du Sanctuaire de Lumière</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_MaitreDesLampesSitePart</sitePartDefName>
+      <bossDefName>Expedition33_MaitreDesLampes</bossDefName>
+      <questId>ActeI_Final</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnDualisteSite</defName>
+  <label>découverte des Terres Oubliées</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_DualisteSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Dualiste</bossDefName>
+      <questId>ActeII_TerresOubliees</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnRenoirSite</defName>
+  <label>découverte du Manoir de Renoir</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_RenoirSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Renoir</bossDefName>
+      <questId>ActeII_Manoir</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnSireneSite</defName>
+  <label>découverte du Domaine de la Sirène</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_SireneSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Sirene</bossDefName>
+      <questId>ActeII_LesAxons</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnVisagesSite</defName>
+  <label>découverte du Palais des Visages</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_VisagesSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Visages</bossDefName>
+      <questId>ActeII_LesAxons</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_SpawnPeintresseSite</defName>
+  <label>découverte du Monolithe</label>
+  <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
+  <category>Misc</category>
+  <baseChance>0</baseChance>
+  <targetTags>
+    <li>World</li>
+  </targetTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <sitePartDefName>Expedition33_PeintresseSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Peintresse</bossDefName>
+      <questId>ActeII_Final</questId>
+    </li>
+  </modExtensions>
+</IncidentDef>
+
+</Defs>

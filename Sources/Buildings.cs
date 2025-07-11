@@ -6,16 +6,18 @@ using UnityEngine;
 
 namespace Mod_warult
 {
-    // Détecteur d'âge maudit
+    // Dï¿½tecteur d'ï¿½ge maudit
     public class Building_CursedAgeDetector : Building
     {
         private int lastDetectedAge = -1;
         private int detectionCooldown = 0;
         private bool isActive = false;
 
-        public override void Tick()
+        protected override void Tick()      // â† protected, pas public
         {
             base.Tick();
+
+
 
             if (!isActive || detectionCooldown > 0)
             {
@@ -23,7 +25,7 @@ namespace Mod_warult
                 return;
             }
 
-            if (Find.TickManager.TicksGame % 2500 == 0)
+            if (GenTicks.TicksGame % 2500 == 0)
             {
                 DetectCursedAge();
             }
@@ -40,12 +42,12 @@ namespace Mod_warult
             {
                 lastDetectedAge = currentAge;
 
-                string message = $"DÉTECTEUR D'ÂGE MAUDIT ACTIVÉ !\n\n" +
-                               $"Âge actuellement peint sur le monolithe : {currentAge} ans\n\n" +
-                               $"Tous les colons de cet âge sont en danger immédiat !";
+                string message = $"Dï¿½TECTEUR D'ï¿½GE MAUDIT ACTIVï¿½ !\n\n" +
+                               $"ï¿½ge actuellement peint sur le monolithe : {currentAge} ans\n\n" +
+                               $"Tous les colons de cet ï¿½ge sont en danger immï¿½diat !";
 
                 Find.LetterStack.ReceiveLetter(
-                    "Âge Maudit Détecté",
+                    "ï¿½ge Maudit Dï¿½tectï¿½",
                     message,
                     LetterDefOf.NeutralEvent,
                     this
@@ -61,27 +63,27 @@ namespace Mod_warult
 
             if (lastDetectedAge != -1)
             {
-                baseString += $"\nÂge maudit détecté : {lastDetectedAge} ans";
+                baseString += $"\nï¿½ge maudit dï¿½tectï¿½ : {lastDetectedAge} ans";
             }
 
             if (detectionCooldown > 0)
             {
                 int hours = detectionCooldown / 2500;
-                baseString += $"\nProchaine détection dans : {hours}h";
+                baseString += $"\nProchaine dï¿½tection dans : {hours}h";
             }
 
             return baseString;
         }
     }
 
-    // Générateur de champ anti-Gommage
+    // Gï¿½nï¿½rateur de champ anti-Gommage
     public class Building_AntiGommageField : Building
     {
         private int fieldRadius = 15;
         private bool fieldActive = false;
         private List<Pawn> protectedColonists = new List<Pawn>();
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
 
@@ -161,7 +163,7 @@ namespace Mod_warult
         {
             string baseString = base.GetInspectString();
             baseString += $"\nRayon de protection : {fieldRadius} cases";
-            baseString += $"\nColons protégés : {protectedColonists.Count}";
+            baseString += $"\nColons protï¿½gï¿½s : {protectedColonists.Count}";
             baseString += $"\nChamp actif : {(fieldActive ? "Oui" : "Non")}";
             return baseString;
         }

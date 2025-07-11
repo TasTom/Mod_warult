@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- DutyDef pour défendre une position -->
+  <DutyDef>
+    <defName>BossDefendPoint</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <subNodes>
+            <li Class="JobGiver_KeepLyingDown"/>
+          </subNodes>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_QueuedJob"/>
+        <li Class="Mod_warult.ThinkNode_AbilityUser"/>
+        <li Class="JobGiver_ConfigurableHostilityResponse"/>
+        <li Class="JobGiver_AIFightEnemies"/>
+        <li Class="JobGiver_WanderAnywhere">
+          <wanderRadius>10</wanderRadius>
+          <ticksBetweenWandersRange>125~200</ticksBetweenWandersRange>
+          <maxDanger>Deadly</maxDanger>
+        </li>
+        <li Class="JobGiver_IdleError"/>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <!-- DutyDef pour assaut sur la colonie -->
+  <DutyDef>
+    <defName>BossAssaultColony</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <subNodes>
+            <li Class="JobGiver_KeepLyingDown"/>
+          </subNodes>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_QueuedJob"/>
+        
+        <!-- Capacités de boss -->
+        <li Class="Mod_warult.ThinkNode_AbilityUser"/>
+        
+        <!-- Assaut agressif -->
+        <li Class="JobGiver_ConfigurableHostilityResponse"/>
+        <li Class="JobGiver_AIFightEnemies"/>  <!-- ✅ CORRIGÉ -->
+        
+        <!-- Déplacement vers les ennemis -->
+        <li Class="JobGiver_WanderAnywhere">
+          <wanderRadius>15</wanderRadius>      <!-- ✅ AJOUTÉ -->
+          <ticksBetweenWandersRange>60~120</ticksBetweenWandersRange>  <!-- ✅ AJOUTÉ -->
+          <maxDanger>Deadly</maxDanger>
+        </li>
+        <li Class="JobGiver_IdleError"/>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+</Defs>

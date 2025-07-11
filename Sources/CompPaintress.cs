@@ -13,6 +13,22 @@ using Verse.Sound;
 
 namespace Mod_warult
 {
+    public class ThinkNode_BossAbilities : ThinkNode
+    {
+        public override ThinkResult TryIssueJobPackage(Pawn pawn, JobIssueParams jobParams)
+        {
+            // Vérifier si c'est un boss avec les capacités spéciales
+            var comp = pawn.GetComp<CompBossAbilities>();
+            if (comp != null)
+            {
+                // Le boss a des capacités spéciales, laisser l'IA normale gérer
+                return ThinkResult.NoJob;
+            }
+            
+            return ThinkResult.NoJob;
+        }
+    }
+
     public class CompPaintressDeath : ThingComp
     {
         public override void PostDestroy(DestroyMode mode, Map previousMap)

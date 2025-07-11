@@ -64,7 +64,7 @@ namespace Mod_warult
             if (gameComp?.currentPaintedAge != null && gameComp.currentPaintedAge != -1)
             {
                 int daysUntilNext = gameComp.nextPaintingTick > 0
-                    ? (gameComp.nextPaintingTick - Find.TickManager.TicksGame) / 60000
+                    ? (gameComp.nextPaintingTick - GenTicks.TicksGame) / 60000
                     : 999;
 
                 return $"�GE PEINT SUR LE MONOLITHE : {gameComp.currentPaintedAge} ANS\n\n" +

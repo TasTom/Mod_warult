@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DES BOSS - L'EVÊQUE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_SacredHealing</defName>
+  <label>guérison sacrée</label>
+  <description>Régénération accélérée grâce à la lumière sacrée.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 1.0, 0.8)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>600</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <InjuryHealingFactor>5.0</InjuryHealingFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_SacredBlindness</defName>
+  <label>cécité sacrée</label>
+  <description>Aveuglé par la lumière divine, précision grandement réduite.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 0.8, 0.0)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1200</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+        <MeleeHitChance>0.4</MeleeHitChance>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_DivineRegeneration</defName>
+  <label>régénération divine</label>
+  <description>Régénération divine puissante de l'Evêque.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 1.0, 1.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <InjuryHealingFactor>10.0</InjuryHealingFactor>
+        <IncomingDamageFactor>0.5</IncomingDamageFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DES BOSS BASIQUES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_RapidMovement</defName>
+  <label>mouvement rapide</label>
+  <description>Vitesse de déplacement considérablement augmentée.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>900</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MoveSpeed>2.0</MoveSpeed>
+        <MeleeHitChance>1.3</MeleeHitChance>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_RapidMovementBuff</defName>
+  <label>mouvement rapide</label>
+  <description>Vitesse de déplacement considérablement augmentée.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>900</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MoveSpeed>2.0</MoveSpeed>
+        <MeleeHitChance>1.3</MeleeHitChance>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_HeavyArmor</defName>
+  <label>blindage renforcé</label>
+  <description>Protection lourde qui réduit massivement les dégâts.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.6, 0.6, 0.8)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.3</IncomingDamageFactor>
+        <MoveSpeed>0.7</MoveSpeed>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_HeavyArmorBuff</defName>
+  <label>blindage renforcé</label>
+  <description>Protection lourde qui réduit massivement les dégâts.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.6, 0.6, 0.8)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.3</IncomingDamageFactor>
+        <MoveSpeed>0.7</MoveSpeed>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_SlowRegeneration</defName>
+  <label>régénération lente</label>
+  <description>Régénération constante mais progressive.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3600</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <InjuryHealingFactor>2.0</InjuryHealingFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_SlowRegenerationBuff</defName>
+  <label>régénération lente</label>
+  <description>Régénération constante mais progressive.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3600</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <InjuryHealingFactor>2.0</InjuryHealingFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_EnergyShields</defName>
+  <label>boucliers d'énergie</label>
+  <description>Boucliers énergétiques qui absorbent les attaques.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.2, 0.6, 1.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2400</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.4</IncomingDamageFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_EnergyShieldsBuff</defName>
+  <label>boucliers d'énergie</label>
+  <description>Boucliers énergétiques qui absorbent les attaques.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.2, 0.6, 1.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2400</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.4</IncomingDamageFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DU MAÎTRE DES LAMPES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_LightConfusion</defName>
+  <label>confusion lumineuse</label>
+  <description>Confus par les jeux de lumière du Maître des Lampes, la vision et la précision sont altérées.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 1.0, 0.6)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1500</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+        <MeleeHitChance>0.6</MeleeHitChance>
+        <MoveSpeed>0.8</MoveSpeed>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.3</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_LampMastery</defName>
+  <label>maîtrise des lampes</label>
+  <description>Entouré par l'énergie des lampes spectrales, bénéficie d'une aura protectrice.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 0.9, 1.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>4800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.7</IncomingDamageFactor>
+        <InjuryHealingFactor>1.5</InjuryHealingFactor>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>0.2</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_LampCurse</defName>
+  <label>malédiction des lampes</label>
+  <description>Maudit par les lampes sombres, subissez des effets néfastes aléatoires.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.4, 0.2, 0.6)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3600</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+        <MeleeHitChance>0.6</MeleeHitChance>
+        <MoveSpeed>0.8</MoveSpeed>
+        <WorkSpeedGlobal>0.7</WorkSpeedGlobal>
+        <MentalBreakThreshold>1.3</MentalBreakThreshold>
+      </statFactors>
+      <hediffGivers>
+        <li Class="HediffGiver_Random">
+          <hediff>Cataract</hediff>
+          <mtbDays>5</mtbDays>
+        </li>
+      </hediffGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DU DUALISTE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_LightBlindness</defName>
+  <label>aveuglement lumineux</label>
+  <description>Aveuglé par la frappe claire du Dualiste.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 1.0, 0.5)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>900</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+        <MeleeHitChance>0.3</MeleeHitChance>
+        <MoveSpeed>0.7</MoveSpeed>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_DarknessSlow</defName>
+  <label>ralentissement obscur</label>
+  <description>Ralenti par l'explosion obscure, mouvement et réflexes diminués.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.3, 0.0, 0.3)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1500</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MoveSpeed>0.5</MoveSpeed>
+        <WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+        <MeleeHitChance>0.7</MeleeHitChance>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_LightMode</defName>
+  <label>mode lumière</label>
+  <description>Le Dualiste est en mode lumière, résistant aux attaques obscures.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 1.0, 0.8)</defaultLabelColor>
+  <isBad>false</isBad>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.7</IncomingDamageFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_DarkMode</defName>
+  <label>mode obscur</label>
+  <description>Le Dualiste est en mode obscur, résistant aux attaques lumineuses.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.3, 0.0, 0.3)</defaultLabelColor>
+  <isBad>false</isBad>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.7</IncomingDamageFactor>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DE FRANÇOIS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_FrancoisTerror</defName>
+  <label>terreur de François</label>
+  <description>Terrifié par la présence mortelle de François. Toutes les capacités sont drastiquement réduites.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2400</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+        <MeleeHitChance>0.4</MeleeHitChance>
+        <MoveSpeed>0.6</MoveSpeed>
+        <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+        <MentalBreakThreshold>2.0</MentalBreakThreshold>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DE COMMANDANT RENOIR -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_CommanderBoost</defName>
+  <label>boost du commandant</label>
+  <description>Inspiré par les ordres tactiques de Renoir, toutes les capacités de combat sont améliorées.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 0.6, 0.2)</defaultLabelColor>
+  <isBad>false</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3600</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>1.4</ShootingAccuracyPawn>
+        <MeleeHitChance>1.3</MeleeHitChance>
+        <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        <MoveSpeed>1.15</MoveSpeed>
+        <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DE LA SIRÈNE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_SonicStun</defName>
+  <label>étourdissement sonique</label>
+  <description>Étourdi par l'onde sonique de la Sirène. Mouvements ralentis et capacités réduites.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.5, 0.7, 0.9)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MoveSpeed>0.3</MoveSpeed>
+        <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+        <MeleeHitChance>0.4</MeleeHitChance>
+        <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.3</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_MindControlled</defName>
+  <label>contrôle mental</label>
+  <description>Esprit dominé par la Sirène. Agit temporairement comme un ennemi contre ses anciens alliés.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 0.2, 0.8)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1200</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MentalBreakThreshold>0.01</MentalBreakThreshold>
+      </statFactors>
+      <mentalStateGivers>
+        <li>
+          <mentalState>Berserk</mentalState>
+          <mtbDays>0.01</mtbDays>
+        </li>
+      </mentalStateGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DES VISAGES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_FaceShifted</defName>
+  <label>visage altéré</label>
+  <description>Identité temporairement modifiée par les Visages. Les relations et la reconnaissance sont perturbées.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.6, 0.4, 0.6)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2400</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <SocialImpact>0.5</SocialImpact>
+        <NegotiationAbility>0.3</NegotiationAbility>
+        <TradePriceImprovement>0.7</TradePriceImprovement>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.2</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_IdentityConfusion</defName>
+  <label>confusion d'identité</label>
+  <description>Confus sur sa propre identité et celle des autres. Peut attaquer par erreur des alliés.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.7, 0.3, 0.7)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+        <MeleeHitChance>0.6</MeleeHitChance>
+        <SocialImpact>0.2</SocialImpact>
+      </statFactors>
+      <mentalStateGivers>
+        <li>
+          <mentalState>WanderConfused</mentalState>
+          <mtbDays>0.1</mtbDays>
+        </li>
+      </mentalStateGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DE LA PEINTRESSE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_GommageCountdown</defName>
+  <label>compte à rebours du gommage</label>
+  <description>Un nombre mortel a été inscrit ! Le compte à rebours vers la disparition commence...</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 0.0, 0.0)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>6000</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MentalBreakThreshold>3.0</MentalBreakThreshold>
+        <MoveSpeed>0.8</MoveSpeed>
+        <WorkSpeedGlobal>0.7</WorkSpeedGlobal>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.1</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+  <lethalSeverity>1.0</lethalSeverity>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_CosmicPaint</defName>
+  <label>peinture cosmique</label>
+  <description>Marqué par le pinceau cosmique de la Peintresse. La réalité se déforme autour de vous.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 0.2, 0.8)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3600</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+        <MeleeHitChance>0.5</MeleeHitChance>
+        <MoveSpeed>0.7</MoveSpeed>
+        <IncomingDamageFactor>1.3</IncomingDamageFactor>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.4</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_NumberCurse</defName>
+  <label>malédiction du nombre</label>
+  <description>Un nombre néfaste a été inscrit sur vous. Ses effets aléatoires se manifestent de manière imprévisible.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>4800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
+        <MeleeHitChance>0.7</MeleeHitChance>
+        <WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+        <MentalBreakThreshold>1.5</MentalBreakThreshold>
+      </statFactors>
+      <hediffGivers>
+        <li Class="HediffGiver_Random">
+          <hediff>BadBack</hediff>
+          <mtbDays>2</mtbDays>
+        </li>
+      </hediffGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_TimeConfusion</defName>
+  <label>confusion temporelle</label>
+  <description>Pris dans les distorsions temporelles de la Peintresse. Le temps semble s'écouler différemment.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.7, 0.3, 0.7)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+        <MeleeHitChance>0.6</MeleeHitChance>
+        <SocialImpact>0.2</SocialImpact>
+      </statFactors>
+      <mentalStateGivers>
+        <li>
+          <mentalState>WanderConfused</mentalState>
+          <mtbDays>0.2</mtbDays>
+        </li>
+      </mentalStateGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_MonolithCurse</defName>
+  <label>malédiction du monolithe</label>
+  <description>Marqué par le pouvoir ancien du Monolithe. Une malédiction cosmique s'abat sur vous.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.1, 0.1, 0.1)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>7200</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+        <MeleeHitChance>0.4</MeleeHitChance>
+        <MoveSpeed>0.6</MoveSpeed>
+        <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        <MentalBreakThreshold>2.5</MentalBreakThreshold>
+        <IncomingDamageFactor>1.5</IncomingDamageFactor>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.4</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.3</offset>
+        </li>
+      </capMods>
+      <hediffGivers>
+        <li Class="HediffGiver_Random">
+          <hediff>Frail</hediff>
+          <mtbDays>3</mtbDays>
+        </li>
+      </hediffGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+</Defs>

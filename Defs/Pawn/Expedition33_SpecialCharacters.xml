@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<PawnKindDef>
+  <defName>Expedition33_Verso</defName>
+  <label>Verso</label>
+  <race>Expedition33_VersoRace</race>
+  <defaultFactionType>PlayerColony</defaultFactionType>
+  <combatPower>400</combatPower>
+  <canArriveManhunter>false</canArriveManhunter>
+  <initialResistanceRange>20~30</initialResistanceRange>
+  <initialWillRange>8~10</initialWillRange>
+  <apparelTags>
+    <li>IndustrialBasic</li>
+  </apparelTags>
+  <weaponTags>
+    <li>IndustrialGunAdvanced</li>
+  </weaponTags>
+
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Verso</def>
+      </li>
+    </forcedTraits>
+
+  <modExtensions>
+    <li Class="Mod_warult.BossExtension">
+      <bossType>Ally</bossType>
+      <questReward>ancient_knowledge</questReward>
+      <specialMechanics>
+        <li>immortality_fragment</li>
+        <li>expedition_zero_memories</li>
+        <li>fracture_parfaite</li>
+      </specialMechanics>
+    </li>
+  </modExtensions>
+</PawnKindDef>
+
+
+ 
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_SakapatateUltime</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Elite</bossType>
+        <questReward>unlock_ancient_sanctuary_secrets</questReward>
+        <creatureName>Sakapatate l'Ultime</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>heavy_armor</li>
+          <li>energy_shields</li>
+          <li>area_attacks</li>
+          <li>supreme_power</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+<PawnKindDef>
+  <defName>Expedition33_Mime</defName>
+  <label>le Mime</label>
+  <race>Human</race>
+  <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+  <combatPower>120</combatPower>
+  <canArriveManhunter>false</canArriveManhunter>
+  <backstoryCategories>
+    <li>Civil</li>
+  </backstoryCategories>
+  <initialResistanceRange>8~15</initialResistanceRange>
+  <initialWillRange>2~4</initialWillRange>
+  <apparelTags>
+    <li>IndustrialBasic</li>
+  </apparelTags>
+  <weaponTags>
+    <li>IndustrialGunAdvanced</li>
+  </weaponTags>
+  <modExtensions>
+    <li Class="Mod_warult.BossExtension">
+      <bossType>Illusionist</bossType>
+      <questReward>minor_experience</questReward>
+      <specialMechanics>
+        <li>silence_aura</li>
+        <li>invisible_barriers</li>
+      </specialMechanics>
+    </li>
+  </modExtensions>
+</PawnKindDef>
+
+
+
+
+</Defs>

@@ -6,32 +6,22 @@ namespace Mod_warult
 {
     public class BiomeWorker_ContinentObscur : BiomeWorker
     {
-        public override float GetScore(Tile tile, int tileID)
+        // Signature 1.4+
+        public override float GetScore(BiomeDef biome, Tile tile, PlanetTile planetTile)
         {
-            if (tile.WaterCovered)
-                return -100f;
+            // Exemple de logique : donner un score élevé si tile.biome == biome
+            if (biome.defName != "Expedition33_ContinentObscur")
+                return -100f;                 // non concerné
 
-            if (tile.temperature < 5f || tile.temperature > 35f)
-                return 0f;
+            float score = 0f;
 
-            if (tile.hilliness == Hilliness.Flat)
-                return 0f;
+            // Facteurs basiques
+            score += (float)tile.elevation / 500f;     // plus haut = plus obscur
+            score -= tile.temperature / 10f;           // climat froid favorisé
+                                                       // marécageux
 
-            if (tile.rainfall < 400f)
-                return 0f;
-
-            // Bonus pour les zones montagneuses
-            if (tile.hilliness == Hilliness.Mountainous)
-                return 25f;
-
-            if (tile.hilliness == Hilliness.LargeHills)
-                return 20f;
-
-            if (tile.hilliness == Hilliness.SmallHills)
-                return 15f;
-
-            return 10f;
+            return score;
         }
-
     }
 }
+

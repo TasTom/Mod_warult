@@ -100,7 +100,7 @@ namespace Mod_warult
 
 			if (gameComp.nextPaintingTick > 0)
 			{
-				int ticksRemaining = gameComp.nextPaintingTick - Find.TickManager.TicksGame;
+				int ticksRemaining = gameComp.nextPaintingTick - GenTicks.TicksGame;
 				if (ticksRemaining > 0)
 				{
 					int daysRemaining = ticksRemaining / 60000; // 60000 ticks = 1 jour

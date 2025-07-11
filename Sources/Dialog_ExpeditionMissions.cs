@@ -7,24 +7,24 @@ using UnityEngine;
 using Verse.AI;
 using Verse.Sound;
 
-
 namespace Mod_warult
 {
     public class Dialog_ExpeditionMissions : Window
     {
-        private ExpeditionProgressionManager progressionManager;
+        private Hediff_QuestTracker questTracker;
         private Vector2 scrollPosition = Vector2.zero;
 
-        public Dialog_ExpeditionMissions(ExpeditionProgressionManager manager)
+        public Dialog_ExpeditionMissions(Pawn pawnWithTracker)
         {
-            this.progressionManager = manager;
+            this.questTracker = pawnWithTracker.health.hediffSet.GetFirstHediffOfDef(
+                DefDatabase<HediffDef>.GetNamed("Expedition33_QuestTracker")) as Hediff_QuestTracker;
             this.doCloseX = true;
             this.doCloseButton = true;
             this.closeOnClickedOutside = false;
             this.absorbInputAroundWindow = true;
         }
 
-        public override Vector2 InitialSize => new Vector2(600f, 500f);
+        public override Vector2 InitialSize => new Vector2(700f, 600f);
 
         public override void DoWindowContents(Rect inRect)
         {
@@ -38,15 +38,16 @@ namespace Mod_warult
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, viewRect);
 
             float curY = 0f;
-            var currentMission = progressionManager.GetCurrentMission();
 
-            if (currentMission != null)
+            // Mission actuelle
+            if (questTracker?.currentQuestId != null && QuestManager.AllQuests.ContainsKey(questTracker.currentQuestId))
             {
-                DrawMission(currentMission, new Rect(0f, curY, viewRect.width, 200f), true);
+                var currentMissionData = QuestManager.AllQuests[questTracker.currentQuestId];
+                DrawMission(currentMissionData, new Rect(0f, curY, viewRect.width, 200f), true);
                 curY += 210f;
             }
 
-            // Dessiner les missions précédentes (optionnel)
+            // Missions précédentes
             DrawCompletedMissions(ref curY, viewRect.width);
 
             Widgets.EndScrollView();
@@ -55,7 +56,7 @@ namespace Mod_warult
             DrawActionButtons(new Rect(0f, inRect.height - 50f, inRect.width, 40f));
         }
 
-        private void DrawMission(ExpeditionMission mission, Rect rect, bool isCurrent)
+        private void DrawMission(QuestData mission, Rect rect, bool isCurrent = false)
         {
             Color originalColor = GUI.color;
             if (isCurrent)
@@ -79,36 +80,104 @@ namespace Mod_warult
 
             foreach (string objective in mission.objectives)
             {
-                bool completed = progressionManager.IsObjectiveCompleted(objective);
+                bool completed = IsObjectiveCompleted(mission.questId, objective);
                 Color textColor = completed ? Color.green : Color.white;
 
                 GUI.color = textColor;
                 string prefix = completed ? "✓ " : "• ";
                 Widgets.Label(new Rect(rect.x + 20f, objY, rect.width - 40f, 20f), prefix + objective);
                 objY += 22f;
-                GUI.color = originalColor;
             }
+
+            GUI.color = originalColor;
+
+            // Statut de la mission
+            string status = isCurrent ? "EN COURS" : "TERMINÉE";
+            Color statusColor = isCurrent ? Color.yellow : Color.green;
+            GUI.color = statusColor;
+            Widgets.Label(new Rect(rect.x + 10f, rect.y + rect.height - 25f, 100f, 20f), status);
+            GUI.color = originalColor;
+        }
+
+        private bool IsObjectiveCompleted(string questId, string objective)
+        {
+            if (questTracker == null) return false;
+
+            // Si la quête est terminée, tous ses objectifs sont considérés comme complétés
+            if (questTracker.completedQuests.Contains(questId))
+                return true;
+
+            // Si c'est la quête actuelle, on peut ajouter une logique plus complexe ici
+            // Pour l'instant, on considère qu'aucun objectif de la quête courante n'est terminé
+            return false;
         }
 
         private void DrawCompletedMissions(ref float curY, float width)
         {
-            // Implémenter l'affichage des missions terminées si nécessaire
+            if (questTracker?.completedQuests == null || questTracker.completedQuests.Count == 0)
+                return;
+
+            // Titre des missions terminées
+            Widgets.Label(new Rect(10f, curY, width - 20f, 25f), "Missions Terminées:");
+            curY += 30f;
+
+            foreach (string completedQuestId in questTracker.completedQuests)
+            {
+                if (QuestManager.AllQuests.ContainsKey(completedQuestId))
+                {
+                    var missionData = QuestManager.AllQuests[completedQuestId];
+                    DrawMission(missionData, new Rect(0f, curY, width, 150f), false);
+                    curY += 160f;
+                }
+            }
         }
 
         private void DrawActionButtons(Rect rect)
         {
-            if (Widgets.ButtonText(new Rect(rect.x, rect.y, 150f, rect.height), "Actualiser"))
+            if (Widgets.ButtonText(new Rect(rect.x, rect.y-50f, 150f, rect.height), "Actualiser"))
             {
-                // Vérifier les objectifs manuellement
-                progressionManager.CheckAllObjectives();
+                // Fermer et rouvrir la fenêtre pour actualiser
+                Close();
+            }
+
+            if (Widgets.ButtonText(new Rect(rect.x + 160f, rect.y-50f, 150f, rect.height), "Progression"))
+            {
+                if (questTracker != null)
+                {
+                    string progressText = $"Quête actuelle: {questTracker.currentQuestId}\n";
+                    progressText += $"Quêtes terminées: {questTracker.completedQuests.Count}";
+
+                    Messages.Message(progressText, MessageTypeDefOf.NeutralEvent);
+                }
+            }
+
+                // ✅ BOUTON POUR FINIR LE PROLOGUE
+            if (questTracker?.currentQuestId == "Prologue_Start")
+            {
+                if (Widgets.ButtonText(new Rect(rect.x + 320f, rect.y-50f, 150f, rect.height), "🚢 PARTIR !"))
+                {
+                    questTracker.TriggerQuestEvent("EVENT_DEPARTURE");
+                    Messages.Message("🚀 L'Expédition 33 prend le départ vers l'inconnu !", MessageTypeDefOf.PositiveEvent);
+                    Close();
+                }
             }
         }
 
+        
+
         private float GetContentHeight()
         {
-            return 400f; // Ajuster selon le contenu
+            float height = 250f; // Hauteur pour la mission actuelle
+
+            if (questTracker?.completedQuests != null)
+            {
+                height += 50f; // Titre des missions terminées
+                height += questTracker.completedQuests.Count * 160f; // Chaque mission terminée
+            }
+
+            return Math.Max(height, 400f);
         }
+        
+        
     }
-    
-    
 }

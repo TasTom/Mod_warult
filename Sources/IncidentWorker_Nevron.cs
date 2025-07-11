@@ -340,7 +340,7 @@ namespace Mod_warult
                     Log.Message($"✅ PawnKind: {kindName}");
                     Log.Message($"   - Race: {pawnKind.race?.defName ?? "NULL"}");
                     Log.Message($"   - CombatPower: {pawnKind.combatPower}");
-                    Log.Message($"   - DefaultFaction: {pawnKind.defaultFactionType?.defName ?? "NULL"}");
+                    Log.Message($"   - DefaultFaction: {pawnKind.defaultFactionDef?.defName ?? "NULL"}");
 
                     // Test génération individuelle
                     try

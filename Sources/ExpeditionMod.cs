@@ -15,7 +15,7 @@ using HarmonyLib;
 
 namespace Mod_warult
 {
-    
+
 
 
     [StaticConstructorOnStartup]
@@ -29,6 +29,38 @@ namespace Mod_warult
             var h = new Harmony("warult.expedition33");
             h.PatchAll();                              // ← indispensable
             Log.Message("[Expedition33] Harmony PatchAll exécuté");
+        }
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(inRect);
+            
+            listing.Label($"Multiplicateur XP Combat: {ExpeditionSettings.combatXPMultiplier:F1}");
+            ExpeditionSettings.combatXPMultiplier = listing.Slider(ExpeditionSettings.combatXPMultiplier, 0.1f, 5.0f);
+            
+            listing.CheckboxLabeled("Partage d'XP activé", ref ExpeditionSettings.enableXPSharing);
+            
+            listing.End();
+        }
+    }
+
+
+        public class ExpeditionSettings : ModSettings
+    {
+        public static float combatXPMultiplier = 1.0f;
+        public static float soulXPMultiplier = 1.0f;
+        public static int pointsPerLevel = 3;
+        public static bool enableXPSharing = false;
+        public static float bossXPBonus = 10.0f; // Multiplicateur boss
+
+        public override void ExposeData()
+        {
+            Scribe_Values.Look(ref combatXPMultiplier, "combatXPMultiplier", 1.0f);
+            Scribe_Values.Look(ref soulXPMultiplier, "soulXPMultiplier", 1.0f);
+            Scribe_Values.Look(ref pointsPerLevel, "pointsPerLevel", 3);
+            Scribe_Values.Look(ref enableXPSharing, "enableXPSharing", false);
+            Scribe_Values.Look(ref bossXPBonus, "bossXPBonus", 10.0f);
+            base.ExposeData();
         }
     }
 
@@ -114,19 +146,19 @@ namespace Mod_warult
         }
     }
 
-    
 
 
 
 
 
 
-   
 
 
 
 
-    
+
+
+
 
 
 
@@ -171,8 +203,8 @@ namespace Mod_warult
         }
     }
 
-   
-    
+
+
 
     public class HediffComp_ArtisticCorruption : HediffComp
     {
@@ -212,5 +244,7 @@ namespace Mod_warult
             );
         }
     }
+
+    
 
 }

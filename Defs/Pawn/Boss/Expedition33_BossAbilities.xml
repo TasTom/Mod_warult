@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES DE L'EVÊQUE - GARDIEN SACRÉ -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+ <AbilityDef>
+    <defName>Expedition33_SacredLight</defName>
+    <label>lumière sacrée</label>
+    <description>Projette un rayon de lumière sacrée : soigne les alliés et aveugle les ennemis.</description>
+
+    <!-- icône affichée dans le gizmo -->
+    <iconPath>UI/Icons/Abilities/SacredLight</iconPath>
+
+    <!-- cooldown 30 s (1 800 ticks) -->
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <hostile>false</hostile>
+
+    <verbProperties>
+      <!-- classe C# contenant l’effet -->
+      <verbClass>Mod_warult.Verb_CastAbility_SacredLight</verbClass>
+
+      <!-- portée réelle du rayon -->
+      <range>15</range>
+
+      <!-- temps d’incantation avant l’effet -->
+      <warmupTime>2.0</warmupTime>
+
+      <!-- paramètres de ciblage                           -->
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>    <!-- on ne vise pas soi-même -->
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <!-- JobDef natif pour toutes les abilities ciblées -->
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <!-- ▸ PURIFICATION DIVINE  ▸ self-cast (zone de régénération) -->
+  <AbilityDef>
+    <defName>Expedition33_DivinePurification</defName>
+    <label>purification divine</label>
+    <description>Crée autour de Eveque une zone de purification : régénère la santé et repousse les ennemis proches</description>
+
+    <iconPath>UI/Icons/Abilities/DivinePurification</iconPath>
+
+    <!-- cooldown 60 s (3 600 ticks) -->
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <hostile>false</hostile>
+
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_DivinePurification</verbClass>
+
+      <!-- portée nulle : l’ability ne cible que soi-même -->
+      <range>0</range>
+      <warmupTime>3.0</warmupTime>
+
+
+      <!-- uniquement self-cast -->
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+
+    <!-- aucun jobDef : RimWorld utilise automatiquement CastAbilitySelf -->
+  </AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_IndigoBlast</defName>
+  <label>explosion d'indigo</label>
+  <description>Explosion d'énergie d'indigo qui inflige des dégâts dans une large zone.</description>
+  <iconPath>UI/Icons/Abilities/IndigoBlast</iconPath>
+  <cooldownTicksRange>4800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_IndigoBlast</verbClass>
+    <violent>true</violent>
+    <range>25</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetLocations>true</canTargetLocations>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <!-- ✅ UTILISER : Le nouveau JobDef -->
+  <jobDef>Expedition33_CastAbility</jobDef>
+</AbilityDef>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES BASIQUES - GOBLU ET SAKAPATATES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_RapidMovement</defName>
+  <label>mouvement rapide</label>
+  <description>Boost de vitesse temporaire permettant d'esquiver les attaques.</description>
+  <iconPath>UI/Icons/Abilities/RapidMovement</iconPath>
+  <cooldownTicksRange>1200</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_RapidMovement</verbClass>
+    <range>0</range>
+    <warmupTime>0.5</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <!-- <jobDef>CastAbilityOnThing</jobDef> -->
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_HeavyArmor</defName>
+  <label>blindage renforcé</label>
+  <description>Active un blindage temporaire qui réduit drastiquement les dégâts reçus.</description>
+  <iconPath>UI/Icons/Abilities/HeavyArmor</iconPath>
+  <cooldownTicksRange>2400</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_HeavyArmor</verbClass>
+    <range>0</range>
+    <warmupTime>1.5</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_SlowRegeneration</defName>
+  <label>régénération lente</label>
+  <description>Régénération constante mais lente des blessures pendant le combat.</description>
+  <iconPath>UI/Icons/Abilities/SlowRegeneration</iconPath>
+  <cooldownTicksRange>3600</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_SlowRegeneration</verbClass>
+    <range>0</range>
+    <warmupTime>2.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_EnergyShields</defName>
+  <label>boucliers d'énergie</label>
+  <description>Génère des boucliers d'énergie qui absorbent les attaques.</description>
+  <iconPath>UI/Icons/Abilities/EnergyShields</iconPath>
+  <cooldownTicksRange>4800</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_EnergyShields</verbClass>
+    <range>0</range>
+    <warmupTime>2.5</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_AreaAttacks</defName>
+  <label>attaques de zone</label>
+  <description>Attaque dévastatrice qui touche tous les ennemis dans un large rayon.</description>
+  <iconPath>UI/Icons/Abilities/AreaAttacks</iconPath>
+  <cooldownTicksRange>3600</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_AreaAttacks</verbClass>
+    <violent>true</violent>
+    <range>0</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <!-- <jobDef>CastAbilityOnThing</jobDef> -->
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES LUMINEUSES - MAÎTRE DES LAMPES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_LightManipulation</defName>
+  <label>manipulation de lumière</label>
+  <description>Contrôle l'éclairage de la zone, créant des zones sombres et lumineuses.</description>
+  <iconPath>UI/Icons/Abilities/LightManipulation</iconPath>
+  <cooldownTicksRange>2400</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_LightManipulation</verbClass>
+    <range>25</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_IlluminationAttacks</defName>
+  <label>attaques d'illumination</label>
+  <description>Projette des faisceaux lumineux qui aveuglent et brûlent les ennemis.</description>
+  <iconPath>UI/Icons/Abilities/IlluminationAttacks</iconPath>
+  <cooldownTicksRange>1800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_IlluminationAttacks</verbClass>
+    <violent>true</violent>
+    <range>20</range>
+    <warmupTime>2.0</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_LampMastery</defName>
+  <label>maîtrise des lampes</label>
+  <description>Convoque des lampes spectrales qui éclairent et attaquent les ennemis.</description>
+  <iconPath>UI/Icons/Abilities/LampMastery</iconPath>
+  <cooldownTicksRange>6000</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_LampMastery</verbClass>
+    <range>0</range>
+    <warmupTime>4.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES DU DUALISTE - MAÎTRE CLAIR-OBSCUR -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_ClairStrike</defName>
+  <label>frappe claire</label>
+  <description>Attaque de lumière pure qui traverse les armures et aveugle temporairement.</description>
+  <iconPath>UI/Icons/Abilities/ClairStrike</iconPath>
+  <cooldownTicksRange>1200</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_ClairStrike</verbClass>
+    <violent>true</violent>
+    <range>12</range>
+    <warmupTime>1.5</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_ObscurBlast</defName>
+  <label>explosion obscure</label>
+  <description>Explosion de ténèbres qui draine la vie et ralentit les ennemis.</description>
+  <iconPath>UI/Icons/Abilities/ObscurBlast</iconPath>
+  <cooldownTicksRange>1800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_ObscurBlast</verbClass>
+    <violent>true</violent>
+    <range>10</range>
+    <warmupTime>2.0</warmupTime>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_DualityShift</defName>
+  <label>changement de dualité</label>
+  <description>Inverse les résistances entre clair et obscur, changeant complètement les tactiques de combat.</description>
+  <iconPath>UI/Icons/Abilities/DualityShift</iconPath>
+  <cooldownTicksRange>2400</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_DualityShift</verbClass>
+    <range>0</range>
+    <warmupTime>1.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <!-- <jobDef>CastAbilityOnThing</jobDef> -->
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES DE FRANÇOIS - LA MENACE MORTELLE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_LethalStrike</defName>
+  <label>frappe mortelle</label>
+  <description>Attaque dévastatrice capable d'éliminer instantanément un ennemi. Très dangereuse.</description>
+  <iconPath>UI/Icons/Abilities/LethalStrike</iconPath>
+  <cooldownTicksRange>7200</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_LethalStrike</verbClass>
+    <violent>true</violent>
+    <range>8</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_FearAura</defName>
+  <label>aura de terreur</label>
+  <description>Génère une aura de peur qui réduit la précision et la volonté des ennemis proches.</description>
+  <iconPath>UI/Icons/Abilities/FearAura</iconPath>
+  <cooldownTicksRange>3600</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_FearAura</verbClass>
+    <range>0</range>
+    <warmupTime>2.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES DE COMMANDANT RENOIR -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_CommanderAura</defName>
+  <label>aura de commandement</label>
+  <description>Booste les capacités de combat de tous les alliés dans un large rayon.</description>
+  <iconPath>UI/Icons/Abilities/CommanderAura</iconPath>
+  <cooldownTicksRange>2400</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_CommanderAura</verbClass>
+    <range>0</range>
+    <warmupTime>1.5</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_TacticalStrike</defName>
+  <label>frappe tactique</label>
+  <description>Attaque coordonnée qui inflige plus de dégâts selon le nombre d'alliés présents.</description>
+  <iconPath>UI/Icons/Abilities/TacticalStrike</iconPath>
+  <cooldownTicksRange>1800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_TacticalStrike</verbClass>
+    <violent>true</violent>
+    <range>15</range>
+    <warmupTime>2.0</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_ExpeditionMemory</defName>
+  <label>mémoire d'expédition</label>
+  <description>Invoque les souvenirs de l'Expédition Zéro, faisant apparaître des membres corrompus temporaires.</description>
+  <iconPath>UI/Icons/Abilities/ExpeditionMemory</iconPath>
+  <cooldownTicksRange>6000</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_ExpeditionMemory</verbClass>
+    <range>0</range>
+    <warmupTime>4.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES DES AXONS (SIRÈNE ET VISAGES) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_SonicWave</defName>
+  <label>onde sonique</label>
+  <description>La Sirène émet une onde sonique dévastatrice qui traverse les obstacles.</description>
+  <iconPath>UI/Icons/Abilities/SonicWave</iconPath>
+  <cooldownTicksRange>3000</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_SonicWave</verbClass>
+    <violent>true</violent>
+    <range>25</range>
+    <warmupTime>3.5</warmupTime>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_MindControl</defName>
+  <label>contrôle mental</label>
+  <description>Prend temporairement le contrôle d'un ennemi, le retournant contre ses alliés.</description>
+  <iconPath>UI/Icons/Abilities/MindControl</iconPath>
+  <cooldownTicksRange>9000</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_MindControl</verbClass>
+    <range>18</range>
+    <warmupTime>4.0</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_FaceShift</defName>
+  <label>changement de visage</label>
+  <description>Les Visages changent d'identité, confondant les ennemis et altérant leurs capacités.</description>
+  <iconPath>UI/Icons/Abilities/FaceShift</iconPath>
+  <cooldownTicksRange>4800</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_FaceShift</verbClass>
+    <range>0</range>
+    <warmupTime>2.5</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_RealityDistortion</defName>
+  <label>distorsion de réalité</label>
+  <description>Déforme la réalité autour des Visages, créant des illusions dangereuses.</description>
+  <iconPath>UI/Icons/Abilities/RealityDistorsion</iconPath>
+  <cooldownTicksRange>7200</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_RealityDistortion</verbClass>
+    <range>0</range>
+    <warmupTime>5.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES DE LA PEINTRESSE - BOSS FINAL -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_GommageRitual</defName>
+  <label>rituel du gommage</label>
+  <description>Commence à inscrire un nombre mortel. Tous les personnages de cet âge risquent la disparition.</description>
+  <iconPath>UI/Icons/Abilities/GommageRitual</iconPath>
+  <cooldownTicksRange>12000</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_GommageRitual</verbClass>
+    <range>0</range>
+    <warmupTime>8.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_CosmicBrush</defName>
+  <label>pinceau cosmique</label>
+  <description>Peint des zones de danger sur la carte qui évoluent et se déplacent.</description>
+  <iconPath>UI/Icons/Abilities/CosmicBrush</iconPath>
+  <cooldownTicksRange>6000</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_CosmicBrush</verbClass>
+    <range>30</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_NumberInscription</defName>
+  <label>inscription de nombre</label>
+  <description>Inscrit un nombre dans l'air qui cause des effets aléatoires selon sa valeur.</description>
+  <iconPath>UI/Icons/Abilities/NumberInscription</iconPath>
+  <cooldownTicksRange>4800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_NumberInscription</verbClass>
+    <range>20</range>
+    <warmupTime>4.0</warmupTime>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_MonolithPower</defName>
+  <label>pouvoir du monolithe</label>
+  <description>Canalise la puissance du Monolithe pour une attaque dévastatrice finale.</description>
+  <iconPath>UI/Icons/Abilities/MonolithPower</iconPath>
+  <cooldownTicksRange>18000</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_MonolithPower</verbClass>
+    <violent>true</violent>
+    <range>0</range>
+    <warmupTime>10.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES SPÉCIALES - VERSO ET AUTRES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<AbilityDef>
+  <defName>Expedition33_ImmortalityFragment</defName>
+  <label>fragment d'immortalité</label>
+  <description>Verso utilise sa nature immortelle pour régénérer ses blessures.</description>
+  <iconPath>UI/Icons/Abilities/ImmortalityFragment</iconPath>
+  <cooldownTicksRange>7200</cooldownTicksRange>
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_ImmortalityFragment</verbClass>
+    <range>0</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_FractureParfaite</defName>
+  <label>fracture parfaite</label>
+  <description>Technique mystérieuse de Verso qui peut briser les défenses ennemies.</description>
+  <iconPath>UI/Icons/Abilities/FractureParfaite</iconPath>
+  <cooldownTicksRange>4800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_FractureParfaite</verbClass>
+    <violent>true</violent>
+    <range>12</range>
+    <warmupTime>2.5</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_CorruptedRage</defName>
+  <label>rage corrompue</label>
+  <description>Fureur alimentée par la corruption du Gommage.</description>
+  <iconPath>UI/Icons/Abilities/CorruptedRage</iconPath>
+  <cooldownTicksRange>1800</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_CorruptedRage</verbClass>
+    <range>0</range>
+    <warmupTime>1.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_SilenceAura</defName>
+  <label>aura de silence</label>
+  <description>Le Mime crée une zone de silence total autour de lui.</description>
+  <iconPath>UI/Icons/Abilities/SilenceAura</iconPath>
+  <cooldownTicksRange>2400</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_SilenceAura</verbClass>
+    <range>0</range>
+    <warmupTime>1.5</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_InvisibleBarriers</defName>
+  <label>barrières invisibles</label>
+  <description>Crée des barrières invisibles qui bloquent le mouvement et les projectiles.</description>
+  <iconPath>UI/Icons/Abilities/InvisibleBarriers</iconPath>
+  <cooldownTicksRange>3600</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_InvisibleBarriers</verbClass>
+    <range>15</range>
+    <warmupTime>3.0</warmupTime>
+    <targetParams>
+      <canTargetLocations>true</canTargetLocations>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+</Defs>

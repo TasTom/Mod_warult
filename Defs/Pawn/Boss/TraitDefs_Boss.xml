@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ÉVÊQUE ──────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Eveque</defName>
+    <label>gardien sacré</label>
+    <description>Émet une aura de foi inébranlable et manie les rites d’illumination.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Évêque sacré</label>
+        <description>Maîtrise la lumière divine et se régénère dans les moments critiques.</description>
+        <statOffsets>
+          <PsychicSensitivity>0.15</PsychicSensitivity>
+          <ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+    <!-- GOBLU ──────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Goblu</defName>
+    <label>Proctecteur des fleurs</label>
+    <description>Rapide et defend coute que coute son champ de fleur</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Goblu</label>
+        <statOffsets>
+          <MoveSpeed>0.50</MoveSpeed>
+          <PsychicSensitivity>0.15</PsychicSensitivity>
+          <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+          <MeleeDPS>0.25</MeleeDPS>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- SAKAPATATE ROBUSTE ──────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_SakapatateRobuste</defName>
+    <label>peau de quartz</label>
+    <description>Une masse végétale blindée, lente à blesser mais rapide à frapper.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sakapatate robuste</label>
+        <statOffsets>
+          <MoveSpeed>-0.10</MoveSpeed>
+          <ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- SAKAPATATE ULTIME ───────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_SakapatateUltime</defName>
+    <label>cœur de granite</label>
+    <description>Régénère lentement ses blessures et déploie des boucliers d’énergie.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sakapatate ultime</label>
+        <statOffsets>
+          <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <PainShockThreshold>0.10</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- DUALISTE ────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Dualiste</defName>
+    <label>dualité incarnée</label>
+    <description>Alterne entre éclats de lumière aveuglante et ténèbres psychiques.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Maître clair-obscur</label>
+        <statOffsets>
+          <GlobalLearningFactor>0.30</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- FRANÇOIS ────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Francois</defName>
+    <label>exécuteur né</label>
+    <description>Se délecte de la peur et porte des coups mortels.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Assassin d’élite</label>
+        <statOffsets>
+          <MeleeHitChance>0.12</MeleeHitChance>
+          <MeleeDPS>0.25</MeleeDPS>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- MAÎTRE DES LAMPES ───────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_MaitreLampes</defName>
+    <label>architecte des lueurs</label>
+    <description>Contrôle l’éclairage, invoque des lampes spectrales et brûle ses ennemis.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Mage luminescent</label>
+        <statOffsets>
+          <PsychicSensitivity>0.20</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- COMMANDANT RENOIR ───────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_CommandantRenoir</defName>
+    <label>stratège implacable</label>
+    <description>Accroît la force de ses troupes et exécute des frappes coordonnées.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Commandant vétéran</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- SIRÈNE ──────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Sirene</defName>
+    <label>voix abyssale</label>
+    <description>Émet des ondes soniques et manipule l’esprit des mortels.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Chanteuse cauchemardesque</label>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- VISAGES ─────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Visages</defName>
+    <label>porteur de mille masques</label>
+    <description>Change d’identité pour dérouter ses adversaires et distordre la réalité.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Illusionniste</label>
+        <statOffsets>
+          <SocialImpact>0.30</SocialImpact>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- PEINTRESSE ──────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Peintresse</defName>
+    <label>muse cosmique</label>
+    <description>Peint des zones de danger et canalise le pouvoir du Monolithe.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Artiste stellaire</label>
+        <statOffsets>
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- VERSO ───────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Verso</defName>
+    <label>immortel brisé</label>
+    <description>Régénère ses blessures et fracture les défenses ennemies.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Âme fracturée</label>
+        <statOffsets>
+          <PainShockThreshold>0.20</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!-- MIME ────────────────────────────────────────────────── -->
+  <TraitDef>
+    <defName>Expedition33_BossTrait_Mime</defName>
+    <label>ombre silencieuse</label>
+    <description>Crée des zones de silence et des barrières invisibles.</description>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Moi-même</label>
+        <statOffsets>
+          <MeleeDodgeChance>0.10</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>

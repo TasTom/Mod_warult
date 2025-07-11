@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using UnityEngine;
-using System; // AJOUTEZ CETTE LIGNE
+using System;
 
 namespace Mod_warult
 {
@@ -77,10 +77,63 @@ namespace Mod_warult
             }
         }
 
+        // ✅ MÉTHODE CORRIGÉE - Résout l'erreur de compilation
         private void OpenMissionWindow()
         {
-            Find.WindowStack.Add(new Dialog_ExpeditionMissions(progressionManager));
+            try
+            {
+                // Trouve un pawn avec le QuestTracker
+                var pawnWithTracker = FindPawnWithQuestTracker();
+                
+                if (pawnWithTracker != null)
+                {
+                    Find.WindowStack.Add(new Dialog_ExpeditionMissions(pawnWithTracker));
+                }
+                else
+                {
+                    Messages.Message("Aucun membre d'expédition avec tracker de quêtes trouvé.", MessageTypeDefOf.RejectInput);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Log.Error($"[Expedition33] Erreur lors de l'ouverture des missions: {ex.Message}");
+            }
         }
+
+        // ✅ NOUVELLE MÉTHODE - Trouve le pawn avec le QuestTracker
+        private Pawn FindPawnWithQuestTracker()
+        {
+            // 1. Parcourt d’abord tous les colons libres vivants
+            foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists)
+            {
+                var questTracker = pawn.health.hediffSet.GetFirstHediffOfDef(
+                    DefDatabase<HediffDef>.GetNamed("Expedition33_QuestTracker"));
+
+                if (questTracker != null)
+                    return pawn;
+            }
+
+            // 2. Aucun tracker trouvé : on prend simplement le premier colon libre
+            var firstColonist = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists
+                                .FirstOrDefault();
+
+            // 3. On ajoute automatiquement le tracker si nécessaire
+            if (firstColonist != null)
+            {
+                var def = DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_QuestTracker");
+                if (def != null)
+                {
+                    var tracker = HediffMaker.MakeHediff(def, firstColonist);
+                    firstColonist.health.AddHediff(tracker);
+
+                    Messages.Message("Tracker de quêtes ajouté automatiquement.",
+                                     MessageTypeDefOf.NeutralEvent);
+                }
+            }
+
+            return firstColonist;   // Peut être null si aucun colon libre n’existe
+        }
+
 
         private void OpenResearchWindow()
         {

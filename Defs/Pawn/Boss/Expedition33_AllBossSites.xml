@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SITES BOSS - ACTE I -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<SitePartDef>
+  <defName>Expedition33_EvequeSitePart</defName>
+  <label>sanctuaire de l'Evêque</label>
+  <description>Un sanctuaire sacré où l'Evêque gardien protège ces lieux.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+     <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+    <arrivedLetter>Vous atteignez l'arbre indigo où l'Evêque gardien vous attend. La lumière sacrée baigne ce lieu mystique.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeI</li>
+  </tags>
+    <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Eveque</bossDefName>
+      <questId>ActeI_VallonsFleuris</questId>
+    </li>
+  </modExtensions>
+
+</SitePartDef>
+
+
+<SitePartDef>
+  <defName>Expedition33_GobluSitePart</defName>
+  <label>vallons fleuris</label>
+  <description>Territoire sauvage où rôde le mystérieux Goblu.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Vous atteignez les Vallons Fleuris. Le Goblu vous attend quelque part dans cette région apparemment paisible.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeI</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Goblu</bossDefName>
+      <questId>ActeI_VallonsFleuris</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_SakapatateRobusteSitePart</defName>
+  <label>océan suspendu</label>
+  <description>Phénomène impossible : un océan qui flotte dans les airs.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>L'Océan Suspendu défie toutes les lois de la physique. Le Sakapatate Robuste garde ce lieu mystique.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeI</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_SakapatateRobuste</bossDefName>
+      <questId>ActeI_OceanSuspendu</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_SakapatateUltimeSitePart</defName>
+  <label>sanctuaire ancien</label>
+  <description>Ruines d'une civilisation oubliée gardées par le Sakapatate Ultime.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Ces ruines antiques recèlent des secrets. Le Sakapatate Ultime protège jalousement ce lieu sacré.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeI</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_SakapatateUltime</bossDefName>
+      <questId>ActeI_SanctuaireAncien</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_FrancoisSitePart</defName>
+  <label>nid d'Esquie</label>
+  <description>Falaises dangereuses où François, la menace mortelle, a établi son territoire.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Ces falaises abritent François, réputé pour éliminer ses ennemis d'un seul coup. Soyez extrêmement prudents.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeI</li>
+    <li>Lethal</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Francois</bossDefName>
+      <questId>ActeI_NidEsquie</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_MaitreDesLampesSitePart</defName>
+  <label>sanctuaire de lumière</label>
+  <description>Le domaine du Maître des Lampes, gardien final de l'Acte I.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Le Maître des Lampes contrôle la lumière elle-même. Sa défaite ouvrira la voie vers l'Acte II.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeI</li>
+    <li>FinalBoss</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_MaitreDesLampes</bossDefName>
+      <questId>ActeI_Final</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SITES BOSS - ACTE II -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<SitePartDef>
+  <defName>Expedition33_DualisteSitePart</defName>
+  <label>terres oubliées</label>
+  <description>Régions désolées où le Dualiste maîtrise les forces du clair et de l'obscur.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Ces terres désolées abritent le Dualiste, maître de l'équilibre entre lumière et ténèbres.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeII</li>
+    <li>Duality</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Dualiste</bossDefName>
+      <questId>ActeII_TerresOubliees</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_RenoirSitePart</defName>
+  <label>manoir de Renoir</label>
+  <description>Un manoir imposant où Renoir, commandant de l'Expédition Zéro, attend son jugement.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Le manoir de Renoir se dresse devant vous. L'ancien commandant connaît des secrets sur le passé des expéditions.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeII</li>
+    <li>Commander</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Renoir</bossDefName>
+      <questId>ActeII_Manoir</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_SireneSitePart</defName>
+  <label>domaine de la Sirène</label>
+  <description>Territoire aquatique où la Sirène, premier gardien Axon, exerce son contrôle mental.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Les eaux mystiques de la Sirène s'étendent devant vous. Résistez à son contrôle mental.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeII</li>
+    <li>Axon</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Sirene</bossDefName>
+      <questId>ActeII_LesAxons</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_VisagesSitePart</defName>
+  <label>palais des Visages</label>
+  <description>Lieu de confusion où les Visages, second gardien Axon, distordent la réalité.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Le Palais des Visages déforme la perception. Gardez votre identité face à leurs illusions.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>ActeII</li>
+    <li>Axon</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Visages</bossDefName>
+      <questId>ActeII_LesAxons</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+<SitePartDef>
+  <defName>Expedition33_PeintresseSitePart</defName>
+  <label>monolithe de la Peintresse</label>
+  <description>Le Monolithe noir où la Peintresse inscrit les nombres du Gommage. Le lieu de la confrontation finale.</description>
+  <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
+   <siteTexture>UI/Icons/Site_boss</siteTexture>
+    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Le Monolithe noir se dresse devant vous. C'est ici que se décidera le sort de l'humanité face au Gommage.</arrivedLetter>
+  <tags>
+    <li>BossExpedition33</li>
+    <li>FinalBoss</li>
+    <li>Monolithe</li>
+  </tags>
+  <modExtensions>
+    <li Class="Mod_warult.BossSiteExtension">
+      <bossDefName>Expedition33_Peintresse</bossDefName>
+      <questId>ActeII_Final</questId>
+    </li>
+  </modExtensions>
+</SitePartDef>
+
+</Defs>

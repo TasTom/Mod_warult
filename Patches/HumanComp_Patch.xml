@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>
-    <!-- Patch pour ajouter le composant de progression à tous les humains -->
+<Patch>
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Ludeon.RimWorld</li>
@@ -11,11 +10,11 @@
                     <xpath>/Defs/ThingDef[defName="Human"]</xpath>
                     <value>
                         <comps>
-                            <li Class="Mod_warult.CompProperties_ExpeditionProgression"/>
+                            <li Class="Mod_warult.CompProperties_ExpeditionProgression" />
                         </comps>
                     </value>
                 </li>
             </operations>
         </match>
     </Operation>
-</Defs>
+</Patch>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Boss 1 : L'Évêque - Entité Divine -->
+  <PawnKindDef>
+    <defName>Expedition33_Eveque</defName>
+    <label>L'Évêque</label>
+    <race>Expedition33_EvequeRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>300</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    
+    <initialResistanceRange>15~25</initialResistanceRange>
+    <initialWillRange>4~6</initialWillRange>
+    
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+    
+    <abilities>
+      <li>Expedition33_SacredLight</li>
+      <li>Expedition33_DivinePurification</li>
+      <li>Expedition33_IndigoBlast</li>
+    </abilities>
+    
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Eveque</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+    
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Sacred</bossType>
+        <questReward>unlock_indigo_essence</questReward>
+        <creatureName>L'Évêque</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>phase_transformation</li>
+          <li>area_denial</li>
+          <li>divine_manifestation</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 2 : Le Goblu - Créature Primitive -->
+  <PawnKindDef>
+    <defName>Expedition33_Goblu</defName>
+    <label>Le Goblu</label>
+    <race>Expedition33_GobluRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>180</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    
+    <initialResistanceRange>10~18</initialResistanceRange>
+    <initialWillRange>3~5</initialWillRange>
+    
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+    
+    <abilities>
+      <li>Expedition33_RapidMovement</li>
+    </abilities>
+    
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Goblu</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+    
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>BasicThreat</bossType>
+        <questReward>unlock_lumina_basics</questReward>
+        <creatureName>Le Goblu</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>rapid_movement</li>
+          <li>primitive_instincts</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 3 : Sakapatate le Robuste -->
+  <PawnKindDef>
+    <defName>Expedition33_SakapatateRobuste</defName>
+    <label>Sakapatate le Robuste</label>
+    <race>Expedition33_SakapatateRobusteRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>250</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    
+    <initialResistanceRange>12~20</initialResistanceRange>
+    <initialWillRange>4~6</initialWillRange>
+    
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_HeavyArmor</li>
+      <li>Expedition33_SlowRegeneration</li>
+      <li>Expedition33_RapidMovement</li>
+      <li>Expedition33_AreaAttacks</li>
+    </abilities>
+    
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_SakapatateRobuste</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Defensive</bossType>
+        <questReward>unlock_lumina_mastery</questReward>
+        <creatureName>Sakapatate le Robuste</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>heavy_armor</li>
+          <li>slow_regeneration</li>
+          <li>ancient_wisdom</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 4 : Sakapatate l'Ultime -->
+  <PawnKindDef>
+    <defName>Expedition33_SakapatateUltime</defName>
+    <label>Sakapatate l'Ultime</label>
+    <race>Expedition33_SakapatateUltimeRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>320</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    
+    <initialResistanceRange>15~25</initialResistanceRange>
+    <initialWillRange>5~7</initialWillRange>
+    
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_EnergyShields</li>
+      <li>Expedition33_AreaAttacks</li>
+      <li>Expedition33_HeavyArmor</li>
+      <li>Expedition33_SlowRegeneration</li>
+    </abilities>
+    
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_SakapatateUltime</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Elite</bossType>
+        <questReward>unlock_ancient_sanctuary_secrets</questReward>
+        <creatureName>Sakapatate l'Ultime</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>heavy_armor</li>
+          <li>energy_shields</li>
+          <li>area_attacks</li>
+          <li>supreme_power</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 5 : François l'Immortel -->
+  <PawnKindDef>
+    <defName>Expedition33_Francois</defName>
+    <label>François l'Immortel</label>
+    <race>Expedition33_FrancoisRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>450</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    
+    <initialResistanceRange>18~28</initialResistanceRange>
+    <initialWillRange>6~8</initialWillRange>
+    
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+    
+    <abilities>
+      <li>Expedition33_LethalStrike</li>
+      <li>Expedition33_FearAura</li>
+    </abilities>
+    
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Francois</def>
+      </li>
+    </forcedTraits>
+    
+    <aiAvoidCover>false</aiAvoidCover>
+    
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Lethal</bossType>
+        <questReward>unlock_esquie_mount</questReward>
+        <creatureName>François l'Immortel</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>instant_kill_chance</li>
+          <li>fear_aura</li>
+          <li>immortal_essence</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+ <PawnKindDef>
+    <defName>Expedition33_MaitreDesLampes</defName>
+    <label>Le Maître des Lampes</label>
+    <race>Expedition33_MaitreLampesRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>500</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>20~30</initialResistanceRange>
+    <initialWillRange>7~9</initialWillRange>
+
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_LightManipulation</li>
+      <li>Expedition33_IlluminationAttacks</li>
+      <li>Expedition33_LampMastery</li>
+    </abilities>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_MaitreLampes</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>LightController</bossType>
+        <questReward>unlock_acte_ii</questReward>
+        <creatureName>Le Maître des Lampes</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>phase_transformation</li>
+          <li>light_manipulation</li>
+          <li>illumination_attacks</li>
+          <li>lamp_mastery</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 7 : Le Dualiste -->
+  <PawnKindDef>
+    <defName>Expedition33_Dualiste</defName>
+    <label>Le Dualiste</label>
+    <race>Expedition33_DualisteRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>400</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>18~28</initialResistanceRange>
+    <initialWillRange>5~7</initialWillRange>
+
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_ClairStrike</li>
+      <li>Expedition33_ObscurBlast</li>
+      <li>Expedition33_DualityShift</li>
+    </abilities>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Dualiste</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Duality</bossType>
+        <creatureName>Le Dualiste</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <weaknessElement>Light</weaknessElement>
+        <resistanceElement>Dark</resistanceElement>
+        <specialMechanics>
+          <li>polarity_shift</li>
+          <li>mirror_damage</li>
+          <li>cosmic_duality</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 8 : Commandant Renoir -->
+  <PawnKindDef>
+    <defName>Expedition33_Renoir</defName>
+    <label>Commandant Renoir</label>
+    <race>Expedition33_RenoirRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>500</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>20~30</initialResistanceRange>
+    <initialWillRange>6~8</initialWillRange>
+
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_CommanderAura</li>
+      <li>Expedition33_TacticalStrike</li>
+      <li>Expedition33_ExpeditionMemory</li>
+    </abilities>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_CommandantRenoir</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Commander</bossType>
+        <creatureName>Commandant Renoir</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <summonMinions>Expedition33_CorruptedMember</summonMinions>
+        <commandRadius>15</commandRadius>
+        <specialMechanics>
+          <li>tactical_coordination</li>
+          <li>memory_flashbacks</li>
+          <li>command_presence</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 9 : La Sirène -->
+  <PawnKindDef>
+    <defName>Expedition33_Sirene</defName>
+    <label>La Sirène</label>
+    <race>Expedition33_SireneRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>600</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>22~32</initialResistanceRange>
+    <initialWillRange>8~10</initialWillRange>
+
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_SonicWave</li>
+      <li>Expedition33_MindControl</li>
+    </abilities>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Sirene</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Axon</bossType>
+        <questReward>unlock_conservator_help</questReward>
+        <creatureName>La Sirène</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>sonic_attacks</li>
+          <li>mind_control</li>
+          <li>water_manipulation</li>
+          <li>axon_power</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 10 : Les Visages -->
+  <PawnKindDef>
+    <defName>Expedition33_Visages</defName>
+    <label>Les Visages</label>
+    <race>Expedition33_VisagesRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>650</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>25~35</initialResistanceRange>
+    <initialWillRange>9~11</initialWillRange>
+
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_FaceShift</li>
+      <li>Expedition33_RealityDistortion</li>
+    </abilities>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Visages</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Axon</bossType>
+        <questReward>unlock_monolith_access</questReward>
+        <creatureName>Les Visages</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>multiple_faces</li>
+          <li>identity_confusion</li>
+          <li>reality_distortion</li>
+          <li>axon_collective</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Boss 11 : La Peintresse – Boss final -->
+  <PawnKindDef>
+    <defName>Expedition33_Peintresse</defName>
+    <label>La Peintresse</label>
+    <race>Expedition33_PeintresseRace</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>1000</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>30~40</initialResistanceRange>
+    <initialWillRange>12~15</initialWillRange>
+
+    <apparelMoney>0</apparelMoney>
+    <weaponMoney>0</weaponMoney>
+
+    <abilities>
+      <li>Expedition33_GommageRitual</li>
+      <li>Expedition33_CosmicBrush</li>
+      <li>Expedition33_NumberInscription</li>
+      <li>Expedition33_MonolithPower</li>
+    </abilities>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Peintresse</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>FinalBoss</bossType>
+        <questReward>victory_expedition33</questReward>
+        <creatureName>La Peintresse</creatureName>
+        <isLegendaryEntity>true</isLegendaryEntity>
+        <specialMechanics>
+          <li>gommage_ritual</li>
+          <li>number_inscription</li>
+          <li>reality_painting</li>
+          <li>phase_transformation</li>
+          <li>monolith_power</li>
+          <li>cosmic_creation</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Subalterne : Membre corrompu -->
+  <PawnKindDef>
+    <defName>Expedition33_CorruptedMember</defName>
+    <label>Membre corrompu</label>
+    <race>Human</race>
+    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <combatPower>120</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+
+    <initialResistanceRange>10~18</initialResistanceRange>
+    <initialWillRange>3~5</initialWillRange>
+
+    <apparelMoney>500~800</apparelMoney>
+    <weaponMoney>300~600</weaponMoney>
+
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <weaponTags>
+      <li>IndustrialGunBasic</li>
+    </weaponTags>
+
+    <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Verso</def>
+      </li>
+    </forcedTraits>
+
+    <aiAvoidCover>false</aiAvoidCover>
+
+    <modExtensions>
+      <li Class="Mod_warult.BossExtension">
+        <bossType>Minion</bossType>
+        <creatureName>Membre corrompu</creatureName>
+        <isLegendaryEntity>false</isLegendaryEntity>
+        <specialMechanics>
+          <li>corruption_influence</li>
+          <li>expedition_memory</li>
+        </specialMechanics>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+</Defs>

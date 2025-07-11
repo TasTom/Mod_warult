@@ -160,6 +160,9 @@ namespace Mod_warult
     {
         static void Prefix(DamageInfo? dinfo, Hediff exactCulprit) // ✅ Signature complète
         {
+
+             if (!dinfo.HasValue)
+            return ;  
             Pawn killer = dinfo.HasValue ? dinfo.Value.Instigator as Pawn : null;
             if (killer == null) return;
 

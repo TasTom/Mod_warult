@@ -33,7 +33,6 @@
             <useMeatFrom>Megasloth</useMeatFrom>
             <manhunterOnDamageChance>0.8</manhunterOnDamageChance>
             <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
-            <wildness>1.0</wildness>
             <petness>0</petness>
             <trainability>None</trainability>
             <intelligence>Animal</intelligence>
@@ -136,7 +135,6 @@
             <useMeatFrom>Megasloth</useMeatFrom>
             <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
             <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
-            <wildness>1.0</wildness>
             <petness>0</petness>
             <trainability>None</trainability>
             <intelligence>Animal</intelligence>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Classe de base pour les backstories Expedition 33 -->
+<AlienRace.AlienBackstoryDef Name="Expedition33BackStory" Abstract="True">
+  <disallowedTraitsChance>
+    <li>
+      <defName Degree="-1">Immunity</defName>
+      <chance>100</chance>
+    </li>
+  </disallowedTraitsChance>
+  <bodyTypeMale>Male</bodyTypeMale>
+  <bodyTypeFemale>Female</bodyTypeFemale>
+</AlienRace.AlienBackstoryDef>
+
+<!-- ========================== CHILDHOOD ========================== -->
+
+<!-- L'Évêque - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Eveque_Childhood</defName>
+  <title>Enfant mystique</title>
+  <titleShort>Mystique</titleShort>
+  <baseDesc>{PAWN_nameDef} manifestait des pouvoirs divins dès son plus jeune âge. Les prêtres du village parlaient de miracles quand {PAWN_pronoun} était présent.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Intellectual>4</Intellectual>
+    <Social>2</Social>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_DivineEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Le Dualiste - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Dualiste_Childhood</defName>
+  <title>Enfant de la dualité</title>
+  <titleShort>Dualiste</titleShort>
+  <baseDesc>{PAWN_nameDef} était né sous une éclipse totale, oscillant constamment entre lumière et ténèbres.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Intellectual>3</Intellectual>
+    <Artistic>3</Artistic>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_DualityEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- François - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Francois_Childhood</defName>
+  <title>Lame en devenir</title>
+  <titleShort>Lame</titleShort>
+  <baseDesc>{PAWN_nameDef} était un enfant prodige de la violence, manifestant une maîtrise surnaturelle des armes.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Melee>4</Melee>
+    <Shooting>2</Shooting>
+  </skillGains>
+  <disallowedTraitsChance>
+    <li>
+      <defName Degree="0">Kind</defName>
+      <chance>100</chance>
+    </li>
+  </disallowedTraitsChance>
+  <spawnCategories>
+    <li>Expedition33_ImmortalEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Sakapatate Robuste - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_SakapatateRobuste_Childhood</defName>
+  <title>Pousse ancestrale</title>
+  <titleShort>Pousse</titleShort>
+  <baseDesc>{PAWN_nameDef} grandit d'une graine millénaire, développant une carapace naturelle.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Plants>3</Plants>
+    <Melee>2</Melee>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_AncientGuardian</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Sakapatate Ultime - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_SakapatateUltime_Childhood</defName>
+  <title>Sève primordiale</title>
+  <titleShort>Sève</titleShort>
+  <baseDesc>{PAWN_nameDef} absorba la sagesse ancestrale des profondeurs terrestres pendant des siècles.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Plants>4</Plants>
+    <Melee>3</Melee>
+    <Construction>2</Construction>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_SupremeGuardian</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Maître des Lampes - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_MaitreLampes_Childhood</defName>
+  <title>Porteur de lumière</title>
+  <titleShort>Porteur</titleShort>
+  <baseDesc>{PAWN_nameDef} créait des lanternes magiques et manipulait les ombres avec aisance.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Intellectual>3</Intellectual>
+    <Crafting>3</Crafting>
+    <Artistic>2</Artistic>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_LightController</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Commandant Renoir - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_CommandantRenoir_Childhood</defName>
+  <title>Cadet d'expédition</title>
+  <titleShort>Cadet</titleShort>
+  <baseDesc>{PAWN_nameDef} fut formé dans les académies militaires de l'Expédition 33.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Social>3</Social>
+    <Intellectual>3</Intellectual>
+    <Shooting>2</Shooting>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_CommanderEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Sirène - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Sirene_Childhood</defName>
+  <title>Voix des profondeurs</title>
+  <titleShort>Voix</titleShort>
+  <baseDesc>{PAWN_nameDef} développa sa capacité à manipuler les esprits par sa voix hypnotique.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Social>4</Social>
+    <Artistic>3</Artistic>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_AxonEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Visages - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Visages_Childhood</defName>
+  <title>Collectif naissant</title>
+  <titleShort>Collectif</titleShort>
+  <baseDesc>{PAWN_nameDef} apprit à jongler entre différentes identités et personnalités.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Social>3</Social>
+    <Intellectual>3</Intellectual>
+    <Artistic>2</Artistic>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_AxonEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Peintresse - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Peintresse_Childhood</defName>
+  <title>Artiste cosmique</title>
+  <titleShort>Artiste</titleShort>
+  <baseDesc>{PAWN_nameDef} créait des œuvres qui modifiaient la réalité et ouvraient des portails.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Artistic>5</Artistic>
+    <Intellectual>3</Intellectual>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_RealityWeaver</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Verso - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Verso_Childhood</defName>
+  <title>Fragment éternel</title>
+  <titleShort>Fragment</titleShort>
+  <baseDesc>{PAWN_nameDef} apprit les secrets de la régénération et de la survie éternelle.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Melee>3</Melee>
+    <Medicine>2</Medicine>
+    <Intellectual>2</Intellectual>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_ImmortalEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Mime - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Mime_Childhood</defName>
+  <title>Enfant du silence</title>
+  <titleShort>Silence</titleShort>
+  <baseDesc>{PAWN_nameDef} apprit à communiquer par gestes et à créer des barrières invisibles.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Melee>2</Melee>
+    <Artistic>3</Artistic>
+    <Intellectual>2</Intellectual>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_SilentEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Goblu - Childhood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Goblu_Childhood</defName>
+  <title>Créature primitive</title>
+  <titleShort>Primitive</titleShort>
+  <baseDesc>{PAWN_nameDef} développa une agilité et une férocité naturelles.</baseDesc>
+  <slot>Childhood</slot>
+  <bioAgeRange>
+    <min>0</min>
+    <max>16</max>
+  </bioAgeRange>
+  <skillGains>
+    <Melee>3</Melee>
+    <Animals>2</Animals>
+  </skillGains>
+  <spawnCategories>
+    <li>Expedition33_PrimitiveEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+</Defs>

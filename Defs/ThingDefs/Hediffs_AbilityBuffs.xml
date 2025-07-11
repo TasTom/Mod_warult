@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Buffs des capacités spéciales -->
+  <HediffDef>
+    <defName>Expedition33_RegenerationBuff</defName>
+    <label>régénération active</label>
+    <description>Régénération accélérée des blessures.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks> <!-- 30 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <InjuryHealingFactor>5.0</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_IronWillBuff</defName>
+    <label>volonté d'acier</label>
+    <description>Immunité temporaire aux crises mentales.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>30000</disappearsAfterTicks> <!-- 2h -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <MentalBreakThreshold>0.01</MentalBreakThreshold>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_BerserkerRageBuff</defName>
+    <label>rage berserker</label>
+    <description>Rage destructrice qui augmente les dégâts mais réduit la défense.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>18000</disappearsAfterTicks> <!-- 30 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.5</MeleeDamageFactor>
+          <IncomingDamageFactor>1.2</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_TimeSlipBuff</defName>
+    <label>glissement temporel</label>
+    <description>Vitesse d'action considérablement augmentée.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.2, 0.8, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4800</disappearsAfterTicks> <!-- 8 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>2.0</WorkSpeedGlobal>
+          <MoveSpeed>1.5</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_IronSkinBuff</defName>
+    <label>peau de fer</label>
+    <description>Protection magique qui réduit drastiquement les dégâts reçus.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks> <!-- 25 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_FortressBuff</defName>
+    <label>forteresse</label>
+    <description>Protection quasi-totale contre tous les types de dégâts.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>4800</disappearsAfterTicks> <!-- 8 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.1</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_LuckyStrikeBuff</defName>
+    <label>coup de chance</label>
+    <description>Précision grandement améliorée pour la prochaine attaque.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>3000</disappearsAfterTicks> <!-- 5 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <ShootingAccuracyPawn>3.0</ShootingAccuracyPawn>
+          <MeleeHitChance>3.0</MeleeHitChance>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_MiracleBuff</defName>
+    <label>protection divine</label>
+    <description>Protection miraculeuse contre les blessures mortelles.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 1.0, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>6000</disappearsAfterTicks> <!-- 10 secondes -->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.05</IncomingDamageFactor>
+          <PainShockThreshold>10.0</PainShockThreshold>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

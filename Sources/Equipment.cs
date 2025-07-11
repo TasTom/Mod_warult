@@ -9,7 +9,7 @@ namespace Mod_warult
         public int protectionCharges = 3;
         public bool isActive = true;
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
 
@@ -49,7 +49,7 @@ namespace Mod_warult
                 isActive = false;
 
                 Messages.Message(
-                    $"Le bouclier anti-Gommage de {Wearer.Name.ToStringShort} est épuisé !",
+                    $"Le bouclier anti-Gommage de {Wearer.Name.ToStringShort} est ï¿½puisï¿½ !",
                     MessageTypeDefOf.NegativeEvent
                 );
             }
@@ -59,7 +59,7 @@ namespace Mod_warult
         {
             string baseString = base.GetInspectString();
             baseString += $"\nCharges restantes : {protectionCharges}/3";
-            baseString += $"\nStatut : {(isActive ? "Actif" : "Épuisé")}";
+            baseString += $"\nStatut : {(isActive ? "Actif" : "ï¿½puisï¿½")}";
             return baseString;
         }
     }

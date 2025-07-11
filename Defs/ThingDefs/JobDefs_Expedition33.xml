@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <JobDef>
+    <defName>Expedition33_CastAbility</defName>
+    <driverClass>Mod_warult.JobDriver_ExecuteAbility</driverClass>
+    <reportString>lance une capacité.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  
+</Defs>

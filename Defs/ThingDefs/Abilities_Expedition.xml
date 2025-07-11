@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 💪 Vitalité -->
+  <AbilityDef>
+    <defName>Expedition33_Regeneration</defName>
+    <label>régénération</label>
+    <description>Régénère progressivement les blessures pendant 30 secondes.</description>
+    <iconPath>UI/Icons/Abilities/AbilityRegeneration</iconPath>
+    <cooldownTicksRange>20000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_Regeneration</verbClass>
+      <warmupTime>1.0</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Expedition33_IronWill</defName>
+    <label>volonté d'acier</label>
+    <description>Immunise temporairement contre les crises mentales.</description>
+    <iconPath>UI/Icons/Abilities/AbilityIronWill</iconPath>
+    <cooldownTicksRange>54000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_IronWill</verbClass>
+      <warmupTime>1.5</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <!-- ⚔️ Puissance -->
+  <AbilityDef>
+    <defName>Expedition33_BerserkerRage</defName>
+    <label>rage berserker</label>
+    <description>Augmente les dégâts mais réduit la défense pendant 30 secondes.</description>
+    <iconPath>UI/Icons/Abilities/AbilityBerserker</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_BerserkerRage</verbClass>
+      <warmupTime>1.0</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Expedition33_CrushingBlow</defName>
+    <label>coup dévastateur</label>
+    <description>Inflige des dégâts dans une zone autour de la cible.</description>
+    <iconPath>UI/Icons/Abilities/AbilityCrush</iconPath>
+    <cooldownTicksRange>45000</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_Explosion</verbClass>
+      <violent>true</violent>
+      <warmupTime>2.0</warmupTime>
+      <range>15</range>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <!-- 🏃 Agilité -->
+  <AbilityDef>
+    <defName>Expedition33_QuickStep</defName>
+    <label>pas éclair</label>
+    <description>Se téléporte instantanément vers un lieu proche.</description>
+    <iconPath>UI/Icons/Abilities/AbilityQuickStep</iconPath>
+    <cooldownTicksRange>18000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_QuickStep</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>7.0</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastJump</jobDef>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Expedition33_TimeSlip</defName>
+    <label>glissement temporel</label>
+    <description>Augmente temporairement la vitesse d'action.</description>
+    <iconPath>UI/Icons/Abilities/AbilityTimeSlip</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_TimeSlip</verbClass>
+      <warmupTime>1.5</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <!-- 🛡️ Défense -->
+  <AbilityDef>
+    <defName>Expedition33_IronSkin</defName>
+    <label>peau de fer</label>
+    <description>Réduit considérablement les dégâts reçus pendant 25 secondes.</description>
+    <iconPath>UI/Icons/Abilities/AbilityIronSkin</iconPath>
+    <cooldownTicksRange>32000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_IronSkin</verbClass>
+      <warmupTime>1.0</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Expedition33_Fortress</defName>
+    <label>forteresse</label>
+    <description>Immunité presque totale aux dégâts pendant 8 secondes.</description>
+    <iconPath>UI/Icons/Abilities/AbilityFortress</iconPath>
+    <cooldownTicksRange>90000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_Fortress</verbClass>
+      <warmupTime>2.0</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <!-- 🍀 Chance -->
+  <AbilityDef>
+    <defName>Expedition33_LuckyStrike</defName>
+    <label>coup de chance</label>
+    <description>Augmente drastiquement la précision de la prochaine attaque.</description>
+    <iconPath>UI/Icons/Abilities/AbilityLuckyStrike</iconPath>
+    <cooldownTicksRange>20000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_LuckyStrike</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Expedition33_Miracle</defName>
+    <label>miracle</label>
+    <description>Protection divine temporaire contre les blessures mortelles.</description>
+    <iconPath>UI/Icons/Abilities/AbilityMiracle</iconPath>
+    <cooldownTicksRange>150000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Mod_warult.Verb_CastAbility_Miracle</verbClass>
+      <warmupTime>3.0</warmupTime>
+      <range>0</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastAbilityOnThing</jobDef>
+  </AbilityDef>
+
+</Defs>

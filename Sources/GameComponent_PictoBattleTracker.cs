@@ -19,7 +19,7 @@ namespace Mod_warult
 
     public override void GameComponentTick()
     {
-        if (Find.TickManager.TicksGame % 250 == 0)
+        if (GenTicks.TicksGame % 250 == 0)
         {
             CheckForCompletedBattles();
         }

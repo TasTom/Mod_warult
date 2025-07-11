@@ -91,7 +91,7 @@
                     
                     
                     <customDrawSize>(1, 1)</customDrawSize>
-                    <customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize>
+                    <customHeadDrawSize>(1.0, 1.0)</customHeadDrawSize>
                     <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
                 </alienPartGenerator>
             </generalSettings>

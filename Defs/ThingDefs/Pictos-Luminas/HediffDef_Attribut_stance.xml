@@ -1,174 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- Bonus de Vitalité -->
-    <HediffDef>
-        <defName>Expedition33_VitalityBonus</defName>
-        <label>vitalité améliorée</label>
-        <description>Bonus permanent de vitalité obtenu par progression de niveau.</description>
-        <hediffClass>Hediff</hediffClass>
-        <maxSeverity>9.0</maxSeverity>
-        <isBad>false</isBad>
-        <stages>
-            <li>
-                <minSeverity>0.1</minSeverity>
-                <statOffsets>
-                    <MaxHitPoints>10</MaxHitPoints>
-                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>1.0</minSeverity>
-                <statOffsets>
-                    <MaxHitPoints>25</MaxHitPoints>
-                    <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
-                    <PainShockThreshold>0.1</PainShockThreshold>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>3.0</minSeverity>
-                <statOffsets>
-                    <MaxHitPoints>50</MaxHitPoints>
-                    <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
-                    <PainShockThreshold>0.2</PainShockThreshold>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>6.0</minSeverity>
-                <statOffsets>
-                    <MaxHitPoints>100</MaxHitPoints>
-                    <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
-                    <PainShockThreshold>0.3</PainShockThreshold>
-                </statOffsets>
-            </li>
-        </stages>
-    </HediffDef>
+  <!-- Hediff principal pour la progression -->
+  <HediffDef>
+    <defName>Expedition33_Progression</defName>
+    <label>progression expedition</label>
+    <description>Système de progression du mod Expedition 33.</description>
+    <hediffClass>Mod_warult.Hediff_ExpeditionProgression</hediffClass>
+    <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <chronic>true</chronic>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>0.1</initialSeverity>
+  </HediffDef>
+
+  <!-- ✅ VITALITÉ - PROGRESSION AMÉLIORÉE -->
+  <HediffDef>
+    <defName>Expedition33_VitalityBonus</defName>
+    <label>vitalité renforcée</label>
+    <description>Bonus permanent de vitalité obtenu par la progression d'expédition.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>9.0</maxSeverity>
+    <stages>
+      <!-- Niveau Débutant (1-2 points vitalité) -->
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <label>vitalité renforcée (débutant)</label>
+        <statOffsets>
+          <MaxHitPoints>8</MaxHitPoints>
+          <ImmunityGainSpeed>0.08</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+      <!-- Niveau Intermédiaire (3-5 points vitalité) -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>vitalité renforcée (intermédiaire)</label>
+        <statOffsets>
+          <MaxHitPoints>20</MaxHitPoints>
+          <ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+          <PainShockThreshold>0.08</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <!-- Niveau Avancé (6-8 points vitalité) -->
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>vitalité renforcée (avancé)</label>
+        <statOffsets>
+          <MaxHitPoints>40</MaxHitPoints>
+          <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+          <PainShockThreshold>0.15</PainShockThreshold>
+          <InjuryHealingFactor>0.1</InjuryHealingFactor>
+        </statOffsets>
+      </li>
+      <!-- Niveau Expert (9-15 points vitalité) -->
+      <li>
+        <minSeverity>6.0</minSeverity>
+        <label>vitalité renforcée (expert)</label>
+        <statOffsets>
+          <MaxHitPoints>70</MaxHitPoints>
+          <ImmunityGainSpeed>0.4</ImmunityGainSpeed>
+          <PainShockThreshold>0.25</PainShockThreshold>
+          <InjuryHealingFactor>0.2</InjuryHealingFactor>
+        </statOffsets>
+      </li>
+      <!-- Niveau Maître (16+ points vitalité) -->
+      <li>
+        <minSeverity>8.5</minSeverity>
+        <label>vitalité renforcée (maître)</label>
+        <statOffsets>
+          <MaxHitPoints>120</MaxHitPoints>
+          <ImmunityGainSpeed>0.6</ImmunityGainSpeed>
+          <PainShockThreshold>0.4</PainShockThreshold>
+          <InjuryHealingFactor>0.35</InjuryHealingFactor>
+            <ToxicResistance>0.1</ToxicResistance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ✅ PUISSANCE - PROGRESSION COMPLÈTE -->
+  <HediffDef>
+    <defName>Expedition33_PowerBonus</defName>
+    <label>puissance dévastatrice</label>
+    <description>Bonus permanent de puissance obtenu par la progression d'expédition.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>9.0</maxSeverity>
+    <stages>
+      <!-- Niveau Débutant -->
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <label>puissance dévastatrice (débutant)</label>
+        <statOffsets>
+          <MeleeDamageFactor>0.06</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.04</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <!-- Niveau Intermédiaire -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>puissance dévastatrice (intermédiaire)</label>
+        <statOffsets>
+          <MeleeDamageFactor>0.12</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.08</ShootingAccuracyPawn>
+        
+        </statOffsets>
+      </li>
+      <!-- Niveau Avancé -->
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>puissance dévastatrice (avancé)</label>
+        <statOffsets>
+          <MeleeDamageFactor>0.20</MeleeDamageFactor>
+         <ShootingAccuracyPawn>0.12</ShootingAccuracyPawn>
     
-    <!-- Bonus de Dextérité -->
-    <HediffDef>
-        <defName>Expedition33_DexterityBonus</defName>
-        <label>dextérité améliorée</label>
-        <description>Bonus permanent de dextérité obtenu par progression de niveau.</description>
-        <hediffClass>Hediff</hediffClass>
-        <maxSeverity>9.0</maxSeverity>
-        <isBad>false</isBad>
-        <stages>
-            <li>
-                <minSeverity>0.1</minSeverity>
-                <statOffsets>
-                    <MeleeHitChance>0.05</MeleeHitChance>
-                    <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>1.0</minSeverity>
-                <statOffsets>
-                    <MeleeHitChance>0.1</MeleeHitChance>
-                    <ShootingAccuracyPawn>0.08</ShootingAccuracyPawn>
-                    <MeleeDodgeChance>2</MeleeDodgeChance>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>3.0</minSeverity>
-                <statOffsets>
-                    <MeleeHitChance>0.2</MeleeHitChance>
-                    <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
-                    <MeleeDodgeChance>5</MeleeDodgeChance>
-                    <MoveSpeed>0.1</MoveSpeed>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>6.0</minSeverity>
-                <statOffsets>
-                    <MeleeHitChance>0.35</MeleeHitChance>
-                    <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
-                    <MeleeDodgeChance>10</MeleeDodgeChance>
-                    <MoveSpeed>0.2</MoveSpeed>
-                </statOffsets>
-            </li>
-        </stages>
-    </HediffDef>
+          <CarryingCapacity>15</CarryingCapacity>
+        </statOffsets>
+      </li>
+      <!-- Niveau Expert -->
+      <li>
+        <minSeverity>6.0</minSeverity>
+        <label>puissance dévastatrice (expert)</label>
+        <statOffsets>
+          <MeleeDamageFactor>0.30</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.18</ShootingAccuracyPawn>
     
-    <!-- Bonus de Chance -->
-    <HediffDef>
-        <defName>Expedition33_ChanceBonus</defName>
-        <label>chance améliorée</label>
-        <description>Bonus permanent de chance obtenu par progression de niveau.</description>
-        <hediffClass>Hediff</hediffClass>
-        <maxSeverity>9.0</maxSeverity>
-        <isBad>false</isBad>
-        <stages>
-            <li>
-                <minSeverity>0.1</minSeverity>
-                <statOffsets>
-                    <TradePriceImprovement>0.03</TradePriceImprovement>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>1.0</minSeverity>
-                <statOffsets>
-                    <TradePriceImprovement>0.08</TradePriceImprovement>
-                    <PlantHarvestYield>0.1</PlantHarvestYield>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>3.0</minSeverity>
-                <statOffsets>
-                    <TradePriceImprovement>0.15</TradePriceImprovement>
-                    <PlantHarvestYield>0.2</PlantHarvestYield>
-                    <MiningYield>0.1</MiningYield>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>6.0</minSeverity>
-                <statOffsets>
-                    <TradePriceImprovement>0.25</TradePriceImprovement>
-                    <PlantHarvestYield>0.3</PlantHarvestYield>
-                    <MiningYield>0.2</MiningYield>
-                    <ResearchSpeed>0.15</ResearchSpeed>
-                </statOffsets>
-            </li>
-        </stages>
-    </HediffDef>
-    
-    <!-- Bonus de niveau général -->
-    <HediffDef>
-        <defName>Expedition33_LevelBonus</defName>
-        <label>expérience de l'expédition</label>
-        <description>Sagesse acquise par l'expérience de l'Expédition 33.</description>
-        <hediffClass>Hediff</hediffClass>
-        <maxSeverity>5.0</maxSeverity>
-        <isBad>false</isBad>
-        <stages>
-            <li>
-                <minSeverity>0.25</minSeverity>
-                <statOffsets>
-                    <GlobalLearningFactor>0.05</GlobalLearningFactor>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>1.0</minSeverity>
-                <statOffsets>
-                    <GlobalLearningFactor>0.1</GlobalLearningFactor>
-                    <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>2.5</minSeverity>
-                <statOffsets>
-                    <GlobalLearningFactor>0.2</GlobalLearningFactor>
-                    <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
-                    <PsychicSensitivity>-0.1</PsychicSensitivity>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>4.5</minSeverity>
-                <statOffsets>
-                    <GlobalLearningFactor>0.3</GlobalLearningFactor>
-                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-                    <PsychicSensitivity>-0.2</PsychicSensitivity>
-                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
-                </statOffsets>
-            </li>
-        </stages>
-    </HediffDef>
+          <CarryingCapacity>25</CarryingCapacity>
+        </statOffsets>
+      </li>
+      <!-- Niveau Maître -->
+      <li>
+        <minSeverity>8.5</minSeverity>
+        <label>puissance dévastatrice (maître)</label>
+        <statOffsets>
+          <MeleeDamageFactor>0.45</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+      
+          <CarryingCapacity>40</CarryingCapacity>
+          <MeleeArmorPenetration>0.1</MeleeArmorPenetration>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ✅ AGILITÉ - PROGRESSION COMPLÈTE -->
+  <HediffDef>
+    <defName>Expedition33_AgilityBonus</defName>
+    <label>agilité extraordinaire</label>
+    <description>Bonus permanent d'agilité obtenu par la progression d'expédition.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.1, 0.8, 0.1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>9.0</maxSeverity>
+    <stages>
+      <!-- Niveau Débutant -->
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <label>agilité extraordinaire (débutant)</label>
+        <statOffsets>
+          <MoveSpeed>0.08</MoveSpeed>
+          <WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <!-- Niveau Intermédiaire -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>agilité extraordinaire (intermédiaire)</label>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+          <WorkSpeedGlobal>0.08</WorkSpeedGlobal>
+          <MeleeDodgeChance>3</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+      <!-- Niveau Avancé -->
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>agilité extraordinaire (avancé)</label>
+        <statOffsets>
+          <MoveSpeed>0.25</MoveSpeed>
+          <WorkSpeedGlobal>0.12</WorkSpeedGlobal>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+          <RestRateMultiplier>0.1</RestRateMultiplier>
+        </statOffsets>
+      </li>
+      <!-- Niveau Expert -->
+      <li>
+        <minSeverity>6.0</minSeverity>
+        <label>agilité extraordinaire (expert)</label>
+        <statOffsets>
+          <MoveSpeed>0.35</MoveSpeed>
+          <WorkSpeedGlobal>0.18</WorkSpeedGlobal>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
+          <RestRateMultiplier>0.18</RestRateMultiplier>
+        </statOffsets>
+      </li>
+      <!-- Niveau Maître -->
+      <li>
+        <minSeverity>8.5</minSeverity>
+        <label>agilité extraordinaire (maître)</label>
+        <statOffsets>
+          <MoveSpeed>0.5</MoveSpeed>
+          <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+          <MeleeDodgeChance>16</MeleeDodgeChance>
+          <RestRateMultiplier>0.3</RestRateMultiplier>
+          <FilthRate>-0.5</FilthRate>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ✅ DÉFENSE - PROGRESSION COMPLÈTE -->
+  <HediffDef>
+    <defName>Expedition33_DefenseBonus</defName>
+    <label>défense inébranlable</label>
+    <description>Bonus permanent de défense obtenu par la progression d'expédition.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.1, 0.1, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>9.0</maxSeverity>
+    <stages>
+      <!-- Niveau Débutant -->
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <label>défense inébranlable (débutant)</label>
+        <statOffsets>
+          <IncomingDamageFactor>-0.04</IncomingDamageFactor>
+          <PainShockThreshold>0.06</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <!-- Niveau Intermédiaire -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>défense inébranlable (intermédiaire)</label>
+        <statOffsets>
+          <IncomingDamageFactor>-0.08</IncomingDamageFactor>
+          <PainShockThreshold>0.12</PainShockThreshold>
+          <MeleeHitChance>0.05</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <!-- Niveau Avancé -->
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>défense inébranlable (avancé)</label>
+        <statOffsets>
+          <IncomingDamageFactor>-0.12</IncomingDamageFactor>
+          <PainShockThreshold>0.20</PainShockThreshold>
+          <MeleeHitChance>0.10</MeleeHitChance>
+          <StaggerDurationFactor>-0.15</StaggerDurationFactor>
+        </statOffsets>
+      </li>
+      <!-- Niveau Expert -->
+      <li>
+        <minSeverity>6.0</minSeverity>
+        <label>défense inébranlable (expert)</label>
+        <statOffsets>
+          <IncomingDamageFactor>-0.18</IncomingDamageFactor>
+          <PainShockThreshold>0.30</PainShockThreshold>
+          <MeleeHitChance>0.15</MeleeHitChance>
+          <StaggerDurationFactor>-0.25</StaggerDurationFactor>
+        </statOffsets>
+      </li>
+      <!-- Niveau Maître -->
+      <li>
+        <minSeverity>8.5</minSeverity>
+        <label>défense inébranlable (maître)</label>
+        <statOffsets>
+          <IncomingDamageFactor>-0.25</IncomingDamageFactor>
+          <PainShockThreshold>0.45</PainShockThreshold>
+          <MeleeHitChance>0.22</MeleeHitChance>
+          <StaggerDurationFactor>-0.4</StaggerDurationFactor>
+          <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ✅ CHANCE - PROGRESSION AMÉLIORÉE -->
+  <HediffDef>
+    <defName>Expedition33_ChanceBonus</defName>
+    <label>chance miraculeuse</label>
+    <description>Bonus permanent de chance obtenu par la progression d'expédition.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>9.0</maxSeverity>
+    <stages>
+      <!-- Niveau Débutant -->
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <label>chance miraculeuse (débutant)</label>
+        <statOffsets>
+          <TradePriceImprovement>0.04</TradePriceImprovement>
+          <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <!-- Niveau Intermédiaire -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>chance miraculeuse (intermédiaire)</label>
+        <statOffsets>
+          <TradePriceImprovement>0.10</TradePriceImprovement>
+          <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
+          <PlantHarvestYield>0.08</PlantHarvestYield>
+        </statOffsets>
+      </li>
+      <!-- Niveau Avancé -->
+      <li>
+        <minSeverity>3.0</minSeverity>
+        <label>chance miraculeuse (avancé)</label>
+        <statOffsets>
+          <TradePriceImprovement>0.18</TradePriceImprovement>
+          <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+          <PlantHarvestYield>0.15</PlantHarvestYield>
+          <MiningYield>0.12</MiningYield>
+        </statOffsets>
+      </li>
+      <!-- Niveau Expert -->
+      <li>
+        <minSeverity>6.0</minSeverity>
+        <label>chance miraculeuse (expert)</label>
+        <statOffsets>
+          <TradePriceImprovement>0.28</TradePriceImprovement>
+          <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+          <PlantHarvestYield>0.25</PlantHarvestYield>
+          <MiningYield>0.20</MiningYield>
+          <ResearchSpeed>0.12</ResearchSpeed>
+        </statOffsets>
+      </li>
+      <!-- Niveau Maître -->
+      <li>
+        <minSeverity>8.5</minSeverity>
+        <label>chance miraculeuse (maître)</label>
+        <statOffsets>
+          <TradePriceImprovement>0.40</TradePriceImprovement>
+          <ShootingAccuracyPawn>0.22</ShootingAccuracyPawn>
+          <PlantHarvestYield>0.35</PlantHarvestYield>
+          <MiningYield>0.30</MiningYield>
+          <ResearchSpeed>0.20</ResearchSpeed>
+          <ConstructionSpeed>0.15</ConstructionSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ✅ BONUS DE NIVEAU - PROGRESSION COHÉRENTE -->
+  <HediffDef>
+    <defName>Expedition33_LevelBonus</defName>
+    <label>sagesse de l'expédition</label>
+    <description>Sagesse et expérience acquises au cours de l'Expédition 33.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>5.0</maxSeverity>
+    <stages>
+      <!-- Niveau Apprenti (5-10) -->
+      <li>
+        <minSeverity>0.25</minSeverity>
+        <label>sagesse de l'expédition (apprenti)</label>
+        <statOffsets>
+          <GlobalLearningFactor>0.06</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+      <!-- Niveau Confirmé (15-25) -->
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>sagesse de l'expédition (confirmé)</label>
+        <statOffsets>
+          <GlobalLearningFactor>0.12</GlobalLearningFactor>
+          <WorkSpeedGlobal>0.06</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <!-- Niveau Expérimenté (35-50) -->
+      <li>
+        <minSeverity>2.5</minSeverity>
+        <label>sagesse de l'expédition (expérimenté)</label>
+        <statOffsets>
+          <GlobalLearningFactor>0.20</GlobalLearningFactor>
+          <WorkSpeedGlobal>0.12</WorkSpeedGlobal>
+          <PsychicSensitivity>-0.08</PsychicSensitivity>
+        </statOffsets>
+      </li>
+      <!-- Niveau Vétéran (75-99) -->
+      <li>
+        <minSeverity>4.5</minSeverity>
+        <label>sagesse de l'expédition (vétéran)</label>
+        <statOffsets>
+          <GlobalLearningFactor>0.30</GlobalLearningFactor>
+          <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
+          <PsychicSensitivity>-0.15</PsychicSensitivity>
+          <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+          <SocialImpact>0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
 </Defs>

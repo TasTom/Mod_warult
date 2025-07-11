@@ -29,8 +29,8 @@
 				<compClass>Mod_warult.CompPaintressDeath</compClass>
 			</li>
 			<!-- ✅ AJOUTÉ: Capacités de boss -->
-            <li Class="Mod_warult.CompProperties_BossAbilities">
-                <compClass>Mod_warult.CompBossAbilities</compClass>
+            <li Class="Mod_warult.CompProperties_AbilityUser">
+                <compClass>Mod_warult.CompAbilityUser</compClass>
             </li>
             <!-- ✅ AJOUTÉ: Aura lumineuse -->
             <li Class="CompProperties_Glower">
@@ -92,7 +92,6 @@
 			<foodType>CarnivoreAnimal</foodType>
 			<leatherDef>Leather_Human</leatherDef>
 			<manhunterOnDamageChance>1.0</manhunterOnDamageChance>
-			<wildness>1.0</wildness>
 			<predator>true</predator>
 			<maxPreyBodySize>10</maxPreyBodySize>
 			<lifeExpectancy>1000</lifeExpectancy>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- ========================== ADULTHOOD ========================== -->
+
+<!-- L'Évêque - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Eveque_Adulthood</defName>
+  <title>Évêque du Monolithe</title>
+  <titleShort>Évêque</titleShort>
+  <baseDesc>{PAWN_nameDef} devint le gardien mystique du Monolithe, maître des rituels divins et de la lumière sacrée.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Intellectual>5</Intellectual>
+    <Social>3</Social>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Eveque</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Cleaning</workDisables>
+  <spawnCategories>
+    <li>Expedition33_DivineEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Le Dualiste - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Dualiste_Adulthood</defName>
+  <title>Maître clair-obscur</title>
+  <titleShort>Dualiste</titleShort>
+  <baseDesc>{PAWN_nameDef} devint une entité cosmique incarnant l'équilibre parfait entre lumière et ténèbres.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Intellectual>4</Intellectual>
+    <Artistic>4</Artistic>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Dualiste</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Mining</workDisables>
+  <spawnCategories>
+    <li>Expedition33_DualityEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- François - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Francois_Adulthood</defName>
+  <title>Lame irréversible</title>
+  <titleShort>François</titleShort>
+  <baseDesc>{PAWN_nameDef} devint une entité immortelle de destruction, maître des coups fatals.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Melee>6</Melee>
+    <Shooting>4</Shooting>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Francois</defName>
+      <chance>100</chance>
+    </li>
+    <li>
+      <defName Degree="0">Bloodlust</defName>
+      <chance>50</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Animals</workDisables>
+  <workDisables>Caring</workDisables>
+  <spawnCategories>
+    <li>Expedition33_ImmortalEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Sakapatate Robuste - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_SakapatateRobuste_Adulthood</defName>
+  <title>Colosse tuberculeux</title>
+  <titleShort>Sakapatate robuste</titleShort>
+  <baseDesc>{PAWN_nameDef} devint un gardien végétal ancestral, masse imposante de chair et de tubercules blindés.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Plants>5</Plants>
+    <Melee>4</Melee>
+    <Construction>3</Construction>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_SakapatateRobuste</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <bodyTypeMale>Hulk</bodyTypeMale>
+  <bodyTypeFemale>Hulk</bodyTypeFemale>
+  <workDisables>Social</workDisables>
+  <workDisables>Cooking</workDisables>
+  <spawnCategories>
+    <li>Expedition33_AncientGuardian</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Sakapatate Ultime - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_SakapatateUltime_Adulthood</defName>
+  <title>Sève séculaire</title>
+  <titleShort>Sakapatate ultime</titleShort>
+  <baseDesc>{PAWN_nameDef} devint l'évolution ultime des gardiens végétaux, incarnation de la puissance naturelle millénaire.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Plants>6</Plants>
+    <Melee>5</Melee>
+    <Construction>4</Construction>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_SakapatateUltime</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <bodyTypeMale>Hulk</bodyTypeMale>
+  <bodyTypeFemale>Hulk</bodyTypeFemale>
+  <workDisables>Social</workDisables>
+  <workDisables>Artistic</workDisables>
+  <spawnCategories>
+    <li>Expedition33_SupremeGuardian</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Maître des Lampes - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_MaitreLampes_Adulthood</defName>
+  <title>Architecte des lueurs</title>
+  <titleShort>Maître des lampes</titleShort>
+  <baseDesc>{PAWN_nameDef} devint le seigneur de la lumière, manipulateur des éclairages et créateur de lampes spectrales.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Intellectual>5</Intellectual>
+    <Crafting>5</Crafting>
+    <Artistic>4</Artistic>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_MaitreLampes</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Hauling</workDisables>
+  <spawnCategories>
+    <li>Expedition33_LightController</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Commandant Renoir - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_CommandantRenoir_Adulthood</defName>
+  <title>Commandant d'expédition</title>
+  <titleShort>Cmdt Renoir</titleShort>
+  <baseDesc>{PAWN_nameDef} devint un général corrompu de l'Expédition 33, stratège maître de l'art tactique.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Social>5</Social>
+    <Intellectual>5</Intellectual>
+    <Shooting>4</Shooting>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_CommandantRenoir</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Animals</workDisables>
+  <spawnCategories>
+    <li>Expedition33_CommanderEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Sirène - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Sirene_Adulthood</defName>
+  <title>Chanteuse abyssale</title>
+  <titleShort>Sirène</titleShort>
+  <baseDesc>{PAWN_nameDef} devint un Axon des profondeurs, entité sonique capable de briser les esprits par sa voix.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Social>6</Social>
+    <Artistic>5</Artistic>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Sirene</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Mining</workDisables>
+  <workDisables>Hauling</workDisables>
+  <spawnCategories>
+    <li>Expedition33_AxonEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Visages - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Visages_Adulthood</defName>
+  <title>Portefaix d'identités</title>
+  <titleShort>Visages</titleShort>
+  <baseDesc>{PAWN_nameDef} devint un Axon multiforme, collectif de consciences capable de changer d'identité.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Social>5</Social>
+    <Intellectual>5</Intellectual>
+    <Artistic>4</Artistic>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Visages</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Cooking</workDisables>
+  <spawnCategories>
+    <li>Expedition33_AxonEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Peintresse - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Peintresse_Adulthood</defName>
+  <title>Artiste cosmique</title>
+  <titleShort>Peintresse</titleShort>
+  <baseDesc>{PAWN_nameDef} devint une tisseuse de réalité, artiste cosmique capable de remodeler l'existence.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Artistic>8</Artistic>
+    <Intellectual>6</Intellectual>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Peintresse</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Mining</workDisables>
+  <workDisables>PlantWork</workDisables>
+  <spawnCategories>
+    <li>Expedition33_RealityWeaver</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Verso - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Verso_Adulthood</defName>
+  <title>Fragment immortel</title>
+  <titleShort>Verso</titleShort>
+  <baseDesc>{PAWN_nameDef} devint un fragment d'immortalité brisée, entité régénératrice aux techniques de combat parfaites.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Melee>5</Melee>
+    <Intellectual>3</Intellectual>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Verso</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Caring</workDisables>
+  <spawnCategories>
+    <li>Expedition33_ImmortalEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Mime - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Mime_Adulthood</defName>
+  <title>Ombre silencieuse</title>
+  <titleShort>Mime</titleShort>
+  <baseDesc>{PAWN_nameDef} devint une entité silencieuse, maître des illusions invisibles et des barrières impalpables.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Melee>4</Melee>
+    <Artistic>5</Artistic>
+    <Intellectual>3</Intellectual>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Mime</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Animals</workDisables>
+  <workDisables>Social</workDisables>
+  <spawnCategories>
+    <li>Expedition33_SilentEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+<!-- Goblu - Adulthood -->
+<AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
+  <defName>Expedition33_Goblu_Adulthood</defName>
+  <title>Prédateur primitif</title>
+  <titleShort>Goblu</titleShort>
+  <baseDesc>{PAWN_nameDef} devint une créature primitive aux instincts sauvages et à l'agilité redoutable.</baseDesc>
+  <slot>Adulthood</slot>
+  <skillGains>
+    <Melee>5</Melee>
+    <Animals>4</Animals>
+  </skillGains>
+  <forcedTraitsChance>
+    <li>
+      <defName Degree="0">Expedition33_BossTrait_Goblu</defName>
+      <chance>100</chance>
+    </li>
+  </forcedTraitsChance>
+  <workDisables>Intellectual</workDisables>
+  <workDisables>Artistic</workDisables>
+  <spawnCategories>
+    <li>Expedition33_PrimitiveEntity</li>
+  </spawnCategories>
+</AlienRace.AlienBackstoryDef>
+
+</Defs>

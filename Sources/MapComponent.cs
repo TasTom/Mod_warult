@@ -61,19 +61,19 @@ namespace Mod_warult
             try
             {
                 var realColonists = map.mapPawns.FreeColonists
-                    .Where(p => p.Name?.ToStringShort != "Gardien Fantôme")
+                    .Where(p => p.Name?.ToStringShort != "Gardien Fantï¿½me")
                     .ToList();
 
                 hasRealColonists = realColonists.Any();
 
-                // NOUVEAU - Détecte l'abandon du site
+                // NOUVEAU - Dï¿½tecte l'abandon du site
                 if (hasRealColonists)
                 {
-                    lastColonistTick = Find.TickManager.TicksGame;
+                    lastColonistTick = GenTicks.TicksGame;
                 }
                 else if (lastColonistTick > 0)
                 {
-                    int ticksSinceLastColonist = Find.TickManager.TicksGame - lastColonistTick;
+                    int ticksSinceLastColonist = GenTicks.TicksGame - lastColonistTick;
                     int daysSinceAbandoned = ticksSinceLastColonist / 60000;
 
                     if (daysSinceAbandoned >= 3 && paintressAlive)
@@ -102,7 +102,7 @@ namespace Mod_warult
                     SpawnPaintressIfNeeded();
                 }
 
-                if (Find.TickManager.TicksGame % 60000 == 0)
+                if (GenTicks.TicksGame % 60000 == 0)
                 {
                     CheckPaintressStatus();
                 }
@@ -113,7 +113,7 @@ namespace Mod_warult
             }
         }
 
-        // NOUVEAU - Notifie le GameComponent que le site a été abandonné
+        // NOUVEAU - Notifie le GameComponent que le site a ï¿½tï¿½ abandonnï¿½
         private void NotifyGameComponentOfAbandonment()
         {
             try
@@ -121,7 +121,7 @@ namespace Mod_warult
                 var gameComp = Current.Game.GetComponent<GameComponent_PaintressMonolith>();
                 if (gameComp != null)
                 {
-                    Log.Message("Site du monolithe abandonné - Notification au GameComponent");
+                    Log.Message("Site du monolithe abandonnï¿½ - Notification au GameComponent");
                 }
             }
             catch (Exception e)
@@ -170,13 +170,13 @@ namespace Mod_warult
                 if (!CellFinder.TryFindRandomCellNear(map.Center, map, 50,
                         (IntVec3 c) => c.Standable(map) && c.Walkable(map), out hiddenPos))
                 {
-                    Log.Warning("Impossible de trouver une position pour le colon fantôme");
+                    Log.Warning("Impossible de trouver une position pour le colon fantï¿½me");
                     return;
                 }
 
                 PawnKindDef colonistKind = PawnKindDefOf.Colonist;
                 ghostColonist = PawnGenerator.GeneratePawn(colonistKind, Faction.OfPlayer);
-                ghostColonist.Name = new NameTriple("", "Gardien", "Fantôme");
+                ghostColonist.Name = new NameTriple("", "Gardien", "Fantï¿½me");
 
                 GenSpawn.Spawn(ghostColonist, hiddenPos, map);
 
@@ -188,11 +188,11 @@ namespace Mod_warult
                 if (ghostColonist.needs?.mood != null)
                     ghostColonist.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.Catharsis);
 
-                Log.Message($"Colon fantôme créé à {hiddenPos} pour maintenir la carte");
+                Log.Message($"Colon fantï¿½me crï¿½ï¿½ ï¿½ {hiddenPos} pour maintenir la carte");
             }
             catch (Exception e)
             {
-                Log.Error($"Erreur lors de la création du colon fantôme : {e.Message}");
+                Log.Error($"Erreur lors de la crï¿½ation du colon fantï¿½me : {e.Message}");
             }
         }
 
@@ -204,11 +204,11 @@ namespace Mod_warult
                 {
                     ghostColonist.Destroy();
                     ghostColonist = null;
-                    Log.Message("Vrais colons détectés - Colon fantôme supprimé");
+                    Log.Message("Vrais colons dï¿½tectï¿½s - Colon fantï¿½me supprimï¿½");
                 }
                 catch (Exception e)
                 {
-                    Log.Error($"Erreur lors de la suppression du colon fantôme : {e.Message}");
+                    Log.Error($"Erreur lors de la suppression du colon fantï¿½me : {e.Message}");
                 }
             }
         }
@@ -222,7 +222,7 @@ namespace Mod_warult
 
                 if (existingPaintress != null)
                 {
-                    Log.Message("Paintress déjà présente sur la carte");
+                    Log.Message("Paintress dï¿½jï¿½ prï¿½sente sur la carte");
                     paintressSpawned = true;
                     return;
                 }
@@ -231,7 +231,7 @@ namespace Mod_warult
                     DefDatabase<PawnKindDef>.GetNamedSilentFail("Expedition33_PaintressMonster");
                 if (paintressKind == null)
                 {
-                    Log.Error("PawnKindDef Expedition33_PaintressMonster non trouvé !");
+                    Log.Error("PawnKindDef Expedition33_PaintressMonster non trouvï¿½ !");
                     return;
                 }
 
@@ -239,7 +239,7 @@ namespace Mod_warult
                 if (!CellFinder.TryFindRandomCellNear(spawnPos, map, 15,
                         (IntVec3 c) => c.Standable(map) && c.Walkable(map), out spawnPos))
                 {
-                    Log.Warning("Position de spawn par défaut utilisée");
+                    Log.Warning("Position de spawn par dï¿½faut utilisï¿½e");
                     spawnPos = map.Center;
                 }
 
@@ -250,7 +250,7 @@ namespace Mod_warult
                 Pawn paintress = PawnGenerator.GeneratePawn(paintressKind, expedition33);
                 if (paintress == null)
                 {
-                    Log.Error("Impossible de générer la Paintress !");
+                    Log.Error("Impossible de gï¿½nï¿½rer la Paintress !");
                     return;
                 }
 
@@ -259,12 +259,12 @@ namespace Mod_warult
 
                 paintressSpawned = true;
 
-                Log.Message($"Paintress spawnée automatiquement à {spawnPos}");
+                Log.Message($"Paintress spawnï¿½e automatiquement ï¿½ {spawnPos}");
 
                 Find.LetterStack.ReceiveLetter(
                     "LA PAINTRESS VOUS ATTEND !",
-                    "En explorant cette région mystérieuse, vous découvrez la terrifiante Paintress !\n\n" +
-                    "Cette entité colossale manipule la réalité avec son pinceau magique. " +
+                    "En explorant cette rï¿½gion mystï¿½rieuse, vous dï¿½couvrez la terrifiante Paintress !\n\n" +
+                    "Cette entitï¿½ colossale manipule la rï¿½alitï¿½ avec son pinceau magique. " +
                     "Comme dans Clair Obscur: Expedition 33, elle garde jalousement son monolithe.\n\n" +
                     "L'affrontement final commence maintenant !",
                     LetterDefOf.ThreatBig,
@@ -292,7 +292,7 @@ namespace Mod_warult
                     {
                         RemoveGhostColonist();
                         preventRemoval = false;
-                        Log.Message("Paintress morte - Colon fantôme supprimé, carte peut être abandonnée");
+                        Log.Message("Paintress morte - Colon fantï¿½me supprimï¿½, carte peut ï¿½tre abandonnï¿½e");
                     }
                 }
                 else if (paintressSpawned)
@@ -300,7 +300,7 @@ namespace Mod_warult
                     paintressAlive = false;
                     RemoveGhostColonist();
                     preventRemoval = false;
-                    Log.Message("Paintress disparue - Considérée comme morte");
+                    Log.Message("Paintress disparue - Considï¿½rï¿½e comme morte");
                 }
             }
             catch (Exception e)
@@ -314,7 +314,7 @@ namespace Mod_warult
             if (isMonolithSite)
             {
                 string siteName = map.info.parent?.Label ?? "Site du monolithe";
-                Log.Message($"Carte du monolithe générée - Persistance forcée : {siteName}");
+                Log.Message($"Carte du monolithe gï¿½nï¿½rï¿½e - Persistance forcï¿½e : {siteName}");
 
                 var gameComp = Current.Game.GetComponent<GameComponent_PaintressMonolith>();
                 if (gameComp != null)
@@ -328,11 +328,11 @@ namespace Mod_warult
         {
             if (isMonolithSite && paintressAlive && preventRemoval)
             {
-                Log.Warning("Tentative de suppression de la carte du monolithe empêchée - Paintress encore vivante");
+                Log.Warning("Tentative de suppression de la carte du monolithe empï¿½chï¿½e - Paintress encore vivante");
                 return;
             }
 
-            Log.Message("Carte du monolithe supprimée - Paintress morte ou removal autorisé");
+            Log.Message("Carte du monolithe supprimï¿½e - Paintress morte ou removal autorisï¿½");
             base.MapRemoved();
         }
 
@@ -349,5 +349,7 @@ namespace Mod_warult
             Scribe_References.Look(ref ghostColonist, "ghostColonist");
         }
     }
+
+    
 
 }
