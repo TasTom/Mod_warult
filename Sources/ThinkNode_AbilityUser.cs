@@ -270,8 +270,7 @@ namespace Mod_warult
                 "MonolithPower" when enemies.Count >= 5 => 130,
 
                 // === VERSO ===
-                "ImmortalityFragment" when healthPercent < 0.5f => 110,
-                "ImmortalityFragment" when nearEnemies >= 3 => 90,
+                "ImmortalityFragment" when healthPercent < 0.25f => 80,
                 "FractureParfaite" when enemies.Any(e => e.health.summaryHealth.SummaryHealthPercent > 0.8f) => 100,
                 "FractureParfaite" when enemies.Count >= 2 => 85,
 
@@ -349,11 +348,20 @@ namespace Mod_warult
 
 
 
-        // Méthodes utilitaires manquantes
         private static bool IsBoss(Pawn pawn)
         {
-            return pawn?.kindDef?.defName?.StartsWith("Expedition33_") == true;
+            // Vérification standard pour les boss
+            if (pawn?.kindDef?.defName?.StartsWith("Expedition33_") == true)
+                return true;
+
+            // Vérification spéciale pour les colons Verso
+            if (pawn?.kindDef?.defName?.Contains("Verso") == true)
+                return true;
+
+            return false;
         }
+
+
 
         private List<BossAbility> GetAbilitiesForBoss(Pawn pawn)
         {
@@ -371,7 +379,7 @@ namespace Mod_warult
                 {
                     new BossAbility("RapidMovement", 0f, true),
                     new BossAbility("HeavyArmor", 0f, true),
-                    new BossAbility("AreaAttacks", 10f, false)
+                    new BossAbility("AreaAttacks", 20f, false)
                 },
 
                 "Expedition33_SakapatateUltime" => new List<BossAbility>
@@ -434,6 +442,14 @@ namespace Mod_warult
                     new BossAbility("ImmortalityFragment", 0f, true),
                     new BossAbility("FractureParfaite", 12f, false)
                 },
+
+                        // Support pour colon Verso (nom peut varier)
+                var name when name.Contains("Verso") => new List<BossAbility>
+                {
+                    new BossAbility("ImmortalityFragment", 0f, true),
+                    new BossAbility("FractureParfaite", 12f, false)
+                },
+                
 
                 "Expedition33_Mime" => new List<BossAbility>
                 {
@@ -524,7 +540,17 @@ namespace Mod_warult
                         ability.range,
                         t => t is Pawn p && p.Faction?.IsPlayer == true && !p.Downed
                     );
-
+                 case "FractureParfaite":
+                 if (pawn.Faction == Faction.OfPlayer)
+                    return null;
+                    return GenClosest.ClosestThingReachable(
+                        pawn.Position, pawn.Map,
+                        ThingRequest.ForGroup(ThingRequestGroup.Pawn),
+                        PathEndMode.OnCell,
+                        TraverseParms.For(pawn),
+                        ability.range,
+                        t => t is Pawn p && p.Faction?.IsPlayer == true && !p.Downed && p != pawn // Exclure soi-même
+                    );
                 case "ObscurBlast":
                 case "AreaAttacks":
                     // Cibler le centre du groupe d'ennemis le plus dense

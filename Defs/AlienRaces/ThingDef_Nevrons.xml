@@ -351,8 +351,8 @@
             <baseBodySize>3.0</baseBodySize>
             <foodType>OmnivoreHuman</foodType>
             <gestationPeriodDays>45</gestationPeriodDays>
-            <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
-            <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
 
             <lifeStageAges>
                 <li>

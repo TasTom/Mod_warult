@@ -70,18 +70,7 @@
 		<letterDef>PositiveEvent</letterDef>
 	</IncidentDef>
 
-	<IncidentDef>
-		<defName>Expedition33_SpawnPaintressOnSite</defName>
-		<label>Spawn Panteresse sur Site</label>
-		<workerClass>Mod_warult.IncidentWorker_SpawnPaintressOnSite</workerClass>
-		<category>Misc</category>
-		<targetTags>
-			<li>Map_Misc</li>
-		</targetTags>
-		<baseChance>100.0</baseChance>
-		<minRefireDays>1</minRefireDays>
-		<earliestDay>1</earliestDay>
-	</IncidentDef>
+
 
 
 </Defs>

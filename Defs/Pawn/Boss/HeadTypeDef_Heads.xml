@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<HeadTypeDef ParentName="AverageBase">
+  <defName>Eveque_None</defName>
+  <graphicPath>Things/Pawn/Humanlike/Heads/None</graphicPath>
+  <gender>None</gender>
+</HeadTypeDef>
+</Defs>

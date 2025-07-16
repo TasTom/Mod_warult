@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =============================================================== -->
+  <!--               BodyTypeDef pour l’apparence                     -->
+  <!-- =============================================================== -->
+  <BodyTypeDef>
+    <defName>Eveque_Body</defName>
+    <label>évêque</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque</bodyDessicatedGraphicPath>
+    <!-- Uncommenter si vous fournissez un masque pour les vêtements
+    <bodyMaleMaskPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque_Mask</bodyMaleMaskPath>
+    <bodyFemaleMaskPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque_Mask</bodyFemaleMaskPath>
+    -->
+  </BodyTypeDef>
+
+  <!-- =============================================================== -->
+  <!--               BodyDef pour l’anatomie (gel, blessures, etc.)    -->
+  <!-- =============================================================== -->
+  <BodyDef>
+    <defName>Eveque_Body</defName>
+    <label>corps d'évêque</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <!-- Cou et tête -->
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <!-- Bras gauche -->
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <!-- Bras droit -->
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <!-- Jambe gauche -->
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <!-- Jambe droite -->
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+</Defs>

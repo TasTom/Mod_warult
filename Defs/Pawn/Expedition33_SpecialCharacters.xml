@@ -17,12 +17,16 @@
     <li>IndustrialGunAdvanced</li>
   </weaponTags>
 
+  <abilities>
+    <li>Expedition33_ImmortalityFragment</li>
+    <li>Expedition33_FractureParfaite</li>
+  </abilities>
 
-    <forcedTraits>
-      <li>
-        <def>Expedition33_BossTrait_Verso</def>
-      </li>
-    </forcedTraits>
+  <forcedTraits>
+    <li>
+      <def>Expedition33_BossTrait_Verso</def>
+    </li>
+  </forcedTraits>
 
   <modExtensions>
     <li Class="Mod_warult.BossExtension">
@@ -37,32 +41,6 @@
   </modExtensions>
 </PawnKindDef>
 
-
- 
-
-    <forcedTraits>
-      <li>
-        <def>Expedition33_BossTrait_SakapatateUltime</def>
-      </li>
-    </forcedTraits>
-
-    <aiAvoidCover>false</aiAvoidCover>
-
-    <modExtensions>
-      <li Class="Mod_warult.BossExtension">
-        <bossType>Elite</bossType>
-        <questReward>unlock_ancient_sanctuary_secrets</questReward>
-        <creatureName>Sakapatate l'Ultime</creatureName>
-        <isLegendaryEntity>true</isLegendaryEntity>
-        <specialMechanics>
-          <li>heavy_armor</li>
-          <li>energy_shields</li>
-          <li>area_attacks</li>
-          <li>supreme_power</li>
-        </specialMechanics>
-      </li>
-    </modExtensions>
-  </PawnKindDef>
 
 <PawnKindDef>
   <defName>Expedition33_Mime</defName>

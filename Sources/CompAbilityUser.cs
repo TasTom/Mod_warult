@@ -11,6 +11,8 @@ namespace Mod_warult
         
         private List<AbilityDef> learnedAbilities = new List<AbilityDef>();
         private Dictionary<AbilityDef, int> abilityCooldowns = new Dictionary<AbilityDef, int>();
+
+         public bool ShouldAutocast => Props.autocast && AbilityUserPawn.Faction != Faction.OfPlayer;
         
         public Pawn AbilityUserPawn => parent as Pawn;
         
@@ -84,6 +86,7 @@ namespace Mod_warult
     public class CompProperties_AbilityUser : CompProperties
     {
         public List<AbilityDef> abilityDefs;
+        public bool autocast = true;
         
         public CompProperties_AbilityUser()
         {

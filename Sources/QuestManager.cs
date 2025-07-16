@@ -96,7 +96,7 @@ namespace Mod_warult
                     questId = "ActeII_VersoArrival",
                     title = "L'Arrivée de Verso",
                     description = "Un homme mystérieux apparaît : Verso, survivant de l'Expédition Zéro. Il connaît des secrets sur le Gommage et la Peintresse. Son arrivée marque le début d'une nouvelle phase.",
-                    objectives = new List<string> { "Accueillir Verso dans l'expédition.", "Écouter ses révélations.", "Explorer les Terres Oubliées." },
+                    objectives = new List<string> { "Accueillir Verso dans l'expédition." },
                     triggerCondition = "EVENT_VERSO_JOINED",
                     nextQuestId = "ActeII_TerresOubliees"
                 },

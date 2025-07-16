@@ -13,14 +13,14 @@
 			<drawSize>(3,2)</drawSize>
 		</graphicData>
 		<castEdgeShadows>true</castEdgeShadows>
-		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<staticSunShadowHeight>0.10</staticSunShadowHeight>
 		<costList>
 			<WoodLog>150</WoodLog>
 			<Steel>75</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
-		<fillPercent>0.5</fillPercent>
+		<fillPercent>0.6</fillPercent>
 		<blockLight>true</blockLight>
 		<canOverlapZones>false</canOverlapZones>
 		<useHitPoints>True</useHitPoints>
@@ -154,7 +154,7 @@
 		</graphicData>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
-		<fillPercent>0.35</fillPercent>
+		<fillPercent>0.8</fillPercent>
 		<pathCost>50</pathCost>
 		<castEdgeShadows>true</castEdgeShadows>
 		<costList>
@@ -212,7 +212,7 @@
 			<Gold>30</Gold>
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
-		<fillPercent>0.5</fillPercent>
+		<fillPercent>0.6</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<WorkToBuild>10000</WorkToBuild>

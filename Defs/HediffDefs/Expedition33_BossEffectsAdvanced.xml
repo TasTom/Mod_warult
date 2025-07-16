@@ -775,4 +775,41 @@
   </stages>
 </HediffDef>
 
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EFFETS DE VERSO -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_ImmortalityBuff</defName>
+  <label>Fragment d'immortalité</label>
+  <description>Un fragment mystique qui régénère les blessures et renforce la vitalité.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.8, 0.8, 1.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+     <li Class="HediffCompProperties_SeverityPerDay">
+      <severityPerDay>-0.1</severityPerDay> <!-- Diminue lentement -->
+    </li>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3600</disappearsAfterTicks> <!-- 1 minute -->
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>0.1</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>0.1</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+
 </Defs>

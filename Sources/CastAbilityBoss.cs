@@ -1255,7 +1255,8 @@ namespace Mod_warult
             if (base.TryCastShot())
             {
                 var target = currentTarget.Pawn;
-                if (target != null)
+                if (target == null || target == CasterPawn) return false;
+                if (target != null )
                 {
                     // Fracture parfaite - ignore toute armure et résistance
                     var fractureDamage = new DamageInfo(DamageDefOf.Cut, 200f, 10f, -1f, CasterPawn);
@@ -1267,7 +1268,7 @@ namespace Mod_warult
                     // Effet visuel cristallin
                     for (int i = 0; i < 20; i++)
                     {
-                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f, 
+                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f,
                             new Color(0.8f, 0.9f, 1f));
                     }
                 }

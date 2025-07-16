@@ -62,6 +62,9 @@
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_EvequeRace</defName>
     <label>Évêque Boss</label>
+
+
+
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
@@ -71,13 +74,84 @@
         </abilityDefs>
       </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Eveque_AI</thinkTreeMain></race>
+    <race>
+      <body>Human</body>
+      <thinkTreeMain>Expedition33_Eveque_AI</thinkTreeMain>
+      <nameCategory>HumanStandard</nameCategory> 
+      <hasGenders>false</hasGenders>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>2.0</baseHealthScale>
+      
+      <lifeStageAges>
+        <li Class="AlienRace.LifeStageAgeAlien">
+          <def>HumanlikeAdult</def>
+          <minAge>13</minAge>
+         
+        </li>
+      </lifeStageAges>
+    
+    </race>
+
+
     <alienRace>
+      <graphicPaths>
+        <head>
+            <path>Things/Pawn/Humanlike/Heads/None </path>
+             <headtypeGraphics>
+                <Eveque_None>Things/Pawn/Humanlike/Heads/None</Eveque_None>
+              </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque</path>
+        </body>
+      </graphicPaths>
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>false</immuneToAge>
+
+        <alienPartGenerator>
+          <bodyTypes>
+            <li>Eveque_Body</li>
+          </bodyTypes>
+          <headTypes>
+            <li>Eveque_None</li>
+          </headTypes>
+          <customDrawSize>(3, 3)</customDrawSize>
+          <customHeadDrawSize>(0, 0)</customHeadDrawSize>
+          
+        </alienPartGenerator>
+
+
+        <immuneToAge>true</immuneToAge>
       </generalSettings>
+      <raceRestriction>
+      
+      </raceRestriction>
+       <styleSettings>
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>TattooDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+      </styleSettings>
+
+
+
       <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
     </alienRace>
   </ThingDef>
@@ -324,6 +398,7 @@
     <label>Verso Boss</label>
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
+      <autocast>false</autocast>
         <abilityDefs>
           <li>Expedition33_ImmortalityFragment</li>
           <li>Expedition33_FractureParfaite</li>

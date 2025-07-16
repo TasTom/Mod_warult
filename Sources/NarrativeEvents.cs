@@ -8,19 +8,33 @@ namespace Mod_warult
     {
         public static void TriggerVersoArrival()
         {
+            var existingVerso = Find.Maps
+                .SelectMany(m => m.mapPawns.AllPawns)
+                .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_Verso");
+
+            if (existingVerso != null)
+            {
+                Log.Warning("[Expedition33] Verso existe déjà, annulation du spawn");
+                // ✅ Déclenche l'événement même si Verso existe déjà
+                var trackerquest = QuestEventUtility.FindQuestTracker();
+                if (trackerquest != null && trackerquest.currentQuestId == "ActeII_VersoArrival")
+                    QuestEventUtility.TriggerGlobalEvent("EVENT_VERSO_JOINED");
+                return;
+            }
+
             // Génère Verso et l'ajoute à la faction du joueur
             var verso = PawnGenerator.GeneratePawn(
                 DefDatabase<PawnKindDef>.GetNamed("Expedition33_Verso"));
             verso.SetFaction(Faction.OfPlayer);
-            
+
             var map = Find.Maps.Where(m => m.IsPlayerHome).FirstOrDefault();
             if (map != null)
             {
                 IntVec3 spawnSpot = CellFinder.RandomClosewalkCellNear(
                     map.Center, map, 20, x => x.Standable(map));
-                    
+
                 GenSpawn.Spawn(verso, spawnSpot, map);
-                
+
                 Find.WindowStack.Add(new Dialog_MessageBox(
                     "🔮 UN ÉTRANGER MYSTÉRIEUX\n\n" +
                     "Un homme aux cheveux blancs apparaît près de votre campement. " +
@@ -30,8 +44,16 @@ namespace Mod_warult
                     "vous guider vers la vérité sur la Peintresse et le Gommage.\"\n\n" +
                     "Verso a rejoint votre expédition !"));
             }
+
+            // ✅ AJOUTE CETTE LIGNE : Déclenche l'événement après le spawn
+            var tracker = QuestEventUtility.FindQuestTracker();
+            if (tracker != null && tracker.currentQuestId == "ActeII_VersoArrival")
+                QuestEventUtility.TriggerGlobalEvent("EVENT_VERSO_JOINED");
         }
-        
+
+
+
+
         public static void TriggerActeICompletion()
         {
             Find.WindowStack.Add(new Dialog_MessageBox(

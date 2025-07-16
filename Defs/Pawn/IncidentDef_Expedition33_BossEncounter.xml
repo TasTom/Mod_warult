@@ -27,7 +27,7 @@
 
 <IncidentDef>
   <defName>Expedition33_SpawnGobluSite</defName>
-  <label>découverte des Vallons Fleuris</label>
+  <label>découverte de l'Océan Suspendu</label>
   <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
   <category>Misc</category>
   <baseChance>0</baseChance>
@@ -38,14 +38,14 @@
     <li Class="Mod_warult.BossSiteExtension">
       <sitePartDefName>Expedition33_GobluSitePart</sitePartDefName>
       <bossDefName>Expedition33_Goblu</bossDefName>
-      <questId>ActeI_VallonsFleuris</questId>
+      <questId>ActeI_OceanSuspendu</questId>
     </li>
   </modExtensions>
 </IncidentDef>
 
 <IncidentDef>
   <defName>Expedition33_SpawnSakapatateRobusteSite</defName>
-  <label>découverte de l'Océan Suspendu</label>
+  <label>découverte du Sanctuaire Ancien</label>
   <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
   <category>Misc</category>
   <baseChance>0</baseChance>
@@ -56,7 +56,7 @@
     <li Class="Mod_warult.BossSiteExtension">
       <sitePartDefName>Expedition33_SakapatateRobusteSitePart</sitePartDefName>
       <bossDefName>Expedition33_SakapatateRobuste</bossDefName>
-      <questId>ActeI_OceanSuspendu</questId>
+      <questId>ActeI_SanctuaireAncien</questId>
     </li>
   </modExtensions>
 </IncidentDef>

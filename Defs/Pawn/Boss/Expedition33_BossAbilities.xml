@@ -600,6 +600,7 @@
     <range>12</range>
     <warmupTime>2.5</warmupTime>
     <targetParams>
+      <canTargetSelf>false</canTargetSelf>
       <canTargetPawns>true</canTargetPawns>
     </targetParams>
   </verbProperties>

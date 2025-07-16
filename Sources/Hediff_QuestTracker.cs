@@ -25,7 +25,11 @@ namespace Mod_warult
 
         public void CompleteCurrentQuest()
         {
+            
             if (string.IsNullOrEmpty(currentQuestId)) return;
+
+
+            
 
             // Vérification de sécurité
             if (!QuestManager.AllQuests.ContainsKey(currentQuestId))
@@ -53,10 +57,11 @@ namespace Mod_warult
                 Messages.Message("🏆 Félicitations ! Trame narrative principale terminée !", MessageTypeDefOf.PositiveEvent);
             }
 
-            // Événements spéciaux selon la quête terminée
             if (currentQuestId == "ActeII_VersoArrival")
             {
                 NarrativeEvents.TriggerVersoArrival();
+
+
             }
             else if (currentQuestId == "ActeI_Final")
             {
@@ -70,6 +75,14 @@ namespace Mod_warult
 
         private void TriggerBossSiteForQuest(string questId)
         {
+            if (questId == "ActeII_LesAxons")
+            {
+                // Génère les deux sites Axons
+                TriggerIncident("Expedition33_SpawnSireneSite");
+                TriggerIncident("Expedition33_SpawnVisagesSite");
+                return;
+            }
+            
             string incidentDefName = GetIncidentForQuest(questId);
             if (string.IsNullOrEmpty(incidentDefName)) return;
 
@@ -89,7 +102,24 @@ namespace Mod_warult
             {
                 Log.Message($"[Expedition33] Site boss généré pour la quête: {questId}");
             }
+
+            
         }
+
+        private void TriggerIncident(string incidentDefName)
+        {
+            var incidentDef = DefDatabase<IncidentDef>.GetNamedSilentFail(incidentDefName);
+            if (incidentDef == null)
+            {
+                Log.Warning($"[Expedition33] IncidentDef introuvable: {incidentDefName}");
+                return;
+            }
+            IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, Find.World);
+            parms.faction = Find.FactionManager.FirstFactionOfDef(
+                DefDatabase<FactionDef>.GetNamedSilentFail("Expedition33_Nevrons")) ?? Find.FactionManager.RandomEnemyFaction();
+            if (incidentDef.Worker.TryExecute(parms))
+                Log.Message($"[Expedition33] Site boss généré pour l’incident: {incidentDefName}");
+}
 
         private string GetIncidentForQuest(string questId)
         {
@@ -121,7 +151,7 @@ namespace Mod_warult
                     break;
 
                 case "ActeII_Final":
-                    NarrativeEvents.TriggerFinalVictory();
+                    PaintressManager.SpawnPaintressOnObscurContinent();
                     break;
             }
         }
@@ -178,6 +208,7 @@ namespace Mod_warult
         public void TriggerQuestEvent(string eventType)
         {
             if (string.IsNullOrEmpty(currentQuestId)) return;
+            if (completedQuests.Contains(currentQuestId)) return; 
 
             if (QuestManager.AllQuests.ContainsKey(currentQuestId))
             {

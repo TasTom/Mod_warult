@@ -269,8 +269,8 @@ namespace Mod_warult
 
             private static string GetIncidentForQuest(string questId) => questId switch
             {
-                "ActeI_VallonsFleuris" => "Expedition33_SpawnGobluSite",
-                "ActeI_OceanSuspendu" => "Expedition33_SpawnSakapatateRobusteSite",
+                "ActeI_VallonsFleuris" => "Expedition33_SpawnEvequeSite",
+                "ActeI_OceanSuspendu" => "Expedition33_SpawnGobluSite",
                 "ActeI_SanctuaireAncien" => "Expedition33_SpawnSakapatateUltimeSite",
                 "ActeI_NidEsquie" => "Expedition33_SpawnFrancoisSite",
                 "ActeI_Final" => "Expedition33_SpawnMaitreDesLampesSite",

@@ -28,12 +28,12 @@
 
 <SitePartDef>
   <defName>Expedition33_GobluSitePart</defName>
-  <label>vallons fleuris</label>
-  <description>Territoire sauvage où rôde le mystérieux Goblu.</description>
+  <label>Océans suspendus</label>
+  <description>Un phénomène impossible : un océan qui flotte dans les airs. Ici règne le mystérieux Goblu.</description>
   <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
-   <siteTexture>UI/Icons/Site_boss</siteTexture>
-    <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
-  <arrivedLetter>Vous atteignez les Vallons Fleuris. Le Goblu vous attend quelque part dans cette région apparemment paisible.</arrivedLetter>
+  <siteTexture>UI/Icons/Site_boss</siteTexture>
+  <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
+  <arrivedLetter>Vous atteignez l'Océan Suspendu. Un phénomène défiant toutes les lois de la physique s'étend devant vous. Le Goblu garde jalousement ce territoire aquatique flottant.</arrivedLetter>
   <tags>
     <li>BossExpedition33</li>
     <li>ActeI</li>
@@ -41,10 +41,11 @@
   <modExtensions>
     <li Class="Mod_warult.BossSiteExtension">
       <bossDefName>Expedition33_Goblu</bossDefName>
-      <questId>ActeI_VallonsFleuris</questId>
+      <questId>ActeI_OceanSuspendu</questId>
     </li>
   </modExtensions>
 </SitePartDef>
+
 
 <SitePartDef>
   <defName>Expedition33_SakapatateRobusteSitePart</defName>
