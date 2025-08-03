@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Boss Races -->
+  <Expedition33_EvequeRace.label>Évêque</Expedition33_EvequeRace.label>
+  <Expedition33_EvequeRace.description>Un gardien divin corrompu par les énergies chromatiques, maniant la lumière sacrée comme bénédiction et arme.</Expedition33_EvequeRace.description>
+  <Expedition33_EvequeRace.tools.left_fist.label>poing gauche</Expedition33_EvequeRace.tools.left_fist.label>
+  <Expedition33_EvequeRace.tools.left_fist.labelNoLocation>poing</Expedition33_EvequeRace.tools.left_fist.labelNoLocation>
+  <Expedition33_EvequeRace.tools.right_fist.label>poing droit</Expedition33_EvequeRace.tools.right_fist.label>
+  <Expedition33_EvequeRace.tools.right_fist.labelNoLocation>poing</Expedition33_EvequeRace.tools.right_fist.labelNoLocation>
+  <Expedition33_EvequeRace.tools.teeth.label>dents</Expedition33_EvequeRace.tools.teeth.label>
+  <Expedition33_EvequeRace.tools.head.label>tête</Expedition33_EvequeRace.tools.head.label>
+
+
+  <Expedition33_GobluRace.label>Goblu</Expedition33_GobluRace.label>
+  <Expedition33_GobluRace.description>Une créature primitive aux instincts sauvages et à l'agilité redoutable, défenseur de son champ de fleurs sacrées.</Expedition33_GobluRace.description>
+  <Expedition33_GobluRace.tools.left_fist.label>poing gauche</Expedition33_GobluRace.tools.left_fist.label>
+  <Expedition33_GobluRace.tools.left_fist.labelNoLocation>poing</Expedition33_GobluRace.tools.left_fist.labelNoLocation>
+  <Expedition33_GobluRace.tools.right_fist.label>poing droit</Expedition33_GobluRace.tools.right_fist.label>
+  <Expedition33_GobluRace.tools.right_fist.labelNoLocation>poing</Expedition33_GobluRace.tools.right_fist.labelNoLocation>
+  <Expedition33_GobluRace.tools.teeth.label>dents</Expedition33_GobluRace.tools.teeth.label>
+  <Expedition33_GobluRace.tools.head.label>tête</Expedition33_GobluRace.tools.head.label>
+
+
+  <Expedition33_SakapatateRobusteRace.label>Sakapatate Robuste</Expedition33_SakapatateRobusteRace.label>
+  <Expedition33_SakapatateRobusteRace.description>Un gardien végétal ancestral, masse imposante de chair et de tubercules blindés.</Expedition33_SakapatateRobusteRace.description>
+  <Expedition33_SakapatateRobusteRace.tools.left_fist.label>poing gauche</Expedition33_SakapatateRobusteRace.tools.left_fist.label>
+  <Expedition33_SakapatateRobusteRace.tools.left_fist.labelNoLocation>poing</Expedition33_SakapatateRobusteRace.tools.left_fist.labelNoLocation>
+  <Expedition33_SakapatateRobusteRace.tools.right_fist.label>poing droit</Expedition33_SakapatateRobusteRace.tools.right_fist.label>
+  <Expedition33_SakapatateRobusteRace.tools.right_fist.labelNoLocation>poing</Expedition33_SakapatateRobusteRace.tools.right_fist.labelNoLocation>
+  <Expedition33_SakapatateRobusteRace.tools.teeth.label>dents</Expedition33_SakapatateRobusteRace.tools.teeth.label>
+  <Expedition33_SakapatateRobusteRace.tools.head.label>tête</Expedition33_SakapatateRobusteRace.tools.head.label>
+
+
+  <Expedition33_SakapatateUltimeRace.label>Sakapatate Ultime</Expedition33_SakapatateUltimeRace.label>
+  <Expedition33_SakapatateUltimeRace.description>L'évolution ultime des gardiens végétaux, incarnation du pouvoir naturel millénaire.</Expedition33_SakapatateUltimeRace.description>
+  <Expedition33_SakapatateUltimeRace.tools.left_fist.label>poing gauche</Expedition33_SakapatateUltimeRace.tools.left_fist.label>
+  <Expedition33_SakapatateUltimeRace.tools.left_fist.labelNoLocation>poing</Expedition33_SakapatateUltimeRace.tools.left_fist.labelNoLocation>
+  <Expedition33_SakapatateUltimeRace.tools.right_fist.label>poing droit</Expedition33_SakapatateUltimeRace.tools.right_fist.label>
+  <Expedition33_SakapatateUltimeRace.tools.right_fist.labelNoLocation>poing</Expedition33_SakapatateUltimeRace.tools.right_fist.labelNoLocation>
+  <Expedition33_SakapatateUltimeRace.tools.teeth.label>dents</Expedition33_SakapatateUltimeRace.tools.teeth.label>
+  <Expedition33_SakapatateUltimeRace.tools.head.label>tête</Expedition33_SakapatateUltimeRace.tools.head.label>
+
+
+  <Expedition33_FrancoisRace.label>François</Expedition33_FrancoisRace.label>
+  <Expedition33_FrancoisRace.description>Une tortue géante mélancolique avec des champignons bioluminescents sur sa carapace. Malgré son attitude bourrue, il cache une profonde tristesse.</Expedition33_FrancoisRace.description>
+  <Expedition33_FrancoisRace.tools.left_fist.label>poing gauche</Expedition33_FrancoisRace.tools.left_fist.label>
+  <Expedition33_FrancoisRace.tools.left_fist.labelNoLocation>poing</Expedition33_FrancoisRace.tools.left_fist.labelNoLocation>
+  <Expedition33_FrancoisRace.tools.right_fist.label>poing droit</Expedition33_FrancoisRace.tools.right_fist.label>
+  <Expedition33_FrancoisRace.tools.right_fist.labelNoLocation>poing</Expedition33_FrancoisRace.tools.right_fist.labelNoLocation>
+  <Expedition33_FrancoisRace.tools.teeth.label>dents</Expedition33_FrancoisRace.tools.teeth.label>
+  <Expedition33_FrancoisRace.tools.head.label>tête</Expedition33_FrancoisRace.tools.head.label>
+
+
+  <Expedition33_MaitreLampesRace.label>Maître des Lampes</Expedition33_MaitreLampesRace.label>
+  <Expedition33_MaitreLampesRace.description>Seigneur de la lumière, manipulateur d'illumination et créateur de lampes spectrales.</Expedition33_MaitreLampesRace.description>
+  <Expedition33_MaitreLampesRace.tools.left_fist.label>poing gauche</Expedition33_MaitreLampesRace.tools.left_fist.label>
+  <Expedition33_MaitreLampesRace.tools.left_fist.labelNoLocation>poing</Expedition33_MaitreLampesRace.tools.left_fist.labelNoLocation>
+  <Expedition33_MaitreLampesRace.tools.right_fist.label>poing droit</Expedition33_MaitreLampesRace.tools.right_fist.label>
+  <Expedition33_MaitreLampesRace.tools.right_fist.labelNoLocation>poing</Expedition33_MaitreLampesRace.tools.right_fist.labelNoLocation>
+  <Expedition33_MaitreLampesRace.tools.teeth.label>dents</Expedition33_MaitreLampesRace.tools.teeth.label>
+  <Expedition33_MaitreLampesRace.tools.head.label>tête</Expedition33_MaitreLampesRace.tools.head.label>
+
+
+  <Expedition33_DualisteRace.label>Dualiste</Expedition33_DualisteRace.label>
+  <Expedition33_DualisteRace.description>Une entité cosmique incarnant l'équilibre parfait entre lumière et ténèbres.</Expedition33_DualisteRace.description>
+  <Expedition33_DualisteRace.tools.left_fist.label>poing gauche</Expedition33_DualisteRace.tools.left_fist.label>
+  <Expedition33_DualisteRace.tools.left_fist.labelNoLocation>poing</Expedition33_DualisteRace.tools.left_fist.labelNoLocation>
+  <Expedition33_DualisteRace.tools.right_fist.label>poing droit</Expedition33_DualisteRace.tools.right_fist.label>
+  <Expedition33_DualisteRace.tools.right_fist.labelNoLocation>poing</Expedition33_DualisteRace.tools.right_fist.labelNoLocation>
+  <Expedition33_DualisteRace.tools.teeth.label>dents</Expedition33_DualisteRace.tools.teeth.label>
+  <Expedition33_DualisteRace.tools.head.label>tête</Expedition33_DualisteRace.tools.head.label>
+
+
+  <Expedition33_RenoirRace.label>Commandant Renoir</Expedition33_RenoirRace.label>
+  <Expedition33_RenoirRace.description>Un général corrompu de l'Expédition 33, maître stratège de la guerre tactique.</Expedition33_RenoirRace.description>
+  <Expedition33_RenoirRace.tools.left_fist.label>poing gauche</Expedition33_RenoirRace.tools.left_fist.label>
+  <Expedition33_RenoirRace.tools.left_fist.labelNoLocation>poing</Expedition33_RenoirRace.tools.left_fist.labelNoLocation>
+  <Expedition33_RenoirRace.tools.right_fist.label>poing droit</Expedition33_RenoirRace.tools.right_fist.label>
+  <Expedition33_RenoirRace.tools.right_fist.labelNoLocation>poing</Expedition33_RenoirRace.tools.right_fist.labelNoLocation>
+  <Expedition33_RenoirRace.tools.teeth.label>dents</Expedition33_RenoirRace.tools.teeth.label>
+  <Expedition33_RenoirRace.tools.head.label>tête</Expedition33_RenoirRace.tools.head.label>
+
+
+  <Expedition33_SireneRace.label>Sirène</Expedition33_SireneRace.label>
+  <Expedition33_SireneRace.description>Un Axon des profondeurs, entité sonique capable de briser les esprits avec sa voix.</Expedition33_SireneRace.description>
+  <Expedition33_SireneRace.tools.left_fist.label>poing gauche</Expedition33_SireneRace.tools.left_fist.label>
+  <Expedition33_SireneRace.tools.left_fist.labelNoLocation>poing</Expedition33_SireneRace.tools.left_fist.labelNoLocation>
+  <Expedition33_SireneRace.tools.right_fist.label>poing droit</Expedition33_SireneRace.tools.right_fist.label>
+  <Expedition33_SireneRace.tools.right_fist.labelNoLocation>poing</Expedition33_SireneRace.tools.right_fist.labelNoLocation>
+  <Expedition33_SireneRace.tools.teeth.label>dents</Expedition33_SireneRace.tools.teeth.label>
+  <Expedition33_SireneRace.tools.head.label>tête</Expedition33_SireneRace.tools.head.label>
+
+
+  <Expedition33_VisagesRace.label>Visages</Expedition33_VisagesRace.label>
+  <Expedition33_VisagesRace.description>Un Axon multiforme, collectif de consciences capable de changer d'identité.</Expedition33_VisagesRace.description>
+  <Expedition33_VisagesRace.tools.left_fist.label>poing gauche</Expedition33_VisagesRace.tools.left_fist.label>
+  <Expedition33_VisagesRace.tools.left_fist.labelNoLocation>poing</Expedition33_VisagesRace.tools.left_fist.labelNoLocation>
+  <Expedition33_VisagesRace.tools.right_fist.label>poing droit</Expedition33_VisagesRace.tools.right_fist.label>
+  <Expedition33_VisagesRace.tools.right_fist.labelNoLocation>poing</Expedition33_VisagesRace.tools.right_fist.labelNoLocation>
+  <Expedition33_VisagesRace.tools.teeth.label>dents</Expedition33_VisagesRace.tools.teeth.label>
+  <Expedition33_VisagesRace.tools.head.label>tête</Expedition33_VisagesRace.tools.head.label>
+
+
+  <Expedition33_PaintressRace.label>Paintress</Expedition33_PaintressRace.label>
+  <Expedition33_PaintressRace.description>Une tisseuse de réalité, artiste cosmique capable de remodeler l'existence elle-même.</Expedition33_PaintressRace.description>
+  <Expedition33_PaintressRace.tools.left_fist.label>poing gauche</Expedition33_PaintressRace.tools.left_fist.label>
+  <Expedition33_PaintressRace.tools.left_fist.labelNoLocation>poing</Expedition33_PaintressRace.tools.left_fist.labelNoLocation>
+  <Expedition33_PaintressRace.tools.right_fist.label>poing droit</Expedition33_PaintressRace.tools.right_fist.label>
+  <Expedition33_PaintressRace.tools.right_fist.labelNoLocation>poing</Expedition33_PaintressRace.tools.right_fist.labelNoLocation>
+  <Expedition33_PaintressRace.tools.teeth.label>dents</Expedition33_PaintressRace.tools.teeth.label>
+  <Expedition33_PaintressRace.tools.head.label>tête</Expedition33_PaintressRace.tools.head.label>
+
+
+  <Expedition33_MimeRace.label>Mime</Expedition33_MimeRace.label>
+  <Expedition33_MimeRace.description>Une entité silencieuse, maître des illusions invisibles et des barrières intangibles.</Expedition33_MimeRace.description>
+  <Expedition33_MimeRace.tools.left_fist.label>poing gauche</Expedition33_MimeRace.tools.left_fist.label>
+  <Expedition33_MimeRace.tools.left_fist.labelNoLocation>poing</Expedition33_MimeRace.tools.left_fist.labelNoLocation>
+  <Expedition33_MimeRace.tools.right_fist.label>poing droit</Expedition33_MimeRace.tools.right_fist.label>
+  <Expedition33_MimeRace.tools.right_fist.labelNoLocation>poing</Expedition33_MimeRace.tools.right_fist.labelNoLocation>
+  <Expedition33_MimeRace.tools.teeth.label>dents</Expedition33_MimeRace.tools.teeth.label>
+  <Expedition33_MimeRace.tools.head.label>tête</Expedition33_MimeRace.tools.head.label>
+
+
+  <!-- Creatures -->
+  <Gestral.label>gestral</Gestral.label>
+  <Gestral.description>Les Gestrals sont des êtres uniques ressemblant à des marionnettes en bois avec des pinceaux en guise de têtes. Amicaux mais simples d'esprit, ils adorent se battre et respectent les guerriers puissants. Leur capacité à ressusciter à la Rivière Sacrée les rend insouciants face au danger.</Gestral.description>
+  <Gestral.tools.Left_wooden_fist.label>poing en bois gauche</Gestral.tools.Left_wooden_fist.label>
+  <Gestral.tools.Right_wooden_fist.label>poing en bois droit</Gestral.tools.Right_wooden_fist.label>
+
+
+  <Nevron.label>nevron</Nevron.label>
+  <Nevron.description>Une créature autrefois vivante, maintenant corrompue par Le Gommage...</Nevron.description>
+  <Nevron.tools.griffes_chromatiques.label>griffes chromatiques</Nevron.tools.griffes_chromatiques.label>
+  <Nevron.tools.morsure_corrosive.label>morsure corrosive</Nevron.tools.morsure_corrosive.label>
+  <Nevron.tools.charge_chromatique.label>charge chromatique</Nevron.tools.charge_chromatique.label>
+
+
+  <Pitank.label>pitank</Pitank.label>
+  <Pitank.description>Un Nevron évolué, fusion de plusieurs créatures corrompues...</Pitank.description>
+  <Pitank.tools.griffes_massives.label>griffes massives</Pitank.tools.griffes_massives.label>
+  <Pitank.tools.mchoires_broyeuses.label>mâchoires broyeuses</Pitank.tools.mchoires_broyeuses.label>
+  <Pitank.tools.charge_dvastatrice.label>charge dévastatrice</Pitank.tools.charge_dvastatrice.label>
+
+
+  <NevronDechutRace.label>nevron déchu</NevronDechutRace.label>
+  <NevronDechutRace.description>Un humain corrompu par Le Gommage, transformé en créature bestiale mais conservant son intelligence...</NevronDechutRace.description>
+  <NevronDechutRace.tools.griffes_corrompues_gauches.label>griffes corrompues gauches</NevronDechutRace.tools.griffes_corrompues_gauches.label>
+  <NevronDechutRace.tools.griffes_corrompues_droites.label>griffes corrompues droites</NevronDechutRace.tools.griffes_corrompues_droites.label>
+  <NevronDechutRace.tools.morsure_bestiale.label>morsure bestiale</NevronDechutRace.tools.morsure_bestiale.label>
+
+
+  <Expedition_VersoColon.label>Verso</Expedition_VersoColon.label>
+  <Expedition_VersoColon.description>Un colon aux capacités spéciales.</Expedition_VersoColon.description>
+  <Expedition_VersoColon.tools.left_fist.label>poing gauche</Expedition_VersoColon.tools.left_fist.label>
+  <Expedition_VersoColon.tools.left_fist.labelNoLocation>poing</Expedition_VersoColon.tools.left_fist.labelNoLocation>
+  <Expedition_VersoColon.tools.right_fist.label>poing droit</Expedition_VersoColon.tools.right_fist.label>
+  <Expedition_VersoColon.tools.right_fist.labelNoLocation>poing</Expedition_VersoColon.tools.right_fist.labelNoLocation>
+  <Expedition_VersoColon.tools.teeth.label>dents</Expedition_VersoColon.tools.teeth.label>
+  <Expedition_VersoColon.tools.head.label>tête</Expedition_VersoColon.tools.head.label>
+
+
+  <!-- Equipment -->
+  <Expedition33_Uniform.label>uniforme expéditionnaire</Expedition33_Uniform.label>
+  <Expedition33_Uniform.description>Un élégant uniforme militaire Belle Époque porté par les membres de l'Expédition 33. Ses boutons dorés et épaulettes témoignent du rang du porteur. Offre une protection de base contre les effets du Gommage.</Expedition33_Uniform.description>
+
+
+  <Expedition33_AntiGommageShield.label>bouclier anti-gommage</Expedition33_AntiGommageShield.label>
+  <Expedition33_AntiGommageShield.description>Un dispositif de protection personnelle qui génère un champ protecteur contre les effets du Gommage. Ses circuits dorés scintillent d'énergie mystique. Possède 3 charges de protection avant épuisement.</Expedition33_AntiGommageShield.description>
+
+
+  <Expedition33_ReinforcedArmor.label>armure renforcée d'expédition</Expedition33_ReinforcedArmor.label>
+  <Expedition33_ReinforcedArmor.description>Armure de combat avancée développée spécifiquement pour combattre les entités liées à la Paintress. Ses plaques gravées de symboles mystiques offrent une protection supérieure contre les attaques artistiques.</Expedition33_ReinforcedArmor.description>
+
+
+  <Expedition33_OfficerHat.label>casquette d'officier d'expédition</Expedition33_OfficerHat.label>
+  <Expedition33_OfficerHat.description>Une casquette militaire ornée de galons dorés et de symboles anti-Gommage, portée par les officiers de l'Expédition 33. Elle confère autorité et respect parmi les troupes tout en offrant une protection mentale contre les effets psychologiques du Gommage.</Expedition33_OfficerHat.description>
+
+
+  <Expedition33_MilitaryBoots.label>bottes d'expédition renforcées</Expedition33_MilitaryBoots.label>
+  <Expedition33_MilitaryBoots.description>Bottes de cuir robustes portées par les expéditionnaires, renforcées par des plaques métalliques et des semelles antidérapantes. Conçues pour résister aux longues marches et terrains difficiles lors des missions contre les entités mystérieuses.</Expedition33_MilitaryBoots.description>
+
+
+  <!-- Buildings -->
+  <Expedition33_Headquarters.label>quartier général d'expédition</Expedition33_Headquarters.label>
+  <Expedition33_Headquarters.description>Un bâtiment de commandement utilisé par l'Expédition 33 pour planifier leurs missions contre Le Gommage. Contient des cartes, des dossiers secrets et du matériel de communication. Permet la recherche de technologies anti-Gommage.</Expedition33_Headquarters.description>
+
+
+  <Expedition33_CursedAgeDetector.label>détecteur d'âge maudit</Expedition33_CursedAgeDetector.label>
+  <Expedition33_CursedAgeDetector.description>Un dispositif sophistiqué qui analyse les fluctuations artistiques pour détecter l'âge actuellement peint sur le monolithe de la Paintress. Alerte la colonie quand un Gommage est imminent.</Expedition33_CursedAgeDetector.description>
+
+
+  <Expedition33_AntiGommageField.label>générateur de champ anti-gommage</Expedition33_AntiGommageField.label>
+  <Expedition33_AntiGommageField.description>Un générateur avancé qui crée un champ protecteur dans un rayon de 15 cases. Les colons dans cette zone sont protégés contre les effets du Gommage, mais l'appareil consomme une énergie énorme.</Expedition33_AntiGommageField.description>
+
+
+  <Expedition33_Memorial.label>mémorial des effacés</Expedition33_Memorial.label>
+  <Expedition33_Memorial.description>Un monument solennel dédié à ceux qui ont été effacés par Le Gommage. Les noms gravés dans la pierre rappellent que personne n'oublie les disparus, même si la réalité les a oubliés. Améliore le moral des survivants.</Expedition33_Memorial.description>
+
+
+  <Expedition33_Armory.label>armurerie d'expédition</Expedition33_Armory.label>
+  <Expedition33_Armory.description>Un atelier spécialisé pour fabriquer l'équipement unique de l'Expédition 33. Les artisans qui y travaillent connaissent les secrets de fabrication des armes anti-Gommage, boucliers de protection, armes artistiques et Pictos chromatiques.</Expedition33_Armory.description>
+
+
+  <!-- Resources -->
+  <Expedition33_Chroma.label>chroma</Expedition33_Chroma.label>
+  <Expedition33_Chroma.description>Une substance cristalline aux reflets irisés, résidu d'énergie créative pure. Le Chroma est la base de toute manipulation de Picto et permet de forger des artefacts magiques.</Expedition33_Chroma.description>
+
+
+  <Expedition33_ChromaRaw.label>chroma brut</Expedition33_ChromaRaw.label>
+  <Expedition33_ChromaRaw.description>Cristaux de Chroma brut extraits des restes de créatures corrompues par Le Gommage. Ces fragments d'énergie corrompue peuvent être purifiés pour créer du Chroma utilisable.</Expedition33_ChromaRaw.description>
+
+
+  <!-- Weapons -->
+  <ExpeditionScythe.label>faux expéditionnaire</ExpeditionScythe.label>
+  <ExpeditionScythe.description>Une faux de guerre utilisée par les membres de l'Expédition 33. Sa lame courbée porte les marques de nombreux combats contre des entités mystérieuses. Version de base des armes anti-Gommage.</ExpeditionScythe.description>
+  <ExpeditionScythe.tools.lame.label>lame</ExpeditionScythe.tools.lame.label>
+  <ExpeditionScythe.tools.manche.label>manche</ExpeditionScythe.tools.manche.label>
+
+
+  <Expedition33_ArtisticBlade.label>lame artistique</Expedition33_ArtisticBlade.label>
+  <Expedition33_ArtisticBlade.description>Une épée imprégnée de pouvoir créatif, spécialement conçue pour combattre les entités liées à la Paintress. Sa lame scintille d'éclat artistique et inflige des dégâts supplémentaires aux créatures peintes.</Expedition33_ArtisticBlade.description>
+  <Expedition33_ArtisticBlade.tools.lame_artistique.label>lame artistique</Expedition33_ArtisticBlade.tools.lame_artistique.label>
+  <Expedition33_ArtisticBlade.tools.pommeau.label>pommeau</Expedition33_ArtisticBlade.tools.pommeau.label>
+
+
+  <Expedition33_LeverRifle.label>fusil à levier d'expédition</Expedition33_LeverRifle.label>
+  <Expedition33_LeverRifle.description>Un fusil à levier de précision utilisé par les éclaireurs de l'Expédition 33. Son mécanisme fiable et sa portée en font l'arme de choix pour les missions de reconnaissance contre les entités mystérieuses.</Expedition33_LeverRifle.description>
+  <Expedition33_LeverRifle.verbs.Verb_Shoot.label>fusil à levier d'expédition</Expedition33_LeverRifle.verbs.Verb_Shoot.label>
+
+
+  <Bullet_ExpeditionRifle.label>tir de fusil d'expédition</Bullet_ExpeditionRifle.label>
+  <Bullet_ArtisticRifle.label>tir artistique</Bullet_ArtisticRifle.label>
+
+
+  <!-- Plants -->
+  <Expedition33_CrimsonBlossom.label>fleur cramoisie</Expedition33_CrimsonBlossom.label>
+  <Expedition33_CrimsonBlossom.description>Une fleur rouge profond qui semble pulser d'une lumière intérieure.</Expedition33_CrimsonBlossom.description>
+
+
+  <Expedition33_StrangeBush.label>buisson de baies étranges</Expedition33_StrangeBush.label>
+  <Expedition33_StrangeBush.description>Un buisson mystérieux aux feuilles violettes portant des baies rouge profond qui semblent pulser d'une lumière intérieure. Il prospère dans l'atmosphère sombre du Continent Noir.</Expedition33_StrangeBush.description>
+
+
+  <Expedition33_ShadowFern.label>fougère d'ombre</Expedition33_ShadowFern.label>
+  <Expedition33_ShadowFern.description>Une fougère aux frondes presque noires qui prospère dans l'obscurité.</Expedition33_ShadowFern.description>
+
+
+  <Expedition33_FlowerFern.label>fougère fleurie</Expedition33_FlowerFern.label>
+  <Expedition33_FlowerFern.description>Une petite fougère aux frondes presque noires groupées avec d'étranges fleurs.</Expedition33_FlowerFern.description>
+
+
+  <Expedition33_SculptedTree.label>arbre sculpté</Expedition33_SculptedTree.label>
+  <Expedition33_SculptedTree.description>Un arbre aux branches étrangement géométriques, comme taillées par des artisans invisibles. Son mystérieux feuillage violet contraste avec son tronc naturel brun. Il produit du bois sombre aux propriétés uniques, prisé par les artisans du Continent Noir.\n\nDétails de la plante : L'Arbre Sculpté est une plante cultivable qui apparaît aussi à l'état sauvage, nécessitant une fertilité minimale de 0,3. Peut être récolté pour du bois sculpté.</Expedition33_SculptedTree.description>
+
+
+  <Projectile_EnergyWaveBullet.label>onde d'énergie</Projectile_EnergyWaveBullet.label>
+
+  <!-- Outils de la race de base -->
+  <Expedition33_BaseBossRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_BaseBossRace.tools.poingsGauches.label>
+  <Expedition33_BaseBossRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_BaseBossRace.tools.poingsDroits.label>
+  <Expedition33_BaseBossRace.tools.morsure.label>morsure bestiale</Expedition33_BaseBossRace.tools.morsure.label>
+
+  <!-- Outils Évêque Boss -->
+  <Expedition33_EvequeRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_EvequeRace.tools.poingsGauches.label>
+  <Expedition33_EvequeRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_EvequeRace.tools.poingsDroits.label>
+  <Expedition33_EvequeRace.tools.morsure.label>morsure bestiale</Expedition33_EvequeRace.tools.morsure.label>
+
+  <!-- Outils Goblu Boss -->
+  <Expedition33_GobluRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_GobluRace.tools.poingsGauches.label>
+  <Expedition33_GobluRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_GobluRace.tools.poingsDroits.label>
+  <Expedition33_GobluRace.tools.morsure.label>morsure bestiale</Expedition33_GobluRace.tools.morsure.label>
+
+  <!-- Outils Sakapatate Robuste Boss -->
+  <Expedition33_SakapatateRobusteRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_SakapatateRobusteRace.tools.poingsGauches.label>
+  <Expedition33_SakapatateRobusteRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_SakapatateRobusteRace.tools.poingsDroits.label>
+  <Expedition33_SakapatateRobusteRace.tools.morsure.label>morsure bestiale</Expedition33_SakapatateRobusteRace.tools.morsure.label>
+
+  <!-- Outils Sakapatate Ultime Boss -->
+  <Expedition33_SakapatateUltimeRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_SakapatateUltimeRace.tools.poingsGauches.label>
+  <Expedition33_SakapatateUltimeRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_SakapatateUltimeRace.tools.poingsDroits.label>
+  <Expedition33_SakapatateUltimeRace.tools.morsure.label>morsure bestiale</Expedition33_SakapatateUltimeRace.tools.morsure.label>
+
+  <!-- Outils François Boss -->
+  <Expedition33_FrancoisRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_FrancoisRace.tools.poingsGauches.label>
+  <Expedition33_FrancoisRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_FrancoisRace.tools.poingsDroits.label>
+  <Expedition33_FrancoisRace.tools.morsure.label>morsure bestiale</Expedition33_FrancoisRace.tools.morsure.label>
+
+  <!-- Outils Maître des Lampes Boss -->
+  <Expedition33_MaitreLampesRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_MaitreLampesRace.tools.poingsGauches.label>
+  <Expedition33_MaitreLampesRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_MaitreLampesRace.tools.poingsDroits.label>
+  <Expedition33_MaitreLampesRace.tools.morsure.label>morsure bestiale</Expedition33_MaitreLampesRace.tools.morsure.label>
+
+  <!-- Outils Dualiste Boss -->
+  <Expedition33_DualisteRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_DualisteRace.tools.poingsGauches.label>
+  <Expedition33_DualisteRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_DualisteRace.tools.poingsDroits.label>
+  <Expedition33_DualisteRace.tools.morsure.label>morsure bestiale</Expedition33_DualisteRace.tools.morsure.label>
+
+  <!-- Outils Commandant Renoir Boss -->
+  <Expedition33_RenoirRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_RenoirRace.tools.poingsGauches.label>
+  <Expedition33_RenoirRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_RenoirRace.tools.poingsDroits.label>
+  <Expedition33_RenoirRace.tools.morsure.label>morsure bestiale</Expedition33_RenoirRace.tools.morsure.label>
+
+  <!-- Outils Sirène Boss -->
+  <Expedition33_SireneRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_SireneRace.tools.poingsGauches.label>
+  <Expedition33_SireneRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_SireneRace.tools.poingsDroits.label>
+  <Expedition33_SireneRace.tools.morsure.label>morsure bestiale</Expedition33_SireneRace.tools.morsure.label>
+
+  <!-- Outils Visages Boss -->
+  <Expedition33_VisagesRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_VisagesRace.tools.poingsGauches.label>
+  <Expedition33_VisagesRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_VisagesRace.tools.poingsDroits.label>
+  <Expedition33_VisagesRace.tools.morsure.label>morsure bestiale</Expedition33_VisagesRace.tools.morsure.label>
+
+  <!-- Outils Paintress Boss -->
+  <Expedition33_PaintressRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_PaintressRace.tools.poingsGauches.label>
+  <Expedition33_PaintressRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_PaintressRace.tools.poingsDroits.label>
+  <Expedition33_PaintressRace.tools.morsure.label>morsure bestiale</Expedition33_PaintressRace.tools.morsure.label>
+
+  <!-- Outils Mime Boss -->
+  <Expedition33_MimeRace.tools.poingsGauches.label>poings corrompus gauches</Expedition33_MimeRace.tools.poingsGauches.label>
+  <Expedition33_MimeRace.tools.poingsDroits.label>poings corrompus droits</Expedition33_MimeRace.tools.poingsDroits.label>
+  <Expedition33_MimeRace.tools.morsure.label>morsure bestiale</Expedition33_MimeRace.tools.morsure.label>
+</LanguageData>

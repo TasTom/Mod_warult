@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Traits de Boss -->
+  <Expedition33_BossTrait_Eveque.label>gardien sacré</Expedition33_BossTrait_Eveque.label>
+  <Expedition33_BossTrait_Eveque.description>Émane une aura de foi inébranlable et maîtrise les rites d'illumination.</Expedition33_BossTrait_Eveque.description>
+  <Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.label>Évêque Sacré</Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.label>
+  <Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.description>Maîtrise la lumière divine et se régénère dans les moments critiques.</Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.description>
+  
+  <Expedition33_BossTrait_Goblu.label>protecteur des fleurs</Expedition33_BossTrait_Goblu.label>
+  <Expedition33_BossTrait_Goblu.description>Rapide et défend son champ de fleurs à tout prix.</Expedition33_BossTrait_Goblu.description>
+  <Expedition33_BossTrait_Goblu.degreeDatas.Goblu.label>Goblu</Expedition33_BossTrait_Goblu.degreeDatas.Goblu.label>
+  
+  <Expedition33_BossTrait_SakapatateRobuste.label>peau de quartz</Expedition33_BossTrait_SakapatateRobuste.label>
+  <Expedition33_BossTrait_SakapatateRobuste.description>Une masse végétale blindée, lente à blesser mais prompte à frapper.</Expedition33_BossTrait_SakapatateRobuste.description>
+  <Expedition33_BossTrait_SakapatateRobuste.degreeDatas.Sakapatate_robuste.label>Sakapatate Robuste</Expedition33_BossTrait_SakapatateRobuste.degreeDatas.Sakapatate_robuste.label>
+  
+  <Expedition33_BossTrait_SakapatateUltime.label>cœur de granit</Expedition33_BossTrait_SakapatateUltime.label>
+  <Expedition33_BossTrait_SakapatateUltime.description>Régénère lentement ses blessures et déploie des boucliers énergétiques.</Expedition33_BossTrait_SakapatateUltime.description>
+  <Expedition33_BossTrait_SakapatateUltime.degreeDatas.Sakapatate_ultime.label>Sakapatate Ultime</Expedition33_BossTrait_SakapatateUltime.degreeDatas.Sakapatate_ultime.label>
+  
+    <!-- Traduction du label principal du trait -->
+    <Expedition33_BossTrait_Dualiste.label>dualité incarnée</Expedition33_BossTrait_Dualiste.label>
+    
+    <!-- Traduction du premier degré (index 0) -->
+    <Expedition33_BossTrait_Dualiste.degreeDatas.0.label>Maître clair-obscur</Expedition33_BossTrait_Dualiste.degreeDatas.0.label>
+    <Expedition33_BossTrait_Dualiste.degreeDatas.0.description>Alterne entre éclats de lumière aveuglante et ténèbres psychiques.</Expedition33_BossTrait_Dualiste.degreeDatas.0.description>
+  <Expedition33_BossTrait_Francois.label>tortue territoriale</Expedition33_BossTrait_Francois.label>
+  <Expedition33_BossTrait_Francois.description>Une tortue géante mélancolique qui protège jalousement son territoire et ses pierres précieuses.</Expedition33_BossTrait_Francois.description>
+  <Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.label>Gardien Grognon</Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.label>
+  <Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.description>Cette tortue bioluminescente garde jalousement ses trésors minéraux. Malgré son attitude bourrue, une profonde tristesse la hante depuis sa séparation d'avec Cléa.</Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.description>
+  
+  <Expedition33_BossTrait_MaitreLampes.label>architecte des lueurs</Expedition33_BossTrait_MaitreLampes.label>
+  <Expedition33_BossTrait_MaitreLampes.description>Contrôle l'éclairage, invoque des lampes spectrales et brûle les ennemis.</Expedition33_BossTrait_MaitreLampes.description>
+  <Expedition33_BossTrait_MaitreLampes.degreeDatas.Mage_luminescent.label>Mage Luminescent</Expedition33_BossTrait_MaitreLampes.degreeDatas.Mage_luminescent.label>
+  
+  <Expedition33_BossTrait_CommandantRenoir.label>stratège implacable</Expedition33_BossTrait_CommandantRenoir.label>
+  <Expedition33_BossTrait_CommandantRenoir.description>Augmente la force de ses troupes et exécute des frappes coordonnées.</Expedition33_BossTrait_CommandantRenoir.description>
+  <Expedition33_BossTrait_CommandantRenoir.degreeDatas.Commandant_vtran.label>Commandant Vétéran</Expedition33_BossTrait_CommandantRenoir.degreeDatas.Commandant_vtran.label>
+  
+  <Expedition33_BossTrait_Sirene.label>voix abyssale</Expedition33_BossTrait_Sirene.label>
+  <Expedition33_BossTrait_Sirene.description>Émet des ondes soniques et manipule les esprits mortels.</Expedition33_BossTrait_Sirene.description>
+  <Expedition33_BossTrait_Sirene.degreeDatas.Chanteuse_cauchemardesque.label>Chanteuse Cauchemardesque</Expedition33_BossTrait_Sirene.degreeDatas.Chanteuse_cauchemardesque.label>
+  
+  <Expedition33_BossTrait_Visages.label>porteur de mille masques</Expedition33_BossTrait_Visages.label>
+  <Expedition33_BossTrait_Visages.description>Change d'identité pour confondre les adversaires et déformer la réalité.</Expedition33_BossTrait_Visages.description>
+  <Expedition33_BossTrait_Visages.degreeDatas.Illusionniste.label>Illusionniste</Expedition33_BossTrait_Visages.degreeDatas.Illusionniste.label>
+  
+  <Expedition33_BossTrait_Paintress.label>muse cosmique</Expedition33_BossTrait_Paintress.label>
+  <Expedition33_BossTrait_Paintress.description>Peint des zones de danger et canalise le pouvoir du Monolithe.</Expedition33_BossTrait_Paintress.description>
+  <Expedition33_BossTrait_Paintress.degreeDatas.Artiste_stellaire.label>Artiste Stellaire</Expedition33_BossTrait_Paintress.degreeDatas.Artiste_stellaire.label>
+  
+  <Expedition33_BossTrait_Verso.label>immortel brisé</Expedition33_BossTrait_Verso.label>
+  <Expedition33_BossTrait_Verso.description>Régénère ses blessures et fracture les défenses ennemies.</Expedition33_BossTrait_Verso.description>
+  <Expedition33_BossTrait_Verso.degreeDatas.me_fracture.label>Âme Fracturée</Expedition33_BossTrait_Verso.degreeDatas.me_fracture.label>
+  <Expedition33_BossTrait_Verso.degreeDatas.me_fracture.description>Survivant de l'Expédition Zéro aux capacités extraordinaires.</Expedition33_BossTrait_Verso.degreeDatas.me_fracture.description>
+  
+  <Expedition33_BossTrait_Mime.label>ombre silencieuse</Expedition33_BossTrait_Mime.label>
+  <Expedition33_BossTrait_Mime.description>Crée des zones de silence et des barrières invisibles.</Expedition33_BossTrait_Mime.description>
+  <Expedition33_BossTrait_Mime.degreeDatas.Moimme.label>Moi-Même</Expedition33_BossTrait_Mime.degreeDatas.Moimme.label>
+  
+  <!-- Traits de Joueur -->
+  <ExpeditionVeteran.label>vétéran d'expédition</ExpeditionVeteran.label>
+  <ExpeditionVeteran.description>Cette personne a survécu à plusieurs expéditions contre Le Gommage. Elle possède une expérience précieuse mais porte les cicatrices psychologiques de ses missions.</ExpeditionVeteran.description>
+  <ExpeditionVeteran.degreeDatas.vtran.label>vétéran</ExpeditionVeteran.degreeDatas.vtran.label>
+  <ExpeditionVeteran.degreeDatas.vtran.description>A participé à plusieurs expéditions et en a tiré de l'expérience.</ExpeditionVeteran.degreeDatas.vtran.description>
+  <ExpeditionVeteran.degreeDatas.vtran_aguerri.label>vétéran aguerri</ExpeditionVeteran.degreeDatas.vtran_aguerri.label>
+  <ExpeditionVeteran.degreeDatas.vtran_aguerri.description>Un survivant endurci de nombreuses expéditions périlleuses.</ExpeditionVeteran.degreeDatas.vtran_aguerri.description>
+  
+  <GommagePhobia.label>phobie du gommage</GommagePhobia.label>
+  <GommagePhobia.description>Cette personne a une peur irrationnelle du phénomène Gommage et des nombres maudits.</GommagePhobia.description>
+  <GommagePhobia.degreeDatas.anxieux.label>anxieux</GommagePhobia.degreeDatas.anxieux.label>
+  <GommagePhobia.degreeDatas.anxieux.description>Ressent une anxiété constante liée au Gommage.</GommagePhobia.degreeDatas.anxieux.description>
+  <GommagePhobia.degreeDatas.terroris.label>terrorisé</GommagePhobia.degreeDatas.terroris.label>
+  <GommagePhobia.degreeDatas.terroris.description>Vit dans la terreur constante d'être effacé.</GommagePhobia.degreeDatas.terroris.description>
+ <Expedition33_BossTrait_Goblu.degreeDatas.Goblu.description>Rapide et défend coûte que coûte son champ de fleurs</Expedition33_BossTrait_Goblu.degreeDatas.Goblu.description>
+    <Expedition33_BossTrait_SakapatateRobuste.degreeDatas.Sakapatate_robuste.description>Une masse de tissu blindée, lente à blesser mais rapide à frapper.</Expedition33_BossTrait_SakapatateRobuste.degreeDatas.Sakapatate_robuste.description>
+    <Expedition33_BossTrait_SakapatateUltime.degreeDatas.Sakapatate_ultime.description>Régénère lentement ses blessures et déploie des boucliers d'énergie.</Expedition33_BossTrait_SakapatateUltime.degreeDatas.Sakapatate_ultime.description>
+   <Expedition33_BossTrait_Dualiste.degreeDatas.0.description>Alterne entre éclats de lumière aveuglante et ténèbres psychiques.</Expedition33_BossTrait_Dualiste.degreeDatas.0.description>
+    <Expedition33_BossTrait_MaitreLampes.degreeDatas.Mage_luminescent.description>Contrôle l'éclairage, invoque des lampes spectrales et brûle ses ennemis.</Expedition33_BossTrait_MaitreLampes.degreeDatas.Mage_luminescent.description>
+    <Expedition33_BossTrait_CommandantRenoir.degreeDatas.Commandant_vtran.description>Accroît la force de ses troupes et exécute des frappes coordonnées.</Expedition33_BossTrait_CommandantRenoir.degreeDatas.Commandant_vtran.description>
+    <Expedition33_BossTrait_Sirene.degreeDatas.Chanteuse_cauchemardesque.description>Émet des ondes soniques et manipule l'esprit des mortels.</Expedition33_BossTrait_Sirene.degreeDatas.Chanteuse_cauchemardesque.description>
+    <Expedition33_BossTrait_Visages.degreeDatas.Illusionniste.description>Change d'identité pour dérouter ses adversaires et distordre la réalité.</Expedition33_BossTrait_Visages.degreeDatas.Illusionniste.description>
+    <Expedition33_BossTrait_Paintress.degreeDatas.Artiste_stellaire.description>Peint des zones de danger et canalise le pouvoir du Monolithe.</Expedition33_BossTrait_Paintress.degreeDatas.Artiste_stellaire.description>
+    <Expedition33_BossTrait_Mime.degreeDatas.Moimme.description>Crée des zones de silence et des barrières invisibles.</Expedition33_BossTrait_Mime.degreeDatas.Moimme.description>
+
+
+</LanguageData>

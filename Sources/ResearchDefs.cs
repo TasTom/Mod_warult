@@ -11,12 +11,12 @@ namespace Mod_warult
         public static ResearchProjectDef ArtisticDetection;
         public static ResearchProjectDef BasicProtection;
 
-        // Tier 2 - Recherches intermédiaires
+        // Tier 2 - Recherches intermï¿½diaires
         public static ResearchProjectDef CursedAgeDetector;
         public static ResearchProjectDef AntiGommageShield;
         public static ResearchProjectDef ArtisticWeapons;
 
-        // Tier 3 - Recherches avancées
+        // Tier 3 - Recherches avancï¿½es
         public static ResearchProjectDef AntiGommageField;
         public static ResearchProjectDef CounterPaintBrush;
         public static ResearchProjectDef TemporalSanctuary;

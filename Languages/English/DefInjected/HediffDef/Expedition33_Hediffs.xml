@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Main Status Effects -->
+  <Expedition33_SacredHealing.label>sacred healing</Expedition33_SacredHealing.label>
+  <Expedition33_SacredHealing.description>Accelerated regeneration thanks to sacred light.</Expedition33_SacredHealing.description>
+  
+  <Expedition33_SacredBlindness.label>sacred blindness</Expedition33_SacredBlindness.label>
+  <Expedition33_SacredBlindness.description>Blinded by divine light, accuracy greatly reduced.</Expedition33_SacredBlindness.description>
+  
+  <Expedition33_DivineRegeneration.label>divine regeneration</Expedition33_DivineRegeneration.label>
+  <Expedition33_DivineRegeneration.description>Powerful divine regeneration from the Bishop.</Expedition33_DivineRegeneration.description>
+  
+  <!-- Movement and Defense Buffs -->
+  <Expedition33_RapidMovement.label>rapid movement</Expedition33_RapidMovement.label>
+  <Expedition33_RapidMovement.description>Movement speed considerably increased.</Expedition33_RapidMovement.description>
+  
+  <Expedition33_RapidMovementBuff.label>rapid movement</Expedition33_RapidMovementBuff.label>
+  <Expedition33_RapidMovementBuff.description>Movement speed considerably increased.</Expedition33_RapidMovementBuff.description>
+  
+  <Expedition33_HeavyArmor.label>reinforced armor</Expedition33_HeavyArmor.label>
+  <Expedition33_HeavyArmor.description>Heavy protection that massively reduces damage.</Expedition33_HeavyArmor.description>
+  
+  <Expedition33_HeavyArmorBuff.label>reinforced armor</Expedition33_HeavyArmorBuff.label>
+  <Expedition33_HeavyArmorBuff.description>Heavy protection that massively reduces damage.</Expedition33_HeavyArmorBuff.description>
+  
+  <Expedition33_SlowRegeneration.label>slow regeneration</Expedition33_SlowRegeneration.label>
+  <Expedition33_SlowRegeneration.description>Constant but progressive regeneration.</Expedition33_SlowRegeneration.description>
+  
+  <Expedition33_SlowRegenerationBuff.label>slow regeneration</Expedition33_SlowRegenerationBuff.label>
+  <Expedition33_SlowRegenerationBuff.description>Constant but progressive regeneration.</Expedition33_SlowRegenerationBuff.description>
+  
+  <Expedition33_EnergyShields.label>energy shields</Expedition33_EnergyShields.label>
+  <Expedition33_EnergyShields.description>Energy shields that absorb attacks.</Expedition33_EnergyShields.description>
+  
+  <Expedition33_EnergyShieldsBuff.label>energy shields</Expedition33_EnergyShieldsBuff.label>
+  <Expedition33_EnergyShieldsBuff.description>Energy shields that absorb attacks.</Expedition33_EnergyShieldsBuff.description>
+  
+  <!-- Light and Darkness Effects -->
+  <Expedition33_LightConfusion.label>light confusion</Expedition33_LightConfusion.label>
+  <Expedition33_LightConfusion.description>Confused by the Lampmaster's light displays, vision and accuracy are impaired.</Expedition33_LightConfusion.description>
+  
+  <Expedition33_LightBlindness.label>light blindness</Expedition33_LightBlindness.label>
+  <Expedition33_LightBlindness.description>Blinded by the Dualist's light strike.</Expedition33_LightBlindness.description>
+  
+  <Expedition33_LightBurn.label>light burn</Expedition33_LightBurn.label>
+  <Expedition33_LightBurn.description>This character has been severely burned by supernatural light, affecting their vision and abilities.</Expedition33_LightBurn.description>
+  <Expedition33_LightBurn.stages.blouissement.label>Dazzlement</Expedition33_LightBurn.stages.blouissement.label>
+  
+  <Expedition33_LightMode.label>light mode</Expedition33_LightMode.label>
+  <Expedition33_LightMode.description>The Dualist is in light mode, resistant to dark attacks.</Expedition33_LightMode.description>
+  
+  <Expedition33_DarkMode.label>dark mode</Expedition33_DarkMode.label>
+  <Expedition33_DarkMode.description>The Dualist is in dark mode, resistant to light attacks.</Expedition33_DarkMode.description>
+  
+  <Expedition33_DarknessEffect.label>darkness effect</Expedition33_DarknessEffect.label>
+  <Expedition33_DarknessEffect.description>Vision, reflexes and morale considerably reduced by dark forces.</Expedition33_DarknessEffect.description>
+  
+  <Expedition33_DarknessCurse.label>darkness curse</Expedition33_DarknessCurse.label>
+  <Expedition33_DarknessCurse.description>This character is victim of a dark curse that weakens their mental and physical abilities.</Expedition33_DarknessCurse.description>
+  
+  <Expedition33_DarknessSlow.label>darkness slow</Expedition33_DarknessSlow.label>
+  <Expedition33_DarknessSlow.description>Slowed by the dark explosion, movement and reflexes diminished.</Expedition33_DarknessSlow.description>
+  
+  <Expedition33_DarknessDebuff.label>dark mist</Expedition33_DarknessDebuff.label>
+  <Expedition33_DarknessDebuff.description>This character is plunged in darkness, reducing their motor and mental faculties.</Expedition33_DarknessDebuff.description>
+  
+  <Expedition33_ObscurEffect.label>dark shock</Expedition33_ObscurEffect.label>
+  <Expedition33_ObscurEffect.description>This character's mind is affected by a wave of dark energy, causing confusion and disorientation.</Expedition33_ObscurEffect.description>
+  <Expedition33_ObscurEffect.stages.Confusion_obscure.label>Dark confusion</Expedition33_ObscurEffect.stages.Confusion_obscure.label>
+  
+  <!-- Lamp Effects -->
+  <Expedition33_LampMastery.label>lamp mastery</Expedition33_LampMastery.label>
+  <Expedition33_LampMastery.description>Surrounded by spectral lamp energy, benefits from a protective aura.</Expedition33_LampMastery.description>
+  
+  <Expedition33_LampCurse.label>lamp curse</Expedition33_LampCurse.label>
+  <Expedition33_LampCurse.description>Cursed by dark lamps, suffer random harmful effects.</Expedition33_LampCurse.description>
+  
+  <!-- Boss-Specific Effects -->
+  <Expedition33_FrancoisTerror.label>François terror</Expedition33_FrancoisTerror.label>
+  <Expedition33_FrancoisTerror.description>Terrified by François's deadly presence. All abilities are drastically reduced.</Expedition33_FrancoisTerror.description>
+  
+  <Expedition33_CommanderBoost.label>commander boost</Expedition33_CommanderBoost.label>
+  <Expedition33_CommanderBoost.description>Inspired by Renoir's tactical orders, all combat abilities are enhanced.</Expedition33_CommanderBoost.description>
+  
+  <Expedition33_SonicStun.label>sonic stun</Expedition33_SonicStun.label>
+  <Expedition33_SonicStun.description>Stunned by the Siren's sonic wave. Movement slowed and abilities reduced.</Expedition33_SonicStun.description>
+  
+  <Expedition33_MindControlled.label>mind controlled</Expedition33_MindControlled.label>
+  <Expedition33_MindControlled.description>Mind dominated by the Siren. Acts temporarily as an enemy against former allies.</Expedition33_MindControlled.description>
+  
+  <Expedition33_FaceShifted.label>face shifted</Expedition33_FaceShifted.label>
+  <Expedition33_FaceShifted.description>Identity temporarily modified by the Faces. Relations and recognition are disturbed.</Expedition33_FaceShifted.description>
+  
+  <Expedition33_IdentityConfusion.label>identity confusion</Expedition33_IdentityConfusion.label>
+  <Expedition33_IdentityConfusion.description>Confused about their own identity and that of others. May mistakenly attack allies.</Expedition33_IdentityConfusion.description>
+  
+  <Expedition33_FaceShiftBuff.label>face change</Expedition33_FaceShiftBuff.label>
+  <Expedition33_FaceShiftBuff.description>This character goes through a destabilizing trance, completely changing their identity in the eyes of others.</Expedition33_FaceShiftBuff.description>
+  <Expedition33_FaceShiftBuff.stages.Dissimulation_totale.label>Total concealment</Expedition33_FaceShiftBuff.stages.Dissimulation_totale.label>
+  
+  <Expedition33_DualityShiftBuff.label>duality form</Expedition33_DualityShiftBuff.label>
+  <Expedition33_DualityShiftBuff.description>This character is temporarily infused with the powers of light and shadow, multiplying their abilities.</Expedition33_DualityShiftBuff.description>
+  
+  <Expedition33_FearAuraHediff.label>terror aura</Expedition33_FearAuraHediff.label>
+  <Expedition33_FearAuraHediff.description>Paralyzed by supernatural terror. All abilities are drastically reduced by fear.</Expedition33_FearAuraHediff.description>
+  
+  <!-- Paintress Effects -->
+  <Expedition33_RealityDistorted.label>reality distorted</Expedition33_RealityDistorted.label>
+  <Expedition33_RealityDistorted.description>This character's mind is affected by a fundamental anomaly in the space-time fabric.</Expedition33_RealityDistorted.description>
+  
+  <Expedition33_GommageCountdown.label>gommage countdown</Expedition33_GommageCountdown.label>
+  <Expedition33_GommageCountdown.description>A deadly number has been inscribed! The countdown to disappearance begins...</Expedition33_GommageCountdown.description>
+  
+  <Expedition33_CosmicPaint.label>cosmic paint</Expedition33_CosmicPaint.label>
+  <Expedition33_CosmicPaint.description>Marked by the Paintress's cosmic brush. Reality warps around you.</Expedition33_CosmicPaint.description>
+  
+  <Expedition33_NumberCurse.label>number curse</Expedition33_NumberCurse.label>
+  <Expedition33_NumberCurse.description>A harmful number has been inscribed on you. Its random effects manifest unpredictably.</Expedition33_NumberCurse.description>
+  
+  <Expedition33_TimeConfusion.label>time confusion</Expedition33_TimeConfusion.label>
+  <Expedition33_TimeConfusion.description>Caught in the Paintress's temporal distortions. Time seems to flow differently.</Expedition33_TimeConfusion.description>
+  
+  <Expedition33_MonolithCurse.label>monolith curse</Expedition33_MonolithCurse.label>
+  <Expedition33_MonolithCurse.description>Marked by the ancient power of the Monolith. A cosmic curse befalls you.</Expedition33_MonolithCurse.description>
+  
+  <!-- Protection and Game System -->
+  <Expedition33_QuestTracker.label>Expedition 33 quest tracker</Expedition33_QuestTracker.label>
+  <Expedition33_QuestTracker.description>Tracks the main narrative progression of Expedition 33.</Expedition33_QuestTracker.description>
+  
+  <Expedition33_GommageProtection.label>anti-gommage protection</Expedition33_GommageProtection.label>
+  <Expedition33_GommageProtection.description>Protected against Gommage effects by a personal shield. This mystical protection shimmers around the bearer.</Expedition33_GommageProtection.description>
+  <Expedition33_GommageProtection.stages.bouclier_actif.label>active shield</Expedition33_GommageProtection.stages.bouclier_actif.label>
+  
+  <Expedition33_AntiGommageProtection.label>anti-gommage protection</Expedition33_AntiGommageProtection.label>
+  <Expedition33_AntiGommageProtection.description>This person is protected against Gommage effects by an energy field.</Expedition33_AntiGommageProtection.description>
+  
+  <!-- Long-term Effects -->
+  <Expedition33_ArtisticCorruption.label>artistic corruption</Expedition33_ArtisticCorruption.label>
+  <Expedition33_ArtisticCorruption.description>Exposed to the Paintress's energies, this colonist develops "artistic stains" that alter their perception of reality.</Expedition33_ArtisticCorruption.description>
+  <Expedition33_ArtisticCorruption.stages.lgre.label>mild</Expedition33_ArtisticCorruption.stages.lgre.label>
+  <Expedition33_ArtisticCorruption.stages.modre.label>moderate</Expedition33_ArtisticCorruption.stages.modre.label>
+  <Expedition33_ArtisticCorruption.stages.svre.label>severe</Expedition33_ArtisticCorruption.stages.svre.label>
+  
+  <Expedition33_GommageResistance.label>gommage resistance</Expedition33_GommageResistance.label>
+  <Expedition33_GommageResistance.description>This colonist has developed natural resistance to Gommage effects after prolonged exposure to anti-Gommage technologies.</Expedition33_GommageResistance.description>
+  <Expedition33_GommageResistance.stages.rsistant.label>resistant</Expedition33_GommageResistance.stages.rsistant.label>
+  
+  <Expedition33_ArtisticInspiration.label>artistic inspiration</Expedition33_ArtisticInspiration.label>
+  <Expedition33_ArtisticInspiration.description>Inspired by the fight against the Paintress, this colonist feels enhanced creativity and renewed motivation.</Expedition33_ArtisticInspiration.description>
+  <Expedition33_ArtisticInspiration.stages.inspir.label>inspired</Expedition33_ArtisticInspiration.stages.inspir.label>
+  
+  <Expedition33_ShieldExhaustion.label>shield exhaustion</Expedition33_ShieldExhaustion.label>
+  <Expedition33_ShieldExhaustion.description>This colonist's anti-Gommage shield is exhausted. They are temporarily vulnerable to Gommage effects.</Expedition33_ShieldExhaustion.description>
+  <Expedition33_ShieldExhaustion.stages.vulnrable.label>vulnerable</Expedition33_ShieldExhaustion.stages.vulnrable.label>
+  
+  <Expedition33_GommageWitness.label>gommage witness</Expedition33_GommageWitness.label>
+  <Expedition33_GommageWitness.description>This colonist witnessed a Gommage event. The trauma of seeing people disappear from reality leaves deep psychological scars.</Expedition33_GommageWitness.description>
+  <Expedition33_GommageWitness.stages.traumatis.label>traumatized</Expedition33_GommageWitness.stages.traumatis.label>
+  
+  <Expedition33_SanctuaryBlessing.label>sanctuary blessing</Expedition33_SanctuaryBlessing.label>
+  <Expedition33_SanctuaryBlessing.description>This colonist has spent time in the Temporal Sanctuary. Exposure to temporal energies grants exceptional serenity and mental clarity.</Expedition33_SanctuaryBlessing.description>
+  <Expedition33_SanctuaryBlessing.stages.bni.label>blessed</Expedition33_SanctuaryBlessing.stages.bni.label>
+  
+  <Expedition33_PilgrimageBlessing.label>pilgrimage blessing</Expedition33_PilgrimageBlessing.label>
+  <Expedition33_PilgrimageBlessing.description>This Gestral participated in a spiritual pilgrimage to the Sacred River, bringing inner peace and ancestral wisdom.</Expedition33_PilgrimageBlessing.description>
+  
+  <Expedition33_AncestralBlessing.label>ancestral blessing</Expedition33_AncestralBlessing.label>
+  <Expedition33_AncestralBlessing.description>This Gestral feels the benevolent presence of their ancestors, giving them strength and wisdom.</Expedition33_AncestralBlessing.description>
+
+  <!-- Ability Buffs -->
+  <Expedition33_RegenerationBuff.label>active regeneration</Expedition33_RegenerationBuff.label>
+  <Expedition33_RegenerationBuff.description>Accelerated healing of wounds.</Expedition33_RegenerationBuff.description>
+  
+  <Expedition33_IronWillBuff.label>iron will</Expedition33_IronWillBuff.label>
+  <Expedition33_IronWillBuff.description>Temporary immunity to mental breaks.</Expedition33_IronWillBuff.description>
+  
+  <Expedition33_BerserkerRageBuff.label>berserker rage</Expedition33_BerserkerRageBuff.label>
+  <Expedition33_BerserkerRageBuff.description>Destructive rage that increases damage but reduces defense.</Expedition33_BerserkerRageBuff.description>
+  
+  <Expedition33_TimeSlipBuff.label>time slip</Expedition33_TimeSlipBuff.label>
+  <Expedition33_TimeSlipBuff.description>Action speed considerably increased.</Expedition33_TimeSlipBuff.description>
+  
+  <Expedition33_IronSkinBuff.label>iron skin</Expedition33_IronSkinBuff.label>
+  <Expedition33_IronSkinBuff.description>Magical protection that drastically reduces damage taken.</Expedition33_IronSkinBuff.description>
+  
+  <Expedition33_FortressBuff.label>fortress</Expedition33_FortressBuff.label>
+  <Expedition33_FortressBuff.description>Near-total protection against all types of damage.</Expedition33_FortressBuff.description>
+  
+  <Expedition33_LuckyStrikeBuff.label>lucky strike</Expedition33_LuckyStrikeBuff.label>
+  <Expedition33_LuckyStrikeBuff.description>Greatly improved accuracy for the next attack.</Expedition33_LuckyStrikeBuff.description>
+  
+  <Expedition33_MiracleBuff.label>divine protection</Expedition33_MiracleBuff.label>
+  <Expedition33_MiracleBuff.description>Miraculous protection against mortal wounds.</Expedition33_MiracleBuff.description>
+  
+  <Expedition33_ImmortalityBuff.label>immortality fragment</Expedition33_ImmortalityBuff.label>
+  <Expedition33_ImmortalityBuff.description>Rapid regeneration thanks to Verso's immortal nature.</Expedition33_ImmortalityBuff.description>
+  
+  <Expedition33_FastHealing.label>fast healing</Expedition33_FastHealing.label>
+  <Expedition33_FastHealing.description>Accelerated healing of wounds.</Expedition33_FastHealing.description>
+
+  <!-- Gestral Growth -->
+  <GestralGrowthStages.label>gestral growth</GestralGrowthStages.label>
+  <GestralGrowthStages.description>This Gestral's size evolves according to their age.</GestralGrowthStages.description>
+  <GestralGrowthStages.stages.jeune_gestral.label>young gestral</GestralGrowthStages.stages.jeune_gestral.label>
+  <GestralGrowthStages.stages.gestral_adulte.label>adult gestral</GestralGrowthStages.stages.gestral_adulte.label>
+  <GestralGrowthStages.stages.gestral_ancien.label>ancient gestral</GestralGrowthStages.stages.gestral_ancien.label>
+  <GestralGrowthStages.stages.gestralarbre.label>gestral-tree</GestralGrowthStages.stages.gestralarbre.label>
+
+  <!-- Picto Bonuses -->
+  <Expedition33_PictoBonus_Vitality.label>picto imprint - vitality</Expedition33_PictoBonus_Vitality.label>
+  <Expedition33_PictoBonus_Vitality.description>Bonus granted by a vitality picto.</Expedition33_PictoBonus_Vitality.description>
+  
+  <Expedition33_PictoBonus_Defense.label>picto imprint - defense</Expedition33_PictoBonus_Defense.label>
+  <Expedition33_PictoBonus_Defense.description>Bonus granted by a defense picto.</Expedition33_PictoBonus_Defense.description>
+  
+  <Expedition33_PictoBonus_Critical.label>picto imprint - critical</Expedition33_PictoBonus_Critical.label>
+  <Expedition33_PictoBonus_Critical.description>Bonus granted by a critical picto.</Expedition33_PictoBonus_Critical.description>
+  
+  <Expedition33_PictoBonus_Guardian.label>picto imprint - guardian</Expedition33_PictoBonus_Guardian.label>
+  <Expedition33_PictoBonus_Guardian.description>Bonus granted by a guardian picto.</Expedition33_PictoBonus_Guardian.description>
+  
+  <Expedition33_PictoBonus_Striker.label>picto imprint - striker</Expedition33_PictoBonus_Striker.label>
+  <Expedition33_PictoBonus_Striker.description>Bonus granted by a striker picto.</Expedition33_PictoBonus_Striker.description>
+  
+  <Expedition33_PictoBonus_Healer.label>picto imprint - healer</Expedition33_PictoBonus_Healer.label>
+  <Expedition33_PictoBonus_Healer.description>Bonus granted by a healer picto.</Expedition33_PictoBonus_Healer.description>
+  
+  <Expedition33_PictoBonus_Scholar.label>picto imprint - scholar</Expedition33_PictoBonus_Scholar.label>
+  <Expedition33_PictoBonus_Scholar.description>Bonus granted by a scholar picto.</Expedition33_PictoBonus_Scholar.description>
+
+  <!-- Lumina -->
+  <Expedition33_Lumina_Guardian.label>Lumina Guardian</Expedition33_Lumina_Guardian.label>
+  <Expedition33_Lumina_Guardian.description>Mastered guardian passive skill.</Expedition33_Lumina_Guardian.description>
+  
+  <Expedition33_Lumina_Vitality.label>Lumina Vitality</Expedition33_Lumina_Vitality.label>
+  <Expedition33_Lumina_Vitality.description>Mastered vitality passive skill.</Expedition33_Lumina_Vitality.description>
+  
+  <Expedition33_Lumina_Defense.label>Lumina Defense</Expedition33_Lumina_Defense.label>
+  <Expedition33_Lumina_Defense.description>Mastered defense passive skill.</Expedition33_Lumina_Defense.description>
+  
+  <Expedition33_Lumina_Critical.label>Lumina Critical</Expedition33_Lumina_Critical.label>
+  <Expedition33_Lumina_Critical.description>Mastered critical passive skill.</Expedition33_Lumina_Critical.description>
+  
+  <Expedition33_Lumina_Striker.label>Lumina Striker</Expedition33_Lumina_Striker.label>
+  <Expedition33_Lumina_Striker.description>Mastered attack passive skill.</Expedition33_Lumina_Striker.description>
+  
+  <Expedition33_Lumina_Healer.label>Lumina Healer</Expedition33_Lumina_Healer.label>
+  <Expedition33_Lumina_Healer.description>Mastered healing passive skill.</Expedition33_Lumina_Healer.description>
+  
+  <Expedition33_Lumina_Scholar.label>Lumina Scholar</Expedition33_Lumina_Scholar.label>
+  <Expedition33_Lumina_Scholar.description>Mastered scholar passive skill.</Expedition33_Lumina_Scholar.description>
+
+  <!-- Progression System -->
+  <Expedition33_Progression.label>expedition progression</Expedition33_Progression.label>
+  <Expedition33_Progression.description>Expedition 33 mod progression system.</Expedition33_Progression.description>
+  
+  <Expedition33_VitalityBonus.label>enhanced vitality</Expedition33_VitalityBonus.label>
+  <Expedition33_VitalityBonus.description>Permanent vitality bonus obtained through expedition progression.</Expedition33_VitalityBonus.description>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_dbutant.label>enhanced vitality (beginner)</Expedition33_VitalityBonus.stages.vitalit_renforce_dbutant.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_intermdiaire.label>enhanced vitality (intermediate)</Expedition33_VitalityBonus.stages.vitalit_renforce_intermdiaire.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_avanc.label>enhanced vitality (advanced)</Expedition33_VitalityBonus.stages.vitalit_renforce_avanc.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_expert.label>enhanced vitality (expert)</Expedition33_VitalityBonus.stages.vitalit_renforce_expert.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_matre.label>enhanced vitality (master)</Expedition33_VitalityBonus.stages.vitalit_renforce_matre.label>
+  
+  <Expedition33_PowerBonus.label>devastating power</Expedition33_PowerBonus.label>
+  <Expedition33_PowerBonus.description>Permanent power bonus obtained through expedition progression.</Expedition33_PowerBonus.description>
+  <Expedition33_PowerBonus.stages.dbutant.label>(beginner)</Expedition33_PowerBonus.stages.dbutant.label>
+  <Expedition33_PowerBonus.stages.intermdiaire.label>(intermediate)</Expedition33_PowerBonus.stages.intermdiaire.label>
+  <Expedition33_PowerBonus.stages.avanc.label>(advanced)</Expedition33_PowerBonus.stages.avanc.label>
+  <Expedition33_PowerBonus.stages.expert.label>(expert)</Expedition33_PowerBonus.stages.expert.label>
+  <Expedition33_PowerBonus.stages.matre.label>(master)</Expedition33_PowerBonus.stages.matre.label>
+  
+  <Expedition33_AgilityBonus.label>extraordinary agility</Expedition33_AgilityBonus.label>
+  <Expedition33_AgilityBonus.description>Permanent agility bonus obtained through expedition progression.</Expedition33_AgilityBonus.description>
+  <Expedition33_AgilityBonus.stages.dbutant.label>(beginner)</Expedition33_AgilityBonus.stages.dbutant.label>
+  <Expedition33_AgilityBonus.stages.intermdiaire.label>(intermediate)</Expedition33_AgilityBonus.stages.intermdiaire.label>
+  <Expedition33_AgilityBonus.stages.avanc.label>(advanced)</Expedition33_AgilityBonus.stages.avanc.label>
+  <Expedition33_AgilityBonus.stages.expert.label>(expert)</Expedition33_AgilityBonus.stages.expert.label>
+  <Expedition33_AgilityBonus.stages.matre.label>(master)</Expedition33_AgilityBonus.stages.matre.label>
+  
+  <Expedition33_DefenseBonus.label>unshakeable defense</Expedition33_DefenseBonus.label>
+  <Expedition33_DefenseBonus.description>Permanent defense bonus obtained through expedition progression.</Expedition33_DefenseBonus.description>
+  <Expedition33_DefenseBonus.stages.dbutant.label>(beginner)</Expedition33_DefenseBonus.stages.dbutant.label>
+  <Expedition33_DefenseBonus.stages.intermdiaire.label>(intermediate)</Expedition33_DefenseBonus.stages.intermdiaire.label>
+  <Expedition33_DefenseBonus.stages.avanc.label>(advanced)</Expedition33_DefenseBonus.stages.avanc.label>
+  <Expedition33_DefenseBonus.stages.expert.label>(expert)</Expedition33_DefenseBonus.stages.expert.label>
+  <Expedition33_DefenseBonus.stages.matre.label>(master)</Expedition33_DefenseBonus.stages.matre.label>
+  
+  <Expedition33_ChanceBonus.label>miraculous luck</Expedition33_ChanceBonus.label>
+  <Expedition33_ChanceBonus.description>Permanent luck bonus obtained through expedition progression.</Expedition33_ChanceBonus.description>
+  <Expedition33_ChanceBonus.stages.dbutant.label>(beginner)</Expedition33_ChanceBonus.stages.dbutant.label>
+  <Expedition33_ChanceBonus.stages.intermdiaire.label>(intermediate)</Expedition33_ChanceBonus.stages.intermdiaire.label>
+  <Expedition33_ChanceBonus.stages.avanc.label>(advanced)</Expedition33_ChanceBonus.stages.avanc.label>
+  <Expedition33_ChanceBonus.stages.expert.label>(expert)</Expedition33_ChanceBonus.stages.expert.label>
+  <Expedition33_ChanceBonus.stages.matre.label>(master)</Expedition33_ChanceBonus.stages.matre.label>
+  
+  <Expedition33_LevelBonus.label>expedition wisdom</Expedition33_LevelBonus.label>
+  <Expedition33_LevelBonus.description>Wisdom and experience gained during Expedition 33.</Expedition33_LevelBonus.description>
+  <Expedition33_LevelBonus.stages.apprenti.label>(apprentice)</Expedition33_LevelBonus.stages.apprenti.label>
+  <Expedition33_LevelBonus.stages.confirm.label>(confirmed)</Expedition33_LevelBonus.stages.confirm.label>
+  <Expedition33_LevelBonus.stages.expriment.label>(experienced)</Expedition33_LevelBonus.stages.expriment.label>
+  <Expedition33_LevelBonus.stages.vtran.label>(veteran)</Expedition33_LevelBonus.stages.vtran.label>
+
+
+    <Expedition33_GommageCountdownAnxiety.label>countdown anxiety</Expedition33_GommageCountdownAnxiety.label>
+  <Expedition33_GommageCountdownAnxiety.description>This colonist saw the Gommage process trigger but no one died. Watching the cursed age approach and count down remains deeply disturbing, even though the danger was avoided.</Expedition33_GommageCountdownAnxiety.description>
+  <Expedition33_GommageCountdownAnxiety.stages.anxieux.label>anxious</Expedition33_GommageCountdownAnxiety.stages.anxieux.label>
+  
+  <Expedition33_AntiPaintressMotivation.label>anti-Paintress motivation</Expedition33_AntiPaintressMotivation.label>
+  <Expedition33_AntiPaintressMotivation.description>This colonist survived a Gommage event. Their survival reinforces their determination to definitively defeat the Paintress. Tomorrow Will Come</Expedition33_AntiPaintressMotivation.description>
+  <Expedition33_AntiPaintressMotivation.stages.motiv.label>motivated</Expedition33_AntiPaintressMotivation.stages.motiv.label>
+  
+</LanguageData>

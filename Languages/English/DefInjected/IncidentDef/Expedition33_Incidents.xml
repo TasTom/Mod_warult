@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Expedition33_Gommage.label>The Gommage</Expedition33_Gommage.label>
+  <Expedition33_Gommage.letterLabel>The Gommage</Expedition33_Gommage.letterLabel>
+  <Expedition33_Gommage.letterText>A mysterious phenomenon strikes your colony...</Expedition33_Gommage.letterText>
+  
+  <Expedition33_Mission.label>Expedition Mission</Expedition33_Mission.label>
+  <Expedition33_Mission.letterLabel>Expedition Mission</Expedition33_Mission.letterLabel>
+  <Expedition33_Mission.letterText>Expedition 33 offers you a mission...</Expedition33_Mission.letterText>
+  
+  <Expedition33_PainterSighting.label>Paintress Sighting</Expedition33_PainterSighting.label>
+  <Expedition33_PainterSighting.letterLabel>The Paintress</Expedition33_PainterSighting.letterLabel>
+  <Expedition33_PainterSighting.letterText>The terrifying Paintress has been spotted near your colony...</Expedition33_PainterSighting.letterText>
+  
+  <Expedition33_TestEvent.label>Expedition 33 Test</Expedition33_TestEvent.label>
+  <Expedition33_TestEvent.letterLabel>Expedition 33 Test</Expedition33_TestEvent.letterLabel>
+  <Expedition33_TestEvent.letterText>This is a test to verify that your events work!</Expedition33_TestEvent.letterText>
+
+  <GestralAwakening.label>ancient gestral awakening</GestralAwakening.label>
+  <GestralAwakening.letterLabel>Awakening of the Ancients</GestralAwakening.letterLabel>
+  <GestralAwakening.letterText>Ancient Gestral-trees awaken in the region, attracted by the presence of their descendants. They bring with them ancient knowledge and Expedition 33 artifacts.</GestralAwakening.letterText>
+  
+  <Expedition33_SacredRiverPilgrimage.label>sacred river pilgrimage</Expedition33_SacredRiverPilgrimage.label>
+  <Expedition33_SacredRiverPilgrimage.letterLabel>Gestral Pilgrimage</Expedition33_SacredRiverPilgrimage.letterLabel>
+  <Expedition33_SacredRiverPilgrimage.letterText>Your Gestrals feel the call of the Sacred River. A group wishes to undertake a pilgrimage to honor their ancestors and recover fragments of ancient memory.</Expedition33_SacredRiverPilgrimage.letterText>
+  
+  <Expedition33_SpawnEvequeSite.label>Bishop's Sanctuary discovery</Expedition33_SpawnEvequeSite.label>
+  <Expedition33_SpawnGobluSite.label>Suspended Ocean discovery</Expedition33_SpawnGobluSite.label>
+  <Expedition33_SpawnSakapatateRobusteSite.label>Ancient Sanctuary discovery</Expedition33_SpawnSakapatateRobusteSite.label>
+  <Expedition33_SpawnSakapatateUltimeSite.label>Ancient Sanctuary discovery</Expedition33_SpawnSakapatateUltimeSite.label>
+  <Expedition33_SpawnFrancoisSite.label>Esquie's Nest discovery</Expedition33_SpawnFrancoisSite.label>
+  <Expedition33_SpawnMaitreDesLampesSite.label>Light Sanctuary discovery</Expedition33_SpawnMaitreDesLampesSite.label>
+  <Expedition33_SpawnDualisteSite.label>Forgotten Lands discovery</Expedition33_SpawnDualisteSite.label>
+  <Expedition33_SpawnRenoirSite.label>Renoir's Manor discovery</Expedition33_SpawnRenoirSite.label>
+  <Expedition33_SpawnSireneSite.label>Siren's Domain discovery</Expedition33_SpawnSireneSite.label>
+  <Expedition33_SpawnVisagesSite.label>Palace of Faces discovery</Expedition33_SpawnVisagesSite.label>
+  <Expedition33_SpawnPaintressSite.label>Monolith discovery</Expedition33_SpawnPaintressSite.label>
+  
+  <NevronMassRaid.label>gommage tide</NevronMassRaid.label>
+  <NevronMassRaid.letterLabel>Gommage Tide</NevronMassRaid.letterLabel>
+  <NevronMassRaid.letterText>A wave of Nevrons corrupted by the Paintress sweeps over your colony, guided by a mysterious collective will. Their number and ferocity are unusual.</NevronMassRaid.letterText>
+  
+  <NevronNestDiscovery.label>chromatic nest discovered</NevronNestDiscovery.label>
+  <NevronNestDiscovery.letterLabel>Gommage Nest</NevronNestDiscovery.letterLabel>
+  <NevronNestDiscovery.letterText>Your colonists stumble upon a mass of pulsating chromatic matter. Inside, Nevron eggs and fragments of Gommage artifacts await to be studied... or destroyed.</NevronNestDiscovery.letterText>
+  
+  <PitankAlphaAttack.label>pitank alpha attack</PitankAlphaAttack.label>
+  <PitankAlphaAttack.letterLabel>Pitank Alpha</PitankAlphaAttack.letterLabel>
+  <PitankAlphaAttack.letterText>A Pitank Alpha, colossus of the Gommage, leads a horde of Nevrons. Its presence warps reality and galvanizes its kin.</PitankAlphaAttack.letterText>
+  
+  <Expedition33_ChromaticArtifactDiscovery.label>chromatic artifact</Expedition33_ChromaticArtifactDiscovery.label>
+  <Expedition33_ChromaticArtifactDiscovery.letterLabel>Chromatic Artifact</Expedition33_ChromaticArtifactDiscovery.letterLabel>
+  <Expedition33_ChromaticArtifactDiscovery.letterText>A strange artifact, vibrating with chromatic energy, has been spotted near your colony. Nevrons seem irresistibly attracted to its presence.</Expedition33_ChromaticArtifactDiscovery.letterText>
+  
+  <NevronMigration.label>nevron migration</NevronMigration.label>
+  <NevronMigration.letterLabel>Chromatic Migration</NevronMigration.letterLabel>
+  <NevronMigration.letterText>A herd of Nevrons crosses the region, fleeing an unknown threat. Some might become aggressive if approached.</NevronMigration.letterText>
+</LanguageData>

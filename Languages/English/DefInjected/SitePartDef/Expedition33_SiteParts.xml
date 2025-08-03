@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Expedition33_EvequeSitePart.label>Bishop's sanctuary</Expedition33_EvequeSitePart.label>
+  <Expedition33_EvequeSitePart.description>A sacred sanctuary where the guardian Bishop protects these places.</Expedition33_EvequeSitePart.description>
+  <Expedition33_EvequeSitePart.arrivedLetter>You reach the indigo tree where the guardian Bishop awaits you. Sacred light bathes this mystical place.</Expedition33_EvequeSitePart.arrivedLetter>
+  
+  <Expedition33_GobluSitePart.label>Suspended Oceans</Expedition33_GobluSitePart.label>
+  <Expedition33_GobluSitePart.description>An impossible phenomenon: an ocean floating in the air. Here reigns the mysterious Goblu.</Expedition33_GobluSitePart.description>
+  <Expedition33_GobluSitePart.arrivedLetter>You reach the Suspended Ocean. A phenomenon defying all laws of physics stretches before you. The Goblu jealously guards this floating aquatic territory.</Expedition33_GobluSitePart.arrivedLetter>
+  
+  <Expedition33_SakapatateRobusteSitePart.label>suspended ocean</Expedition33_SakapatateRobusteSitePart.label>
+  <Expedition33_SakapatateRobusteSitePart.description>Impossible phenomenon: an ocean floating in the air.</Expedition33_SakapatateRobusteSitePart.description>
+  <Expedition33_SakapatateRobusteSitePart.arrivedLetter>The Suspended Ocean defies all laws of physics. The Robust Sakapatate guards this mystical place.</Expedition33_SakapatateRobusteSitePart.arrivedLetter>
+  
+  <Expedition33_SakapatateUltimeSitePart.label>ancient sanctuary</Expedition33_SakapatateUltimeSitePart.label>
+  <Expedition33_SakapatateUltimeSitePart.description>Ruins of a forgotten civilization guarded by the Ultimate Sakapatate.</Expedition33_SakapatateUltimeSitePart.description>
+  <Expedition33_SakapatateUltimeSitePart.arrivedLetter>These ancient ruins hold secrets. The Ultimate Sakapatate jealously protects this sacred place.</Expedition33_SakapatateUltimeSitePart.arrivedLetter>
+  
+  <Expedition33_FrancoisSitePart.label>Esquie's nest</Expedition33_FrancoisSitePart.label>
+  <Expedition33_FrancoisSitePart.description>Dangerous cliffs where François, the deadly threat, has established his territory.</Expedition33_FrancoisSitePart.description>
+  <Expedition33_FrancoisSitePart.arrivedLetter>These cliffs shelter François, reputed to eliminate his enemies in a single blow. Be extremely careful.</Expedition33_FrancoisSitePart.arrivedLetter>
+  
+  <Expedition33_MaitreDesLampesSitePart.label>light sanctuary</Expedition33_MaitreDesLampesSitePart.label>
+  <Expedition33_MaitreDesLampesSitePart.description>The domain of the Lampmaster, final guardian of Act I.</Expedition33_MaitreDesLampesSitePart.description>
+  <Expedition33_MaitreDesLampesSitePart.arrivedLetter>The Lampmaster controls light itself. His defeat will open the way to Act II.</Expedition33_MaitreDesLampesSitePart.arrivedLetter>
+  
+  <Expedition33_DualisteSitePart.label>forgotten lands</Expedition33_DualisteSitePart.label>
+  <Expedition33_DualisteSitePart.description>Desolate regions where the Dualist masters the forces of light and dark.</Expedition33_DualisteSitePart.description>
+  <Expedition33_DualisteSitePart.arrivedLetter>These desolate lands shelter the Dualist, master of the balance between light and darkness.</Expedition33_DualisteSitePart.arrivedLetter>
+  
+  <Expedition33_RenoirSitePart.label>Renoir's manor</Expedition33_RenoirSitePart.label>
+  <Expedition33_RenoirSitePart.description>An imposing manor where Renoir, commander of Expedition Zero, awaits his judgment.</Expedition33_RenoirSitePart.description>
+  <Expedition33_RenoirSitePart.arrivedLetter>Renoir's manor stands before you. The former commander knows secrets about the expeditions' past.</Expedition33_RenoirSitePart.arrivedLetter>
+  
+  <Expedition33_SireneSitePart.label>Siren's domain</Expedition33_SireneSitePart.label>
+  <Expedition33_SireneSitePart.description>Aquatic territory where the Siren, first Axon guardian, exercises her mind control.</Expedition33_SireneSitePart.description>
+  <Expedition33_SireneSitePart.arrivedLetter>The Siren's mystical waters stretch before you. Resist her mind control.</Expedition33_SireneSitePart.arrivedLetter>
+  
+  <Expedition33_VisagesSitePart.label>palace of faces</Expedition33_VisagesSitePart.label>
+  <Expedition33_VisagesSitePart.description>Place of confusion where the Faces, second Axon guardian, distort reality.</Expedition33_VisagesSitePart.description>
+  <Expedition33_VisagesSitePart.arrivedLetter>The Palace of Faces warps perception. Keep your identity in the face of their illusions.</Expedition33_VisagesSitePart.arrivedLetter>
+  
+  <Expedition33_PaintressSitePart.label>Paintress monolith</Expedition33_PaintressSitePart.label>
+  <Expedition33_PaintressSitePart.description>The black Monolith where the Paintress inscribes the numbers of the Gommage. The place of the final confrontation.</Expedition33_PaintressSitePart.description>
+  <Expedition33_PaintressSitePart.arrivedLetter>The black Monolith stands before you. Here will be decided humanity's fate against the Gommage.</Expedition33_PaintressSitePart.arrivedLetter>
+</LanguageData>

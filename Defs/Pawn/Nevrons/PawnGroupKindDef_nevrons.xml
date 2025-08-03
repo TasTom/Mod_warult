@@ -2,14 +2,14 @@
 <Defs>
     <!-- Groupe pour le raid du Pitank Alpha -->
     <PawnGroupKindDef>
-        <defName>Expedition33_PitankAlphaGroup</defName>
+        <defName>PitankAlphaGroup</defName>
         <label>Groupe Pitank Alpha</label>
         <workerClass>PawnGroupKindWorker_Normal</workerClass>
     </PawnGroupKindDef>
 
     <!-- Groupe pour la marée du Gommage -->
     <PawnGroupKindDef>
-        <defName>Expedition33_NevronMassRaidGroup</defName>
+        <defName>NevronMassRaidGroup</defName>
         <label>Marée de Nevrons</label>
         <workerClass>PawnGroupKindWorker_Normal</workerClass>
         

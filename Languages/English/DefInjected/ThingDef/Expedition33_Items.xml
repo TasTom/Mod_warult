@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Chromatic Resources -->
+  <Expedition33_ChromaRaw.label>raw chroma</Expedition33_ChromaRaw.label>
+  <Expedition33_ChromaRaw.description>Unprocessed chromatic energy crystallized into a raw, unstable form. This substance pulses with otherworldly energy and is essential for creating advanced Expedition 33 technology. Handle with extreme caution - prolonged exposure may cause reality distortion.</Expedition33_ChromaRaw.description>
+  
+  <Expedition33_Chroma.label>refined chroma</Expedition33_Chroma.label>
+  <Expedition33_Chroma.description>Processed chromatic energy in its pure, stable form. This crystalline substance glows with an inner light and is used to power the most advanced Expedition 33 equipment. The energy contained within seems to exist in multiple dimensions simultaneously.</Expedition33_Chroma.description>
+  
+  <!-- Equipment -->
+  <Expedition33_OfficerHat.label>Expedition 33 officer cap</Expedition33_OfficerHat.label>
+  <Expedition33_OfficerHat.description>A military-style cap worn by high-ranking members of Expedition 33. The insignia glows faintly with chromatic energy, marking the wearer as someone who has delved deep into forbidden knowledge.</Expedition33_OfficerHat.description>
+  
+  <!-- Pictograms -->
+  <Expedition33_Picto_Guardian.label>Guardian Pictogram</Expedition33_Picto_Guardian.label>
+  <Expedition33_Picto_Guardian.description>An ancient pictogram depicting a guardian figure. The symbol seems to shift and change when viewed directly, suggesting deep connections to protective energies.</Expedition33_Picto_Guardian.description>
+  
+  <Expedition33_Picto_Healer.label>Healer Pictogram</Expedition33_Picto_Healer.label>
+  <Expedition33_Picto_Healer.description>A mystical pictogram representing healing and restoration. The carved symbols pulse with a gentle light that seems to ease pain and suffering.</Expedition33_Picto_Healer.description>
+  
+  <Expedition33_Picto_Scholar.label>Scholar Pictogram</Expedition33_Picto_Scholar.label>
+  <Expedition33_Picto_Scholar.description>An intricate pictogram symbolizing knowledge and wisdom. Those who study it report strange visions and sudden insights into cosmic truths.</Expedition33_Picto_Scholar.description>
+  
+  <Expedition33_Picto_Striker.label>Striker Pictogram</Expedition33_Picto_Striker.label>
+  <Expedition33_Picto_Striker.description>A fierce pictogram representing combat and destruction. The symbol radiates an aura of aggression that makes nearby weapons feel lighter and deadlier.</Expedition33_Picto_Striker.description>
+  
+  <!-- Protection Items -->
+  <Expedition33_AntiGommageShield.label>anti-gommage shield</Expedition33_AntiGommageShield.label>
+  <Expedition33_AntiGommageShield.description>A protective device designed to ward off the reality-warping effects of the Gommage. The shield creates a localized field that maintains the integrity of space-time within its influence.</Expedition33_AntiGommageShield.description>
+</LanguageData>

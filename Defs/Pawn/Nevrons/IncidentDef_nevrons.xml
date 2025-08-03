@@ -2,7 +2,7 @@
 <Defs>
     <!-- RAID MASSIF - utilise la faction par défaut -->
     <IncidentDef>
-        <defName>Expedition33_NevronMassRaid</defName>
+        <defName>NevronMassRaid</defName>
         <label>marée du gommage</label>
         <category>ThreatBig</category>
         <targetTags>
@@ -21,7 +21,7 @@
 
     <!-- DÉCOUVERTE NID (Custom worker - OK) -->
     <IncidentDef>
-        <defName>Expedition33_NevronNestDiscovery</defName>
+        <defName>NevronNestDiscovery</defName>
         <label>nid chromatique découvert</label>
         <category>Misc</category>
         <targetTags>
@@ -38,7 +38,7 @@
 
     <!-- ATTAQUE PITANK ALPHA - utilise la faction par défaut -->
     <IncidentDef>
-        <defName>Expedition33_PitankAlphaAttack</defName>
+        <defName>PitankAlphaAttack</defName>
         <label>attaque du pitank alpha</label>
         <category>ThreatBig</category>
         <targetTags>
@@ -72,7 +72,7 @@
 
     <!-- MIGRATION NEVRONS (Custom worker - OK) -->
     <IncidentDef>
-        <defName>Expedition33_NevronMigration</defName>
+        <defName>NevronMigration</defName>
         <label>migration de névrons</label>
         <category>Misc</category>
         <targetTags>

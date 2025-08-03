@@ -6,4 +6,9 @@
     <reportString>lance une capacité magique.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
+<JobDef>
+  <defName>Expedition33_BossMovement</defName>
+  <driverClass>Mod_warult.JobDriver_BossMovement</driverClass>
+  <alwaysShowWeapon>true</alwaysShowWeapon>
+</JobDef>
 </Defs>

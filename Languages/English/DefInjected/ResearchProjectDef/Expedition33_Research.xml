@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Expedition33_GommageAnalysis.label>Gommage Analysis</Expedition33_GommageAnalysis.label>
+  <Expedition33_GommageAnalysis.description>In-depth study of the Gommage phenomenon to understand its mechanisms.</Expedition33_GommageAnalysis.description>
+  
+  <Expedition33_ArtisticDetection.label>Artistic Detection</Expedition33_ArtisticDetection.label>
+  <Expedition33_ArtisticDetection.description>Development of methods to detect artistic corruption.</Expedition33_ArtisticDetection.description>
+  
+  <Expedition33_BasicProtection.label>Basic Protection</Expedition33_BasicProtection.label>
+  <Expedition33_BasicProtection.description>First protection equipment against minor Gommage effects.</Expedition33_BasicProtection.description>
+  
+  <Expedition33_CursedAgeDetector.label>Cursed Age Detector</Expedition33_CursedAgeDetector.label>
+  <Expedition33_CursedAgeDetector.description>Construction of a device capable of identifying the currently painted age.</Expedition33_CursedAgeDetector.description>
+  
+  <Expedition33_AntiGommageShield.label>Anti-Gommage Shield</Expedition33_AntiGommageShield.label>
+  <Expedition33_AntiGommageShield.description>Individual protection against Gommage effects.</Expedition33_AntiGommageShield.description>
+  
+  <Expedition33_ArtisticWeapons.label>Artistic Weapons</Expedition33_ArtisticWeapons.label>
+  <Expedition33_ArtisticWeapons.description>Weapons infused with creative power to fight painted entities.</Expedition33_ArtisticWeapons.description>
+  
+  <Expedition33_AntiGommageField.label>Anti-Gommage Field</Expedition33_AntiGommageField.label>
+  <Expedition33_AntiGommageField.description>Area protection generator for the entire colony.</Expedition33_AntiGommageField.description>
+  
+  <Expedition33_CounterPaintBrush.label>Counter-Paint Brush</Expedition33_CounterPaintBrush.label>
+  <Expedition33_CounterPaintBrush.description>Ultimate weapon capable of erasing the Paintress's creations.</Expedition33_CounterPaintBrush.description>
+  
+  <Expedition33_TemporalSanctuary.label>Temporal Sanctuary</Expedition33_TemporalSanctuary.label>
+  <Expedition33_TemporalSanctuary.description>Refuge that freezes time to escape the Gommage.</Expedition33_TemporalSanctuary.description>
+  
+  <Expedition33_GommageDetection.label>Gommage Detection</Expedition33_GommageDetection.label>
+  <Expedition33_GommageDetection.description>Develop methods to detect the presence of the Gommage and its corrupted manifestations.</Expedition33_GommageDetection.description>
+  
+  <Expedition33_AntiGommageWeapons.label>Anti-Gommage Weaponry</Expedition33_AntiGommageWeapons.label>
+  <Expedition33_AntiGommageWeapons.description>Create weapons specially designed to fight entities corrupted by The Gommage.</Expedition33_AntiGommageWeapons.description>
+  
+  <Expedition33_AdvancedPurification.label>Advanced Purification</Expedition33_AdvancedPurification.label>
+  <Expedition33_AdvancedPurification.description>Advanced techniques to purify areas corrupted by The Gommage.</Expedition33_AdvancedPurification.description>
+</LanguageData>

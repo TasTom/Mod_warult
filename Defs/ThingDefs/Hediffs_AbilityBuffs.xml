@@ -182,4 +182,43 @@
     </stages>
   </HediffDef>
 
+<HediffDef>
+  <defName>Expedition33_ImmortalityBuff</defName>
+  <label>fragment d'immortalité</label>
+  <description>Régénération rapide grâce à la nature immortelle de Verso.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 0.8, 0.2)</defaultLabelColor>
+  <isBad>false</isBad>
+  <maxSeverity>2.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>7200</disappearsAfterTicks> <!-- 2 minutes -->
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <IncomingDamageFactor>0.5</IncomingDamageFactor>
+      </statFactors>
+      <naturalHealingFactor>10.0</naturalHealingFactor>
+    </li>
+  </stages>
+</HediffDef>
+
+
+<HediffDef>
+  <defName>Expedition33_FastHealing</defName>
+  <label>guérison rapide</label>
+  <description>Guérison accélérée des blessures.</description>
+  <hediffClass>Hediff</hediffClass>
+  <defaultLabelColor>(0.0, 1.0, 0.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <stages>
+    <li>
+      <naturalHealingFactor>3.0</naturalHealingFactor>
+    </li>
+  </stages>
+</HediffDef>
+
 </Defs>

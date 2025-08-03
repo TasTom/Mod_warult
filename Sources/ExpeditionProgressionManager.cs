@@ -8,6 +8,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse.AI;
 using Verse.Sound;
+using HarmonyLib;
 
 namespace Mod_warult
 {
@@ -44,25 +45,26 @@ namespace Mod_warult
 
         public ExpeditionProgressionManager()
         {
-            InitializeMissions();
-            completedObjectives = new Dictionary<string, bool>();
-            unlockedAbilities = new HashSet<string>();
-            _instance = this; // Assigne l'instance
+            if (missions == null)
+                InitializeMissions();
+
+            if (completedObjectives == null)
+                completedObjectives = new Dictionary<string, bool>();
+
+            if (unlockedAbilities == null)
+                unlockedAbilities = new HashSet<string>();
         }
 
         // ✅ NOUVELLE MÉTHODE: UnlockAbility pour CompExpeditionProgression
         public void UnlockAbility(string abilityType)
         {
             if (string.IsNullOrEmpty(abilityType)) return;
-
+            
             if (unlockedAbilities.Add(abilityType))
             {
-                Log.Message($"✅ Ability unlocked globally: {abilityType}");
-
-                Messages.Message(
-                    $"Capacité débloquée pour toute l'équipe : {abilityType}",
-                    MessageTypeDefOf.PositiveEvent
-                );
+                Log.Message("Expedition33_AbilityUnlockedGlobally".Translate(abilityType));
+                Messages.Message("Expedition33_TeamAbilityUnlocked".Translate(abilityType),
+                    MessageTypeDefOf.PositiveEvent);
             }
         }
 
@@ -79,64 +81,70 @@ namespace Mod_warult
                 new ExpeditionMission
                 {
                     id = "mission_01_awakening",
-                    title = "Réveil de l'Expédition",
-                    description = "Établir une base d'opérations et recruter des Gestrals pour rejoindre la lutte contre Le Gommage.",
+                    title = "Expedition33_Mission01Title".Translate(),
+                    description = "Expedition33_Mission01Desc".Translate(),
                     objectives = new List<string>
                     {
-                        "Construire un Quartier Général",
-                        "Recruter 3 Gestrals",
-                        "Rechercher 'Détection du Gommage'"
+                        "Expedition33_Mission01Obj1".Translate(),
+                        "Expedition33_Mission01Obj2".Translate(),
+                        "Expedition33_Mission01Obj3".Translate()
                     },
-                    rewards = new List<string> { "Accès aux missions de reconnaissance" },
+                    rewards = new List<string> { "Expedition33_Mission01Reward".Translate() },
                     nextMissionId = "mission_02_reconnaissance"
                 },
 
                 new ExpeditionMission
                 {
                     id = "mission_02_reconnaissance",
-                    title = "Première Reconnaissance",
-                    description = "Envoyer une équipe explorer les zones contaminées par Le Gommage pour cartographier les menaces.",
+                    title = "Expedition33_Mission02Title".Translate(),
+                    description = "Expedition33_Mission02Desc".Translate(),
                     objectives = new List<string>
                     {
-                        "Éliminer 10 entités du Gommage",
-                        "Collecter 5 échantillons de corruption",
-                        "Survivre 3 jours dans une zone contaminée"
+                        "Expedition33_Mission02Obj1".Translate(),
+                        "Expedition33_Mission02Obj2".Translate(),
+                        "Expedition33_Mission02Obj3".Translate()
                     },
-                    rewards = new List<string> { "Déblocage des armes anti-Gommage" },
+                    rewards = new List<string> { "Expedition33_Mission02Reward".Translate() },
                     nextMissionId = "mission_03_purification"
                 },
 
                 new ExpeditionMission
                 {
                     id = "mission_03_purification",
-                    title = "Protocole de Purification",
-                    description = "Développer et tester des méthodes de purification des zones corrompues par Le Gommage.",
+                    title = "Expedition33_Mission03Title".Translate(),
+                    description = "Expedition33_Mission03Desc".Translate(),
                     objectives = new List<string>
                     {
-                        "Fabriquer 3 dispositifs de purification",
-                        "Purifier une zone corrompue",
-                        "Protéger les dispositifs pendant 2 jours"
+                        "Expedition33_Mission03Obj1".Translate(),
+                        "Expedition33_Mission03Obj2".Translate(),
+                        "Expedition33_Mission03Obj3".Translate()
                     },
-                    rewards = new List<string> { "Technologie de purification avancée" },
+                    rewards = new List<string> { "Expedition33_Mission03Reward".Translate() },
                     nextMissionId = "mission_04_boss_mineur"
                 },
 
                 new ExpeditionMission
                 {
                     id = "mission_04_boss_mineur",
-                    title = "Confrontation Majeure",
-                    description = "Affronter un Avatar du Gommage, une manifestation puissante de la corruption.",
+                    title = "Expedition33_Mission04Title".Translate(),
+                    description = "Expedition33_Mission04Desc".Translate(),
                     objectives = new List<string>
                     {
-                        "Localiser l'Avatar du Gommage",
-                        "Vaincre l'Avatar en combat",
-                        "Récupérer son essence corrompue"
+                        "Expedition33_Mission04Obj1".Translate(),
+                        "Expedition33_Mission04Obj2".Translate(),
+                        "Expedition33_Mission04Obj3".Translate()
                     },
-                    rewards = new List<string> { "Artefacts de pouvoir", "Accès aux missions finales" },
+                    rewards = new List<string>
+                    {
+                        "Expedition33_Mission04Reward1".Translate(),
+                        "Expedition33_Mission04Reward2".Translate()
+                    },
                     nextMissionId = "mission_05_finale"
                 }
             };
         }
+
+
 
         // ... (garde toutes tes autres méthodes existantes) ...
 
@@ -178,7 +186,7 @@ namespace Mod_warult
                         break;
 
                     case "recruter 1 gestrals":
-                        if (CountColonistsOfRace("Expedition33_Gestral") >= 1)
+                        if (CountColonistsOfRace("Gestral") >= 1)
                             CompleteObjective(objective);
                         break;
 
@@ -384,10 +392,10 @@ namespace Mod_warult
         public bool IsCompleted(Dictionary<string, bool> completedObjectives)
         {
             if (objectives?.Count == 0) return false;
-            
-            return objectives.All(obj => 
-                !string.IsNullOrEmpty(obj) && 
-                completedObjectives.ContainsKey(obj) && 
+
+            return objectives.All(obj =>
+                !string.IsNullOrEmpty(obj) &&
+                completedObjectives.ContainsKey(obj) &&
                 completedObjectives[obj]);
         }
         public int GetCompletedObjectivesCount(Dictionary<string, bool> completedObjectives)
@@ -420,6 +428,7 @@ namespace Mod_warult
     public class GameComponent_ExpeditionProgress : GameComponent
     {
         private int tickCounter = 0;
+
         private const int CHECK_INTERVAL = 250; // Vérifier toutes les ~4 secondes
 
         public GameComponent_ExpeditionProgress(Game game) : base() { }
@@ -431,6 +440,16 @@ namespace Mod_warult
             {
                 tickCounter = 0;
                 CheckExpeditionProgress();
+                if (QuestManager.triggerVersoJoinedNextTick)
+                {
+                    QuestManager.triggerVersoJoinedNextTick = false; // reset
+                    if (QuestManager.CurrentQuestId == "ActeII_VersoArrival")
+                    {
+                        Log.Message("[Expedition33] ✅ Déclenchement tardif de EVENT_VERSO_JOINED (via GameComponent).");
+                        QuestManager.TriggerQuestEvent("EVENT_VERSO_JOINED");
+                    }
+                }
+    
             }
         }
 
@@ -453,5 +472,22 @@ namespace Mod_warult
             Scribe_Values.Look(ref tickCounter, "tickCounter", 0);
         }
     }
-    // ... (garde tes autres classes ExpeditionMission et GameComponent_ExpeditionProgress) ...
+
+    [HarmonyPatch(typeof(BillUtility), nameof(BillUtility.Notify_ColonistUnavailable))]
+    public static class Patch_IgnoreNonBillGiver
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(Pawn __0)
+        {
+            Pawn pawn = __0;
+            if (pawn == null || pawn.Destroyed || pawn.Dead || pawn.BillStack == null)
+            {
+                return false; // Ignore les pawns invalides
+            }
+            return true; // Procède normalement
+        }
+    }
+
+
+    
 }

@@ -2,56 +2,53 @@
 <Defs>
 
 <PawnKindDef>
-  <defName>Expedition33_Verso</defName>
+  <defName>Expedition_Verso</defName>
   <label>Verso</label>
-  <race>Expedition33_VersoRace</race>
+  <race>Expedition_VersoColon</race>
+   <!-- <nameMaker>Expedition_VersoNames</nameMaker> -->
   <defaultFactionType>PlayerColony</defaultFactionType>
-  <combatPower>400</combatPower>
-  <canArriveManhunter>false</canArriveManhunter>
-  <initialResistanceRange>20~30</initialResistanceRange>
-  <initialWillRange>8~10</initialWillRange>
-  <apparelTags>
-    <li>IndustrialBasic</li>
-  </apparelTags>
-  <weaponTags>
-    <li>IndustrialGunAdvanced</li>
-  </weaponTags>
-
-  <abilities>
-    <li>Expedition33_ImmortalityFragment</li>
-    <li>Expedition33_FractureParfaite</li>
-  </abilities>
-
-  <forcedTraits>
+  <initialResistanceRange>15~25</initialResistanceRange>
+  <initialWillRange>80~90</initialWillRange>
+  <backstoryFiltersOverride>
     <li>
-      <def>Expedition33_BossTrait_Verso</def>
+      <categories>
+        <li>Expedition33_ImmortalEntity</li>
+      </categories>
     </li>
-  </forcedTraits>
-
-  <modExtensions>
+  </backstoryFiltersOverride>
+     <forcedTraits>
+      <li>
+        <def>Expedition33_BossTrait_Verso</def>
+      </li>
+    </forcedTraits>
+  <apparelMoney>0</apparelMoney>
+  <apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+  <techHediffsChance>0.15</techHediffsChance>
+  <techHediffsMoney>0</techHediffsMoney>
+  <combatPower>100</combatPower>
+  <!-- <abilities>
+   <li>Expedition_VersoFractureParfaite</li>
+   <li>Expedition_VersoImmortalityFragment</li>
+  </abilities> -->
+    <!-- <modExtensions>
     <li Class="Mod_warult.BossExtension">
-      <bossType>Ally</bossType>
-      <questReward>ancient_knowledge</questReward>
-      <specialMechanics>
-        <li>immortality_fragment</li>
-        <li>expedition_zero_memories</li>
-        <li>fracture_parfaite</li>
-      </specialMechanics>
+      <bossType>Immortal</bossType>
+      <questReward>verso_arrival</questReward>
+      <creatureName>Verso</creatureName>  
+      <isLegendaryEntity>true</isLegendaryEntity>
     </li>
-  </modExtensions>
+  </modExtensions> -->
 </PawnKindDef>
+
 
 
 <PawnKindDef>
   <defName>Expedition33_Mime</defName>
   <label>le Mime</label>
   <race>Human</race>
-  <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+  <defaultFactionType>Nevrons</defaultFactionType>
   <combatPower>120</combatPower>
   <canArriveManhunter>false</canArriveManhunter>
-  <backstoryCategories>
-    <li>Civil</li>
-  </backstoryCategories>
   <initialResistanceRange>8~15</initialResistanceRange>
   <initialWillRange>2~4</initialWillRange>
   <apparelTags>
@@ -60,6 +57,13 @@
   <weaponTags>
     <li>IndustrialGunAdvanced</li>
   </weaponTags>
+      <backstoryFiltersOverride>
+    <li>
+      <categories>
+        <li>Expedition33_SilentEntity</li>
+      </categories>
+    </li>
+  </backstoryFiltersOverride>
   <modExtensions>
     <li Class="Mod_warult.BossExtension">
       <bossType>Illusionist</bossType>

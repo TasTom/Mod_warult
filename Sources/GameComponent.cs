@@ -35,7 +35,6 @@ namespace Mod_warult
             Scribe_Values.Look(ref completedMissions, "completedMissions", 0);
             Scribe_Values.Look(ref paintressSightings, "paintressSightings", 0);
             Scribe_Collections.Look(ref cursedAges, "cursedAges", LookMode.Value);
-
             if (cursedAges == null)
                 cursedAges = new List<int>();
         }
@@ -67,173 +66,243 @@ namespace Mod_warult
         public int worldTileMonolith = -1;
         public bool hasBeenWarned = false;
         private bool initialized = false;
-        private int initialWarningTick = -1;
         public bool siteRevealed = false;
         private List<Map> importantMaps = new List<Map>();
 
-        // NOUVEAU - Variables pour la réapparition
-        private int lastSiteCheckTick = -1;
-        private bool needsSiteRecreation = false;
-        private int siteRecreationAttempts = 0;
-        private const int MAX_RECREATION_ATTEMPTS = 3;
+        private const int TICKS_PER_DAY = 60000;
+        private const int FIRST_GOMMAGE_DELAY_DAYS = 15; //15
+        private const int GOMMAGE_CYCLE_DAYS = 60; //60
 
-        private const int TICKS_PER_YEAR = 3600000;
-        private const int WARNING_DAYS_BEFORE = 1;
+        public List<GommageHistoryEntry> gommageHistory = new List<GommageHistoryEntry>();
 
-        // CORRECTION : Constructeur avec paramètre Game
         public GameComponent_PaintressMonolith(Game game) : base()
         {
             if (importantMaps == null)
                 importantMaps = new List<Map>();
         }
 
-        
-
-        // NOUVEAU - Vérifie si le site du monolithe existe encore
-        private void CheckMonolithSiteExists()
+        public override void GameComponentTick()
         {
-            if (!siteRevealed || worldTileMonolith == -1) return;
+            if (!paintressAlive)
+                return;
 
-            try
+            if (!initialized && GenTicks.TicksGame > 600)
             {
-                Site monolithSite = Find.WorldObjects.Sites
-                    .FirstOrDefault(s => s.Tile == worldTileMonolith);
-
-                if (monolithSite == null)
-                {
-                    Log.Warning("Site du monolithe disparu - Programmation de la recréation");
-                    needsSiteRecreation = true;
-                    lastSiteCheckTick = GenTicks.TicksGame;
-                    siteRevealed = false;
-                    siteRecreationAttempts = 0;
-                }
-                else
-                {
-                    if (monolithSite.Map != null)
-                    {
-                        var paintress = monolithSite.Map.mapPawns.AllPawns
-                            .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_PaintressMonster");
-
-                        if (paintress == null || paintress.Dead)
-                        {
-                            Log.Message("Paintress morte détectée - Site sera recréé avec nouvelle Paintress");
-                            needsSiteRecreation = true;
-                            lastSiteCheckTick = GenTicks.TicksGame;
-                            siteRecreationAttempts = 0;
-                        }
-                    }
-                }
+                InitializePaintressSystem();
             }
-            catch (Exception e)
+
+            if (!paintressAlive) return;
+
+            if (GenTicks.TicksGame % TICKS_PER_DAY == 0)
             {
-                Log.Error($"Erreur dans CheckMonolithSiteExists : {e.Message}");
+                CheckAnnualGommageCycle();
             }
         }
 
-        // NOUVEAU - Recrée le site du monolithe avec message dramatique
-        
-    
-
-
-        private void ForceMonolithSitePersistence()
+        private void InitializePaintressSystem()
         {
-            try
+            if (!paintressAlive)
+                return;
+
+            initialized = true;
+
+            // CORRECTION : S'assurer que le délai est bien dans le futur
+            int delayTicks = FIRST_GOMMAGE_DELAY_DAYS * TICKS_PER_DAY;
+            nextPaintingTick = GenTicks.TicksGame + delayTicks;
+            currentPaintedAge = Rand.Range(33, 55);
+
+            Messages.Message(
+                "Expedition33_PaintressSystemInit".Translate(currentPaintedAge, FIRST_GOMMAGE_DELAY_DAYS),
+                MessageTypeDefOf.NeutralEvent
+            );
+
+            Log.Message($"Expedition33: System initialized at tick {GenTicks.TicksGame}. First Gommage scheduled for tick {nextPaintingTick} (in {delayTicks} ticks)");
+        }
+
+
+        private void CheckAnnualGommageCycle()
+        {
+            if (!paintressAlive || !initialized) // AJOUT : Vérifier que l'initialisation est terminée
+                return;
+            if (nextPaintingTick <= 0) return;
+
+            int currentTick = GenTicks.TicksGame;
+            int ticksUntilGommage = nextPaintingTick - currentTick;
+            int warningTicks = 3 * TICKS_PER_DAY;
+
+            // AJOUT : Debug pour voir les valeurs
+            if (GenTicks.TicksGame % (TICKS_PER_DAY * 5) == 0) // Log tous les 5 jours
             {
-                Site monolithSite = Find.WorldObjects.Sites
-                    .FirstOrDefault(s => s.Tile == worldTileMonolith);
-
-                if (monolithSite?.Map != null)
-                {
-                    var paintress = monolithSite.Map.mapPawns.AllPawns
-                        .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_PaintressMonster");
-
-                    if (paintress != null && !paintress.Dead)
-                    {
-                        if (monolithSite.Map.mapPawns.FreeColonistsCount == 0)
-                        {
-                            Find.WorldObjects.Remove(monolithSite);
-                            Find.WorldObjects.Add(monolithSite);
-                            Log.Message("Site du monolithe forcé en persistance via hack");
-                        }
-                    }
-                }
+                Log.Message($"Expedition33: Current tick {currentTick}, next Gommage at {nextPaintingTick}, ticks remaining: {ticksUntilGommage}");
             }
-            catch (Exception e)
+
+            if (ticksUntilGommage <= warningTicks && !hasBeenWarned)
             {
-                Log.Error($"Erreur dans ForceMonolithSitePersistence : {e.Message}");
+                hasBeenWarned = true;
+                SendGommageWarning(ticksUntilGommage / TICKS_PER_DAY);
+            }
+
+            if (ticksUntilGommage <= 0)
+            {
+                ExecuteAnnualGommage();
+                ScheduleNextAnnualGommage();
+                hasBeenWarned = false;
             }
         }
 
 
-     
 
-       
-        private void SendPaintingWarning()
+        private void SendGommageWarning(int daysRemaining)
         {
-            if (!initialized) return;
+            if (!paintressAlive)
+                return;
 
-            string letterText = $"Des éclaireurs de l'Expédition 33 rapportent une activité inquiétante :\n\n" +
-                               $"\"La Paintress s'approche de son monolithe mystique. Dans exactement 1 jour, " +
-                               $"elle peindra un nouveau numéro qui déterminera l'âge des prochaines victimes du Gommage.\"\n\n" +
-                               $"Âge actuellement peint : {currentPaintedAge} ans\n\n" +
-                               $"Préparez-vous... Le destin de vos colons se joue demain.";
+            string letterText = "Expedition33_GommageWarningText".Translate(
+                daysRemaining, currentPaintedAge, daysRemaining);
 
             Find.LetterStack.ReceiveLetter(
-                "La Paintress s'approche du Monolithe",
+                "Expedition33_PaintressApproaches".Translate(),
                 letterText,
                 LetterDefOf.ThreatBig
             );
         }
 
-        private void PaintNewAge()
+        private void ExecuteAnnualGommage()
         {
-            if (!initialized) return;
+            if (!paintressAlive)
+                return;
 
-            currentPaintedAge = Math.Max(20, currentPaintedAge - 1);
-            nextPaintingTick = GenTicks.TicksGame + TICKS_PER_YEAR;
-
-            string letterText = $"La Paintress a peint un nouveau numéro sur son monolithe !\n\n" +
-                               $"ÂGE PEINT : {currentPaintedAge} ANS\n\n" +
-                               $"Tous vos colons de cet âge exact sont maintenant en danger mortel. " +
-                               $"Le Gommage peut survenir à tout moment.\n\n" +
-                               $"Seule l'élimination de la Paintress peut briser ce cycle maudit !";
+            currentPaintedAge = CalculateNextAge();
+            string letterText = "Expedition33_NewGommageAnnual".Translate(currentPaintedAge, currentPaintedAge);
 
             Find.LetterStack.ReceiveLetter(
-                $"NOUVEAU GOMMAGE : {currentPaintedAge} ANS",
+                "Expedition33_NewGommageAnnualTitle".Translate(currentPaintedAge),
                 letterText,
                 LetterDefOf.ThreatBig
             );
 
-            ScheduleGommageEvent();
+            TriggerGommageIncident();
         }
 
-        private void ScheduleGommageEvent()
+        private void ScheduleNextAnnualGommage()
         {
-            if (!initialized) return;
+            if (!paintressAlive)
+                return;
+
+            nextPaintingTick = GenTicks.TicksGame + (GOMMAGE_CYCLE_DAYS * TICKS_PER_DAY);
+            Log.Message("Expedition33_NextGommageScheduled".Translate(nextPaintingTick));
+        }
+
+        private int CalculateNextAge()
+        {
+            currentPaintedAge--; // Décrémente d'abord
+            return currentPaintedAge; // Puis retourne la nouvelle valeur
+        }
+
+        private void TriggerGommageIncident()
+        {
+            Log.Message("Expedition33: TriggerGommageIncident() called");
+
+            if (!paintressAlive)
+            {
+                Log.Warning("Expedition33: Cannot trigger - Paintress not alive");
+                return;
+            }
 
             IncidentDef gommageIncident = DefDatabase<IncidentDef>.GetNamedSilentFail("Expedition33_Gommage");
-            if (gommageIncident != null && Find.CurrentMap != null)
+            if (gommageIncident == null)
+            {
+                Log.Error("Expedition33: IncidentDef 'Expedition33_Gommage' not found!");
+                Log.Error("Expedition33: Available IncidentDefs containing 'Expedition':");
+                foreach (var def in DefDatabase<IncidentDef>.AllDefs.Where(d => d.defName.Contains("Expedition")))
+                {
+                    Log.Error($"  - {def.defName}");
+                }
+                return;
+            }
+
+            if (Find.CurrentMap == null)
+            {
+                Log.Warning("Expedition33: No current map available");
+                return;
+            }
+            try
             {
                 IncidentParms parms = StorytellerUtility.DefaultParmsNow(gommageIncident.category, Find.CurrentMap);
-                Find.Storyteller.incidentQueue.Add(gommageIncident, GenTicks.TicksGame + Rand.Range(60000, 300000), parms);
+                
+                // CHANGEMENT : Exécution directe au lieu de programmation
+                bool result = gommageIncident.Worker.TryExecute(parms);
+                
+                Log.Message($"Expedition33: Gommage incident executed directly - Result: {result}");
+                
+                if (!result)
+                {
+                    Log.Warning("Expedition33: Gommage incident execution failed - check CanFireNowSub conditions");
+                }
             }
+            catch (Exception e)
+            {
+                Log.Error($"Expedition33: Error executing incident: {e.Message}");
+            }
+        }
+
+
+
+
+
+
+
+        public int GetDaysUntilNextGommage()
+        {
+            if (nextPaintingTick <= 0) return -1;
+            int ticksRemaining = nextPaintingTick - GenTicks.TicksGame;
+            return Math.Max(0, ticksRemaining / TICKS_PER_DAY);
+        }
+
+        public bool IsGommageImminent(int warningDays = 3)
+        {
+            int daysRemaining = GetDaysUntilNextGommage();
+            return daysRemaining >= 0 && daysRemaining <= warningDays;
+        }
+
+        public override string ToString()
+        {
+            if (!initialized) return "Expedition33_SystemNotInitialized".Translate();
+            int daysRemaining = GetDaysUntilNextGommage();
+            string status = paintressAlive ? "Expedition33_Active".Translate() : "Expedition33_Neutralized".Translate();
+            return "Expedition33_PaintressStatus".Translate(status, currentPaintedAge, daysRemaining);
         }
 
         public void OnPaintressKilled()
         {
             paintressAlive = false;
             currentPaintedAge = -1;
-
-            string letterText = "La Paintress a été éliminée !\n\n" +
-                               "Son monolithe mystique s'effrite en poussière. Le cycle du Gommage est brisé. " +
-                               "Vos colons sont enfin en sécurité, libérés de cette terreur artistique.\n\n" +
-                               "L'Expédition 33 peut enfin connaître la paix.";
-
+            
             Find.LetterStack.ReceiveLetter(
-                "Le Gommage est vaincu !",
-                letterText,
+                "Expedition33_GommageDefeated".Translate(),
+                "Expedition33_PaintressKilledText".Translate(),
                 LetterDefOf.PositiveEvent
             );
+        }
+
+        public void RecordGommageEvent(int age, int totalVictims, int protectedCount, int tickOccurred)
+        {
+            var entry = new GommageHistoryEntry
+            {
+                age = age,
+                totalVictims = totalVictims,
+                protectedCount = protectedCount,
+                tickOccurred = tickOccurred,
+                dayOccurred = tickOccurred / 60000
+            };
+
+            gommageHistory.Add(entry);
+            if (gommageHistory.Count > 10)
+            {
+                gommageHistory.RemoveAt(0);
+            }
+
+            Log.Message("Expedition33_GommageRecorded".Translate(age, totalVictims, protectedCount));
         }
 
         public override void ExposeData()
@@ -244,15 +313,51 @@ namespace Mod_warult
             Scribe_Values.Look(ref worldTileMonolith, "worldTileMonolith", -1);
             Scribe_Values.Look(ref hasBeenWarned, "hasBeenWarned", false);
             Scribe_Values.Look(ref initialized, "initialized", false);
-            Scribe_Values.Look(ref initialWarningTick, "initialWarningTick", -1);
             Scribe_Values.Look(ref siteRevealed, "siteRevealed", false);
-            Scribe_Values.Look(ref lastSiteCheckTick, "lastSiteCheckTick", -1);
-            Scribe_Values.Look(ref needsSiteRecreation, "needsSiteRecreation", false);
-            Scribe_Values.Look(ref siteRecreationAttempts, "siteRecreationAttempts", 0);
             Scribe_Collections.Look(ref importantMaps, "importantMaps", LookMode.Reference);
-
             if (importantMaps == null)
                 importantMaps = new List<Map>();
+            Scribe_Collections.Look(ref gommageHistory, "gommageHistory", LookMode.Deep);
+            if (gommageHistory == null)
+                gommageHistory = new List<GommageHistoryEntry>();
+        }
+    }
+
+    public class GommageHistoryEntry : IExposable
+    {
+        public int age = 0;
+        public int totalVictims = 0;
+        public int protectedCount = 0;
+        public int tickOccurred = 0;
+        public int dayOccurred = 0;
+
+        public void ExposeData()
+        {
+            Scribe_Values.Look(ref age, "age", 0);
+            Scribe_Values.Look(ref totalVictims, "totalVictims", 0);
+            Scribe_Values.Look(ref protectedCount, "protectedCount", 0);
+            Scribe_Values.Look(ref tickOccurred, "tickOccurred", 0);
+            Scribe_Values.Look(ref dayOccurred, "dayOccurred", 0);
+        }
+
+        public string GetStatusText()
+        {
+            if (totalVictims == 0)
+                return "Expedition33_GommageBlocked".Translate();
+            else if (protectedCount > 0)
+                return "Expedition33_GommagePartial".Translate();
+            else
+                return "Expedition33_GommageTotal".Translate();
+        }
+
+        public Color GetStatusColor()
+        {
+            if (totalVictims == 0)
+                return Color.green;
+            else if (protectedCount > 0)
+                return Color.yellow;
+            else
+                return Color.red;
         }
     }
 }

@@ -6,29 +6,49 @@
     <defName>Expedition33_Eveque</defName>
     <label>L'Évêque</label>
     <race>Expedition33_EvequeRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>300</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     
     <initialResistanceRange>15~25</initialResistanceRange>
     <initialWillRange>4~6</initialWillRange>
     
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
-    
+
     <abilities>
       <li>Expedition33_SacredLight</li>
       <li>Expedition33_DivinePurification</li>
       <li>Expedition33_IndigoBlast</li>
+      <li>Expedition33_RangeAttack</li>
     </abilities>
     
-      <backstoryFiltersOverride>
-    <li>
-      <categories>
-        <li>Expedition33_DivineEntity</li>
-      </categories>
-    </li>
-  </backstoryFiltersOverride>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_DivineEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_Eveque</def>
@@ -57,20 +77,46 @@
     <defName>Expedition33_Goblu</defName>
     <label>Le Goblu</label>
     <race>Expedition33_GobluRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>180</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     
     <initialResistanceRange>10~18</initialResistanceRange>
     <initialWillRange>3~5</initialWillRange>
     
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
     
     <abilities>
       <li>Expedition33_RapidMovement</li>
     </abilities>
     
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_PrimitiveEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_Goblu</def>
@@ -98,14 +144,32 @@
     <defName>Expedition33_SakapatateRobuste</defName>
     <label>Sakapatate le Robuste</label>
     <race>Expedition33_SakapatateRobusteRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>250</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     
     <initialResistanceRange>12~20</initialResistanceRange>
     <initialWillRange>4~6</initialWillRange>
     
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
@@ -114,6 +178,14 @@
       <li>Expedition33_RapidMovement</li>
       <li>Expedition33_AreaAttacks</li>
     </abilities>
+    
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_AncientGuardian</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
     
     <forcedTraits>
       <li>
@@ -143,14 +215,32 @@
     <defName>Expedition33_SakapatateUltime</defName>
     <label>Sakapatate l'Ultime</label>
     <race>Expedition33_SakapatateUltimeRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>320</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     
     <initialResistanceRange>15~25</initialResistanceRange>
     <initialWillRange>5~7</initialWillRange>
     
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
@@ -159,6 +249,14 @@
       <li>Expedition33_HeavyArmor</li>
       <li>Expedition33_SlowRegeneration</li>
     </abilities>
+    
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_SupremeGuardian</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
     
     <forcedTraits>
       <li>
@@ -189,20 +287,47 @@
     <defName>Expedition33_Francois</defName>
     <label>François l'Immortel</label>
     <race>Expedition33_FrancoisRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>450</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     
     <initialResistanceRange>18~28</initialResistanceRange>
     <initialWillRange>6~8</initialWillRange>
     
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
     
     <abilities>
+      <li>Expedition33_RangeAttack</li>
       <li>Expedition33_LethalStrike</li>
       <li>Expedition33_FearAura</li>
     </abilities>
+    
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_FrancoisEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
     
     <forcedTraits>
       <li>
@@ -227,26 +352,54 @@
     </modExtensions>
   </PawnKindDef>
 
- <PawnKindDef>
+  <!-- Boss 6 : Le Maître des Lampes -->
+  <PawnKindDef>
     <defName>Expedition33_MaitreDesLampes</defName>
     <label>Le Maître des Lampes</label>
     <race>Expedition33_MaitreLampesRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>500</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
     <initialResistanceRange>20~30</initialResistanceRange>
     <initialWillRange>7~9</initialWillRange>
 
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
+      <li>Expedition33_RangeAttack</li>
       <li>Expedition33_LightManipulation</li>
       <li>Expedition33_IlluminationAttacks</li>
       <li>Expedition33_LampMastery</li>
     </abilities>
 
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_LightController</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_MaitreLampes</def>
@@ -276,14 +429,32 @@
     <defName>Expedition33_Dualiste</defName>
     <label>Le Dualiste</label>
     <race>Expedition33_DualisteRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>400</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
     <initialResistanceRange>18~28</initialResistanceRange>
     <initialWillRange>5~7</initialWillRange>
 
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
@@ -292,6 +463,14 @@
       <li>Expedition33_DualityShift</li>
     </abilities>
 
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_DualityEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_Dualiste</def>
@@ -321,14 +500,32 @@
     <defName>Expedition33_Renoir</defName>
     <label>Commandant Renoir</label>
     <race>Expedition33_RenoirRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>500</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
     <initialResistanceRange>20~30</initialResistanceRange>
     <initialWillRange>6~8</initialWillRange>
 
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
@@ -337,6 +534,14 @@
       <li>Expedition33_ExpeditionMemory</li>
     </abilities>
 
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_CommanderEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_CommandantRenoir</def>
@@ -366,21 +571,48 @@
     <defName>Expedition33_Sirene</defName>
     <label>La Sirène</label>
     <race>Expedition33_SireneRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>600</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
     <initialResistanceRange>22~32</initialResistanceRange>
     <initialWillRange>8~10</initialWillRange>
 
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
+      <li>Expedition33_RangeAttack</li>
       <li>Expedition33_SonicWave</li>
       <li>Expedition33_MindControl</li>
     </abilities>
 
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_SireneEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_Sirene</def>
@@ -410,21 +642,48 @@
     <defName>Expedition33_Visages</defName>
     <label>Les Visages</label>
     <race>Expedition33_VisagesRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>650</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
     <initialResistanceRange>25~35</initialResistanceRange>
     <initialWillRange>9~11</initialWillRange>
 
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
+      <li>Expedition33_RangeAttack</li>
       <li>Expedition33_FaceShift</li>
       <li>Expedition33_RealityDistortion</li>
     </abilities>
 
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_VisageEntity</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
         <def>Expedition33_BossTrait_Visages</def>
@@ -449,41 +708,69 @@
     </modExtensions>
   </PawnKindDef>
 
-  <!-- Boss 11 : La Peintresse – Boss final -->
+  <!-- Boss 11 : La Paintress – Boss final -->
   <PawnKindDef>
-    <defName>Expedition33_Peintresse</defName>
-    <label>La Peintresse</label>
-    <race>Expedition33_PeintresseRace</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defName>Expedition33_Paintress</defName>
+    <label>La Paintress</label>
+    <race>Expedition33_PaintressRace</race>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>1000</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
     <initialResistanceRange>30~40</initialResistanceRange>
     <initialWillRange>12~15</initialWillRange>
 
+    <!-- ✅ AUCUN VÊTEMENT -->
     <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelRequired />
+    <apparelTags Inherit="False"></apparelTags>
+    <apparelDisallowTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>Tribal</li>
+      <li>Western</li>
+      <li>BeltDefensePop</li>
+      <li>BeltDefense</li>
+    </apparelDisallowTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <gearHealthRange>0~0</gearHealthRange>
     <weaponMoney>0</weaponMoney>
 
     <abilities>
+      <li>Expedition33_RangeAttack</li>
       <li>Expedition33_GommageRitual</li>
       <li>Expedition33_CosmicBrush</li>
       <li>Expedition33_NumberInscription</li>
       <li>Expedition33_MonolithPower</li>
+      <li>Expedition33_NevronPainting</li>
     </abilities>
 
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Expedition33_RealityWeaver</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    
     <forcedTraits>
       <li>
-        <def>Expedition33_BossTrait_Peintresse</def>
+        <def>Expedition33_BossTrait_Paintress</def>
       </li>
     </forcedTraits>
 
     <aiAvoidCover>false</aiAvoidCover>
-
+ 
     <modExtensions>
       <li Class="Mod_warult.BossExtension">
         <bossType>FinalBoss</bossType>
         <questReward>victory_expedition33</questReward>
-        <creatureName>La Peintresse</creatureName>
+        <creatureName>La Paintress</creatureName>
         <isLegendaryEntity>true</isLegendaryEntity>
         <specialMechanics>
           <li>gommage_ritual</li>
@@ -502,7 +789,7 @@
     <defName>Expedition33_CorruptedMember</defName>
     <label>Membre corrompu</label>
     <race>Human</race>
-    <defaultFactionType>Expedition33_Nevrons</defaultFactionType>
+    <defaultFactionType>Nevrons</defaultFactionType>
     <combatPower>120</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
 
@@ -511,8 +798,6 @@
 
     <apparelMoney>500~800</apparelMoney>
     <weaponMoney>300~600</weaponMoney>
-
-    
 
     <apparelTags>
       <li>IndustrialBasic</li>

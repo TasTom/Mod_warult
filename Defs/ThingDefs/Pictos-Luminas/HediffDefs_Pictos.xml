@@ -43,7 +43,7 @@
             <li>
                 <statOffsets>
                     <MaxHitPoints>20</MaxHitPoints>
-                    <MoveSpeed>0.1</MoveSpeed>
+                    <MoveSpeed>0.05</MoveSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -78,8 +78,8 @@
         <stages>
             <li>
                 <statOffsets>
-                    <MeleeHitChance>0.2</MeleeHitChance>
-                    <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+                    <MeleeHitChance>0.1</MeleeHitChance>
+                    <ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
                 </statOffsets>
             </li>
         </stages>
@@ -96,7 +96,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+                    <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
                     <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
                 </statOffsets>
             </li>
@@ -114,8 +114,8 @@
         <stages>
             <li>
                 <statOffsets>
-                    <MeleeDamageFactor>0.20</MeleeDamageFactor>
-                    <MeleeHitChance>5.0</MeleeHitChance>
+                    <MeleeDamageFactor>0.15</MeleeDamageFactor>
+                    <MeleeHitChance>1.0</MeleeHitChance>
                 </statOffsets>
             </li>
         </stages>
@@ -132,8 +132,8 @@
         <stages>
             <li>
                 <statOffsets>
-                    <InjuryHealingFactor>0.30</InjuryHealingFactor>
-                    <ImmunityGainSpeed>0.40</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.10</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.10</ImmunityGainSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -150,11 +150,145 @@
         <stages>
             <li>
                 <statOffsets>
-                    <ResearchSpeed>0.40</ResearchSpeed>
-                    <GlobalLearningFactor>0.30</GlobalLearningFactor>
+                    <ResearchSpeed>0.10</ResearchSpeed>
+                    <GlobalLearningFactor>0.10</GlobalLearningFactor>
                 </statOffsets>
             </li>
         </stages>
     </HediffDef>
+
+  <!-- Lumina Guardian -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Guardian</defName>
+    <label>Lumina Guardian</label>
+    <description>Compétence passive de gardien maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeDodgeChance>2</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lumina Vitality -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Vitality</defName>
+    <label>Lumina Vitality</label>
+    <description>Compétence passive de vitalité maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <MaxHitPoints>20</MaxHitPoints>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lumina Defense -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Defense</defName>
+    <label>Lumina Defense</label>
+    <description>Compétence passive de défense maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lumina Critical -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Critical</defName>
+    <label>Lumina Critical</label>
+    <description>Compétence passive critique maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lumina Striker -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Striker</defName>
+    <label>Lumina Striker</label>
+    <description>Compétence passive d'attaque maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDamageFactor>0.1</MeleeDamageFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lumina Healer -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Healer</defName>
+    <label>Lumina Healer</label>
+    <description>Compétence passive de soins maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <MedicalTendSpeed>0.2</MedicalTendSpeed>
+          <MedicalTendQuality>0.1</MedicalTendQuality>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Lumina Scholar -->
+  <HediffDef>
+    <defName>Expedition33_Lumina_Scholar</defName>
+    <label>Lumina Scholar</label>
+    <description>Compétence passive d'érudition maîtrisée.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <ResearchSpeed>0.15</ResearchSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
 
 </Defs>

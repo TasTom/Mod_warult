@@ -88,6 +88,7 @@
 			<Steel>50</Steel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 			<Gold>15</Gold>
+			<Expedition33_Chroma>5</Expedition33_Chroma>
 		</costList>
 		<!-- AJOUTEZ CECI pour le smelting -->
 		<smeltable>true</smeltable>
@@ -97,7 +98,9 @@
 			<Gold>7</Gold>
 			<!-- 50% de l'or utilisé -->
 			<ComponentIndustrial>1</ComponentIndustrial>
+
 			<!-- 33% des composants -->
+			<Expedition33_Chroma>1</Expedition33_Chroma>
 		</smeltProducts>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.15</MoveSpeed>
@@ -154,6 +157,7 @@
 			<Plasteel>60</Plasteel>
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<Gold>30</Gold>
+			<Expedition33_Chroma>10</Expedition33_Chroma>
 		</costList>
 		<smeltable>true</smeltable>
 		<smeltProducts>
@@ -165,6 +169,7 @@
 			<!-- 33% récupération -->
 			<Gold>15</Gold>
 			<!-- 50% récupération -->
+			<Expedition33_Chroma>2</Expedition33_Chroma>
 		</smeltProducts>
 		<apparel>
 			<bodyPartGroups>
@@ -296,7 +301,7 @@
 			<bodyPartGroups>
 				<li>Feet</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/MilitaryBoots/MilitaryBoots</wornGraphicPath>
+			<!-- <wornGraphicPath>Things/Pawn/Humanlike/Apparel/MilitaryBoots/MilitaryBoots</wornGraphicPath> -->
 			<layers>
 				<li>OnSkin</li>
 			</layers>

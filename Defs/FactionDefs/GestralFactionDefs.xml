@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <FactionDef ParentName="TribeBase">
-        <defName>Expedition33_GestralTribe</defName>
+        <defName>GestralTribe</defName>
         <label>Tribu Gestral</label>
         <description>Une tribu de Gestrals amicaux mais simples d'esprit qui adorent se battre. Ils respectent les puissants guerriers et n'ont pas peur de la mort grâce à leur capacité de renaissance à la Rivière Sacrée.</description>
         <pawnSingular>gestral</pawnSingular>
@@ -19,17 +19,25 @@
         <canSiege>true</canSiege>
         <canStageAttacks>true</canStageAttacks>
         <leaderTitle>Grand Guerrier</leaderTitle>
-        <factionIconPath>UI/Icons/Expedition33_GestralIcon</factionIconPath>
+        <factionIconPath>UI/Icons/GestralIcon</factionIconPath>
         <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
         <autoFlee>true</autoFlee>
         <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
-        <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+        <raidLootMaker>TribeRaidLootMaker</raidLootMaker>
+        <hidden>false</hidden>
+        <maxConfigurableAtWorldCreation>4</maxConfigurableAtWorldCreation>
+<configurationListOrderPriority>60</configurationListOrderPriority>
 
         <colorSpectrum>
             <li>(0.6, 0.4, 0.2)</li>
             <li>(0.5, 0.3, 0.1)</li>
         </colorSpectrum>
         
+        		<raidCommonalityFromPointsCurve>
+    <points>
+        <li>(0, 1)</li>
+    </points>
+</raidCommonalityFromPointsCurve>
         
         
     
@@ -78,47 +86,53 @@
             </points>
         </raidLootValueFromPointsCurve>
 
-        <basicMemberKind>Expedition33_GestralTribal</basicMemberKind>
+        <basicMemberKind>GestralTribal</basicMemberKind>
         <pawnGroupMakers>
             <li>
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <Expedition33_GestralTribal>20</Expedition33_GestralTribal> 
-                    <Expedition33_GestralWarrior>15</Expedition33_GestralWarrior>
-                    <Expedition33_GestralChampion>8</Expedition33_GestralChampion>
-                    <Expedition33_GestralPhilosopher>3</Expedition33_GestralPhilosopher>
-                    <Expedition33_GestralTrader>5</Expedition33_GestralTrader>
+                    <GestralTribal>20</GestralTribal> 
+                    <GestralWarrior>15</GestralWarrior>
+                    <GestralChampion>8</GestralChampion>
+                    <GestralPhilosopher>3</GestralPhilosopher>
+                    <GestralTrader>5</GestralTrader>
                 </options>
             </li>
             <li>
                 <kindDef>Peaceful</kindDef>
                 <commonality>40</commonality>
                 <options>
-                    <Expedition33_GestralTrader>10</Expedition33_GestralTrader>
-                    <Expedition33_GestralPhilosopher>5</Expedition33_GestralPhilosopher>
-                     <Expedition33_GestralWarrior>15</Expedition33_GestralWarrior>
+                    <GestralTrader>10</GestralTrader>
+                    <GestralPhilosopher>5</GestralPhilosopher>
+                     <GestralWarrior>15</GestralWarrior>
                 </options>
             </li>
             <li>
                 <kindDef>Settlement</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <Expedition33_GestralTribal>10</Expedition33_GestralTribal>
-                    <Expedition33_GestralWarrior>10</Expedition33_GestralWarrior>
-                    <Expedition33_GestralTrader>8</Expedition33_GestralTrader>
-                    <Expedition33_GestralPhilosopher>5</Expedition33_GestralPhilosopher>
+                    <GestralTribal>10</GestralTribal>
+                    <GestralWarrior>10</GestralWarrior>
+                    <GestralTrader>8</GestralTrader>
+                    <GestralPhilosopher>5</GestralPhilosopher>
                 </options>
             </li>
-            <li>
+           <li>
                 <kindDef>Trader</kindDef>
-                <commonality>100</commonality>
-                <options>
-                    <Expedition33_GestralTrader>20</Expedition33_GestralTrader>
-                    <Expedition33_GestralPhilosopher>10</Expedition33_GestralPhilosopher>
-                    <Expedition33_GestralWarrior>15</Expedition33_GestralWarrior>
-                </options>
+                <traders>
+                    <GestralTrader>1</GestralTrader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Alpaca>4</Alpaca>
+                </carriers>
+                <guards>
+                    <GestralWarrior>10</GestralWarrior>
+                    <GestralPhilosopher>5</GestralPhilosopher>
+                </guards>
             </li>
+
     
         </pawnGroupMakers>
         <fixedName>Tribu des Gestrals Guerriers</fixedName>

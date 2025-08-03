@@ -5,7 +5,7 @@
         <hediffGivers>
             <!-- UN SEUL hediff qui s'applique une fois -->
             <li Class="HediffGiver_Birthday">
-                <hediff>Expedition33_GestralGrowthStages</hediff>
+                <hediff>GestralGrowthStages</hediff>
                 <ageFractionChanceCurve>
                     <points>
                         <li>(0.01, 1.0)</li>  <!-- S'applique dès 2 ans -->

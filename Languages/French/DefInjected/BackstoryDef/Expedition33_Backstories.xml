@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Boss Backstories - Childhood -->
+  <Expedition33_Eveque_Childhood.description>{PAWN_nameDef} manifestait des pouvoirs divins dès son plus jeune âge. Les prêtres du village parlaient de miracles quand {PAWN_pronoun} était présent.</Expedition33_Eveque_Childhood.description>
+  <Expedition33_Eveque_Childhood.title>Enfant mystique</Expedition33_Eveque_Childhood.title>
+  <Expedition33_Eveque_Childhood.titleShort>Mystique</Expedition33_Eveque_Childhood.titleShort>
+  
+  <Expedition33_Dualiste_Childhood.description>{PAWN_nameDef} était né sous une éclipse totale, oscillant constamment entre lumière et ténèbres.</Expedition33_Dualiste_Childhood.description>
+  <Expedition33_Dualiste_Childhood.title>Enfant de la dualité</Expedition33_Dualiste_Childhood.title>
+  <Expedition33_Dualiste_Childhood.titleShort>Dualiste</Expedition33_Dualiste_Childhood.titleShort>
+  
+  <Expedition33_Francois_Childhood.description>{PAWN_nameDef} était une jeune tortue curieuse qui collectionnait les rochers brillants dans les cavernes près du Nid d'Esquie.</Expedition33_Francois_Childhood.description>
+  <Expedition33_Francois_Childhood.title>Jeune gardien des cavernes</Expedition33_Francois_Childhood.title>
+  <Expedition33_Francois_Childhood.titleShort>Gardien</Expedition33_Francois_Childhood.titleShort>
+  
+  <Expedition33_SakapatateRobuste_Childhood.description>{PAWN_nameDef} grandit d'une graine millénaire, développant une carapace naturelle.</Expedition33_SakapatateRobuste_Childhood.description>
+  <Expedition33_SakapatateRobuste_Childhood.title>Pousse ancestrale</Expedition33_SakapatateRobuste_Childhood.title>
+  <Expedition33_SakapatateRobuste_Childhood.titleShort>Pousse</Expedition33_SakapatateRobuste_Childhood.titleShort>
+  
+  <Expedition33_SakapatateUltime_Childhood.description>{PAWN_nameDef} absorba la sagesse ancestrale des profondeurs terrestres pendant des siècles.</Expedition33_SakapatateUltime_Childhood.description>
+  <Expedition33_SakapatateUltime_Childhood.title>Sève primordiale</Expedition33_SakapatateUltime_Childhood.title>
+  <Expedition33_SakapatateUltime_Childhood.titleShort>Sève</Expedition33_SakapatateUltime_Childhood.titleShort>
+  
+  <Expedition33_MaitreLampes_Childhood.description>{PAWN_nameDef} créait des lanternes magiques et manipulait les ombres avec aisance.</Expedition33_MaitreLampes_Childhood.description>
+  <Expedition33_MaitreLampes_Childhood.title>Porteur de lumière</Expedition33_MaitreLampes_Childhood.title>
+  <Expedition33_MaitreLampes_Childhood.titleShort>Porteur</Expedition33_MaitreLampes_Childhood.titleShort>
+  
+  <Expedition33_CommandantRenoir_Childhood.description>{PAWN_nameDef} fut formé dans les académies militaires de l'Expédition 33.</Expedition33_CommandantRenoir_Childhood.description>
+  <Expedition33_CommandantRenoir_Childhood.title>Cadet d'expédition</Expedition33_CommandantRenoir_Childhood.title>
+  <Expedition33_CommandantRenoir_Childhood.titleShort>Cadet</Expedition33_CommandantRenoir_Childhood.titleShort>
+  
+  <Expedition33_Sirene_Childhood.description>{PAWN_nameDef} développa sa capacité à manipuler les esprits par sa voix hypnotique.</Expedition33_Sirene_Childhood.description>
+  <Expedition33_Sirene_Childhood.title>Voix des profondeurs</Expedition33_Sirene_Childhood.title>
+  <Expedition33_Sirene_Childhood.titleShort>Voix</Expedition33_Sirene_Childhood.titleShort>
+  
+  <Expedition33_Visages_Childhood.description>{PAWN_nameDef} apprit à jongler entre différentes identités et personnalités.</Expedition33_Visages_Childhood.description>
+  <Expedition33_Visages_Childhood.title>Collectif naissant</Expedition33_Visages_Childhood.title>
+  <Expedition33_Visages_Childhood.titleShort>Collectif</Expedition33_Visages_Childhood.titleShort>
+  
+  <Expedition33_Paintress_Childhood.description>{PAWN_nameDef} créait des œuvres qui modifiaient la réalité et ouvraient des portails.</Expedition33_Paintress_Childhood.description>
+  <Expedition33_Paintress_Childhood.title>Artiste cosmique</Expedition33_Paintress_Childhood.title>
+  <Expedition33_Paintress_Childhood.titleShort>Artiste</Expedition33_Paintress_Childhood.titleShort>
+  
+  <Expedition_Verso_Childhood.description>{PAWN_nameDef} apprit les secrets de la régénération et de la survie éternelle.</Expedition_Verso_Childhood.description>
+  <Expedition_Verso_Childhood.title>Fragment éternel</Expedition_Verso_Childhood.title>
+  <Expedition_Verso_Childhood.titleShort>Immortel</Expedition_Verso_Childhood.titleShort>
+  
+  <Expedition33_Mime_Childhood.description>{PAWN_nameDef} apprit à communiquer par gestes et à créer des barrières invisibles.</Expedition33_Mime_Childhood.description>
+  <Expedition33_Mime_Childhood.title>Enfant du silence</Expedition33_Mime_Childhood.title>
+  <Expedition33_Mime_Childhood.titleShort>Silence</Expedition33_Mime_Childhood.titleShort>
+  
+  <Expedition33_Goblu_Childhood.description>{PAWN_nameDef} développa une agilité et une férocité naturelles.</Expedition33_Goblu_Childhood.description>
+  <Expedition33_Goblu_Childhood.title>Créature primitive</Expedition33_Goblu_Childhood.title>
+  <Expedition33_Goblu_Childhood.titleShort>Primitive</Expedition33_Goblu_Childhood.titleShort>
+
+  <!-- Human Backstories -->
+  <Expedition33_Recruit.description>[PAWN_nameDef] a été recruté(e) dans l'Expédition 33 après avoir montré des aptitudes prometteuses. [PAWN_pronoun] a suivi un entraînement militaire de base et appris les rudiments de la survie.</Expedition33_Recruit.description>
+  <Expedition33_Recruit.title>recrue d'expédition</Expedition33_Recruit.title>
+  <Expedition33_Recruit.titleShort>recrue</Expedition33_Recruit.titleShort>
+  
+  <Expedition33_Officer.description>[PAWN_nameDef] a gravi les échelons de l'Expédition 33 grâce à [PAWN_possessive] leadership naturel et [PAWN_possessive] compréhension tactique. [PAWN_pronoun] a mené plusieurs missions contre les forces du Gommage.</Expedition33_Officer.description>
+  <Expedition33_Officer.title>officier d'expédition</Expedition33_Officer.title>
+  <Expedition33_Officer.titleShort>officier</Expedition33_Officer.titleShort>
+  
+  <Expedition33_Engineer.description>[PAWN_nameDef] était responsable de la maintenance et de la création d'équipements pour l'Expédition 33. [PAWN_possessive] expertise technique était cruciale pour les missions en territoire hostile.</Expedition33_Engineer.description>
+  <Expedition33_Engineer.title>ingénieur d'expédition</Expedition33_Engineer.title>
+  <Expedition33_Engineer.titleShort>ingénieur</Expedition33_Engineer.titleShort>
+  
+  <Expedition33_Paintress.description>[PAWN_nameDef] est l'entité mystérieuse responsable du Gommage. [PAWN_possessive] pouvoir de manipulation de la réalité [PAWN_objective] rend quasi-invincible. [PAWN_pronoun] efface les êtres de l'existence d'un simple geste.</Expedition33_Paintress.description>
+  <Expedition33_Paintress.title>la Paintress</Expedition33_Paintress.title>
+  <Expedition33_Paintress.titleShort>Paintress</Expedition33_Paintress.titleShort>
+  
+  <Expedition33_Scout.description>[PAWN_nameDef] a survécu à de nombreuses missions de reconnaissance en territoire gommé. [PAWN_possessive] expérience [PAWN_objective] a appris à détecter les signes avant-coureurs du Gommage.</Expedition33_Scout.description>
+  <Expedition33_Scout.title>éclaireur vétéran</Expedition33_Scout.title>
+  <Expedition33_Scout.titleShort>éclaireur</Expedition33_Scout.titleShort>
+
+  <!-- Gestral Backstories -->
+  <GestralTribalChild.description>[PAWN_nameDef] a grandi parmi la tribu des Gestrals, apprenant les traditions de [PAWN_possessive] peuple-marionnette et développant [PAWN_possessive] connexion avec la nature.</GestralTribalChild.description>
+  <GestralTribalChild.title>jeune gestral</GestralTribalChild.title>
+  <GestralTribalChild.titleShort>jeune</GestralTribalChild.titleShort>
+  
+  <GestralWarrior.description>[PAWN_nameDef] a consacré sa vie à maîtriser l'art du combat au corps à corps, respectant la tradition gestrale qui honore les puissants guerriers.</GestralWarrior.description>
+  <GestralWarrior.title>guerrier gestral</GestralWarrior.title>
+  <GestralWarrior.titleShort>guerrier</GestralWarrior.titleShort>
+  
+  <GestralArtisan.description>[PAWN_nameDef] utilise [PAWN_possessive] pinceau naturel pour créer des œuvres magnifiques, perpétuant la tradition artistique millénaire des Gestrals.</GestralArtisan.description>
+  <GestralArtisan.title>artisan gestral</GestralArtisan.title>
+  <GestralArtisan.titleShort>artisan</GestralArtisan.titleShort>
+  
+  <GestralWiseOne.description>[PAWN_nameDef] est un philosophe gestral qui a médité sur les mystères de la renaissance et de la Rivière Sacrée, acquérant une sagesse profonde.</GestralWiseOne.description>
+  <GestralWiseOne.title>sage gestral</GestralWiseOne.title>
+  <GestralWiseOne.titleShort>sage</GestralWiseOne.titleShort>
+  
+  <GestralTrader.description>[PAWN_nameDef] voyage entre les tribus, échangeant des biens et des histoires, utilisant [PAWN_possessive] charme naturel pour négocier.</GestralTrader.description>
+  <GestralTrader.title>marchand gestral</GestralTrader.title>
+  <GestralTrader.titleShort>marchand</GestralTrader.titleShort>
+
+    <!-- Eveque -->
+  <Expedition33_Eveque_Adulthood.description>{PAWN_nameDef} devint le gardien mystique du Monolithe, maître des rituels divins et de la lumière sacrée.</Expedition33_Eveque_Adulthood.description>
+  <Expedition33_Eveque_Adulthood.title>Évêque du Monolithe</Expedition33_Eveque_Adulthood.title>
+  <Expedition33_Eveque_Adulthood.titleShort>Évêque</Expedition33_Eveque_Adulthood.titleShort>
+
+  <!-- Dualiste -->
+  <Expedition33_Dualiste_Adulthood.description>{PAWN_nameDef} devint une entité cosmique incarnant l'équilibre parfait entre lumière et ténèbres.</Expedition33_Dualiste_Adulthood.description>
+  <Expedition33_Dualiste_Adulthood.title>Maître clair-obscur</Expedition33_Dualiste_Adulthood.title>
+  <Expedition33_Dualiste_Adulthood.titleShort>Dualiste</Expedition33_Dualiste_Adulthood.titleShort>
+
+  <!-- François -->
+  <Expedition33_Francois_Adulthood.description>{PAWN_nameDef} devint une tortue géante mélancolique, sa carapace ornée de champignons bleus luminescents. Malgré son attitude grincheuse, il cache une profonde tristesse depuis la séparation d'avec Clea.</Expedition33_Francois_Adulthood.description>
+  <Expedition33_Francois_Adulthood.title>Tortue bioluminescente</Expedition33_Francois_Adulthood.title>
+  <Expedition33_Francois_Adulthood.titleShort>François</Expedition33_Francois_Adulthood.titleShort>
+
+  <!-- Sakapatate robuste -->
+  <Expedition33_SakapatateRobuste_Adulthood.description>{PAWN_nameDef} devint un gardien végétal ancestral, masse imposante de chair et de tubercules blindés.</Expedition33_SakapatateRobuste_Adulthood.description>
+  <Expedition33_SakapatateRobuste_Adulthood.title>Colosse tuberculeux</Expedition33_SakapatateRobuste_Adulthood.title>
+  <Expedition33_SakapatateRobuste_Adulthood.titleShort>Sakapatate robuste</Expedition33_SakapatateRobuste_Adulthood.titleShort>
+
+  <!-- Sakapatate ultime -->
+  <Expedition33_SakapatateUltime_Adulthood.description>{PAWN_nameDef} devint l'évolution ultime des gardiens végétaux, incarnation de la puissance naturelle millénaire.</Expedition33_SakapatateUltime_Adulthood.description>
+  <Expedition33_SakapatateUltime_Adulthood.title>Sève séculaire</Expedition33_SakapatateUltime_Adulthood.title>
+  <Expedition33_SakapatateUltime_Adulthood.titleShort>Sakapatate ultime</Expedition33_SakapatateUltime_Adulthood.titleShort>
+
+  <!-- Maître des lampes -->
+  <Expedition33_MaitreLampes_Adulthood.description>{PAWN_nameDef} devint le seigneur de la lumière, manipulateur des éclairages et créateur de lampes spectrales.</Expedition33_MaitreLampes_Adulthood.description>
+  <Expedition33_MaitreLampes_Adulthood.title>Architecte des lueurs</Expedition33_MaitreLampes_Adulthood.title>
+  <Expedition33_MaitreLampes_Adulthood.titleShort>Maître des lampes</Expedition33_MaitreLampes_Adulthood.titleShort>
+
+  <!-- Commandant Renoir -->
+  <Expedition33_CommandantRenoir_Adulthood.description>{PAWN_nameDef} devint un général corrompu de l'Expédition 33, stratège maître de l'art tactique.</Expedition33_CommandantRenoir_Adulthood.description>
+  <Expedition33_CommandantRenoir_Adulthood.title>Commandant d'expédition</Expedition33_CommandantRenoir_Adulthood.title>
+  <Expedition33_CommandantRenoir_Adulthood.titleShort>Cmdt Renoir</Expedition33_CommandantRenoir_Adulthood.titleShort>
+
+  <!-- Sirène -->
+  <Expedition33_Sirene_Adulthood.description>{PAWN_nameDef} devint un Axon des profondeurs, entité sonique capable de briser les esprits par sa voix.</Expedition33_Sirene_Adulthood.description>
+  <Expedition33_Sirene_Adulthood.title>Chanteuse abyssale</Expedition33_Sirene_Adulthood.title>
+  <Expedition33_Sirene_Adulthood.titleShort>Sirène</Expedition33_Sirene_Adulthood.titleShort>
+
+  <!-- Visages -->
+  <Expedition33_Visages_Adulthood.description>{PAWN_nameDef} devint un Axon multiforme, collectif de consciences capable de changer d'identité.</Expedition33_Visages_Adulthood.description>
+  <Expedition33_Visages_Adulthood.title>Portefaix d'identités</Expedition33_Visages_Adulthood.title>
+  <Expedition33_Visages_Adulthood.titleShort>Visages</Expedition33_Visages_Adulthood.titleShort>
+
+  <!-- Paintress -->
+  <Expedition33_Paintress_Adulthood.description>{PAWN_nameDef} devint une tisseuse de réalité, artiste cosmique capable de remodeler l'existence.</Expedition33_Paintress_Adulthood.description>
+  <Expedition33_Paintress_Adulthood.title>Artiste cosmique</Expedition33_Paintress_Adulthood.title>
+  <Expedition33_Paintress_Adulthood.titleShort>Paintress</Expedition33_Paintress_Adulthood.titleShort>
+
+  <!-- Verso -->
+  <Expedition_Verso_Adulthood.description>{PAWN_nameDef} devint un fragment d'immortalité brisée, entité régénératrice aux techniques de combat parfaites.</Expedition_Verso_Adulthood.description>
+  <Expedition_Verso_Adulthood.title>Fragment immortel</Expedition_Verso_Adulthood.title>
+  <Expedition_Verso_Adulthood.titleShort>Verso</Expedition_Verso_Adulthood.titleShort>
+
+  <!-- Mime -->
+  <Expedition33_Mime_Adulthood.description>{PAWN_nameDef} devint une entité silencieuse, maître des illusions invisibles et des barrières impalpables.</Expedition33_Mime_Adulthood.description>
+  <Expedition33_Mime_Adulthood.title>Ombre silencieuse</Expedition33_Mime_Adulthood.title>
+  <Expedition33_Mime_Adulthood.titleShort>Mime</Expedition33_Mime_Adulthood.titleShort>
+
+  <!-- Goblu -->
+  <Expedition33_Goblu_Adulthood.description>{PAWN_nameDef} devint une créature primitive aux instincts sauvages et à l'agilité redoutable.</Expedition33_Goblu_Adulthood.description>
+  <Expedition33_Goblu_Adulthood.title>Prédateur primitif</Expedition33_Goblu_Adulthood.title>
+  <Expedition33_Goblu_Adulthood.titleShort>Goblu</Expedition33_Goblu_Adulthood.titleShort>
+
+</LanguageData>

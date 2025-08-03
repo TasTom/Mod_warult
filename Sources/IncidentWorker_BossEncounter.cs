@@ -1,5 +1,5 @@
 using System;
-using System.Linq;                    // ✅ manquant
+using System.Linq;
 using RimWorld;
 using Verse;
 using UnityEngine;
@@ -17,11 +17,11 @@ namespace Mod_warult
             if (string.IsNullOrEmpty(bossToSpawn))
                 return false;
 
-            /* 2. Récupération du PawnKindDef sans risque d’exception */
+            /* 2. Récupération du PawnKindDef sans risque d'exception */
             PawnKindDef bossKind = DefDatabase<PawnKindDef>.GetNamedSilentFail(bossToSpawn);
             if (bossKind == null)
             {
-                Log.Error($"[Expedition33] PawnKindDef introuvable : {bossToSpawn}");
+                Log.Error("Expedition33_BossNotFoundError".Translate(bossToSpawn));
                 return false;
             }
 
@@ -34,18 +34,16 @@ namespace Mod_warult
 
             GenSpawn.Spawn(boss, spawnSpot, map);
 
-            /* 5. Message d’alerte */
+            /* 5. Message d'alerte */
             Messages.Message(
-                $"⚔️ {boss.LabelShort.CapitalizeFirst()} apparaît près de votre base !",
+                "Expedition33_BossAppears".Translate(boss.LabelShort.CapitalizeFirst()),
                 new TargetInfo(spawnSpot, map),
                 MessageTypeDefOf.ThreatBig
             );
+
             return true;
         }
 
-        /* ------------------------------------------------------------------ */
-        /* Méthode d’aiguillage selon la quête                               */
-        /* ------------------------------------------------------------------ */
         private string GetBossForCurrentQuest()
         {
             Pawn colonistWithTracker = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists
@@ -61,15 +59,15 @@ namespace Mod_warult
 
             return tracker?.currentQuestId switch
             {
-                "ActeI_VallonsFleuris"      => "Expedition33_Eveque",
-                "ActeI_OceanSuspendu"       => "Expedition33_Goblu",
-                "ActeI_SanctuaireAncien"    => "Expedition33_SakapatateUltime",
-                "ActeI_NidEsquie"           => "Expedition33_Francois",
-                "ActeI_Final"               => "Expedition33_MaitreDesLampes",
-                "ActeII_TerresOubliees"     => "Expedition33_Dualiste",
-                "ActeII_Manoir"             => "Expedition33_Renoir",
-                "ActeII_LesAxons"           => "Expedition33_Sirene",
-                _                           => null
+                "ActeI_VallonsFleuris" => "Expedition33_Eveque",
+                "ActeI_OceanSuspendu" => "Expedition33_Goblu",
+                "ActeI_SanctuaireAncien" => "Expedition33_SakapatateUltime",
+                "ActeI_NidEsquie" => "Expedition33_Francois",
+                "ActeI_Final" => "Expedition33_MaitreDesLampes",
+                "ActeII_TerresOubliees" => "Expedition33_Dualiste",
+                "ActeII_Manoir" => "Expedition33_Renoir",
+                "ActeII_LesAxons" => "Expedition33_Sirene",
+                _ => null
             };
         }
     }

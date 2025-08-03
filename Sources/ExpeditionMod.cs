@@ -11,47 +11,94 @@ using UnityEngine;
 using Verse.Sound;
 using HarmonyLib;
 
-
-
 namespace Mod_warult
 {
-
-
-
-    [StaticConstructorOnStartup]
     public class Expedition33Mod : Mod
     {
         public Expedition33Mod(ModContentPack content) : base(content)
         {
-            Log.Message("Hello World!");
-            Log.Message("Expédition 33 - Mod chargé avec succès !");
-            Log.Message("Le Gommage guette... Restez vigilants, expéditionnaires.");
+            // Messages temporaires sans traduction pour éviter les erreurs lors de l'initialisation
+            Log.Message("[Expedition33] Hello World!");
+            Log.Message("[Expedition33] Mod loaded successfully!");
+            Log.Message("[Expedition33] Le Gommage guette... Restez vigilants, expéditionnaires.");
+
             var h = new Harmony("warult.expedition33");
-            h.PatchAll();                              // ← indispensable
-            Log.Message("[Expedition33] Harmony PatchAll exécuté");
+            h.PatchAll();
+            Log.Message("[Expedition33] Harmony PatchAll executed");
         }
+
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(inRect);
             
-            listing.Label($"Multiplicateur XP Combat: {ExpeditionSettings.combatXPMultiplier:F1}");
+            // Utilisation sécurisée des traductions dans l'interface utilisateur
+            listing.Label(GetTranslationSafe("Expedition33_CombatXPMultiplier", 
+                ExpeditionSettings.combatXPMultiplier.ToString("F1")));
             ExpeditionSettings.combatXPMultiplier = listing.Slider(ExpeditionSettings.combatXPMultiplier, 0.1f, 5.0f);
-            
-            listing.CheckboxLabeled("Partage d'XP activé", ref ExpeditionSettings.enableXPSharing);
+            listing.CheckboxLabeled(GetTranslationSafe("Expedition33_XPSharingEnabled"), 
+                ref ExpeditionSettings.enableXPSharing);
+            var harmony = new HarmonyLib.Harmony("mod.warult.nevrons");
+            harmony.PatchAll();
             
             listing.End();
+        }
+
+        // Méthode helper pour les traductions sécurisées
+  
+    private string GetTranslationSafe(string key, params object[] args)
+    {
+        try
+        {
+            var translated = key.TranslateSimple();
+            
+            // Si on a des arguments, les formater manuellement
+            if (args.Length > 0)
+            {
+                return string.Format(translated, args);
+            }
+            
+            return translated;
+        }
+        catch
+        {
+            // Fallback en cas d'échec de traduction
+            return key + (args.Length > 0 ? ": " + string.Join(", ", args) : "");
         }
     }
 
 
-        public class ExpeditionSettings : ModSettings
+
+    }
+
+    // Initialisation retardée pour les messages traduits
+    [StaticConstructorOnStartup]
+    public static class Expedition33PostInitializer
+    {
+        static Expedition33PostInitializer()
+        {
+            // Les traductions sont maintenant disponibles
+            try
+            {
+                Log.Message("Expedition33_ModLoadedHello".Translate());
+                Log.Message("Expedition33_ModLoadedSuccess".Translate());
+                Log.Message("Expedition33_GommageWaits".Translate());
+                Log.Message("Expedition33_HarmonyExecuted".Translate());
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"[Expedition33] Could not load translated messages: {ex.Message}");
+            }
+        }
+    }
+
+    public class ExpeditionSettings : ModSettings
     {
         public static float combatXPMultiplier = 1.0f;
         public static float soulXPMultiplier = 1.0f;
         public static int pointsPerLevel = 3;
         public static bool enableXPSharing = false;
-        public static float bossXPBonus = 10.0f; // Multiplicateur boss
+        public static float bossXPBonus = 10.0f;
 
         public override void ExposeData()
         {
@@ -64,12 +111,10 @@ namespace Mod_warult
         }
     }
 
-
     public class ThoughtWorker_ExpeditionMission : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            // Logique de la pens�e li�e aux missions d'exp�dition
             var gameComp = Current.Game.GetComponent<GameComponent_ExpeditionStats>();
             if (gameComp != null && gameComp.completedMissions > 0)
             {
@@ -79,20 +124,13 @@ namespace Mod_warult
         }
     }
 
-
-
-    // Effets visuels pour le Gommage
     public static class GommageEffects
     {
         public static void CreateGommageEffect(IntVec3 position, Map map)
         {
-            // Effet de fum�e grise myst�rieuse
             FleckMaker.ThrowSmoke(position.ToVector3(), map, 3f);
-
-            // CORRIG� - ThrowDustPuff sans param�tre Color
             FleckMaker.ThrowDustPuff(position.ToVector3(), map, 2f);
-
-            // Particules artistiques (simule des coups de pinceau)
+            
             for (int i = 0; i < 8; i++)
             {
                 Vector3 randomPos = position.ToVector3() + new Vector3(
@@ -100,11 +138,9 @@ namespace Mod_warult
                     0f,
                     Rand.Range(-1f, 1f)
                 );
-                // CORRIG� - ThrowDustPuff sans Color
                 FleckMaker.ThrowDustPuff(randomPos, map, 1f);
             }
 
-            // Son myst�rieux
             PlaySoundAt(SoundDefOf.Psycast_Skip_Exit, position, map);
         }
 
@@ -116,12 +152,11 @@ namespace Mod_warult
             }
             catch
             {
-                // Ignore silencieusement si le son ne peut pas �tre jou�
+                // Ignore silencieusement si le son ne peut pas être joué
             }
         }
     }
 
-    // Optimisations de performance
     [StaticConstructorOnStartup]
     public static class ExpeditionOptimizations
     {
@@ -141,27 +176,10 @@ namespace Mod_warult
             gommageIncident = DefDatabase<IncidentDef>.GetNamedSilentFail("Expedition33_Gommage");
             missionIncident = DefDatabase<IncidentDef>.GetNamedSilentFail("Expedition33_Mission");
             paintressIncident = DefDatabase<IncidentDef>.GetNamedSilentFail("Expedition33_PainterSighting");
-            paintressBoss = DefDatabase<PawnKindDef>.GetNamedSilentFail("Expedition33_PaintressMonster");
+            paintressBoss = DefDatabase<PawnKindDef>.GetNamedSilentFail("Expedition33_Paintress");
             expedition33Faction = DefDatabase<FactionDef>.GetNamedSilentFail("Expedition33");
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public class Site_PersistentMonolith : Site
     {
@@ -169,65 +187,66 @@ namespace Mod_warult
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            // V�rifie si la Panteresse est encore vivante sur cette carte
             if (Map != null)
             {
                 var paintress = Map.mapPawns.AllPawns
-                    .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_PaintressMonster");
-
+                    .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_Paintress");
                 paintressAlive = (paintress != null && !paintress.Dead);
             }
 
             if (paintressAlive)
             {
-                // EMP�CHE la suppression tant que la Panteresse vit
                 alsoRemoveWorldObject = false;
                 return false;
             }
 
-            // Permet la suppression apr�s la mort de la Panteresse
             alsoRemoveWorldObject = true;
             return true;
         }
 
         public override string GetInspectString()
         {
-            if (paintressAlive)
+            try
             {
-                return "Monolithe de la Paintress - La terreur artistique garde ce lieu";
+                if (paintressAlive)
+                {
+                    return "Expedition33_PaintressMonolithActive".Translate();
+                }
+                else
+                {
+                    return "Expedition33_PaintressMonolithInactive".Translate();
+                }
             }
-            else
+            catch
             {
-                return "Ancien Monolithe - Le cycle du Gommage est bris�";
+                // Fallback si la traduction échoue
+                return paintressAlive ? 
+                    "Paintress Monolith - The artistic terror guards this place" : 
+                    "Ancient Monolith - The Gommage cycle is broken";
             }
         }
     }
-
-
-
 
     public class HediffComp_ArtisticCorruption : HediffComp
     {
         public override void CompPostTick(ref float severityAdjustment)
         {
             base.CompPostTick(ref severityAdjustment);
-
-            // La corruption augmente pr�s de la Paintress
             var gameComp = Current.Game.GetComponent<GameComponent_PaintressMonolith>();
+            
             if (gameComp != null && gameComp.paintressAlive)
             {
-                // CORRIG� - Cherche la Paintress sur la carte actuelle
                 if (Pawn?.Map != null)
                 {
                     var paintress = Pawn.Map.mapPawns.AllPawns
-                        .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_PaintressMonster");
-
+                        .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_Paintress");
+                        
                     if (paintress != null && !paintress.Dead)
                     {
                         float distance = Pawn.Position.DistanceTo(paintress.Position);
-                        if (distance < 50) // Dans un rayon de 50 cases
+                        if (distance < 50)
                         {
-                            severityAdjustment += 0.001f; // Corruption acc�l�r�e
+                            severityAdjustment += 0.001f;
                         }
                     }
                 }
@@ -237,14 +256,21 @@ namespace Mod_warult
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             base.CompPostPostAdd(dinfo);
-
-            Messages.Message(
-                $"{Pawn.Name.ToStringShort} d�veloppe une corruption artistique...",
-                MessageTypeDefOf.NegativeHealthEvent
-            );
+            try
+            {
+                Messages.Message(
+                    "Expedition33_ArtisticCorruptionDeveloped".Translate(Pawn.Name.ToStringShort),
+                    MessageTypeDefOf.NegativeHealthEvent
+                );
+            }
+            catch
+            {
+                // Fallback si la traduction échoue
+                Messages.Message(
+                    $"{Pawn.Name.ToStringShort} develops artistic corruption...",
+                    MessageTypeDefOf.NegativeHealthEvent
+                );
+            }
         }
     }
-
-    
-
 }

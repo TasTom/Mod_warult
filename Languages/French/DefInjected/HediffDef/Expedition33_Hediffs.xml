@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Hediffs de base -->
+  <Expedition33_SacredHealing.label>guérison sacrée</Expedition33_SacredHealing.label>
+  <Expedition33_SacredHealing.description>Régénération accélérée grâce à la lumière sacrée.</Expedition33_SacredHealing.description>
+  
+  <Expedition33_SacredBlindness.label>cécité sacrée</Expedition33_SacredBlindness.label>
+  <Expedition33_SacredBlindness.description>Aveuglé par la lumière divine, précision grandement réduite.</Expedition33_SacredBlindness.description>
+  
+  <Expedition33_DivineRegeneration.label>régénération divine</Expedition33_DivineRegeneration.label>
+  <Expedition33_DivineRegeneration.description>Régénération divine puissante de l'Evêque.</Expedition33_DivineRegeneration.description>
+  
+  <!-- Buffs de mouvement et défense -->
+  <Expedition33_RapidMovement.label>mouvement rapide</Expedition33_RapidMovement.label>
+  <Expedition33_RapidMovement.description>Vitesse de déplacement considérablement augmentée.</Expedition33_RapidMovement.description>
+  
+  <Expedition33_RapidMovementBuff.label>mouvement rapide</Expedition33_RapidMovementBuff.label>
+  <Expedition33_RapidMovementBuff.description>Vitesse de déplacement considérablement augmentée.</Expedition33_RapidMovementBuff.description>
+  
+  <Expedition33_HeavyArmor.label>blindage renforcé</Expedition33_HeavyArmor.label>
+  <Expedition33_HeavyArmor.description>Protection lourde qui réduit massivement les dégâts.</Expedition33_HeavyArmor.description>
+  
+  <Expedition33_HeavyArmorBuff.label>blindage renforcé</Expedition33_HeavyArmorBuff.label>
+  <Expedition33_HeavyArmorBuff.description>Protection lourde qui réduit massivement les dégâts.</Expedition33_HeavyArmorBuff.description>
+  
+  <Expedition33_SlowRegeneration.label>régénération lente</Expedition33_SlowRegeneration.label>
+  <Expedition33_SlowRegeneration.description>Régénération constante mais progressive.</Expedition33_SlowRegeneration.description>
+  
+  <Expedition33_SlowRegenerationBuff.label>régénération lente</Expedition33_SlowRegenerationBuff.label>
+  <Expedition33_SlowRegenerationBuff.description>Régénération constante mais progressive.</Expedition33_SlowRegenerationBuff.description>
+  
+  <Expedition33_EnergyShields.label>boucliers d'énergie</Expedition33_EnergyShields.label>
+  <Expedition33_EnergyShields.description>Boucliers énergétiques qui absorbent les attaques.</Expedition33_EnergyShields.description>
+  
+  <Expedition33_EnergyShieldsBuff.label>boucliers d'énergie</Expedition33_EnergyShieldsBuff.label>
+  <Expedition33_EnergyShieldsBuff.description>Boucliers énergétiques qui absorbent les attaques.</Expedition33_EnergyShieldsBuff.description>
+  
+  <!-- Effets de lumière et d'obscurité -->
+  <Expedition33_LightConfusion.label>confusion lumineuse</Expedition33_LightConfusion.label>
+  <Expedition33_LightConfusion.description>Confus par les jeux de lumière du Maître des Lampes, la vision et la précision sont altérées.</Expedition33_LightConfusion.description>
+  
+  <Expedition33_LightBlindness.label>aveuglement lumineux</Expedition33_LightBlindness.label>
+  <Expedition33_LightBlindness.description>Aveuglé par la frappe claire du Dualiste.</Expedition33_LightBlindness.description>
+  
+  <Expedition33_LightBurn.label>brûlure de lumière</Expedition33_LightBurn.label>
+  <Expedition33_LightBurn.description>Ce personnage a été sévèrement brûlé par une lumière surnaturelle, affectant sa vision et ses capacités.</Expedition33_LightBurn.description>
+  <Expedition33_LightBurn.stages.blouissement.label>Éblouissement</Expedition33_LightBurn.stages.blouissement.label>
+  
+  <Expedition33_LightMode.label>mode lumière</Expedition33_LightMode.label>
+  <Expedition33_LightMode.description>Le Dualiste est en mode lumière, résistant aux attaques obscures.</Expedition33_LightMode.description>
+  
+  <Expedition33_DarkMode.label>mode obscur</Expedition33_DarkMode.label>
+  <Expedition33_DarkMode.description>Le Dualiste est en mode obscur, résistant aux attaques lumineuses.</Expedition33_DarkMode.description>
+  
+  <Expedition33_DarknessEffect.label>effet des ténèbres</Expedition33_DarknessEffect.label>
+  <Expedition33_DarknessEffect.description>Vision, réflexes et moral considérablement réduits par les forces obscures.</Expedition33_DarknessEffect.description>
+  
+  <Expedition33_DarknessCurse.label>malédiction des ténèbres</Expedition33_DarknessCurse.label>
+  <Expedition33_DarknessCurse.description>Ce personnage est victime d'une malédiction obscure qui affaiblit ses capacités mentales et physiques.</Expedition33_DarknessCurse.description>
+  
+  <Expedition33_DarknessSlow.label>ralentissement obscur</Expedition33_DarknessSlow.label>
+  <Expedition33_DarknessSlow.description>Ralenti par l'explosion obscure, mouvement et réflexes diminués.</Expedition33_DarknessSlow.description>
+  
+  <Expedition33_DarknessDebuff.label>brume obscure</Expedition33_DarknessDebuff.label>
+  <Expedition33_DarknessDebuff.description>Ce personnage est plongé dans les ténèbres, réduisant ses facultés motrices et mentales.</Expedition33_DarknessDebuff.description>
+  
+  <Expedition33_ObscurEffect.label>choc obscur</Expedition33_ObscurEffect.label>
+  <Expedition33_ObscurEffect.description>L'esprit de ce personnage est affecté par une vague d'énergie sombre, engendrant confusion et perte de repères.</Expedition33_ObscurEffect.description>
+  <Expedition33_ObscurEffect.stages.Confusion_obscure.label>Confusion obscure</Expedition33_ObscurEffect.stages.Confusion_obscure.label>
+  
+  <!-- Effets des lampes -->
+  <Expedition33_LampMastery.label>maîtrise des lampes</Expedition33_LampMastery.label>
+  <Expedition33_LampMastery.description>Entouré par l'énergie des lampes spectrales, bénéficie d'une aura protectrice.</Expedition33_LampMastery.description>
+  
+  <Expedition33_LampCurse.label>malédiction des lampes</Expedition33_LampCurse.label>
+  <Expedition33_LampCurse.description>Maudit par les lampes sombres, subissez des effets néfastes aléatoires.</Expedition33_LampCurse.description>
+  
+  <!-- Effets de boss spécifiques -->
+  <Expedition33_FrancoisTerror.label>terreur de François</Expedition33_FrancoisTerror.label>
+  <Expedition33_FrancoisTerror.description>Terrifié par la présence mortelle de François. Toutes les capacités sont drastiquement réduites.</Expedition33_FrancoisTerror.description>
+  
+  <Expedition33_CommanderBoost.label>boost du commandant</Expedition33_CommanderBoost.label>
+  <Expedition33_CommanderBoost.description>Inspiré par les ordres tactiques de Renoir, toutes les capacités de combat sont améliorées.</Expedition33_CommanderBoost.description>
+  
+  <Expedition33_SonicStun.label>étourdissement sonique</Expedition33_SonicStun.label>
+  <Expedition33_SonicStun.description>Étourdi par l'onde sonique de la Sirène. Mouvements ralentis et capacités réduites.</Expedition33_SonicStun.description>
+  
+  <Expedition33_MindControlled.label>contrôle mental</Expedition33_MindControlled.label>
+  <Expedition33_MindControlled.description>Esprit dominé par la Sirène. Agit temporairement comme un ennemi contre ses anciens alliés.</Expedition33_MindControlled.description>
+  
+  <Expedition33_FaceShifted.label>visage altéré</Expedition33_FaceShifted.label>
+  <Expedition33_FaceShifted.description>Identité temporairement modifiée par les Visages. Les relations et la reconnaissance sont perturbées.</Expedition33_FaceShifted.description>
+  
+  <Expedition33_IdentityConfusion.label>confusion d'identité</Expedition33_IdentityConfusion.label>
+  <Expedition33_IdentityConfusion.description>Confus sur sa propre identité et celle des autres. Peut attaquer par erreur des alliés.</Expedition33_IdentityConfusion.description>
+  
+  <Expedition33_FaceShiftBuff.label>changement de visage</Expedition33_FaceShiftBuff.label>
+  <Expedition33_FaceShiftBuff.description>Ce personnage traverse une transe déstabilisante, modifiant complètement son identité aux yeux des autres.</Expedition33_FaceShiftBuff.description>
+  <Expedition33_FaceShiftBuff.stages.Dissimulation_totale.label>Dissimulation totale</Expedition33_FaceShiftBuff.stages.Dissimulation_totale.label>
+  
+  <Expedition33_DualityShiftBuff.label>forme de dualité</Expedition33_DualityShiftBuff.label>
+  <Expedition33_DualityShiftBuff.description>Ce personnage est temporairement infusé par les pouvoirs de lumière et d'ombre, décuplant ses capacités.</Expedition33_DualityShiftBuff.description>
+  
+  <Expedition33_FearAuraHediff.label>aura de terreur</Expedition33_FearAuraHediff.label>
+  <Expedition33_FearAuraHediff.description>Paralysé par une terreur surnaturelle. Toutes les capacités sont drastiquement réduites par la peur.</Expedition33_FearAuraHediff.description>
+  
+  <!-- Effets de la Paintress -->
+  <Expedition33_RealityDistorted.label>distorsion de réalité</Expedition33_RealityDistorted.label>
+  <Expedition33_RealityDistorted.description>L'esprit de ce personnage est affecté par une anomalie fondamentale du tissu spatiotemporel.</Expedition33_RealityDistorted.description>
+  
+  <Expedition33_GommageCountdown.label>compte à rebours du gommage</Expedition33_GommageCountdown.label>
+  <Expedition33_GommageCountdown.description>Un nombre mortel a été inscrit ! Le compte à rebours vers la disparition commence...</Expedition33_GommageCountdown.description>
+  
+  <Expedition33_CosmicPaint.label>peinture cosmique</Expedition33_CosmicPaint.label>
+  <Expedition33_CosmicPaint.description>Marqué par le pinceau cosmique de la Paintress. La réalité se déforme autour de vous.</Expedition33_CosmicPaint.description>
+  
+  <Expedition33_NumberCurse.label>malédiction du nombre</Expedition33_NumberCurse.label>
+  <Expedition33_NumberCurse.description>Un nombre néfaste a été inscrit sur vous. Ses effets aléatoires se manifestent de manière imprévisible.</Expedition33_NumberCurse.description>
+  
+  <Expedition33_TimeConfusion.label>confusion temporelle</Expedition33_TimeConfusion.label>
+  <Expedition33_TimeConfusion.description>Pris dans les distorsions temporelles de la Paintress. Le temps semble s'écouler différemment.</Expedition33_TimeConfusion.description>
+  
+  <Expedition33_MonolithCurse.label>malédiction du monolithe</Expedition33_MonolithCurse.label>
+  <Expedition33_MonolithCurse.description>Marqué par le pouvoir ancien du Monolithe. Une malédiction cosmique s'abat sur vous.</Expedition33_MonolithCurse.description>
+  
+  <!-- Protection et système de jeu -->
+  <Expedition33_QuestTracker.label>suivi de quête Expedition 33</Expedition33_QuestTracker.label>
+  <Expedition33_QuestTracker.description>Suit la progression narrative principale d'Expedition 33.</Expedition33_QuestTracker.description>
+  
+  <Expedition33_GommageProtection.label>protection anti-gommage</Expedition33_GommageProtection.label>
+  <Expedition33_GommageProtection.description>Protégé contre les effets du Gommage par un bouclier personnel. Cette protection mystique scintille autour du porteur.</Expedition33_GommageProtection.description>
+  <Expedition33_GommageProtection.stages.bouclier_actif.label>bouclier actif</Expedition33_GommageProtection.stages.bouclier_actif.label>
+  
+  <Expedition33_AntiGommageProtection.label>protection anti-gommage</Expedition33_AntiGommageProtection.label>
+  <Expedition33_AntiGommageProtection.description>Cette personne est protégée contre les effets du Gommage par un champ d'énergie.</Expedition33_AntiGommageProtection.description>
+  
+  <!-- Effets à long terme -->
+  <Expedition33_ArtisticCorruption.label>corruption artistique</Expedition33_ArtisticCorruption.label>
+  <Expedition33_ArtisticCorruption.description>Exposé aux énergies de la Paintress, ce colon développe des "taches artistiques" qui modifient sa perception de la réalité.</Expedition33_ArtisticCorruption.description>
+  <Expedition33_ArtisticCorruption.stages.lgre.label>légère</Expedition33_ArtisticCorruption.stages.lgre.label>
+  <Expedition33_ArtisticCorruption.stages.modre.label>modérée</Expedition33_ArtisticCorruption.stages.modre.label>
+  <Expedition33_ArtisticCorruption.stages.svre.label>sévère</Expedition33_ArtisticCorruption.stages.svre.label>
+  
+  <Expedition33_GommageResistance.label>résistance au gommage</Expedition33_GommageResistance.label>
+  <Expedition33_GommageResistance.description>Ce colon a développé une résistance naturelle aux effets du Gommage après une exposition prolongée aux technologies anti-Gommage.</Expedition33_GommageResistance.description>
+  <Expedition33_GommageResistance.stages.rsistant.label>résistant</Expedition33_GommageResistance.stages.rsistant.label>
+  
+  <Expedition33_ArtisticInspiration.label>inspiration artistique</Expedition33_ArtisticInspiration.label>
+  <Expedition33_ArtisticInspiration.description>Inspiré par la lutte contre la Paintress, ce colon ressent une créativité décuplée et une motivation renouvelée.</Expedition33_ArtisticInspiration.description>
+  <Expedition33_ArtisticInspiration.stages.inspir.label>inspiré</Expedition33_ArtisticInspiration.stages.inspir.label>
+  
+  <Expedition33_ShieldExhaustion.label>épuisement du bouclier</Expedition33_ShieldExhaustion.label>
+  <Expedition33_ShieldExhaustion.description>Le bouclier anti-Gommage de ce colon est épuisé. Il est temporairement vulnérable aux effets du Gommage.</Expedition33_ShieldExhaustion.description>
+  <Expedition33_ShieldExhaustion.stages.vulnrable.label>vulnérable</Expedition33_ShieldExhaustion.stages.vulnrable.label>
+  
+  <Expedition33_GommageWitness.label>témoin du gommage</Expedition33_GommageWitness.label>
+  <Expedition33_GommageWitness.description>Ce colon a assisté à un événement de Gommage. Le traumatisme de voir des personnes disparaître de la réalité laisse des cicatrices psychologiques profondes.</Expedition33_GommageWitness.description>
+  <Expedition33_GommageWitness.stages.traumatis.label>traumatisé</Expedition33_GommageWitness.stages.traumatis.label>
+
+
+  <Expedition33_SanctuaryBlessing.label>bénédiction du sanctuaire</Expedition33_SanctuaryBlessing.label>
+  <Expedition33_SanctuaryBlessing.description>Ce colon a passé du temps dans le Sanctuaire Temporel. L'exposition aux énergies temporelles lui confère une sérénité et une clarté d'esprit exceptionnelles.</Expedition33_SanctuaryBlessing.description>
+  <Expedition33_SanctuaryBlessing.stages.bni.label>béni</Expedition33_SanctuaryBlessing.stages.bni.label>
+  <Expedition33_SanctuaryBlessing.label>bénédiction du sanctuaire</Expedition33_SanctuaryBlessing.label>
+  <Expedition33_SanctuaryBlessing.description>Ce colon a passé du temps dans le Sanctuaire Temporel. L'exposition aux énergies temporelles lui confère une sérénité et une clarté d'esprit exceptionnelles.</Expedition33_SanctuaryBlessing.description>
+  <Expedition33_SanctuaryBlessing.stages.bni.label>béni</Expedition33_SanctuaryBlessing.stages.bni.label>
+  
+  <Expedition33_PilgrimageBlessing.label>bénédiction de pèlerinage</Expedition33_PilgrimageBlessing.label>
+  <Expedition33_PilgrimageBlessing.description>Ce Gestral a participé à un pèlerinage spirituel à la Rivière Sacrée, lui apportant paix intérieure et sagesse ancestrale.</Expedition33_PilgrimageBlessing.description>
+  
+  <Expedition33_AncestralBlessing.label>bénédiction ancestrale</Expedition33_AncestralBlessing.label>
+  <Expedition33_AncestralBlessing.description>Ce Gestral ressent la présence bienveillante de ses ancêtres, lui donnant force et sagesse.</Expedition33_AncestralBlessing.description>
+
+  <!-- Buffs de capacités -->
+  <Expedition33_RegenerationBuff.label>régénération active</Expedition33_RegenerationBuff.label>
+  <Expedition33_RegenerationBuff.description>Régénération accélérée des blessures.</Expedition33_RegenerationBuff.description>
+  
+  <Expedition33_IronWillBuff.label>volonté d'acier</Expedition33_IronWillBuff.label>
+  <Expedition33_IronWillBuff.description>Immunité temporaire aux crises mentales.</Expedition33_IronWillBuff.description>
+  
+  <Expedition33_BerserkerRageBuff.label>rage berserker</Expedition33_BerserkerRageBuff.label>
+  <Expedition33_BerserkerRageBuff.description>Rage destructrice qui augmente les dégâts mais réduit la défense.</Expedition33_BerserkerRageBuff.description>
+  
+  <Expedition33_TimeSlipBuff.label>glissement temporel</Expedition33_TimeSlipBuff.label>
+  <Expedition33_TimeSlipBuff.description>Vitesse d'action considérablement augmentée.</Expedition33_TimeSlipBuff.description>
+  
+  <Expedition33_IronSkinBuff.label>peau de fer</Expedition33_IronSkinBuff.label>
+  <Expedition33_IronSkinBuff.description>Protection magique qui réduit drastiquement les dégâts reçus.</Expedition33_IronSkinBuff.description>
+  
+  <Expedition33_FortressBuff.label>forteresse</Expedition33_FortressBuff.label>
+  <Expedition33_FortressBuff.description>Protection quasi-totale contre tous les types de dégâts.</Expedition33_FortressBuff.description>
+  
+  <Expedition33_LuckyStrikeBuff.label>coup de chance</Expedition33_LuckyStrikeBuff.label>
+  <Expedition33_LuckyStrikeBuff.description>Précision grandement améliorée pour la prochaine attaque.</Expedition33_LuckyStrikeBuff.description>
+  
+  <Expedition33_MiracleBuff.label>protection divine</Expedition33_MiracleBuff.label>
+  <Expedition33_MiracleBuff.description>Protection miraculeuse contre les blessures mortelles.</Expedition33_MiracleBuff.description>
+  
+  <Expedition33_ImmortalityBuff.label>fragment d'immortalité</Expedition33_ImmortalityBuff.label>
+  <Expedition33_ImmortalityBuff.description>Régénération rapide grâce à la nature immortelle de Verso.</Expedition33_ImmortalityBuff.description>
+  
+  <Expedition33_FastHealing.label>guérison rapide</Expedition33_FastHealing.label>
+  <Expedition33_FastHealing.description>Guérison accélérée des blessures.</Expedition33_FastHealing.description>
+
+  <!-- Croissance Gestral -->
+  <GestralGrowthStages.label>croissance gestral</GestralGrowthStages.label>
+  <GestralGrowthStages.description>La taille de ce Gestral évolue selon son âge.</GestralGrowthStages.description>
+  <GestralGrowthStages.stages.jeune_gestral.label>jeune gestral</GestralGrowthStages.stages.jeune_gestral.label>
+  <GestralGrowthStages.stages.gestral_adulte.label>gestral adulte</GestralGrowthStages.stages.gestral_adulte.label>
+  <GestralGrowthStages.stages.gestral_ancien.label>gestral ancien</GestralGrowthStages.stages.gestral_ancien.label>
+  <GestralGrowthStages.stages.gestralarbre.label>gestral-arbre</GestralGrowthStages.stages.gestralarbre.label>
+
+  <!-- Bonus Picto -->
+  <Expedition33_PictoBonus_Vitality.label>empreinte de picto - vitalité</Expedition33_PictoBonus_Vitality.label>
+  <Expedition33_PictoBonus_Vitality.description>Bonus conféré par un picto de vitalité.</Expedition33_PictoBonus_Vitality.description>
+  
+  <Expedition33_PictoBonus_Defense.label>empreinte de picto - défense</Expedition33_PictoBonus_Defense.label>
+  <Expedition33_PictoBonus_Defense.description>Bonus conféré par un picto de défense.</Expedition33_PictoBonus_Defense.description>
+  
+  <Expedition33_PictoBonus_Critical.label>empreinte de picto - critique</Expedition33_PictoBonus_Critical.label>
+  <Expedition33_PictoBonus_Critical.description>Bonus conféré par un picto critique.</Expedition33_PictoBonus_Critical.description>
+  
+  <Expedition33_PictoBonus_Guardian.label>empreinte de picto - gardien</Expedition33_PictoBonus_Guardian.label>
+  <Expedition33_PictoBonus_Guardian.description>Bonus conféré par un picto gardien.</Expedition33_PictoBonus_Guardian.description>
+  
+  <Expedition33_PictoBonus_Striker.label>empreinte de picto - frappeur</Expedition33_PictoBonus_Striker.label>
+  <Expedition33_PictoBonus_Striker.description>Bonus conféré par un picto frappeur.</Expedition33_PictoBonus_Striker.description>
+  
+  <Expedition33_PictoBonus_Healer.label>empreinte de picto - soigneur</Expedition33_PictoBonus_Healer.label>
+  <Expedition33_PictoBonus_Healer.description>Bonus conféré par un picto soigneur.</Expedition33_PictoBonus_Healer.description>
+  
+  <Expedition33_PictoBonus_Scholar.label>empreinte de picto - érudit</Expedition33_PictoBonus_Scholar.label>
+  <Expedition33_PictoBonus_Scholar.description>Bonus conféré par un picto érudit.</Expedition33_PictoBonus_Scholar.description>
+
+  <!-- Lumina -->
+  <Expedition33_Lumina_Guardian.label>Lumina Guardian</Expedition33_Lumina_Guardian.label>
+  <Expedition33_Lumina_Guardian.description>Compétence passive de gardien maîtrisée.</Expedition33_Lumina_Guardian.description>
+  
+  <Expedition33_Lumina_Vitality.label>Lumina Vitality</Expedition33_Lumina_Vitality.label>
+  <Expedition33_Lumina_Vitality.description>Compétence passive de vitalité maîtrisée.</Expedition33_Lumina_Vitality.description>
+  
+  <Expedition33_Lumina_Defense.label>Lumina Defense</Expedition33_Lumina_Defense.label>
+  <Expedition33_Lumina_Defense.description>Compétence passive de défense maîtrisée.</Expedition33_Lumina_Defense.description>
+  
+  <Expedition33_Lumina_Critical.label>Lumina Critical</Expedition33_Lumina_Critical.label>
+  <Expedition33_Lumina_Critical.description>Compétence passive critique maîtrisée.</Expedition33_Lumina_Critical.description>
+  
+  <Expedition33_Lumina_Striker.label>Lumina Striker</Expedition33_Lumina_Striker.label>
+  <Expedition33_Lumina_Striker.description>Compétence passive d'attaque maîtrisée.</Expedition33_Lumina_Striker.description>
+  
+  <Expedition33_Lumina_Healer.label>Lumina Healer</Expedition33_Lumina_Healer.label>
+  <Expedition33_Lumina_Healer.description>Compétence passive de soins maîtrisée.</Expedition33_Lumina_Healer.description>
+  
+  <Expedition33_Lumina_Scholar.label>Lumina Scholar</Expedition33_Lumina_Scholar.label>
+  <Expedition33_Lumina_Scholar.description>Compétence passive d'érudition maîtrisée.</Expedition33_Lumina_Scholar.description>
+
+  <!-- Système de progression -->
+  <Expedition33_Progression.label>progression expedition</Expedition33_Progression.label>
+  <Expedition33_Progression.description>Système de progression du mod Expedition 33.</Expedition33_Progression.description>
+  
+  <Expedition33_VitalityBonus.label>vitalité renforcée</Expedition33_VitalityBonus.label>
+  <Expedition33_VitalityBonus.description>Bonus permanent de vitalité obtenu par la progression d'expédition.</Expedition33_VitalityBonus.description>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_dbutant.label>vitalité renforcée (débutant)</Expedition33_VitalityBonus.stages.vitalit_renforce_dbutant.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_intermdiaire.label>vitalité renforcée (intermédiaire)</Expedition33_VitalityBonus.stages.vitalit_renforce_intermdiaire.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_avanc.label>vitalité renforcée (avancé)</Expedition33_VitalityBonus.stages.vitalit_renforce_avanc.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_expert.label>vitalité renforcée (expert)</Expedition33_VitalityBonus.stages.vitalit_renforce_expert.label>
+  <Expedition33_VitalityBonus.stages.vitalit_renforce_matre.label>vitalité renforcée (maître)</Expedition33_VitalityBonus.stages.vitalit_renforce_matre.label>
+  
+  <Expedition33_PowerBonus.label>puissance dévastatrice</Expedition33_PowerBonus.label>
+  <Expedition33_PowerBonus.description>Bonus permanent de puissance obtenu par la progression d'expédition.</Expedition33_PowerBonus.description>
+  <Expedition33_PowerBonus.stages.dbutant.label>(débutant)</Expedition33_PowerBonus.stages.dbutant.label>
+  <Expedition33_PowerBonus.stages.intermdiaire.label>(intermédiaire)</Expedition33_PowerBonus.stages.intermdiaire.label>
+  <Expedition33_PowerBonus.stages.avanc.label>(avancé)</Expedition33_PowerBonus.stages.avanc.label>
+  <Expedition33_PowerBonus.stages.expert.label>(expert)</Expedition33_PowerBonus.stages.expert.label>
+  <Expedition33_PowerBonus.stages.matre.label>(maître)</Expedition33_PowerBonus.stages.matre.label>
+  
+  <Expedition33_AgilityBonus.label>agilité extraordinaire</Expedition33_AgilityBonus.label>
+  <Expedition33_AgilityBonus.description>Bonus permanent d'agilité obtenu par la progression d'expédition.</Expedition33_AgilityBonus.description>
+  <Expedition33_AgilityBonus.stages.dbutant.label>(débutant)</Expedition33_AgilityBonus.stages.dbutant.label>
+  <Expedition33_AgilityBonus.stages.intermdiaire.label>(intermédiaire)</Expedition33_AgilityBonus.stages.intermdiaire.label>
+  <Expedition33_AgilityBonus.stages.avanc.label>(avancé)</Expedition33_AgilityBonus.stages.avanc.label>
+  <Expedition33_AgilityBonus.stages.expert.label>(expert)</Expedition33_AgilityBonus.stages.expert.label>
+  <Expedition33_AgilityBonus.stages.matre.label>(maître)</Expedition33_AgilityBonus.stages.matre.label>
+  
+  <Expedition33_DefenseBonus.label>défense inébranlable</Expedition33_DefenseBonus.label>
+  <Expedition33_DefenseBonus.description>Bonus permanent de défense obtenu par la progression d'expédition.</Expedition33_DefenseBonus.description>
+  <Expedition33_DefenseBonus.stages.dbutant.label>(débutant)</Expedition33_DefenseBonus.stages.dbutant.label>
+  <Expedition33_DefenseBonus.stages.intermdiaire.label>(intermédiaire)</Expedition33_DefenseBonus.stages.intermdiaire.label>
+  <Expedition33_DefenseBonus.stages.avanc.label>(avancé)</Expedition33_DefenseBonus.stages.avanc.label>
+  <Expedition33_DefenseBonus.stages.expert.label>(expert)</Expedition33_DefenseBonus.stages.expert.label>
+  <Expedition33_DefenseBonus.stages.matre.label>(maître)</Expedition33_DefenseBonus.stages.matre.label>
+  
+  <Expedition33_ChanceBonus.label>chance miraculeuse</Expedition33_ChanceBonus.label>
+  <Expedition33_ChanceBonus.description>Bonus permanent de chance obtenu par la progression d'expédition.</Expedition33_ChanceBonus.description>
+  <Expedition33_ChanceBonus.stages.dbutant.label>(débutant)</Expedition33_ChanceBonus.stages.dbutant.label>
+  <Expedition33_ChanceBonus.stages.intermdiaire.label>(intermédiaire)</Expedition33_ChanceBonus.stages.intermdiaire.label>
+  <Expedition33_ChanceBonus.stages.avanc.label>(avancé)</Expedition33_ChanceBonus.stages.avanc.label>
+  <Expedition33_ChanceBonus.stages.expert.label>(expert)</Expedition33_ChanceBonus.stages.expert.label>
+  <Expedition33_ChanceBonus.stages.matre.label>(maître)</Expedition33_ChanceBonus.stages.matre.label>
+  
+  <Expedition33_LevelBonus.label>sagesse de l'expédition</Expedition33_LevelBonus.label>
+  <Expedition33_LevelBonus.description>Sagesse et expérience acquises au cours de l'Expédition 33.</Expedition33_LevelBonus.description>
+  <Expedition33_LevelBonus.stages.apprenti.label>(apprenti)</Expedition33_LevelBonus.stages.apprenti.label>
+  <Expedition33_LevelBonus.stages.confirm.label>(confirmé)</Expedition33_LevelBonus.stages.confirm.label>
+  <Expedition33_LevelBonus.stages.expriment.label>(expérimenté)</Expedition33_LevelBonus.stages.expriment.label>
+  <Expedition33_LevelBonus.stages.vtran.label>(vétéran)</Expedition33_LevelBonus.stages.vtran.label>
+
+      <Expedition33_LightEffect.label>effet de lumière</Expedition33_LightEffect.label>
+    <Expedition33_LightEffect.description>Affecté par la manipulation de la lumière, vision et capacités altérées.</Expedition33_LightEffect.description>
+    <Expedition33_IlluminationBurn.label>brûlure d'illumination</Expedition33_IlluminationBurn.label>
+    <Expedition33_IlluminationBurn.description>Brûlé par les attaques lumineuses intenses du Maître des Lampes. Vision gravement altérée et douleurs constantes.</Expedition33_IlluminationBurn.description>
+
+  <Expedition33_GommageWitness_label>témoin du gommage</Expedition33_GommageWitness_label>
+  <Expedition33_GommageWitness_description>Ce colon a assisté à un événement de Gommage. Le traumatisme de voir des personnes disparaître de la réalité laisse des cicatrices psychologiques profondes.</Expedition33_GommageWitness_description>
+  
+  <Expedition33_GommageCountdownAnxiety_label>anxiété du décompte</Expedition33_GommageCountdownAnxiety_label>
+  <Expedition33_GommageCountdownAnxiety_description>Ce colon a vu le processus de Gommage se déclencher mais personne n'est mort. Voir l'âge maudit approcher et descendre reste profondément troublant, même si le danger a été évité.</Expedition33_GommageCountdownAnxiety_description>
+
+
+<Expedition33_GommageCountdownAnxiety.label>anxiété du décompte</Expedition33_GommageCountdownAnxiety.label>
+<Expedition33_GommageCountdownAnxiety.description>Ce colon a vu le processus de Gommage se déclencher mais personne n'est mort. Voir l'âge maudit approcher et descendre reste profondément troublant, même si le danger a été évité.</Expedition33_GommageCountdownAnxiety.description>
+<Expedition33_GommageCountdownAnxiety.stages.anxieux.label>anxieux</Expedition33_GommageCountdownAnxiety.stages.anxieux.label>
+
+<Expedition33_AntiPaintressMotivation.label>motivation anti-Paintress</Expedition33_AntiPaintressMotivation.label>
+<Expedition33_AntiPaintressMotivation.description>Ce colon a survécu à un événement de Gommage. Sa survie renforce sa détermination à vaincre définitivement la Paintress. Demain Viendra</Expedition33_AntiPaintressMotivation.description>
+<Expedition33_AntiPaintressMotivation.stages.motiv.label>motivé</Expedition33_AntiPaintressMotivation.stages.motiv.label>
+
+
+</LanguageData>

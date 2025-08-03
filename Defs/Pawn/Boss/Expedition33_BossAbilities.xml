@@ -423,7 +423,7 @@
   <verbProperties>
     <verbClass>Mod_warult.Verb_CastAbility_SonicWave</verbClass>
     <violent>true</violent>
-    <range>25</range>
+    <range>50</range>
     <warmupTime>3.5</warmupTime>
     <targetParams>
       <canTargetLocations>true</canTargetLocations>
@@ -488,7 +488,7 @@
 </AbilityDef>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- ABILITIES DE LA PEINTRESSE - BOSS FINAL -->
+<!-- ABILITIES DE LA Paintress - BOSS FINAL -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <AbilityDef>
@@ -565,21 +565,17 @@
   <jobDef>CastAbilityOnThing</jobDef>
 </AbilityDef>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- ABILITIES SPÉCIALES - VERSO ET AUTRES -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
 <AbilityDef>
-  <defName>Expedition33_ImmortalityFragment</defName>
-  <label>fragment d'immortalité</label>
-  <description>Verso utilise sa nature immortelle pour régénérer ses blessures.</description>
-  <iconPath>UI/Icons/Abilities/ImmortalityFragment</iconPath>
-  <cooldownTicksRange>7200</cooldownTicksRange>
+  <defName>Expedition33_NevronPainting</defName>
+  <label>Peinture monstrueuse</label>
+  <description>Invoque les créatures de ces peintures à ses cotées</description>
+  <iconPath>UI/Icons/Abilities/ExpeditionMemory</iconPath>
+  <cooldownTicksRange>30000</cooldownTicksRange>
   <hostile>false</hostile>
   <verbProperties>
-    <verbClass>Mod_warult.Verb_CastAbility_ImmortalityFragment</verbClass>
+    <verbClass>Mod_warult.Verb_CastAbility_NevronPainting</verbClass>
     <range>0</range>
-    <warmupTime>3.0</warmupTime>
+    <warmupTime>5.0</warmupTime>
     <targetParams>
       <canTargetSelf>true</canTargetSelf>
     </targetParams>
@@ -587,25 +583,11 @@
   <jobDef>CastAbilityOnThing</jobDef>
 </AbilityDef>
 
-<AbilityDef>
-  <defName>Expedition33_FractureParfaite</defName>
-  <label>fracture parfaite</label>
-  <description>Technique mystérieuse de Verso qui peut briser les défenses ennemies.</description>
-  <iconPath>UI/Icons/Abilities/FractureParfaite</iconPath>
-  <cooldownTicksRange>4800</cooldownTicksRange>
-  <hostile>true</hostile>
-  <verbProperties>
-    <verbClass>Mod_warult.Verb_CastAbility_FractureParfaite</verbClass>
-    <violent>true</violent>
-    <range>12</range>
-    <warmupTime>2.5</warmupTime>
-    <targetParams>
-      <canTargetSelf>false</canTargetSelf>
-      <canTargetPawns>true</canTargetPawns>
-    </targetParams>
-  </verbProperties>
-  <jobDef>CastAbilityOnThing</jobDef>
-</AbilityDef>
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ABILITIES SPÉCIALES - VERSO ET AUTRES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+
 
 <AbilityDef>
   <defName>Expedition33_CorruptedRage</defName>
@@ -660,5 +642,101 @@
   </verbProperties>
   <jobDef>CastAbilityOnThing</jobDef>
 </AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_RangeAttack</defName>
+  <label>attaque à distance</label>
+  <description>Attaque énergétique.</description>
+  <iconPath>UI/Icons/Abilities/SonicWave</iconPath>
+  <cooldownTicksRange>150</cooldownTicksRange>
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_RangeAttack</verbClass>
+    <range>15</range>
+    <warmupTime>1.0</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetSelf>false</canTargetSelf>
+    </targetParams>
+    <defaultProjectile>Projectile_EnergyWaveBullet</defaultProjectile>
+    <forcedMissRadius>0</forcedMissRadius>
+    <requireLineOfSight>true</requireLineOfSight>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_CannonShot</defName>
+  <label>tir de canon</label>
+  <description>Sakapatate l’Ultime tire un puissant obus explosif.</description>
+  <iconPath>UI/Icons/Abilities/ClairStrike</iconPath>
+  <cooldownTicksRange>600</cooldownTicksRange> <!-- 10 secondes -->
+  <hostile>true</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_CannonShot</verbClass>
+    <range>20</range>
+    <warmupTime>1.5</warmupTime>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetLocations>true</canTargetLocations>
+      <canTargetSelf>false</canTargetSelf>
+    </targetParams>
+    <defaultProjectile>Projectile_SakapateCannon</defaultProjectile>
+    <forcedMissRadius>1.5</forcedMissRadius> <!-- Peut rater un peu -->
+    <requireLineOfSight>true</requireLineOfSight>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_PrimalHeal</defName>
+  <label>soins primitifs</label>
+  <description>Goblu utilise un rituel ancestral pour se soigner sur place.</description>
+  <iconPath>UI/Icons/Abilities/AbilityRegeneration</iconPath>
+  <cooldownTicksRange>1200</cooldownTicksRange> <!-- 20 secondes -->
+  <hostile>false</hostile>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_PrimalHeal</verbClass>
+    <range>0</range>
+    <warmupTime>1.0</warmupTime>
+    <targetParams>
+      <canTargetSelf>true</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<ThingDef ParentName="BaseBullet">
+  <defName>Projectile_EnergyWaveBullet</defName>
+  <label>vague énergétique</label>
+  <graphicData>
+    <texPath>Bullet/RangeBossAttack</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>(1.0,1.0)</drawSize>
+  </graphicData>
+  <projectile>
+    <damageDef>Blunt</damageDef> <!-- Optionnel ici, le vrai dégât sera en C# -->
+    <damageAmountBase>0</damageAmountBase> <!-- On met à 0 pour éviter dégâts automatiques -->
+    <speed>48</speed>
+  </projectile>
+  <thingClass>Mod_warult.Projectile_RangeAttackBullet</thingClass> <!-- Ta class custom -->
+</ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+  <defName>Projectile_SakapateCannon</defName>
+  <label>obus de canon</label>
+  <graphicData>
+    <texPath>Bullet/SakapateCannonBall</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>(1.4,1.4)</drawSize>
+  </graphicData>
+  <projectile>
+    <damageDef>Bomb</damageDef>
+    <damageAmountBase>25</damageAmountBase>
+    <explosionRadius>2.5</explosionRadius>
+    <speed>35</speed>
+    <flyOverhead>false</flyOverhead>
+  </projectile>
+</ThingDef>
 
 </Defs>

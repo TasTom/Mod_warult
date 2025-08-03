@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- Expedition 33 Core Messages -->
+  <Expedition33_OfficerTitle>Expedition 33 Officer</Expedition33_OfficerTitle>
+  <Expedition33_OfficerDesc>A high-ranking member of the mysterious Expedition 33, equipped with advanced chromatic technology.</Expedition33_OfficerDesc>
+  
+  <!-- Abilities -->
+  <Expedition33_RangeAttack_Name>Chromatic Barrage</Expedition33_RangeAttack_Name>
+  <Expedition33_RangeAttack_Desc>Fires a concentrated burst of chromatic energy at distant targets.</Expedition33_RangeAttack_Desc>
+  
+  <Expedition33_SacredLight_Name>Sacred Light</Expedition33_SacredLight_Name>
+  <Expedition33_SacredLight_Desc>Channels divine energy to heal allies and harm undead creatures.</Expedition33_SacredLight_Desc>
+  
+  <Expedition33_SonicWave_Name>Sonic Wave</Expedition33_SonicWave_Name>
+  <Expedition33_SonicWave_Desc>Emits a powerful sonic blast that stuns and disorients enemies in a wide area.</Expedition33_SonicWave_Desc>
+  
+  <Expedition33_MindControl_Name>Mind Control</Expedition33_MindControl_Name>
+  <Expedition33_MindControl_Desc>Temporarily takes control of an enemy's mind, turning them against their allies.</Expedition33_MindControl_Desc>
+  
+  <Expedition33_FaceShift_Name>Face Shift</Expedition33_FaceShift_Name>
+  <Expedition33_FaceShift_Desc>Alters surrounding reality, sowing confusion and disorientation among nearby enemies.</Expedition33_FaceShift_Desc>
+  
+  <Expedition33_RealityDistortion_Name>Reality Distortion</Expedition33_RealityDistortion_Name>
+  <Expedition33_RealityDistortion_Desc>Warps the fabric of reality over a vast area, inflicting heavy psychological damage.</Expedition33_RealityDistortion_Desc>
+  
+  <!-- Resources -->
+  <Expedition33_ChromaRaw_Name>Raw Chroma</Expedition33_ChromaRaw_Name>
+  <Expedition33_ChromaRaw_Desc>Unprocessed chromatic energy crystallized in a raw, unstable form. Essential for advanced Expedition 33 technologies.</Expedition33_ChromaRaw_Desc>
+  
+  <Expedition33_Chroma_Name>Refined Chroma</Expedition33_Chroma_Name>
+  <Expedition33_Chroma_Desc>Processed chromatic energy in its pure, stable form. Used to power the most advanced Expedition 33 equipment.</Expedition33_Chroma_Desc>
+  
+  <!-- Messages and Notifications -->
+  <Expedition33_BossDefeated>The {0} has been defeated! Chromatic energy disperses across the battlefield.</Expedition33_BossDefeated>
+  <Expedition33_NevronSpawned>Corrupted Nevrons emerge from the shadows!</Expedition33_NevronSpawned>
+  <Expedition33_GommageWarning>Reality begins to fracture... The Gommage approaches!</Expedition33_GommageWarning>
+  
+  <!-- Status Effects -->
+  <Expedition33_MindControlled_Name>Mind Controlled</Expedition33_MindControlled_Name>
+  <Expedition33_MindControlled_Desc>This being's mind is under external influence, forcing them to act against their will.</Expedition33_MindControlled_Desc>
+  
+  <Expedition33_RealityDistorted_Name>Reality Distorted</Expedition33_RealityDistorted_Name>
+  <Expedition33_RealityDistorted_Desc>Perception of reality is severely compromised, causing confusion and disorientation.</Expedition33_RealityDistorted_Desc>
+  
+  <!-- Interface Messages -->
+  <Expedition33_CurrentMission>📋 Current Mission</Expedition33_CurrentMission>
+  <Expedition33_AllQuestsCompleted>All main quests are completed!</Expedition33_AllQuestsCompleted>
+  <Expedition33_ConsultMissions>Consult Missions</Expedition33_ConsultMissions>
+  <Expedition33_ConsultMissionsDesc>Open the Expedition 33 progress panel</Expedition33_ConsultMissionsDesc>
+  <Expedition33_AntiGommageResearch>Anti-Gommage Research</Expedition33_AntiGommageResearch>
+  <Expedition33_AntiGommageResearchDesc>Access secret technologies against The Gommage</Expedition33_AntiGommageResearchDesc>
+  
+  <!-- Boss Messages -->
+  <Expedition33_BossInitialized>[Expedition33] Boss {0} initialized with type: {1}</Expedition33_BossInitialized>
+  <Expedition33_BossKilledLog>[Expedition33] Boss killed: {0} -> trigger {1}</Expedition33_BossKilledLog>
+  <Expedition33_BossNotFoundError>[Expedition33] PawnKindDef not found: {0}</Expedition33_BossNotFoundError>
+  <Expedition33_BossAppears>⚔️ {0} appears near your base!</Expedition33_BossAppears>
+  <Expedition33_BishopPhase2>✨ The Bishop enters sacred phase!</Expedition33_BishopPhase2>
+  
+  <!-- Final Confrontation -->
+  <Expedition33_FinalConfrontationTitle>FINAL CONFRONTATION</Expedition33_FinalConfrontationTitle>
+  <Expedition33_FinalConfrontationDesc>The Paintress's Monolith is revealed on the Dark Continent. Prepare to face her!</Expedition33_FinalConfrontationDesc>
+  
+  <!-- Cursed Age Alerts -->
+  <Expedition33_CursedAgeAlert>Current Cursed Age</Expedition33_CursedAgeAlert>
+  <Expedition33_CursedAgeLabel>Cursed Age: {0} years</Expedition33_CursedAgeLabel>
+  <Expedition33_CursedAgeExplanation>The Paintress has painted a new number!\n\nPAINTED AGE: {0} YEARS AND ABOVE\n\nAll your colonists {1} years or older are in mortal danger.</Expedition33_CursedAgeExplanation>
+  <Expedition33_MonolithThreat>The Paintress's monolith threatens your colonists.</Expedition33_MonolithThreat>
+  <Expedition33_CursedAgeDetectedTitle>Cursed Age Detected</Expedition33_CursedAgeDetectedTitle>
+  <Expedition33_CursedAgeDetectedDesc>CURSED AGE DETECTOR ACTIVATED!\n\nAge currently painted on the monolith: {0} years\n\nAll colonists of this age are in immediate danger!</Expedition33_CursedAgeDetectedDesc>
+  <Expedition33_LastDetectedAge>Cursed age detected: {0} years</Expedition33_LastDetectedAge>
+  <Expedition33_NextDetectionIn>Next detection in: {0}h</Expedition33_NextDetectionIn>
+  
+  <!-- Mod Loading -->
+  <Expedition33_ModLoadedSuccess>Expedition 33 - Mod loaded successfully!</Expedition33_ModLoadedSuccess>
+  <Expedition33_GommageWaits>The Gommage lurks... Stay vigilant, expeditioners.</Expedition33_GommageWaits>
+  <Expedition33_HarmonyExecuted>[Expedition33] Harmony PatchAll executed</Expedition33_HarmonyExecuted>
+  
+  <!-- Mod Settings -->
+  <Expedition33_CombatXPMultiplier>Combat XP Multiplier: {0}</Expedition33_CombatXPMultiplier>
+  <Expedition33_XPSharingEnabled>XP sharing enabled</Expedition33_XPSharingEnabled>
+  
+  <!-- Paintress Monolith -->
+  <Expedition33_PaintressMonolithActive>Paintress Monolith - Artistic terror guards this place</Expedition33_PaintressMonolithActive>
+  <Expedition33_PaintressMonolithInactive>Ancient Monolith - The Gommage cycle is broken</Expedition33_PaintressMonolithInactive>
+  
+  <!-- Artistic Corruption -->
+  <Expedition33_ArtisticCorruptionDeveloped>{0} develops artistic corruption...</Expedition33_ArtisticCorruptionDeveloped>
+  
+  <!-- Combat Stances -->
+  <Expedition33_StanceCancelled>Stance cancelled</Expedition33_StanceCancelled>
+  <Expedition33_ChangeStanceDesc>Changes combat posture.</Expedition33_ChangeStanceDesc>
+  <Expedition33_OffensiveStance>Offensive Stance</Expedition33_OffensiveStance>
+  <Expedition33_OffensiveStanceDesc>Offensive (+50% damage, +50% damage taken)</Expedition33_OffensiveStanceDesc>
+  <Expedition33_OffensiveStanceBonuses>+50% damage, +50% damage taken</Expedition33_OffensiveStanceBonuses>
+  <Expedition33_DefensiveStance>Defensive Stance</Expedition33_DefensiveStance>
+  <Expedition33_DefensiveStanceDesc>Defensive (-25% damage taken, +parry)</Expedition33_DefensiveStanceDesc>
+  <Expedition33_DefensiveStanceBonuses>-25% damage taken, +parry</Expedition33_DefensiveStanceBonuses>
+  <Expedition33_VirtuousStance>Virtuous Stance</Expedition33_VirtuousStance>
+  <Expedition33_VirtuousStanceDesc>Virtuous (+200% damage for one attack)</Expedition33_VirtuousStanceDesc>
+  <Expedition33_VirtuousStanceBonuses>+200% damage (1 attack)</Expedition33_VirtuousStanceBonuses>
+  <Expedition33_NoStance>None</Expedition33_NoStance>
+  
+  <!-- Shield and Equipment -->
+  <Expedition33_ShieldActivated>{0}'s anti-Gommage shield activated!</Expedition33_ShieldActivated>
+  <Expedition33_ShieldChargeConsumed>[DEBUG] ConsumeCharge called for {0} - Charges: {1} → {2}</Expedition33_ShieldChargeConsumed>
+  <Expedition33_ShieldChargesRemaining>{0}'s shield: {1}/3 charges remaining</Expedition33_ShieldChargesRemaining>
+  <Expedition33_ShieldExhausted>⚠️ {0}'s anti-Gommage shield exhausted!</Expedition33_ShieldExhausted>
+  <Expedition33_ShieldChargeEmpty>[DEBUG] Attempted to consume charge on empty shield for {0}</Expedition33_ShieldChargeEmpty>
+  <Expedition33_ShieldStatus>{0} Charges remaining: {1}/3</Expedition33_ShieldStatus>
+  <Expedition33_ShieldState>Status: {0}</Expedition33_ShieldState>
+  <Expedition33_Active>Active</Expedition33_Active>
+  <Expedition33_Exhausted>Exhausted</Expedition33_Exhausted>
+  <Expedition33_ShieldProtection>Protects against next Gommage</Expedition33_ShieldProtection>
+  
+  <!-- Artistic Weapons -->
+  <Expedition33_ArtisticPower>Artistic power: {0}x</Expedition33_ArtisticPower>
+  <Expedition33_PaintCharges>Paint charges: {0}/10</Expedition33_PaintCharges>
+  
+  <!-- Anti-Gommage Field -->
+  <Expedition33_FieldActive>Anti-gommage field active</Expedition33_FieldActive>
+  <Expedition33_ProtectionRadius>Protection radius: {0} tiles</Expedition33_ProtectionRadius>
+  <Expedition33_ColonistsProtected>Colonists protected: {0}</Expedition33_ColonistsProtected>
+  <Expedition33_FieldInactive>Anti-gommage field inactive</Expedition33_FieldInactive>
+  
+  <!-- Paintress Messages -->
+  <Expedition33_PaintressDefeatedLetter>THE PAINTRESS HAS BEEN DEFEATED!\n\nThe colossal entity collapses with a deafening crash. Her mystical monolith cracks and crumbles to dust.\n\nThe Gommage cycle is BROKEN forever! Never again will people disappear because of their age.\n\nExpedition 33 has accomplished the impossible. You are the heroes who saved humanity from this artistic terror!\n\nPeace finally reigns over the world.</Expedition33_PaintressDefeatedLetter>
+  <Expedition33_VictoryTitle>VICTORY! THE GOMMAGE IS DEFEATED!</Expedition33_VictoryTitle>
+  <Expedition33_PaintressDefeatedLog>=== PAINTRESS DEFEATED - GOMMAGE CYCLE BROKEN ===</Expedition33_PaintressDefeatedLog>
+  <Expedition33_PaintressSummons>The Paintress roars and summons an army of Nevrons!</Expedition33_PaintressSummons>
+  <Expedition33_PaintressRage>The Paintress enters a destructive rage!</Expedition33_PaintressRage>
+  <Expedition33_PaintressTeleport>The Paintress teleports in a burst of corruption!</Expedition33_PaintressTeleport>
+  
+  <!-- Progression System -->
+  <Expedition33_ProgressionTitle>{0}'s Progression</Expedition33_ProgressionTitle>
+  <Expedition33_CurrentLevel>Level {0}</Expedition33_CurrentLevel>
+  <Expedition33_ProgressToNext>({0}% to level {1})</Expedition33_ProgressToNext>
+  <Expedition33_XPBreakdown>Combat XP: {0} | Soul XP: {1} | Total: {2}</Expedition33_XPBreakdown>
+  <Expedition33_ExperienceDistribution>Experience Distribution</Expedition33_ExperienceDistribution>
+  <Expedition33_NoExperienceYet>No experience gained yet</Expedition33_NoExperienceYet>
+  <Expedition33_SoulXPLabel>🔵 Soul: {0} ({1}%)</Expedition33_SoulXPLabel>
+  <Expedition33_CombatXPGained>{0}: +{1} Combat XP ({2})</Expedition33_CombatXPGained>
+  <Expedition33_SoulXPGained>{0}: +{1} Soul XP ({2})</Expedition33_SoulXPGained>
+  <Expedition33_LevelUp>{0} reaches level {1}! (+3 attribute points)</Expedition33_LevelUp>
+  <Expedition33_XPProgress>{0} / {1} XP</Expedition33_XPProgress>
+  <Expedition33_CombatXPLabel>🔴 Combat: {0} ({1}%)</Expedition33_CombatXPLabel>
+  <Expedition33_AttributeValue>{0}: {1}</Expedition33_AttributeValue>
+  <Expedition33_UpgradeButton>+1</Expedition33_UpgradeButton>
+    
+  <!-- Attributes -->
+  <Expedition33_AttributesAndPoints>Attributes and Points</Expedition33_AttributesAndPoints>
+  <Expedition33_AvailablePoints>⭐ Available points: {0}</Expedition33_AvailablePoints>
+  <Expedition33_VitalityAttribute>💪 Vitality</Expedition33_VitalityAttribute>
+  <Expedition33_PowerAttribute>⚔️ Power</Expedition33_PowerAttribute>
+  <Expedition33_AgilityAttribute>🏃 Agility</Expedition33_AgilityAttribute>
+  <Expedition33_DefenseAttribute>🛡️ Defense</Expedition33_DefenseAttribute>
+  <Expedition33_ChanceAttribute>🍀 Luck</Expedition33_ChanceAttribute>
+  
+  <!-- Attribute Gizmos -->
+  <Expedition33_VitalityGizmo>💪 Vitality: {0}</Expedition33_VitalityGizmo>
+  <Expedition33_VitalityGizmoDesc>Improve vitality (+1)\nAvailable points: {0}</Expedition33_VitalityGizmoDesc>
+  <Expedition33_PowerGizmo>⚔️ Power: {0}</Expedition33_PowerGizmo>
+  <Expedition33_PowerGizmoDesc>Improve power (+1)\nAvailable points: {0}</Expedition33_PowerGizmoDesc>
+  <Expedition33_AgilityGizmo>🏃 Agility: {0}</Expedition33_AgilityGizmo>
+  <Expedition33_AgilityGizmoDesc>Improve agility (+1)\nAvailable points: {0}</Expedition33_AgilityGizmoDesc>
+  <Expedition33_DefenseGizmo>🛡️ Defense: {0}</Expedition33_DefenseGizmo>
+  <Expedition33_DefenseGizmoDesc>Improve defense (+1)\nAvailable points: {0}</Expedition33_DefenseGizmoDesc>
+  <Expedition33_ChanceGizmo>🍀 Luck: {0}</Expedition33_ChanceGizmo>
+  <Expedition33_ChanceGizmoDesc>Improve luck (+1)\nAvailable points: {0}</Expedition33_ChanceGizmoDesc>
+  
+  <!-- Attribute Improvements -->
+  <Expedition33_VitalityIncreased>Vitality increased: {0}</Expedition33_VitalityIncreased>
+  <Expedition33_PowerIncreased>Power increased: {0}</Expedition33_PowerIncreased>
+  <Expedition33_AgilityIncreased>Agility increased: {0}</Expedition33_AgilityIncreased>
+  <Expedition33_DefenseIncreased>Defense increased: {0}</Expedition33_DefenseIncreased>
+  <Expedition33_ChanceIncreased>Luck increased: {0}</Expedition33_ChanceIncreased>
+  
+  <!-- Interface Elements -->
+  <Expedition33_DetailedProgression>Detailed Progression</Expedition33_DetailedProgression>
+  <Expedition33_DetailedProgressionDesc>Open complete progression window</Expedition33_DetailedProgressionDesc>
+  <Expedition33_DetailedProgressionGizmo>📊 Detailed Progression</Expedition33_DetailedProgressionGizmo>
+  <Expedition33_DetailedProgressionGizmoDesc>Open complete progression window</Expedition33_DetailedProgressionGizmoDesc>
+  <Expedition33_ProgressionInfoGizmo>📋 Progression Info</Expedition33_ProgressionInfoGizmo>
+  <Expedition33_ProgressionInfoGizmoDesc>Level: {0}\n💪 Vitality: {1} | ⚔️ Power: {2}\n🏃 Agility: {3} | 🛡️ Defense: {4} | 🍀 Luck: {5}\nCombat XP: {6} | Soul XP: {7}\nAvailable points: {8}</Expedition33_ProgressionInfoGizmoDesc>
+  <Expedition33_AbilityReady>{0}\n\n✅ Ready to use!</Expedition33_AbilityReady>
+
+
+
+  <!-- Abilities -->
+  <Expedition33_RegenerationActivated>[DEBUG] Regeneration activated for {0}</Expedition33_RegenerationActivated>
+  <Expedition33_ImmortalityFragmentActivated>✨ {0} activates an immortality fragment!</Expedition33_ImmortalityFragmentActivated>
+  <Expedition33_PerfectFractureUsed>💎 {0} breaks {1}'s defenses!</Expedition33_PerfectFractureUsed>
+  <Expedition33_CrushingBlowPrepared>💥 {0} prepares a devastating blow!</Expedition33_CrushingBlowPrepared>
+  <Expedition33_AbilityUnlocked>🌟 {0} unlocks '{1}'!</Expedition33_AbilityUnlocked>
+  <Expedition33_UnknownAbility>[Expedition33] Unknown ability: {0}</Expedition33_UnknownAbility>
+  <Expedition33_AbilityActivated>⚡ {0} uses {1}!</Expedition33_AbilityActivated>
+  
+  <!-- Ability Names -->
+  <Expedition33_RegenerationName>Regeneration</Expedition33_RegenerationName>
+  <Expedition33_RegenerationDesc>Gradually regenerates wounds over 30 seconds</Expedition33_RegenerationDesc>
+  <Expedition33_IronWillName>Iron Will</Expedition33_IronWillName>
+  <Expedition33_IronWillDesc>Temporarily immune to mental breaks</Expedition33_IronWillDesc>
+  <Expedition33_BerserkerRageName>Berserker Rage</Expedition33_BerserkerRageName>
+  <Expedition33_BerserkerRageDesc>Increases damage but reduces defense for 30 seconds</Expedition33_BerserkerRageDesc>
+  <Expedition33_CrushingBlowName>Crushing Blow</Expedition33_CrushingBlowName>
+  <Expedition33_CrushingBlowDesc>Deals area damage around the target</Expedition33_CrushingBlowDesc>
+  <Expedition33_QuickStepName>Quick Step</Expedition33_QuickStepName>
+  <Expedition33_QuickStepDesc>Instantly teleports to a nearby location</Expedition33_QuickStepDesc>
+  <Expedition33_TimeSlipName>Time Slip</Expedition33_TimeSlipName>
+  <Expedition33_TimeSlipDesc>Temporarily increases action speed</Expedition33_TimeSlipDesc>
+  <Expedition33_IronSkinName>Iron Skin</Expedition33_IronSkinName>
+  <Expedition33_IronSkinDesc>Significantly reduces damage taken for 25 seconds</Expedition33_IronSkinDesc>
+  <Expedition33_FortressName>Fortress</Expedition33_FortressName>
+  <Expedition33_FortressDesc>Near-total immunity to damage for 8 seconds</Expedition33_FortressDesc>
+  <Expedition33_LuckyStrikeName>Lucky Strike</Expedition33_LuckyStrikeName>
+  <Expedition33_LuckyStrikeDesc>Drastically increases accuracy of the next attack</Expedition33_LuckyStrikeDesc>
+  <Expedition33_MiracleDesc>Temporary divine protection against mortal wounds</Expedition33_MiracleDesc>
+  
+  <!-- Error Messages -->
+  <Expedition33_RegenerationHediffNotFound>[Expedition33] HediffDef 'Expedition33_RegenerationBuff' not found.</Expedition33_RegenerationHediffNotFound>
+  <Expedition33_RegenerationError>[Expedition33] Error activating Regeneration: {0}</Expedition33_RegenerationError>
+  <Expedition33_QuickStepMapError>[Quickstep] Pawn or Map null at activation start.</Expedition33_QuickStepMapError>
+  <Expedition33_QuickStepUsed>⚡ {0} uses Quick Step!</Expedition33_QuickStepUsed>
+  <Expedition33_QuickStepFailed>❌ {0} cannot teleport here!</Expedition33_QuickStepFailed>
+  <Expedition33_VitalityEffectError>[Expedition33] Error applying vitality bonus: {0}</Expedition33_VitalityEffectError>
+  <Expedition33_PowerEffectError>[Expedition33] Error applying power bonus: {0}</Expedition33_PowerEffectError>
+  <Expedition33_VisualEffectError>[VisualEffects] Error {0}: {1}</Expedition33_VisualEffectError>
+  <Expedition33_VerbNullError>[ExecuteAbility] verb is null</Expedition33_VerbNullError>
+  <Expedition33_JobStarted>[ExecuteAbility] Step 1 - job started for {0}</Expedition33_JobStarted>
+  <Expedition33_AbilityExecution>[ExecuteAbility] Step 3 - execution {0}</Expedition33_AbilityExecution>
+  <Expedition33_CastingStarted>🔮 {0} begins casting {1}...</Expedition33_CastingStarted>
+  <Expedition33_CastingCancelledDistance>⚠️ {0} cancels casting - target too far</Expedition33_CastingCancelledDistance>
+  
+  <!-- Debug Messages -->
+  <Expedition33_ImportantConstruction>Important construction</Expedition33_ImportantConstruction>
+  <Expedition33_DebugXPGiven>{0} receives 200 combat and soul XP</Expedition33_DebugXPGiven>
+  <Expedition33_SelectColonistFirst>Select a colonist first</Expedition33_SelectColonistFirst>
+  
+  <!-- Picto System -->
+  <Expedition33_PictoKillRegistered>[DEBUG] RegisterKill called for {0} - before: {1}</Expedition33_PictoKillRegistered>
+  <Expedition33_PictoKillRegisteredAfter>[DEBUG] RegisterKill for {0} - after: {1}</Expedition33_PictoKillRegisteredAfter>
+  <Expedition33_PictoProgress>[Picto] {0} progresses ({1}/{2})</Expedition33_PictoProgress>
+  <Expedition33_PictoMastered>Picto "{0}" mastered! Bonus shared via Luminas.</Expedition33_PictoMastered>
+  <Expedition33_PictoMasteredStatus>Picto mastered – bonus broadcasted.</Expedition33_PictoMasteredStatus>
+  <Expedition33_PictoProgressStatus>Progress: {0}/{1} combats</Expedition33_PictoProgressStatus>
+  <Expedition33_PictoPatchesLoaded>[Picto] Patches loaded!</Expedition33_PictoPatchesLoaded>
+  
+  <!-- Nevron Events -->
+  <Expedition33_ChromaRawNotFound>Expedition33_ChromaRaw ThingDef not found!</Expedition33_ChromaRawNotFound>
+  <Expedition33_NoValidNevronTypes>No valid Nevron PawnKindDef found for migration!</Expedition33_NoValidNevronTypes>
+  <Expedition33_NevronNestDiscoveredTitle>Chromatic nest discovered</Expedition33_NevronNestDiscoveredTitle>
+  <Expedition33_NevronNestDiscoveredDesc>Your colonists have discovered a nest of corrupted creatures, surrounded by pulsating chromatic matter.</Expedition33_NevronNestDiscoveredDesc>
+  <Expedition33_ChromaticArtifactTitle>Chromatic Artifact</Expedition33_ChromaticArtifactTitle>
+  <Expedition33_ChromaticArtifactDesc>A mysterious container has crashed, releasing chromatic matter. Gommage creatures seem attracted to this energy...</Expedition33_ChromaticArtifactDesc>
+  <Expedition33_NevronMigrationTitle>Chromatic Migration</Expedition33_NevronMigrationTitle>
+  <Expedition33_NevronMigrationDesc>A group of {0} corrupted creatures crosses the region. Some seem agitated and could become hostile.</Expedition33_NevronMigrationDesc>
+  
+  <!-- Raid Messages -->
+  <Expedition33_NevronMassRaidAttempt>IncidentWorker_NevronMassRaid: Attempting raid execution</Expedition33_NevronMassRaidAttempt>
+  <Expedition33_NevronFactionNotFound>IncidentWorker_NevronMassRaid: Nevrons faction not found!</Expedition33_NevronFactionNotFound>
+  <Expedition33_NevronMassRaidExecuting>IncidentWorker_NevronMassRaid: Using faction {0} with {1} points</Expedition33_NevronMassRaidExecuting>
+  <Expedition33_PitankAlphaAttempt>IncidentWorker_PitankAlphaAttack: Attempting raid execution</Expedition33_PitankAlphaAttempt>
+  <Expedition33_PitankAlphaExecuting>IncidentWorker_PitankAlphaAttack: Using faction {0} with {1} points</Expedition33_PitankAlphaExecuting>
+  
+  <!-- Site Error Messages -->
+  <Expedition33_BossSiteExtensionMissing>[Expedition33] BossSiteExtension missing on {0}</Expedition33_BossSiteExtensionMissing>
+  <Expedition33_NoAvailableTile>[Expedition33] No available tile for boss site</Expedition33_NoAvailableTile>
+  <Expedition33_SitePartDefNotFound>[Expedition33] SitePartDef not found: {0}</Expedition33_SitePartDefNotFound>
+  <Expedition33_BossSiteCreated>[Expedition33] Boss site "{0}" created (tile {1})</Expedition33_BossSiteCreated>
+  <Expedition33_NoBossSiteExtension>[Expedition33] No BossSiteExtension found on site</Expedition33_NoBossSiteExtension>
+  <Expedition33_EmptyBossDefName>[Expedition33] Empty bossDefName: check IncidentDef!</Expedition33_EmptyBossDefName>
+  <Expedition33_PawnKindDefNotFound>[Expedition33] PawnKindDef not found: {0}</Expedition33_PawnKindDefNotFound>
+  <Expedition33_BossGenerationFailed>[Expedition33] Boss generation failed "{0}"</Expedition33_BossGenerationFailed>
+  <Expedition33_BossAwaitsBattle>⚔️ {0} awaits you!</Expedition33_BossAwaitsBattle>
+  <Expedition33_SiteRecreated>[Expedition33] Site recreated for {0}</Expedition33_SiteRecreated>
+  
+  <!-- Site Titles -->
+  <Expedition33_FloweringValleys>🌸 Flowering Valleys discovered</Expedition33_FloweringValleys>
+  <Expedition33_SuspendedOcean>🌊 Suspended Ocean located</Expedition33_SuspendedOcean>
+  <Expedition33_AncientSanctuary>🏛️ Ancient Sanctuary found</Expedition33_AncientSanctuary>
+  <Expedition33_EsquieNest>⛰️ Esquie's Nest spotted</Expedition33_EsquieNest>
+  <Expedition33_LightSanctuary>💡 Light Sanctuary revealed</Expedition33_LightSanctuary>
+  <Expedition33_ForgottenLands>🌑 Forgotten Lands discovered</Expedition33_ForgottenLands>
+  <Expedition33_RenoirManor>🏰 Renoir's Manor located</Expedition33_RenoirManor>
+  <Expedition33_AxonGuardians>⚡ Axon Guardians detected</Expedition33_AxonGuardians>
+  <Expedition33_MonolithRevealed>⚫ Monolith revealed</Expedition33_MonolithRevealed>
+  <Expedition33_ExpeditionSiteDiscovered>Expedition site discovered</Expedition33_ExpeditionSiteDiscovered>
+ <Expedition33_SireneQuest>The Siren of Chiaroscuro</Expedition33_SireneQuest>
+  <Expedition33_SireneQuestDesc>A hypnotic melody resonates from the depths. The Siren of Chiaroscuro manipulates minds with her entrancing songs, controlling victims to turn against their allies. Her sonic powers can stun and disorient, while her mind control temporarily transforms colonists into enemies. Prepare to face an entity that makes your own forces your greatest weakness.</Expedition33_SireneQuestDesc>
+
+<Expedition33_VisagesQuest>The Faces of Chiaroscuro</Expedition33_VisagesQuest>
+<Expedition33_VisagesQuestDesc>Silhouettes with shifting identities emerge from the shadows. The Faces of Chiaroscuro master the art of metamorphosis and identity confusion. They can temporarily alter the appearance and identity of colonists, causing total confusion on the battlefield. Their powers of concealment and shape-shifting disrupt relations and recognition, creating psychological chaos where friend and foe become indistinguishable.</Expedition33_VisagesQuestDesc>
+
+  <!-- Site Descriptions -->
+  <Expedition33_FloweringValleysDesc>Our scouts have spotted iridescent valleys where Nevrons roam. Form a caravan to eliminate {0} and progress in the expedition.</Expedition33_FloweringValleysDesc>
+  <Expedition33_SuspendedOceanDesc>A levitating ocean defies all laws! {0} guards its access. Prepare for the impossible.</Expedition33_SuspendedOceanDesc>
+  <Expedition33_AncientSanctuaryDesc>Cyclopean ruins contain the secrets of the Gommage. {0} awaits you there.</Expedition33_AncientSanctuaryDesc>
+  <Expedition33_EsquieNestDesc>François rules over these cliffs. One mistake and your colonists will be swept away.</Expedition33_EsquieNestDesc>
+  <Expedition33_LightSanctuaryDesc>The Master of Lamps concentrates light to bar your path; his defeat will open Act II.</Expedition33_LightSanctuaryDesc>
+  <Expedition33_ForgottenLandsDesc>The Dualist challenges you in the Forgotten Lands. Prepare yourself.</Expedition33_ForgottenLandsDesc>
+  <Expedition33_RenoirManorDesc>Renoir holds fragments of truth; face him in his haunted manor.</Expedition33_RenoirManorDesc>
+  <Expedition33_AxonGuardiansDesc>The Axons protect access to the Monolith. Eliminate them.</Expedition33_AxonGuardiansDesc>
+  <Expedition33_MonolithRevealedDesc>The Paintress awaits you. The ultimate confrontation approaches...</Expedition33_MonolithRevealedDesc>
+  <Expedition33_CriticalObjectiveLocated>A critical objective has been located. {0} is on site.</Expedition33_CriticalObjectiveLocated>
+  
+  <!-- Tracker Interface -->
+  <Expedition33_GommageTrackerTitle>GOMMAGE SURVEILLANCE - EXPEDITION 33</Expedition33_GommageTrackerTitle>
+  <Expedition33_GommageCycleBroken>✅ The Gommage cycle is definitively broken!</Expedition33_GommageCycleBroken>
+  <Expedition33_PaintressActive>ACTIVE - IMMINENT DANGER</Expedition33_PaintressActive>
+  <Expedition33_PaintressNeutralized>NEUTRALIZED</Expedition33_PaintressNeutralized>
+  <Expedition33_PaintressStatus>Paintress Status: {0}</Expedition33_PaintressStatus>
+  <Expedition33_CurrentCursedAge>Current Cursed Age: {0} years+</Expedition33_CurrentCursedAge>
+  <Expedition33_NoAgeCurrentlyPainted>No age currently painted</Expedition33_NoAgeCurrentlyPainted>
+  <Expedition33_ColonistsThreatened>WARNING: {0} colonist(s) threatened</Expedition33_ColonistsThreatened>
+  <Expedition33_NextGommageIn>Next Gommage estimated in: {0} day(s)</Expedition33_NextGommageIn>
+  <Expedition33_GommageImminent>GOMMAGE IMMINENT!</Expedition33_GommageImminent>
+  <Expedition33_NextPredictionUnknown>Next prediction: Unknown</Expedition33_NextPredictionUnknown>
+  <Expedition33_ProtectedColonists>Protected Colonists:</Expedition33_ProtectedColonists>
+  <Expedition33_ProtectedCount>Protected ({0}): {1}</Expedition33_ProtectedCount>
+  <Expedition33_NoProtectedColonists>No protected colonists!</Expedition33_NoProtectedColonists>
+  <Expedition33_ThreatAnalysis>Threat analysis:</Expedition33_ThreatAnalysis>
+  <Expedition33_ColonistThreatStatus>{0} {1} ({2} years) - {3}</Expedition33_ColonistThreatStatus>
+  <Expedition33_NoColonistsOfThisAge>ℹ️ No colonists of this age or older currently</Expedition33_NoColonistsOfThisAge>
+  <Expedition33_ShieldEffect>Shield effect</Expedition33_ShieldEffect>
+  <Expedition33_ProtectiveField>Protective field</Expedition33_ProtectiveField>
+  <Expedition33_NotProtected>Not protected</Expedition33_NotProtected>
+  <Expedition33_GommageHistory>Gommage History:</Expedition33_GommageHistory>
+  <Expedition33_Day>Day</Expedition33_Day>
+  <Expedition33_Age>Age</Expedition33_Age>
+  <Expedition33_Victims>Victims</Expedition33_Victims>
+  <Expedition33_Protected>Protected</Expedition33_Protected>
+  <Expedition33_Status>Status</Expedition33_Status>
+  <Expedition33_DayNumber>D{0}</Expedition33_DayNumber>
+  <Expedition33_AgeYears>{0} years</Expedition33_AgeYears>
+  <Expedition33_GommageStats>📊 Summary: {0} events | {1} victims | {2} saved | {3} blocked</Expedition33_GommageStats>
+  <Expedition33_NoGommageRecorded>No Gommage recorded yet</Expedition33_NoGommageRecorded>
+  
+  <!-- Random Paintress Events -->
+  <Expedition33_ExpeditionReport>📰 Expedition 33 Report:\n{0}</Expedition33_ExpeditionReport>
+  <Expedition33_PaintressEvent1>Witnesses report seeing the Paintress near the monolith...</Expedition33_PaintressEvent1>
+  <Expedition33_PaintressEvent2>The monolith emits a mysterious glow tonight.</Expedition33_PaintressEvent2>
+  <Expedition33_PaintressEvent3>Local animals seem agitated by an invisible presence.</Expedition33_PaintressEvent3>
+  <Expedition33_PaintressEvent4>Scouts discover new mystical drawings in the region.</Expedition33_PaintressEvent4>
+  
+  <!-- Ability Error Messages -->
+  <Expedition33_AbilityCannotUse>[Mod_warult] Cannot cast {0} — ability on cooldown or not acquired.</Expedition33_AbilityCannotUse>
+  <Expedition33_AbilityUserPawnInvalid>[Mod_warult] AbilityUser pawn is null or not spawned!</Expedition33_AbilityUserPawnInvalid>
+  <Expedition33_AbilityDefNull>[Mod_warult] AbilityDef is null!</Expedition33_AbilityDefNull>
+  <Expedition33_AbilityJobRequested>[Mod_warult] ✅ Job request to cast ability '{0}' on {1}</Expedition33_AbilityJobRequested>
+  <Expedition33_AbilityCooldown>Ability on cooldown ({0}s)</Expedition33_AbilityCooldown>
+  <Expedition33_AbilityExecuting>[Mod_warult] Executing ability: {0}</Expedition33_AbilityExecuting>
+  <Expedition33_AbilityCastOnTarget>⚡ Ability cast on {0}</Expedition33_AbilityCastOnTarget>
+  <Expedition33_AbilityCooldownRemaining>⏳ Cooldown: {0}s</Expedition33_AbilityCooldownRemaining>
+  <Expedition33_AbilityUnavailable>Ability unavailable.</Expedition33_AbilityUnavailable>
+  
+  <!-- Paintress System -->
+  <Expedition33_PaintressSystemInit>Expedition 33 detects mysterious activity...\n\nThe Paintress's monolith currently bears the number: {0}\n\nFirst Gommage predicted in {1} days.</Expedition33_PaintressSystemInit>
+  <Expedition33_SystemInitialized>[Paintress] System initialized - First Gommage: tick {0}</Expedition33_SystemInitialized>
+  
+  <!-- Warnings -->
+  <Expedition33_GommageWarningText>Expedition 33 scouts report disturbing activity:\n\n"The Paintress approaches her mystical monolith. In exactly {0} day(s), she will paint a new number that will determine the age of the next Gommage victims."\n\nCurrently painted age: {1} years\n\nPrepare yourself... The fate of your colonists will be decided in {2} day(s).</Expedition33_GommageWarningText>
+  <Expedition33_PaintressApproaches>The Paintress Approaches the Monolith</Expedition33_PaintressApproaches>
+  
+  <!-- New Gommages -->
+  <Expedition33_NewGommageAnnual>The Paintress has painted a new number on her monolith!\n\nPAINTED AGE: {0} YEARS\n\nAll your colonists of this age or more are now in mortal danger. The Gommage is waiting for you.\n\nNext cycle in exactly 1 year (60 days).</Expedition33_NewGommageAnnual>
+  <Expedition33_NewGommageAnnualTitle>NEW ANNUAL GOMMAGE: {0} YEARS</Expedition33_NewGommageAnnualTitle>
+  <Expedition33_NextGommageScheduled>[Paintress] Next Gommage scheduled for tick {0}</Expedition33_NextGommageScheduled>
+  <Expedition33_GommageIncidentScheduled>[Paintress] Gommage incident scheduled in {0} day(s)</Expedition33_GommageIncidentScheduled>
+  
+  <!-- Status -->
+  <Expedition33_SystemNotInitialized>System not initialized</Expedition33_SystemNotInitialized>
+  <Expedition33_Neutralized>NEUTRALIZED</Expedition33_Neutralized>
+  
+  <!-- Victory -->
+  <Expedition33_GommageDefeated>The Gommage is defeated!</Expedition33_GommageDefeated>
+  <Expedition33_PaintressKilledText>The Paintress has been eliminated!\n\nHer mystical monolith crumbles to dust. The Gommage cycle is broken. Your colonists are finally safe, freed from this artistic terror.\n\nExpedition 33 can finally know peace.</Expedition33_PaintressKilledText>
+  
+  <!-- History -->
+  <Expedition33_GommageRecorded>[Paintress] Gommage recorded: Age {0}, {1} victims, {2} protected</Expedition33_GommageRecorded>
+  <Expedition33_GommageBlocked>🛡️ BLOCKED</Expedition33_GommageBlocked>
+  <Expedition33_GommagePartial>⚠️ PARTIAL</Expedition33_GommagePartial>
+  <Expedition33_GommageTotal>💥 TOTAL</Expedition33_GommageTotal>
+  
+  <!-- Gommage Messages -->
+  <Expedition33_ArtisticInspirationMessage>{0} is inspired by the fight against the Gommage!</Expedition33_ArtisticInspirationMessage>
+  <Expedition33_GommageBlockedTitle>GOMMAGE BLOCKED!</Expedition33_GommageBlockedTitle>
+  <Expedition33_GommageBlockedText>The Gommage attempted to strike your {0} colonist(s) of {1} years old, but they were all protected by your anti-Gommage technologies!\n\nThe Paintress roars in frustration...\n\nYour research pays off!</Expedition33_GommageBlockedText>
+  <Expedition33_PartialGommageTitle>PARTIAL GOMMAGE: {0} YEARS</Expedition33_PartialGommageTitle>
+  <Expedition33_PartialGommageText>THE GOMMAGE HAS PARTIALLY STRUCK!\n\n{0} colonist(s) of {1} years old have been erased, and {2} survived !</Expedition33_PartialGommageText>
+  <Expedition33_ProtectionsWorking>Your anti-Gommage research saves lives!</Expedition33_ProtectionsWorking>
+  
+  <!-- Expedition Missions -->
+  <Expedition33_MissionTitle>Expedition Mission</Expedition33_MissionTitle>
+  <Expedition33_MissionLetterText>A cryptic radio message from Expedition 33 arrives:\n\n"Mission assigned: {0}"\n\nReports indicate suspicious activity in the region. This mission could reveal crucial information about The Gommage, but it also carries considerable risks.\n\nPrepare your expeditioners and equipment. The truth about the Paintress awaits you.</Expedition33_MissionLetterText>
+  
+  <!-- Mission Types -->
+  <Expedition33_MissionRecon>Reconnaissance in erased territory</Expedition33_MissionRecon>
+  <Expedition33_MissionArtifact>Recovery of lost artifacts</Expedition33_MissionArtifact>
+  <Expedition33_MissionRescue>Rescue of missing expeditioners</Expedition33_MissionRescue>
+  <Expedition33_MissionInvestigation>Investigation of temporal anomalies</Expedition33_MissionInvestigation>
+  <Expedition33_MissionSurveillance>Surveillance for signs of the Paintress</Expedition33_MissionSurveillance>
+  <Expedition33_MissionTestimonies>Collection of Gommage testimonies</Expedition33_MissionTestimonies>
+  
+  <!-- Quests -->
+  <Expedition33_QuestCompleted>✅ Quest completed!\n🆕 New quest: {0}</Expedition33_QuestCompleted>
+  <Expedition33_MainQuestlineCompleted>🏆 Congratulations! Storyline completed!</Expedition33_MainQuestlineCompleted>
+  
+  <!-- Quest Manager Errors -->
+  <Expedition33_TriggerNullError>[Expedition33] ❌ TriggerQuestEvent called with null or empty trigger.</Expedition33_TriggerNullError>
+  <Expedition33_NoQuestEventFound>[Expedition33] No event linked to trigger: {0} at this quest moment.</Expedition33_NoQuestEventFound>
+  <Expedition33_UnknownQuestId>[Expedition33] Unknown QuestId in FireQuestSpecialEvents: {0}</Expedition33_UnknownQuestId>
+  
+  <!-- Quest Progression -->
+  <Expedition33_QuestEventTriggered>[Expedition33] 🎬 Narrative trigger: {0}</Expedition33_QuestEventTriggered>
+  <Expedition33_QuestCompletedNext>✅ Quest completed!\n🆕 New quest: {0}</Expedition33_QuestCompletedNext>
+  <Expedition33_QuestlineCompleted>🏆 Congratulations! Storyline completed!</Expedition33_QuestlineCompleted>
+  
+  <!-- Axon Guardians -->
+  <Expedition33_AxonGuardiansDefeated>[Expedition33] 🎬 Both Axon guardians defeated! Progressing to final quest.</Expedition33_AxonGuardiansDefeated>
+  <Expedition33_SirenRemaining>the Siren</Expedition33_SirenRemaining>
+  <Expedition33_FacesRemaining>the Faces</Expedition33_FacesRemaining>
+  <Expedition33_OneAxonDefeated>⚔️ One Axon guardian defeated! Remaining: {0}</Expedition33_OneAxonDefeated>
+  
+  <!-- Progress Messages -->
+  <Expedition33_PrologueStarted>🌅 The expedition begins toward the mysterious continent...</Expedition33_PrologueStarted>
+  <Expedition33_FloweringValleysCompleted>🌸 Flowering Valleys explored! New territory accessible.</Expedition33_FloweringValleysCompleted>
+  <Expedition33_SuspendedOceanCompleted>🌊 The Suspended Ocean reveals its secrets! Progress toward the Sanctuary.</Expedition33_SuspendedOceanCompleted>
+  <Expedition33_AncientSanctuaryCompleted>🏛️ The Ancient Sanctuary yields its mysteries! Route to Esquie's Nest.</Expedition33_AncientSanctuaryCompleted>
+  <Expedition33_EsquieNestCompleted>⛰️ Esquie's Nest conquered! Prepare for Act I's final guardian.</Expedition33_EsquieNestCompleted>
+  <Expedition33_ActeIFinished>🎭 ACT I COMPLETE! Verso, survivor of Expedition Zero, will join you.</Expedition33_ActeIFinished>
+  <Expedition_VersoJoined>🤝 Verso joins your expedition! Act II begins.</Expedition_VersoJoined>
+  <Expedition33_ForgottenLandsCompleted>🌑 The Forgotten Lands reveal their secrets! Route to Renoir's Manor.</Expedition33_ForgottenLandsCompleted>
+  <Expedition33_ManorCompleted>🏰 Renoir's Manor falls! The Axon guardians stand before you.</Expedition33_ManorCompleted>
+  <Expedition33_AxonsCompleted>⚡ Axon guardians defeated! The Paintress's Monolith is revealed!</Expedition33_AxonsCompleted>
+  <Expedition33_FinalQuestStarted>⚫ FINAL CONFRONTATION! The Paintress awaits you at the Monolith.</Expedition33_FinalQuestStarted>
+  
+  <!-- Ability Messages -->
+  <Expedition33_AbilityNotReady>Ability not ready or on cooldown</Expedition33_AbilityNotReady>
+  <Expedition33_AbilityExecuted>✨ Ability {0} executed!</Expedition33_AbilityExecuted>
+  <Expedition33_AbilityUsageRecorded>[DEBUG] Usage recorded for {0}: {1}</Expedition33_AbilityUsageRecorded>
+  <Expedition33_DesperationBlast>{0} uses IndigoBlast in desperation!</Expedition33_DesperationBlast>
+  <Expedition33_IndigoBlastTooClose>[Expedition33] {0} cancels IndigoBlast - too close</Expedition33_IndigoBlastTooClose>
+  <Expedition33_IndigoBlastExecuted>💥 {0} unleashes an indigo explosion!</Expedition33_IndigoBlastExecuted>
+  <Expedition33_FearAuraActivated>😱 {0} terrorizes enemies!</Expedition33_FearAuraActivated>
+  <Expedition33_SacredLightCasting>[DEBUG] SacredLight - Caster: {0}, Target: {1}</Expedition33_SacredLightCasting>
+  <Expedition33_SacredLightError>[DEBUG] SacredLight error: {0}</Expedition33_SacredLightError>
+  <Expedition33_SacredLightExecuted>✨ {0} projects sacred light!</Expedition33_SacredLightExecuted>
+  
+  <!-- Unlocks -->
+  <Expedition33_AbilityUnlockedGlobally>✅ Ability unlocked globally: {0}</Expedition33_AbilityUnlockedGlobally>
+  <Expedition33_TeamAbilityUnlocked>Team ability unlocked: {0}</Expedition33_TeamAbilityUnlocked>
+  
+  <!-- Missions -->
+  <Expedition33_Mission01Title>Expedition Awakening</Expedition33_Mission01Title>
+  <Expedition33_Mission01Desc>Establish an operations base and recruit Gestrals to join the fight against The Gommage.</Expedition33_Mission01Desc>
+  <Expedition33_Mission01Obj1>Build a Headquarters</Expedition33_Mission01Obj1>
+  <Expedition33_Mission01Obj2>Recruit 3 Gestrals</Expedition33_Mission01Obj2>
+  <Expedition33_Mission01Obj3>Research 'Gommage Detection'</Expedition33_Mission01Obj3>
+  <Expedition33_Mission01Reward>Access to reconnaissance missions</Expedition33_Mission01Reward>
+  
+  <Expedition33_Mission02Title>First Reconnaissance</Expedition33_Mission02Title>
+  <Expedition33_Mission02Desc>Send a team to explore areas contaminated by The Gommage to map the threats.</Expedition33_Mission02Desc>
+  <Expedition33_Mission02Obj1>Eliminate 10 Gommage entities</Expedition33_Mission02Obj1>
+  <Expedition33_Mission02Obj2>Collect 5 corruption samples</Expedition33_Mission02Obj2>
+  <Expedition33_Mission02Obj3>Survive 3 days in a contaminated zone</Expedition33_Mission02Obj3>
+  <Expedition33_Mission02Reward>Anti-Gommage weapons unlock</Expedition33_Mission02Reward>
+  
+  <Expedition33_Mission03Title>Purification Protocol</Expedition33_Mission03Title>
+  <Expedition33_Mission03Desc>Develop and test methods for purifying areas corrupted by The Gommage.</Expedition33_Mission03Desc>
+  <Expedition33_Mission03Obj1>Craft 3 purification devices</Expedition33_Mission03Obj1>
+  <Expedition33_Mission03Obj2>Purify a corrupted zone</Expedition33_Mission03Obj2>
+  <Expedition33_Mission03Obj3>Protect devices for 2 days</Expedition33_Mission03Obj3>
+  <Expedition33_Mission03Reward>Advanced purification technology</Expedition33_Mission03Reward>
+  
+  <Expedition33_Mission04Title>Major Confrontation</Expedition33_Mission04Title>
+  <Expedition33_Mission04Desc>Face a Gommage Avatar, a powerful manifestation of corruption.</Expedition33_Mission04Desc>
+  <Expedition33_Mission04Obj1>Locate the Gommage Avatar</Expedition33_Mission04Obj1>
+  <Expedition33_Mission04Obj2>Defeat the Avatar in combat</Expedition33_Mission04Obj2>
+  <Expedition33_Mission04Obj3>Recover its corrupted essence</Expedition33_Mission04Obj3>
+  <Expedition33_Mission04Reward1>Power artifacts</Expedition33_Mission04Reward1>
+  <Expedition33_Mission04Reward2>Access to final missions</Expedition33_Mission04Reward2>
+
+  <!-- Quest Titles and Descriptions -->
+<!-- Prologue -->
+<Expedition33_Prologue_Title>Sophie's Gommage</Expedition33_Prologue_Title>
+<Expedition33_Prologue_Desc>The Gommage ceremony has taken place. Sophie disappeared into the petals. Expedition 33 must now depart to the mysterious continent to break this deadly cycle.</Expedition33_Prologue_Desc>
+<Expedition33_Prologue_Obj1>Depart to the continent.</Expedition33_Prologue_Obj1>
+<Expedition33_Prologue_Obj2>Survive the journey.</Expedition33_Prologue_Obj2>
+
+<!-- Act I -->
+<Expedition33_VallonsFleuris_Title>The Flowering Valleys</Expedition33_VallonsFleuris_Title>
+<Expedition33_VallonsFleuris_Desc>First exploration of the continent. An apparently peaceful land hides unexpected dangers. A mysterious Mime prowls in the vicinity.</Expedition33_VallonsFleuris_Desc>
+<Expedition33_VallonsFleuris_Obj1>Explore the Flowering Valleys.</Expedition33_VallonsFleuris_Obj1>
+<Expedition33_VallonsFleuris_Obj2>Face the local creatures.</Expedition33_VallonsFleuris_Obj2>
+<Expedition33_VallonsFleuris_Obj3>Defeat the Bishop.</Expedition33_VallonsFleuris_Obj3>
+
+<Expedition33_OceanSuspendu_Title>The Suspended Ocean</Expedition33_OceanSuspendu_Title>
+<Expedition33_OceanSuspendu_Desc>An impossible phenomenon: an ocean floating in the air. Here, you must master the mysterious Lumina energy and improve your equipment.</Expedition33_OceanSuspendu_Desc>
+<Expedition33_OceanSuspendu_Obj1>Reach the Suspended Ocean.</Expedition33_OceanSuspendu_Obj1>
+<Expedition33_OceanSuspendu_Obj2>Master the Lumina.</Expedition33_OceanSuspendu_Obj2>
+<Expedition33_OceanSuspendu_Obj3>Defeat the Goblu.</Expedition33_OceanSuspendu_Obj3>
+
+<Expedition33_SanctuaireAncien_Title>The Ancient Sanctuary</Expedition33_SanctuaireAncien_Title>
+<Expedition33_SanctuaireAncien_Desc>Ruins of a forgotten civilization. The Gestral Village offers side quests and clues about this world's history.</Expedition33_SanctuaireAncien_Desc>
+<Expedition33_SanctuaireAncien_Obj1>Explore the Ancient Sanctuary.</Expedition33_SanctuaireAncien_Obj1>
+<Expedition33_SanctuaireAncien_Obj2>Help the Gestral Village.</Expedition33_SanctuaireAncien_Obj2>
+<Expedition33_SanctuaireAncien_Obj3>Face the Ultimate Sakapatate.</Expedition33_SanctuaireAncien_Obj3>
+
+<Expedition33_NidEsquie_Title>Esquie's Nest</Expedition33_NidEsquie_Title>
+<Expedition33_NidEsquie_Desc>In these dangerous cliffs, you must obtain an Esquie mount and develop the ability to cross water expanses. But mortal danger awaits you.</Expedition33_NidEsquie_Desc>
+<Expedition33_NidEsquie_Obj1>Reach Esquie's Nest.</Expedition33_NidEsquie_Obj1>
+<Expedition33_NidEsquie_Obj2>Obtain an Esquie mount.</Expedition33_NidEsquie_Obj2>
+<Expedition33_NidEsquie_Obj3>Survive François.</Expedition33_NidEsquie_Obj3>
+
+<Expedition33_ActeI_Final_Title>The Master of Lamps</Expedition33_ActeI_Final_Title>
+<Expedition33_ActeI_Final_Desc>The final guardian of Act I. A mysterious creature that controls light itself. Its defeat will open the way to Act II and Verso's arrival.</Expedition33_ActeI_Final_Desc>
+<Expedition33_ActeI_Final_Obj1>Locate the Master of Lamps.</Expedition33_ActeI_Final_Obj1>
+<Expedition33_ActeI_Final_Obj2>Defeat the guardian of light.</Expedition33_ActeI_Final_Obj2>
+
+<!-- Act II -->
+<Expedition_VersoArrival_Title>Verso's Arrival</Expedition_VersoArrival_Title>
+<Expedition_VersoArrival_Desc>A mysterious man appears: Verso, survivor of Expedition Zero. He knows secrets about the Gommage and the Paintress. His arrival marks the beginning of a new phase.</Expedition_VersoArrival_Desc>
+<Expedition_VersoArrival_Obj1>Welcome Verso into the expedition.</Expedition_VersoArrival_Obj1>
+
+<Expedition33_TerresOubliees_Title>The Forgotten Lands</Expedition33_TerresOubliees_Title>
+<Expedition33_TerresOubliees_Desc>Guided by Verso, your group penetrates even more dangerous regions. A master swordsman of duality blocks your path.</Expedition33_TerresOubliees_Desc>
+<Expedition33_TerresOubliees_Obj1>Explore the Forgotten Lands.</Expedition33_TerresOubliees_Obj1>
+<Expedition33_TerresOubliees_Obj2>Face the new threats.</Expedition33_TerresOubliees_Obj2>
+<Expedition33_TerresOubliees_Obj3>Defeat the Dualist.</Expedition33_TerresOubliees_Obj3>
+
+<Expedition33_Manoir_Title>Renoir's Manor</Expedition33_Manoir_Title>
+<Expedition33_Manoir_Desc>An imposing manor stands before you. Inside, Renoir, an enigmatic figure linked to the expeditions' past, awaits you for a decisive confrontation.</Expedition33_Manoir_Desc>
+<Expedition33_Manoir_Obj1>Reach the Manor.</Expedition33_Manoir_Obj1>
+<Expedition33_Manoir_Obj2>Confront Renoir.</Expedition33_Manoir_Obj2>
+<Expedition33_Manoir_Obj3>Discover the secrets of the past.</Expedition33_Manoir_Obj3>
+
+<Expedition33_LesAxons_Title>The Axon Guardians</Expedition33_LesAxons_Title>
+<Expedition33_LesAxons_Desc>To reach the Paintress's Monolith, you must defeat her two guardians: the Siren and the Faces. Only their defeat will allow you to obtain the Conservator's help.</Expedition33_LesAxons_Desc>
+<Expedition33_LesAxons_Obj1>Locate the Axons.</Expedition33_LesAxons_Obj1>
+<Expedition33_LesAxons_Obj2>Defeat the Siren.</Expedition33_LesAxons_Obj2>
+<Expedition33_LesAxons_Obj3>Defeat the Faces.</Expedition33_LesAxons_Obj3>
+<Expedition33_LesAxons_Obj4>Obtain the Conservator's help.</Expedition33_LesAxons_Obj4>
+
+<Expedition33_ActeII_Final_Title>The Monolith Ascension</Expedition33_ActeII_Final_Title>
+<Expedition33_ActeII_Final_Desc>The final moment has arrived. With the Shield-breaker in hand, you must climb the Monolith and face the Paintress herself to break the Gommage cycle once and for all.</Expedition33_ActeII_Final_Desc>
+<Expedition33_ActeII_Final_Obj1>Obtain the Shield-breaker.</Expedition33_ActeII_Final_Obj1>
+<Expedition33_ActeII_Final_Obj2>Destroy the Monolith's barrier.</Expedition33_ActeII_Final_Obj2>
+<Expedition33_ActeII_Final_Obj3>Climb the Monolith.</Expedition33_ActeII_Final_Obj3>
+<Expedition33_ActeII_Final_Obj4>Face the Paintress.</Expedition33_ActeII_Final_Obj4>
+
+<!-- Error Messages -->
+<Expedition33_IncidentNotFound>[Expedition33] IncidentDef not found: {0}</Expedition33_IncidentNotFound>
+<Expedition33_BossSiteGenerated>[Expedition33] Boss site generated for incident: {0}</Expedition33_BossSiteGenerated>
+<Expedition_VersoArrivalTitle>A Mysterious Survivor</Expedition_VersoArrivalTitle>
+<Expedition_VersoArrivalLetter>ACT I COMPLETED!\n\nYour victory against the Master of Lamps resonates across the continent. Suddenly, a familiar silhouette emerges from the shadows...\n\n"I am Verso, last survivor of Expedition Zero. I have observed your exploits. It is time we unite our forces against the Paintress."\n\nACT II now begins with a powerful ally by your side!</Expedition_VersoArrivalLetter>
+
+<Expedition_VersoJoinedTitle>Verso Joins the Expedition</Expedition_VersoJoinedTitle>
+<Expedition_VersoJoinedLetter>The mysterious Verso officially becomes part of your group!\n\nHis knowledge of the Gommage and exceptional combat abilities will be crucial for the continuation of your mission.</Expedition_VersoJoinedLetter>
+
+<Expedition33_ApparelNotFound>[Expedition33] ApparelDef not found: {0}</Expedition33_ApparelNotFound>
+<Expedition33_ApparelEquipError>[Expedition33] Error equipping {0}: {1}</Expedition33_ApparelEquipError>
+<!-- Siren Quest -->
+<Expedition33_SireneQuest_Title>The Abyssal Siren</Expedition33_SireneQuest_Title>
+<Expedition33_SireneQuest_Desc>The cursed songs of the Siren echo from the depths. You must eliminate this Axon guardian before she lures more victims.</Expedition33_SireneQuest_Desc>
+<Expedition33_SireneQuest_Obj1>Locate the Siren's site</Expedition33_SireneQuest_Obj1>
+<Expedition33_SireneQuest_Obj2>Confront the Abyssal Siren</Expedition33_SireneQuest_Obj2>
+<Expedition33_SireneQuest_Obj3>Defeat the sonic guardian</Expedition33_SireneQuest_Obj3>
+
+<!-- Faces Quest -->
+<Expedition33_VisagesQuest_Title>The Faces of Reality</Expedition33_VisagesQuest_Title>
+<Expedition33_VisagesQuest_Desc>After defeating the Siren, the mysterious Faces reveal themselves. These entities manipulate reality itself and stand as the final obstacle before the Paintress.</Expedition33_VisagesQuest_Desc>
+<Expedition33_VisagesQuest_Obj1>Discover the Faces' site</Expedition33_VisagesQuest_Obj1>
+<Expedition33_VisagesQuest_Obj2>Face the reality distortions</Expedition33_VisagesQuest_Obj2>
+<Expedition33_VisagesQuest_Obj3>Eliminate the dimensional guardians</Expedition33_VisagesQuest_Obj3>
+
+<!-- Progress Messages -->
+<Expedition33_SireneCompleted>The Siren has been defeated! The Faces reveal themselves...</Expedition33_SireneCompleted>
+<Expedition33_VisagesCompleted>The Faces have been eliminated! The path to the Paintress is open!</Expedition33_VisagesCompleted>
+  <!-- Expedition Interface -->
+  <Expedition33_MissionsTitle>Expedition Missions</Expedition33_MissionsTitle>
+  <Expedition33_AllMissionsCompleted>All missions have been completed</Expedition33_AllMissionsCompleted>
+  <Expedition33_CompletedMissions>Completed Missions</Expedition33_CompletedMissions>
+  <Expedition33_Objectives>Objectives:</Expedition33_Objectives>
+  
+  <!-- Interface Buttons -->
+  <ProgressDebug>Progress (Debug)</ProgressDebug>
+  <Refresh>Refresh</Refresh>
+  <Close>Close</Close>
+  <BeginExpedition>Begin Expedition</BeginExpedition>
+  
+  <!-- Messages -->
+  <ExpeditionStarted>Expedition has started!</ExpeditionStarted>
+
+    <!-- Hediffs -->
+  <Expedition33_GommageWitness_label>gommage witness</Expedition33_GommageWitness_label>
+  <Expedition33_GommageWitness_description>This colonist witnessed a Gommage event. The trauma of seeing people disappear from reality leaves deep psychological scars.</Expedition33_GommageWitness_description>
+  
+  <Expedition33_GommageCountdownAnxiety_label>countdown anxiety</Expedition33_GommageCountdownAnxiety_label>
+  <Expedition33_GommageCountdownAnxiety_description>This colonist saw the Gommage process trigger but no one died. Watching the cursed age approach and count down remains deeply disturbing, even though the danger was avoided.</Expedition33_GommageCountdownAnxiety_description>
+  
+  <Expedition33_AntiPaintressMotivation_label>anti-Paintress motivation</Expedition33_AntiPaintressMotivation_label>
+  <Expedition33_AntiPaintressMotivation_description>This colonist survived a Gommage event thanks to protective measures in place. This victory reinforces their determination to definitively defeat the Paintress.</Expedition33_AntiPaintressMotivation_description>
+  
+  <!-- Thoughts -->
+  <Expedition33_AntiPaintressHope_label>hope of victory</Expedition33_AntiPaintressHope_label>
+  <Expedition33_AntiPaintressHope_description>We proved that the Paintress can be defeated! This victory gives me hope.</Expedition33_AntiPaintressHope_description>
+
+
+</LanguageData>

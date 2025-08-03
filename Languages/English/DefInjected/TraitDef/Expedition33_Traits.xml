@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Boss Traits -->
+  <Expedition33_BossTrait_Eveque.label>sacred guardian</Expedition33_BossTrait_Eveque.label>
+  <Expedition33_BossTrait_Eveque.description>Emanates an aura of unshakeable faith and wields illumination rites.</Expedition33_BossTrait_Eveque.description>
+  <Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.label>Sacred Bishop</Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.label>
+  <Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.description>Masters divine light and regenerates in critical moments.</Expedition33_BossTrait_Eveque.degreeDatas.vque_sacr.description>
+  
+  <Expedition33_BossTrait_Goblu.label>flower protector</Expedition33_BossTrait_Goblu.label>
+  <Expedition33_BossTrait_Goblu.description>Swift and defends his flower field at all costs.</Expedition33_BossTrait_Goblu.description>
+  <Expedition33_BossTrait_Goblu.degreeDatas.Goblu.label>Goblu</Expedition33_BossTrait_Goblu.degreeDatas.Goblu.label>
+  
+  <Expedition33_BossTrait_SakapatateRobuste.label>quartz skin</Expedition33_BossTrait_SakapatateRobuste.label>
+  <Expedition33_BossTrait_SakapatateRobuste.description>An armored plant mass, slow to wound but quick to strike.</Expedition33_BossTrait_SakapatateRobuste.description>
+  <Expedition33_BossTrait_SakapatateRobuste.degreeDatas.Sakapatate_robuste.label>Robust Sakapatate</Expedition33_BossTrait_SakapatateRobuste.degreeDatas.Sakapatate_robuste.label>
+  
+  <Expedition33_BossTrait_SakapatateUltime.label>granite heart</Expedition33_BossTrait_SakapatateUltime.label>
+  <Expedition33_BossTrait_SakapatateUltime.description>Slowly regenerates wounds and deploys energy shields.</Expedition33_BossTrait_SakapatateUltime.description>
+  <Expedition33_BossTrait_SakapatateUltime.degreeDatas.Sakapatate_ultime.label>Ultimate Sakapatate</Expedition33_BossTrait_SakapatateUltime.degreeDatas.Sakapatate_ultime.label>
+  
+  <!-- Main trait label translation -->
+    <Expedition33_BossTrait_Dualiste.label>incarnate duality</Expedition33_BossTrait_Dualiste.label>
+    
+    <!-- First degree (index 0) translations -->
+    <Expedition33_BossTrait_Dualiste.degreeDatas.0.label>Light-Shadow Master</Expedition33_BossTrait_Dualiste.degreeDatas.0.label>
+    <Expedition33_BossTrait_Dualiste.degreeDatas.0.description>Alternates between blinding light bursts and psychic darkness.</Expedition33_BossTrait_Dualiste.degreeDatas.0.description>
+  <Expedition33_BossTrait_Francois.label>territorial turtle</Expedition33_BossTrait_Francois.label>
+  <Expedition33_BossTrait_Francois.description>A giant melancholic turtle that jealously protects his territory and precious stones.</Expedition33_BossTrait_Francois.description>
+  <Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.label>Grumpy Guardian</Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.label>
+  <Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.description>This bioluminescent turtle jealously guards his mineral treasures. Despite his gruff attitude, deep sadness haunts him since separation from Clea.</Expedition33_BossTrait_Francois.degreeDatas.Gardien_grognon.description>
+  
+  <Expedition33_BossTrait_MaitreLampes.label>architect of glimmers</Expedition33_BossTrait_MaitreLampes.label>
+  <Expedition33_BossTrait_MaitreLampes.description>Controls lighting, summons spectral lamps and burns enemies.</Expedition33_BossTrait_MaitreLampes.description>
+  <Expedition33_BossTrait_MaitreLampes.degreeDatas.Mage_luminescent.label>Luminescent Mage</Expedition33_BossTrait_MaitreLampes.degreeDatas.Mage_luminescent.label>
+  
+  <Expedition33_BossTrait_CommandantRenoir.label>relentless strategist</Expedition33_BossTrait_CommandantRenoir.label>
+  <Expedition33_BossTrait_CommandantRenoir.description>Increases his troops' strength and executes coordinated strikes.</Expedition33_BossTrait_CommandantRenoir.description>
+  <Expedition33_BossTrait_CommandantRenoir.degreeDatas.Commandant_vtran.label>Veteran Commander</Expedition33_BossTrait_CommandantRenoir.degreeDatas.Commandant_vtran.label>
+  
+  <Expedition33_BossTrait_Sirene.label>abyssal voice</Expedition33_BossTrait_Sirene.label>
+  <Expedition33_BossTrait_Sirene.description>Emits sonic waves and manipulates mortal minds.</Expedition33_BossTrait_Sirene.description>
+  <Expedition33_BossTrait_Sirene.degreeDatas.Chanteuse_cauchemardesque.label>Nightmarish Singer</Expedition33_BossTrait_Sirene.degreeDatas.Chanteuse_cauchemardesque.label>
+  
+  <Expedition33_BossTrait_Visages.label>bearer of a thousand masks</Expedition33_BossTrait_Visages.label>
+  <Expedition33_BossTrait_Visages.description>Changes identity to confuse adversaries and distort reality.</Expedition33_BossTrait_Visages.description>
+  <Expedition33_BossTrait_Visages.degreeDatas.Illusionniste.label>Illusionist</Expedition33_BossTrait_Visages.degreeDatas.Illusionniste.label>
+  
+  <Expedition33_BossTrait_Paintress.label>cosmic muse</Expedition33_BossTrait_Paintress.label>
+  <Expedition33_BossTrait_Paintress.description>Paints danger zones and channels the power of the Monolith.</Expedition33_BossTrait_Paintress.description>
+  <Expedition33_BossTrait_Paintress.degreeDatas.Artiste_stellaire.label>Stellar Artist</Expedition33_BossTrait_Paintress.degreeDatas.Artiste_stellaire.label>
+  
+  <Expedition33_BossTrait_Verso.label>broken immortal</Expedition33_BossTrait_Verso.label>
+  <Expedition33_BossTrait_Verso.description>Regenerates wounds and fractures enemy defenses.</Expedition33_BossTrait_Verso.description>
+  <Expedition33_BossTrait_Verso.degreeDatas.me_fracture.label>Fractured Soul</Expedition33_BossTrait_Verso.degreeDatas.me_fracture.label>
+  <Expedition33_BossTrait_Verso.degreeDatas.me_fracture.description>Survivor of Expedition Zero with extraordinary abilities.</Expedition33_BossTrait_Verso.degreeDatas.me_fracture.description>
+  
+  <Expedition33_BossTrait_Mime.label>silent shadow</Expedition33_BossTrait_Mime.label>
+  <Expedition33_BossTrait_Mime.description>Creates zones of silence and invisible barriers.</Expedition33_BossTrait_Mime.description>
+  <Expedition33_BossTrait_Mime.degreeDatas.Moimme.label>Myself</Expedition33_BossTrait_Mime.degreeDatas.Moimme.label>
+  
+  <!-- Player Traits -->
+  <ExpeditionVeteran.label>expedition veteran</ExpeditionVeteran.label>
+  <ExpeditionVeteran.description>This person has survived several expeditions against The Gommage. They possess valuable experience but bear the psychological scars of their missions.</ExpeditionVeteran.description>
+  <ExpeditionVeteran.degreeDatas.vtran.label>veteran</ExpeditionVeteran.degreeDatas.vtran.label>
+  <ExpeditionVeteran.degreeDatas.vtran.description>Has participated in several expeditions and gained experience from them.</ExpeditionVeteran.degreeDatas.vtran.description>
+  <ExpeditionVeteran.degreeDatas.vtran_aguerri.label>seasoned veteran</ExpeditionVeteran.degreeDatas.vtran_aguerri.label>
+  <ExpeditionVeteran.degreeDatas.vtran_aguerri.description>A hardened survivor of numerous perilous expeditions.</ExpeditionVeteran.degreeDatas.vtran_aguerri.description>
+  
+  <GommagePhobia.label>gommage phobia</GommagePhobia.label>
+  <GommagePhobia.description>This person has an irrational fear of the Gommage phenomenon and cursed numbers.</GommagePhobia.description>
+  <GommagePhobia.degreeDatas.anxieux.label>anxious</GommagePhobia.degreeDatas.anxieux.label>
+  <GommagePhobia.degreeDatas.anxieux.description>Feels constant anxiety related to the Gommage.</GommagePhobia.degreeDatas.anxieux.description>
+  <GommagePhobia.degreeDatas.terroris.label>terrified</GommagePhobia.degreeDatas.terroris.label>
+  <GommagePhobia.degreeDatas.terroris.description>Lives in constant terror of being erased.</GommagePhobia.degreeDatas.terroris.description>
+</LanguageData>

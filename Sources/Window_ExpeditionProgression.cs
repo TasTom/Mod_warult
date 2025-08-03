@@ -10,7 +10,6 @@ namespace Mod_warult
     public class Window_ExpeditionProgression : Window
     {
         private Pawn selectedPawn;
-        // private Vector2 scrollPosition;
 
         public Window_ExpeditionProgression(Pawn pawn)
         {
@@ -28,19 +27,17 @@ namespace Mod_warult
             var progression = ExpeditionProgressionHelper.GetOrCreateProgression(selectedPawn);
             if (progression == null) return;
 
-            // ✅ Zone de contenu avec marge
             Rect contentRect = new Rect(10f, 10f, inRect.width - 20f, inRect.height - 50f);
-
             float currentY = 0f;
 
             // Titre
             Text.Font = GameFont.Medium;
             Rect titleRect = new Rect(contentRect.x, contentRect.y + currentY, contentRect.width, 35f);
-            Widgets.Label(titleRect, $"Progression de {selectedPawn.Name}");
+            Widgets.Label(titleRect, "Expedition33_ProgressionTitle".Translate(selectedPawn.Name.ToStringShort));
             Text.Font = GameFont.Small;
             currentY += 45f;
 
-            // ✅ Ligne de séparation
+            // Ligne de séparation
             Widgets.DrawLineHorizontal(contentRect.x, contentRect.y + currentY, contentRect.width);
             currentY += 10f;
 
@@ -52,7 +49,7 @@ namespace Mod_warult
             DrawXPChart(new Rect(contentRect.x, contentRect.y + currentY, contentRect.width, 80f), progression);
             currentY += 90f;
 
-            // ✅ Ligne de séparation
+            // Ligne de séparation
             Widgets.DrawLineHorizontal(contentRect.x, contentRect.y + currentY, contentRect.width);
             currentY += 10f;
 
@@ -60,20 +57,17 @@ namespace Mod_warult
             DrawAttributeDetails(new Rect(contentRect.x, contentRect.y + currentY, contentRect.width, 200f), progression);
         }
 
-
         private void DrawLevelInfo(Rect rect, Hediff_ExpeditionProgression progression)
         {
-            // ✅ Affichage niveau actuel - CORRIGÉ
             Text.Font = GameFont.Small;
-            string levelText = $"Niveau {progression.currentLevel}";
-
+            string levelText = "Expedition33_CurrentLevel".Translate(progression.currentLevel);
+            
             if (progression.currentLevel < 99)
             {
                 float requiredXP = progression.XPRequiredForNextLevel();
                 float currentXP = progression.TotalXP();
                 float nextLevelXP = 0f;
 
-                // Calculer l'XP pour le niveau actuel
                 for (int i = 1; i < progression.currentLevel; i++)
                 {
                     nextLevelXP += 100f + (i * 25f) + Mathf.Pow(i, 1.5f) * 10f;
@@ -81,50 +75,50 @@ namespace Mod_warult
 
                 float progressXP = currentXP - nextLevelXP;
                 float progress = Mathf.Clamp01(progressXP / requiredXP);
+                levelText += " " + "Expedition33_ProgressToNext".Translate(
+                    (progress * 100f).ToString("F0"), progression.currentLevel + 1);
 
-                levelText += $" ({progress:P0} vers niveau {progression.currentLevel + 1})";
-
-                // ✅ Barre de progression CORRIGÉE
+                // Barre de progression
                 Rect progressBar = new Rect(rect.x, rect.y + 25f, rect.width - 20f, 20f);
                 Widgets.FillableBar(progressBar, progress, SolidColorMaterials.NewSolidColorTexture(Color.blue), BaseContent.GreyTex, false);
 
                 // Texte sur la barre
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Text.Font = GameFont.Tiny;
-                Widgets.Label(progressBar, $"{progressXP:F0} / {requiredXP:F0} XP");
+                Widgets.Label(progressBar, "Expedition33_XPProgress".Translate(progressXP.ToString("F0"), requiredXP.ToString("F0")));
                 Text.Anchor = TextAnchor.UpperLeft;
                 Text.Font = GameFont.Small;
             }
 
-            // ✅ Label niveau - Position corrigée
+            // Label niveau
             Widgets.Label(new Rect(rect.x, rect.y, rect.width, 25f), levelText);
-
-            // ✅ XP détaillée - Position corrigée
-            string xpText = $"Combat XP: {progression.combatXP:F0} | Âme XP: {progression.soulXP:F0} | Total: {progression.TotalXP():F0}";
+            
+            // XP détaillée
+            string xpText = "Expedition33_XPBreakdown".Translate(
+                progression.combatXP.ToString("F0"), 
+                progression.soulXP.ToString("F0"), 
+                progression.TotalXP().ToString("F0"));
             Widgets.Label(new Rect(rect.x, rect.y + 50f, rect.width, 25f), xpText);
         }
-
 
         private void DrawXPChart(Rect rect, Hediff_ExpeditionProgression progression)
         {
             Text.Font = GameFont.Small;
-
-            // ✅ Titre du graphique
-            Widgets.Label(new Rect(rect.x, rect.y, rect.width, 20f), "Répartition de l'Expérience");
+            Widgets.Label(new Rect(rect.x, rect.y, rect.width, 20f), "Expedition33_ExperienceDistribution".Translate());
 
             float totalXP = progression.combatXP + progression.soulXP;
             if (totalXP <= 0)
             {
-                Widgets.Label(new Rect(rect.x, rect.y + 25f, rect.width, 25f), "Aucune expérience acquise");
+                Widgets.Label(new Rect(rect.x, rect.y + 25f, rect.width, 25f), "Expedition33_NoExperienceYet".Translate());
                 return;
             }
 
             float combatRatio = progression.combatXP / totalXP;
             float soulRatio = progression.soulXP / totalXP;
 
-            // ✅ Zone des barres - Position corrigée
+            // Zone des barres
             Rect barArea = new Rect(rect.x, rect.y + 25f, rect.width - 20f, 25f);
-
+            
             // Barre Combat XP (rouge)
             if (combatRatio > 0)
             {
@@ -139,23 +133,22 @@ namespace Mod_warult
                 Widgets.DrawBoxSolid(soulBar, new Color(0.2f, 0.2f, 0.8f, 0.8f));
             }
 
-            // ✅ Labels avec pourcentages - Position corrigée
+            // Labels avec pourcentages
             Text.Font = GameFont.Tiny;
             Widgets.Label(new Rect(rect.x, rect.y + 55f, 250f, 20f),
-                $"🔴 Combat: {progression.combatXP:F0} ({combatRatio:P0})");
+                "Expedition33_CombatXPLabel".Translate(progression.combatXP.ToString("F0"), (combatRatio * 100f).ToString("F0")));
             Widgets.Label(new Rect(rect.x + 250f, rect.y + 55f, 250f, 20f),
-                $"🔵 Âme: {progression.soulXP:F0} ({soulRatio:P0})");
+                "Expedition33_SoulXPLabel".Translate(progression.soulXP.ToString("F0"), (soulRatio * 100f).ToString("F0")));
             Text.Font = GameFont.Small;
         }
-
 
         private void DrawAttributeDetails(Rect rect, Hediff_ExpeditionProgression progression)
         {
             float yOffset = 0f;
-
+            
             // Titre de la section
             Text.Font = GameFont.Small;
-            Widgets.Label(new Rect(rect.x, rect.y + yOffset, rect.width, 25f), "Attributs et Points");
+            Widgets.Label(new Rect(rect.x, rect.y + yOffset, rect.width, 25f), "Expedition33_AttributesAndPoints".Translate());
             yOffset += 30f;
 
             // Points disponibles
@@ -163,47 +156,46 @@ namespace Mod_warult
             {
                 GUI.color = Color.yellow;
                 Widgets.Label(new Rect(rect.x, rect.y + yOffset, rect.width, 25f),
-                    $"⭐ Points disponibles: {progression.availablePoints}");
+                    "Expedition33_AvailablePoints".Translate(progression.availablePoints));
                 GUI.color = Color.white;
                 yOffset += 30f;
             }
 
-            // ✅ ATTRIBUTS ÉTENDUS - 5 STATS
+            // Attributs étendus - 5 stats
             DrawAttributeRow(new Rect(rect.x, rect.y + yOffset, rect.width, 30f),
-                "💪 Vitalité", progression.vitality, progression.availablePoints > 0,
+                "Expedition33_VitalityAttribute".Translate(), progression.vitality, progression.availablePoints > 0,
                 () => progression.TrySpendAttributePoint(AttributeType.Vitality));
             yOffset += 35f;
 
             DrawAttributeRow(new Rect(rect.x, rect.y + yOffset, rect.width, 30f),
-                "⚔️ Puissance", progression.power, progression.availablePoints > 0,
+                "Expedition33_PowerAttribute".Translate(), progression.power, progression.availablePoints > 0,
                 () => progression.TrySpendAttributePoint(AttributeType.Power));
             yOffset += 35f;
 
             DrawAttributeRow(new Rect(rect.x, rect.y + yOffset, rect.width, 30f),
-                "🏃 Agilité", progression.agility, progression.availablePoints > 0,
+                "Expedition33_AgilityAttribute".Translate(), progression.agility, progression.availablePoints > 0,
                 () => progression.TrySpendAttributePoint(AttributeType.Agility));
             yOffset += 35f;
 
             DrawAttributeRow(new Rect(rect.x, rect.y + yOffset, rect.width, 30f),
-                "🛡️ Défense", progression.defense, progression.availablePoints > 0,
+                "Expedition33_DefenseAttribute".Translate(), progression.defense, progression.availablePoints > 0,
                 () => progression.TrySpendAttributePoint(AttributeType.Defense));
             yOffset += 35f;
 
             DrawAttributeRow(new Rect(rect.x, rect.y + yOffset, rect.width, 30f),
-                "🍀 Chance", progression.chance, progression.availablePoints > 0,
+                "Expedition33_ChanceAttribute".Translate(), progression.chance, progression.availablePoints > 0,
                 () => progression.TrySpendAttributePoint(AttributeType.Chance));
         }
 
-
         private void DrawAttributeRow(Rect rect, string attributeName, int value, bool canUpgrade, System.Action upgradeAction)
         {
-            // ✅ Label attribut avec icône
-            Widgets.Label(new Rect(rect.x, rect.y, 200f, rect.height), $"{attributeName}: {value}");
-
-            // ✅ Bouton +1 - Position et style améliorés
+            // Label attribut avec icône
+            Widgets.Label(new Rect(rect.x, rect.y, 200f, rect.height), "Expedition33_AttributeValue".Translate(attributeName, value));
+            
+            // Bouton +1
             if (canUpgrade)
             {
-                if (Widgets.ButtonText(new Rect(rect.x + 220f, rect.y, 50f, rect.height), "+1"))
+                if (Widgets.ButtonText(new Rect(rect.x + 220f, rect.y, 50f, rect.height), "Expedition33_UpgradeButton".Translate()))
                 {
                     upgradeAction();
                 }
@@ -212,28 +204,23 @@ namespace Mod_warult
             {
                 // Bouton désactivé visuellement
                 GUI.color = Color.gray;
-                Widgets.ButtonText(new Rect(rect.x + 220f, rect.y, 50f, rect.height), "+1");
+                Widgets.ButtonText(new Rect(rect.x + 220f, rect.y, 50f, rect.height), "Expedition33_UpgradeButton".Translate());
                 GUI.color = Color.white;
             }
         }
     }
 
-    // ✅ INTÉGRATION CORRECTE DU GIZMO DANS LE PATCH EXISTANT
     public static class ExpeditionGizmosExtension
     {
         public static void AddDetailedProgressionGizmo(this List<Gizmo> gizmos, Pawn pawn)
         {
             gizmos.Add(new Command_Action
             {
-                defaultLabel = "Progression Détaillée",
-                defaultDesc = "Ouvrir la fenêtre de progression complète",
+                defaultLabel = "Expedition33_DetailedProgression".Translate(),
+                defaultDesc = "Expedition33_DetailedProgressionDesc".Translate(),
                 icon = ContentFinder<Texture2D>.Get("UI/Icons/Progression"),
                 action = () => Find.WindowStack.Add(new Window_ExpeditionProgression(pawn))
             });
         }
     }
-    
-
-
-
 }

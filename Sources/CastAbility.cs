@@ -70,6 +70,11 @@ namespace Mod_warult
             base.CreateEffects(pawn);
             // Effet vert pour la régénération
             FleckMaker.ThrowDustPuff(pawn.Position.ToVector3Shifted(), pawn.Map, 1.5f);
+            
+            if (Prefs.DevMode)
+            {
+                Log.Message("Expedition33_RegenerationActivated".Translate(pawn.LabelShort));
+            }
         }
     }
 
@@ -179,8 +184,8 @@ namespace Mod_warult
             FleckMaker.ThrowSmoke(targetCell.ToVector3Shifted(), map, ExplosionRadius);
         }
     }
-    
-     public class Verb_CastAbility_QuickStep : Verb_Jump
+
+    public class Verb_CastAbility_QuickStep : Verb_Jump
     {
         protected override bool TryCastShot()
         {
@@ -208,4 +213,51 @@ namespace Mod_warult
         }
     }
 
+    public class Verb_CastAbility_ImmortalityFragment : Verb_CastAbility_ApplyHediff
+    {
+        protected override HediffDef HediffToApply =>
+            DefDatabase<HediffDef>.GetNamed("Expedition33_ImmortalityBuff");
+
+        protected override float HediffSeverity => 2.0f;
+
+        protected override void CreateEffects(Pawn pawn)
+        {
+            base.CreateEffects(pawn);
+
+            // Effets visuels spectaculaires
+            for (int i = 0; i < 30; i++)
+            {
+                FleckMaker.ThrowLightningGlow(pawn.Position.ToVector3Shifted(), pawn.Map, 4f);
+            }
+
+            Messages.Message("Expedition33_ImmortalityFragmentActivated".Translate(pawn.LabelShort),
+                MessageTypeDefOf.ThreatBig);
+        }
+    }
+
+    public class Verb_CastAbility_FractureParfaite : Verb_CastAbility
+    {
+        protected override bool ExecuteAbilityEffect()
+        {
+            var target = currentTarget.Pawn;
+
+            if (target == null || target == CasterPawn || target.Dead || target.Downed)
+                return false;
+
+            // Appliquer des dégâts
+            var damage = new DamageInfo(DamageDefOf.SurgicalCut, 80f, 10f, -1f, CasterPawn);
+            target.TakeDamage(damage);
+
+            // Effet visuel
+            for (int i = 0; i < 20; i++)
+            {
+                FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f, 
+                    new Color(0.8f, 0.9f, 1f));
+            }
+
+            Messages.Message("Expedition33_PerfectFractureUsed".Translate(CasterPawn.LabelShort, target.LabelShort), 
+                MessageTypeDefOf.ThreatBig);
+            return true;
+        }
+    }
 }

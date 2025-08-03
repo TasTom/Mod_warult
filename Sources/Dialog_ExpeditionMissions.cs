@@ -1,183 +1,139 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
-using Verse;
 using UnityEngine;
-using Verse.AI;
-using Verse.Sound;
+using Verse;
+using System.Linq;
 
 namespace Mod_warult
 {
     public class Dialog_ExpeditionMissions : Window
     {
-        private Hediff_QuestTracker questTracker;
-        private Vector2 scrollPosition = Vector2.zero;
+        private Vector2 scroll = Vector2.zero;
 
-        public Dialog_ExpeditionMissions(Pawn pawnWithTracker)
+        public Dialog_ExpeditionMissions()
         {
-            this.questTracker = pawnWithTracker.health.hediffSet.GetFirstHediffOfDef(
-                DefDatabase<HediffDef>.GetNamed("Expedition33_QuestTracker")) as Hediff_QuestTracker;
-            this.doCloseX = true;
-            this.doCloseButton = true;
-            this.closeOnClickedOutside = false;
-            this.absorbInputAroundWindow = true;
+            doCloseButton = true;
+            doCloseX = true;
+            absorbInputAroundWindow = true;
         }
 
-        public override Vector2 InitialSize => new Vector2(700f, 600f);
+        public override Vector2 InitialSize => new Vector2(850f, 520f);
 
         public override void DoWindowContents(Rect inRect)
         {
+            float y = 0f;
+
             Text.Font = GameFont.Medium;
-            Widgets.Label(new Rect(0f, 0f, inRect.width, 35f), "Missions Expédition 33");
+            Widgets.Label(new Rect(0f, y, inRect.width, 35f), "Expedition33_MissionsTitle".Translate());
+            y += 40f;
 
             Text.Font = GameFont.Small;
-            Rect scrollRect = new Rect(0f, 45f, inRect.width, inRect.height - 100f);
-            Rect viewRect = new Rect(0f, 0f, scrollRect.width - 16f, GetContentHeight());
+            var current = QuestManager.GetCurrentQuest();
+            var completed = QuestManager.GetCompletedQuestDatas().ToList();
 
-            Widgets.BeginScrollView(scrollRect, ref scrollPosition, viewRect);
+            float scrollHeight = 200f + completed.Count * 135f;
+            Rect scrollRect = new Rect(0, y, inRect.width, inRect.height - 85f);
+            Rect inner = new Rect(0, 0, scrollRect.width - 16, scrollHeight);
+
+            Widgets.BeginScrollView(scrollRect, ref scroll, inner);
 
             float curY = 0f;
 
-            // Mission actuelle
-            if (questTracker?.currentQuestId != null && QuestManager.AllQuests.ContainsKey(questTracker.currentQuestId))
+            if (current != null)
             {
-                var currentMissionData = QuestManager.AllQuests[questTracker.currentQuestId];
-                DrawMission(currentMissionData, new Rect(0f, curY, viewRect.width, 200f), true);
-                curY += 210f;
+                DrawMissionBlock(current, inner.width, ref curY, true);
+                curY += 15f;
+            }
+            else
+            {
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.Label(new Rect(0, curY, inner.width, 40f), "Expedition33_AllMissionsCompleted".Translate());
+                Text.Anchor = TextAnchor.UpperLeft;
+                curY += 50f;
             }
 
-            // Missions précédentes
-            DrawCompletedMissions(ref curY, viewRect.width);
+            if (completed.Count > 0)
+            {
+                Text.Font = GameFont.Medium;
+                Widgets.Label(new Rect(0, curY, inner.width, 30f), "Expedition33_CompletedMissions".Translate());
+                curY += 30f;
+
+                foreach (var quest in completed)
+                {
+                    DrawMissionBlock(quest, inner.width, ref curY, false);
+                    curY += 10f;
+                }
+            }
 
             Widgets.EndScrollView();
 
-            // Boutons d'action
-            DrawActionButtons(new Rect(0f, inRect.height - 50f, inRect.width, 40f));
-        }
-
-        private void DrawMission(QuestData mission, Rect rect, bool isCurrent = false)
-        {
-            Color originalColor = GUI.color;
-            if (isCurrent)
-                GUI.color = Color.cyan;
-
-            Widgets.DrawBox(rect);
-            GUI.color = originalColor;
-
-            Rect titleRect = new Rect(rect.x + 10f, rect.y + 5f, rect.width - 20f, 25f);
-            Text.Font = GameFont.Medium;
-            Widgets.Label(titleRect, mission.title);
-
-            Text.Font = GameFont.Small;
-            Rect descRect = new Rect(rect.x + 10f, rect.y + 35f, rect.width - 20f, 40f);
-            Widgets.Label(descRect, mission.description);
-
-            // Objectifs
-            float objY = rect.y + 85f;
-            Widgets.Label(new Rect(rect.x + 10f, objY, 100f, 25f), "Objectifs:");
-            objY += 25f;
-
-            foreach (string objective in mission.objectives)
+            // BOUTONS
+            if (Prefs.DevMode)
             {
-                bool completed = IsObjectiveCompleted(mission.questId, objective);
-                Color textColor = completed ? Color.green : Color.white;
-
-                GUI.color = textColor;
-                string prefix = completed ? "✓ " : "• ";
-                Widgets.Label(new Rect(rect.x + 20f, objY, rect.width - 40f, 20f), prefix + objective);
-                objY += 22f;
-            }
-
-            GUI.color = originalColor;
-
-            // Statut de la mission
-            string status = isCurrent ? "EN COURS" : "TERMINÉE";
-            Color statusColor = isCurrent ? Color.yellow : Color.green;
-            GUI.color = statusColor;
-            Widgets.Label(new Rect(rect.x + 10f, rect.y + rect.height - 25f, 100f, 20f), status);
-            GUI.color = originalColor;
-        }
-
-        private bool IsObjectiveCompleted(string questId, string objective)
-        {
-            if (questTracker == null) return false;
-
-            // Si la quête est terminée, tous ses objectifs sont considérés comme complétés
-            if (questTracker.completedQuests.Contains(questId))
-                return true;
-
-            // Si c'est la quête actuelle, on peut ajouter une logique plus complexe ici
-            // Pour l'instant, on considère qu'aucun objectif de la quête courante n'est terminé
-            return false;
-        }
-
-        private void DrawCompletedMissions(ref float curY, float width)
-        {
-            if (questTracker?.completedQuests == null || questTracker.completedQuests.Count == 0)
-                return;
-
-            // Titre des missions terminées
-            Widgets.Label(new Rect(10f, curY, width - 20f, 25f), "Missions Terminées:");
-            curY += 30f;
-
-            foreach (string completedQuestId in questTracker.completedQuests)
-            {
-                if (QuestManager.AllQuests.ContainsKey(completedQuestId))
+                if (current != null && Widgets.ButtonText(new Rect(10f, inRect.height - 90f, 170f, 32f), "ProgressDebug".Translate()))
                 {
-                    var missionData = QuestManager.AllQuests[completedQuestId];
-                    DrawMission(missionData, new Rect(0f, curY, width, 150f), false);
-                    curY += 160f;
+                    QuestManager.TriggerQuestEvent(current.triggerCondition);
+                    Close();
+                    Find.WindowStack.Add(new Dialog_ExpeditionMissions());
                 }
             }
-        }
 
-        private void DrawActionButtons(Rect rect)
-        {
-            if (Widgets.ButtonText(new Rect(rect.x, rect.y-50f, 150f, rect.height), "Actualiser"))
+            if (Widgets.ButtonText(new Rect(200f, inRect.height - 90f, 140f, 32f), "Refresh".Translate()))
+                {
+                    Close();
+                    Find.WindowStack.Add(new Dialog_ExpeditionMissions());
+                }
+
+            if (Widgets.ButtonText(new Rect(350f, inRect.height - 90f, 140f, 32f), "Close".Translate()))
             {
-                // Fermer et rouvrir la fenêtre pour actualiser
                 Close();
             }
 
-            if (Widgets.ButtonText(new Rect(rect.x + 160f, rect.y-50f, 150f, rect.height), "Progression"))
+            if (current != null && current.questId == "Prologue_Start")
             {
-                if (questTracker != null)
+                if (Widgets.ButtonText(new Rect(500f, inRect.height - 90f, 250f, 32f), "BeginExpedition".Translate()))
                 {
-                    string progressText = $"Quête actuelle: {questTracker.currentQuestId}\n";
-                    progressText += $"Quêtes terminées: {questTracker.completedQuests.Count}";
-
-                    Messages.Message(progressText, MessageTypeDefOf.NeutralEvent);
-                }
-            }
-
-                // ✅ BOUTON POUR FINIR LE PROLOGUE
-            if (questTracker?.currentQuestId == "Prologue_Start")
-            {
-                if (Widgets.ButtonText(new Rect(rect.x + 320f, rect.y-50f, 150f, rect.height), "🚢 PARTIR !"))
-                {
-                    questTracker.TriggerQuestEvent("EVENT_DEPARTURE");
-                    Messages.Message("🚀 L'Expédition 33 prend le départ vers l'inconnu !", MessageTypeDefOf.PositiveEvent);
+                    QuestManager.TriggerQuestEvent("EVENT_DEPARTURE");
+                    Messages.Message("ExpeditionStarted".Translate(), MessageTypeDefOf.PositiveEvent);
                     Close();
                 }
             }
         }
 
-        
-
-        private float GetContentHeight()
+        private void DrawMissionBlock(QuestData quest, float width, ref float y, bool isCurrent)
         {
-            float height = 250f; // Hauteur pour la mission actuelle
+            Color borderColor = isCurrent ? new Color(0.1f, 0.25f, 0.8f) : new Color(0.18f, 0.18f, 0.18f);
+            Color contentColor = isCurrent ? new Color(0.88f, 0.95f, 1f) : new Color(0.95f, 0.95f, 0.95f);
 
-            if (questTracker?.completedQuests != null)
+            GUI.color = contentColor;
+            Widgets.DrawBoxSolidWithOutline(new Rect(0, y, width, 140f), Color.clear, Color.white);
+            GUI.color = borderColor;
+            Widgets.DrawBox(new Rect(0, y, width, 140f), 2);
+            GUI.color = Color.white;
+
+            float blockY = y + 5f;
+
+            Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleLeft;
+            Widgets.Label(new Rect(10, blockY, width - 20, 25f), quest.title);
+            blockY += 25f;
+
+            Text.Font = GameFont.Small;
+            Widgets.Label(new Rect(15, blockY, width - 30, 38f), quest.description);
+            blockY += 38f;
+
+            Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(new Rect(18, blockY, width - 36, 16f), "Expedition33_Objectives".Translate());
+            blockY += 16f;
+
+            foreach (var o in quest.objectives)
             {
-                height += 50f; // Titre des missions terminées
-                height += questTracker.completedQuests.Count * 160f; // Chaque mission terminée
+                Widgets.Label(new Rect(30, blockY, width - 40, 18f), (isCurrent ? "• " : "✓ ") + o);
+                blockY += 18f;
             }
 
-            return Math.Max(height, 400f);
+            y += 120f;
+            Text.Font = GameFont.Small;
         }
-        
-        
     }
 }

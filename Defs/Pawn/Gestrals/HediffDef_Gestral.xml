@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <HediffDef>
-        <defName>Expedition33_GestralGrowthStages</defName>
+        <defName>GestralGrowthStages</defName>
         <label>croissance gestral</label>
         <description>La taille de ce Gestral évolue selon son âge.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -18,7 +18,7 @@
                 <minSeverity>0</minSeverity>
                 <label>jeune gestral</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>-0.5</SM_BodySizeOffset>
+                    <SM_BodySizeOffset>-0.3</SM_BodySizeOffset>
                     <Mass>-20</Mass>
                     <CarryingCapacity>-20</CarryingCapacity>
                     <MoveSpeed>0.2</MoveSpeed>
@@ -34,7 +34,7 @@
                 <minSeverity>1.0</minSeverity>
                 <label>gestral adulte</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>0.0</SM_BodySizeOffset>
+                    <SM_BodySizeOffset>0.2</SM_BodySizeOffset>
                 </statOffsets>
             </li>
             
@@ -43,7 +43,8 @@
                 <minSeverity>2.0</minSeverity>
                 <label>gestral ancien</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>1.0</SM_BodySizeOffset>
+                    <SM_BodySizeMultiplier>0.6</SM_BodySizeMultiplier>
+                    <SM_HeadSize_Cosmetic>0.05</SM_HeadSize_Cosmetic>
                     <Mass>30</Mass>
                     <CarryingCapacity>25</CarryingCapacity>
                     <MoveSpeed>-0.3</MoveSpeed>
@@ -60,7 +61,8 @@
                 <minSeverity>3.0</minSeverity>
                 <label>gestral-arbre</label>
                 <statOffsets>
-                    <SM_BodySizeOffset>2.0</SM_BodySizeOffset>
+                    <SM_BodySizeMultiplier>1.0</SM_BodySizeMultiplier>
+                    <SM_HeadSize_Cosmetic>0.08</SM_HeadSize_Cosmetic>
                     <Mass>60</Mass>
                     <CarryingCapacity>50</CarryingCapacity>
                     <MoveSpeed>-0.5</MoveSpeed>
@@ -74,7 +76,7 @@
             </li>
         </stages>
         
-   <comps>
+        <comps>
             <!-- Remplacez votre comp existant par celui-ci -->
             <li Class="Mod_warult.HediffCompProperties_GestralAging">
                 <adultAge>18</adultAge>    <!-- Âge pour devenir adulte -->

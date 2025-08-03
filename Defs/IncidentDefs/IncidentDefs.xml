@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- Incident du Gommage - OPTIMISÉ POUR LES TESTS -->
-	<IncidentDef>
-		<defName>Expedition33_Gommage</defName>
-		<label>Le Gommage</label>
-		<workerClass>Mod_warult.IncidentWorker_Gommage</workerClass>
-		<category>ThreatBig</category>
-		<targetTags>
-			<li>Map_PlayerHome</li>
-		</targetTags>
-		<!-- AUGMENTÉ pour les tests -->
-		<baseChance>15.0</baseChance>
-		<minRefireDays>3</minRefireDays>
-		<earliestDay>5</earliestDay>
-		<!-- SUPPRIMÉ minThreatPoints pour éviter les blocages -->
-		<letterLabel>Le Gommage</letterLabel>
-		<letterText>Un phénomène mystérieux s'abat sur votre colonie...</letterText>
-		<letterDef>ThreatBig</letterDef>
-	</IncidentDef>
+<IncidentDef>
+    <defName>Expedition33_Gommage</defName>
+    <label>Le Gommage</label>
+    <workerClass>Mod_warult.IncidentWorker_Gommage</workerClass>
+    <category>ThreatBig</category>
+    <targetTags>
+        <li>Map_PlayerHome</li>
+    </targetTags>
+    <baseChance>0</baseChance>
+    <minRefireDays>0</minRefireDays>
+    <!-- SUPPRIMÉ ou mis à 0 pour les tests -->
+    <earliestDay>0</earliestDay>
+    <letterLabel>Le Gommage</letterLabel>
+    <letterText>Un phénomène mystérieux s'abat sur votre colonie...</letterText>
+    <letterDef>ThreatBig</letterDef>
+</IncidentDef>
+
 
 	<!-- Mission d'Expédition - AMÉLIORÉ -->
 	<IncidentDef>

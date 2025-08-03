@@ -22,10 +22,10 @@
   <titleShort>Mystique</titleShort>
   <baseDesc>{PAWN_nameDef} manifestait des pouvoirs divins dès son plus jeune âge. Les prêtres du village parlaient de miracles quand {PAWN_pronoun} était présent.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Intellectual>4</Intellectual>
     <Social>2</Social>
@@ -42,10 +42,10 @@
   <titleShort>Dualiste</titleShort>
   <baseDesc>{PAWN_nameDef} était né sous une éclipse totale, oscillant constamment entre lumière et ténèbres.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Intellectual>3</Intellectual>
     <Artistic>3</Artistic>
@@ -58,26 +58,17 @@
 <!-- François - Childhood -->
 <AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
   <defName>Expedition33_Francois_Childhood</defName>
-  <title>Lame en devenir</title>
-  <titleShort>Lame</titleShort>
-  <baseDesc>{PAWN_nameDef} était un enfant prodige de la violence, manifestant une maîtrise surnaturelle des armes.</baseDesc>
+  <title>Jeune gardien des cavernes</title>
+  <titleShort>Gardien</titleShort>
+  <baseDesc>{PAWN_nameDef} était une jeune tortue curieuse qui collectionnait les rochers brillants dans les cavernes près du Nid d'Esquie.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
-    <min>0</min>
-    <max>16</max>
-  </bioAgeRange>
   <skillGains>
-    <Melee>4</Melee>
-    <Shooting>2</Shooting>
+    <Mining>4</Mining>
+    <Melee>2</Melee>
+    <Animals>1</Animals>
   </skillGains>
-  <disallowedTraitsChance>
-    <li>
-      <defName Degree="0">Kind</defName>
-      <chance>100</chance>
-    </li>
-  </disallowedTraitsChance>
   <spawnCategories>
-    <li>Expedition33_ImmortalEntity</li>
+    <li>Expedition33_FrancoisEntity</li>
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
@@ -88,10 +79,10 @@
   <titleShort>Pousse</titleShort>
   <baseDesc>{PAWN_nameDef} grandit d'une graine millénaire, développant une carapace naturelle.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Plants>3</Plants>
     <Melee>2</Melee>
@@ -108,10 +99,10 @@
   <titleShort>Sève</titleShort>
   <baseDesc>{PAWN_nameDef} absorba la sagesse ancestrale des profondeurs terrestres pendant des siècles.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Plants>4</Plants>
     <Melee>3</Melee>
@@ -129,10 +120,10 @@
   <titleShort>Porteur</titleShort>
   <baseDesc>{PAWN_nameDef} créait des lanternes magiques et manipulait les ombres avec aisance.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Intellectual>3</Intellectual>
     <Crafting>3</Crafting>
@@ -150,10 +141,10 @@
   <titleShort>Cadet</titleShort>
   <baseDesc>{PAWN_nameDef} fut formé dans les académies militaires de l'Expédition 33.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Social>3</Social>
     <Intellectual>3</Intellectual>
@@ -171,16 +162,16 @@
   <titleShort>Voix</titleShort>
   <baseDesc>{PAWN_nameDef} développa sa capacité à manipuler les esprits par sa voix hypnotique.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Social>4</Social>
     <Artistic>3</Artistic>
   </skillGains>
   <spawnCategories>
-    <li>Expedition33_AxonEntity</li>
+    <li>Expedition33_SireneEntity</li>
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
@@ -191,31 +182,31 @@
   <titleShort>Collectif</titleShort>
   <baseDesc>{PAWN_nameDef} apprit à jongler entre différentes identités et personnalités.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Social>3</Social>
     <Intellectual>3</Intellectual>
     <Artistic>2</Artistic>
   </skillGains>
   <spawnCategories>
-    <li>Expedition33_AxonEntity</li>
+    <li>Expedition33_VisageEntity</li>
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
-<!-- Peintresse - Childhood -->
+<!-- Paintress - Childhood -->
 <AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
-  <defName>Expedition33_Peintresse_Childhood</defName>
+  <defName>Expedition33_Paintress_Childhood</defName>
   <title>Artiste cosmique</title>
   <titleShort>Artiste</titleShort>
   <baseDesc>{PAWN_nameDef} créait des œuvres qui modifiaient la réalité et ouvraient des portails.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Artistic>5</Artistic>
     <Intellectual>3</Intellectual>
@@ -227,15 +218,15 @@
 
 <!-- Verso - Childhood -->
 <AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
-  <defName>Expedition33_Verso_Childhood</defName>
+  <defName>Expedition_Verso_Childhood</defName>
   <title>Fragment éternel</title>
-  <titleShort>Fragment</titleShort>
+  <titleShort>Immortel</titleShort>
   <baseDesc>{PAWN_nameDef} apprit les secrets de la régénération et de la survie éternelle.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Melee>3</Melee>
     <Medicine>2</Medicine>
@@ -253,10 +244,10 @@
   <titleShort>Silence</titleShort>
   <baseDesc>{PAWN_nameDef} apprit à communiquer par gestes et à créer des barrières invisibles.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Melee>2</Melee>
     <Artistic>3</Artistic>
@@ -274,10 +265,10 @@
   <titleShort>Primitive</titleShort>
   <baseDesc>{PAWN_nameDef} développa une agilité et une férocité naturelles.</baseDesc>
   <slot>Childhood</slot>
-  <bioAgeRange>
+  <!-- <bioAgeRange>
     <min>0</min>
     <max>16</max>
-  </bioAgeRange>
+  </bioAgeRange> -->
   <skillGains>
     <Melee>3</Melee>
     <Animals>2</Animals>

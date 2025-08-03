@@ -1,159 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<!-- Expéditionnaire de base -->
-	<PawnKindDef>
-		<defName>Expedition33_Expeditionnaire</defName>
-		<label>expéditionnaire</label>
-		<race>Human</race>
-		<defaultFactionType>Expedition33</defaultFactionType>
-		<combatPower>80</combatPower>
-		<canArriveManhunter>false</canArriveManhunter>
-		<canBeSapper>false</canBeSapper>
-		<!-- SUPPRIME canBeGuard qui n'existe pas -->
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<shaderType>CutoutComplex</shaderType>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponTags>
-			<li>SimpleGun</li>
-			<li>IndustrialGunAdvanced</li>
-		</weaponTags>
-		<apparelTags>
-			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
-			<li>Military</li>
-		</apparelTags>
-		<initialResistanceRange>10~20</initialResistanceRange>
-		<initialWillRange>1~3</initialWillRange>
-		<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
-	</PawnKindDef>
+    <!-- Expéditionnaire de base -->
+    <PawnKindDef>
+        <defName>Expedition_Expeditionnaire</defName>
+        <label>expéditionnaire</label>
+        <race>Human</race>
+        <defaultFactionType>Expedition33</defaultFactionType>
+        <combatPower>80</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponMoney>500~700</weaponMoney>
+        <weaponTags>
+             <li>Expedition33_BasicWeapon</li>
+            <li>Expedition33_RifleWeapon</li>
+        </weaponTags>
+        
+        <apparelTags>
+            <li>Expedition33</li>
+        </apparelTags>
+        
+        <!-- ✅ ÉQUIPEMENT OBLIGATOIRE -->
+        <apparelRequired>
+            <li>Expedition33_Uniform</li>
+            <li>Expedition33_MilitaryBoots</li>
+        </apparelRequired>
+        
+        <initialResistanceRange>10~20</initialResistanceRange>
+        <initialWillRange>1~3</initialWillRange>
+        <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    </PawnKindDef>
 
-	<!-- Commandant d'expédition (Leader) -->
-	<PawnKindDef>
-		<defName>Expedition33_Commandant</defName>
-		<label>commandant d'expédition</label>
-		<race>Human</race>
-		<defaultFactionType>Expedition33</defaultFactionType>
-		<combatPower>150</combatPower>
-		<canArriveManhunter>false</canArriveManhunter>
-		<canBeSapper>true</canBeSapper>
-		<!-- SUPPRIME canBeGuard -->
-		<factionLeader>true</factionLeader>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<shaderType>CutoutComplex</shaderType>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponTags>
-			<li>IndustrialGunAdvanced</li>
-			<li>MedievalMeleeAdvanced</li>
-		</weaponTags>
-		<apparelTags>
-			<li>IndustrialAdvanced</li>
-			<li>Military</li>
-			<li>Royal</li>
-		</apparelTags>
-		<apparelRequired>
-			<li>Apparel_FlakVest</li>
-		</apparelRequired>
-		<initialResistanceRange>15~25</initialResistanceRange>
-		<initialWillRange>2~4</initialWillRange>
-		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
-	</PawnKindDef>
+    <!-- Commandant d'expédition (Leader) -->
+    <PawnKindDef>
+        <defName>Expedition_Commandant</defName>
+        <label>commandant d'expédition</label>
+        <race>Human</race>
+        <defaultFactionType>Expedition33</defaultFactionType>
+        <combatPower>150</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>true</canBeSapper>
+        <factionLeader>true</factionLeader>
+        
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponMoney>500~700</weaponMoney>
+        <weaponTags>
+            <li>Expedition33_EliteWeapon</li>
+            <li>Expedition33_RifleWeapon</li>
+        </weaponTags>
+        
+        <apparelTags>
+            <li>Military</li>
+            <li>Expedition33</li>
+            <li>Officer</li>
+        </apparelTags>
+        
+        <!-- ✅ ÉQUIPEMENT OBLIGATOIRE COMMANDANT -->
+        <apparelRequired>
+            <li>Expedition33_ReinforcedArmor</li>
+            <li>Expedition33_OfficerHat</li>
+            <li>Expedition33_MilitaryBoots</li>
+            <li>Expedition33_AntiGommageShield</li>
+        </apparelRequired>
+        
+        <initialResistanceRange>15~25</initialResistanceRange>
+        <initialWillRange>2~4</initialWillRange>
+        <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+    </PawnKindDef>
 
-	<!-- Marchand d'expédition -->
-	<PawnKindDef>
-		<defName>Expedition33_Marchand</defName>
-		<label>marchand d'expédition</label>
-		<race>Human</race>
-		<defaultFactionType>Expedition33</defaultFactionType>
-		<combatPower>50</combatPower>
-		<trader>true</trader>
-		<canArriveManhunter>false</canArriveManhunter>
-		<canBeSapper>false</canBeSapper>
-		<!-- SUPPRIME canBeGuard -->
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<shaderType>CutoutComplex</shaderType>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponTags>
-			<li>SimpleGun</li>
-		</weaponTags>
-		<apparelTags>
-			<li>IndustrialBasic</li>
-		</apparelTags>
-		<initialResistanceRange>8~15</initialResistanceRange>
-		<initialWillRange>1~2</initialWillRange>
-		<backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
-	</PawnKindDef>
+    <!-- Marchand d'expédition -->
+    <PawnKindDef>
+        <defName>Expedition_Marchand</defName>
+        <label>marchand d'expédition</label>
+        <race>Human</race>
+        <defaultFactionType>Expedition33</defaultFactionType>
+        <combatPower>50</combatPower>
+        <trader>true</trader>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponMoney>500~700</weaponMoney>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+        
+        <apparelTags>
+            <li>Expedition33</li>
+        </apparelTags>
+        
+        <!-- ✅ ÉQUIPEMENT MARCHAND -->
+        <apparelRequired>
+            <li>Expedition33_Uniform</li>
+            <li>Expedition33_MilitaryBoots</li>
+        </apparelRequired>
+        
+        <initialResistanceRange>8~15</initialResistanceRange>
+        <initialWillRange>1~2</initialWillRange>
+        <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
+    </PawnKindDef>
 
-	<PawnKindDef>
-		<defName>Expedition33_Garde</defName>
-		<label>garde d'expédition</label>
-		<race>Human</race>
-		<defaultFactionType>Expedition33</defaultFactionType>
-		<combatPower>120</combatPower>
-		<canArriveManhunter>false</canArriveManhunter>
-		<canBeSapper>false</canBeSapper>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<shaderType>CutoutComplex</shaderType>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponTags>
-			<li>IndustrialGunAdvanced</li>
-		</weaponTags>
-		<apparelTags>
-			<li>IndustrialAdvanced</li>
-			<li>Military</li>
-		</apparelTags>
-		<initialResistanceRange>15~22</initialResistanceRange>
-		<initialWillRange>2~4</initialWillRange>
-	</PawnKindDef>
+    <!-- Garde d'expédition -->
+    <PawnKindDef>
+        <defName>Expedition_Garde</defName>
+        <label>garde d'expédition</label>
+        <race>Human</race>
+        <defaultFactionType>Expedition33</defaultFactionType>
+        <combatPower>120</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>false</canBeSapper>
+        
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponMoney>500~700</weaponMoney>
+        <weaponTags>
+             <li>Expedition33_RifleWeapon</li>
+        </weaponTags>
+        
+        <apparelTags>
+            <li>Military</li>
+            <li>Expedition33</li>
+        </apparelTags>
+        
+        <!-- ✅ ÉQUIPEMENT GARDE RENFORCÉ -->
+        <apparelRequired>
+            <li>Expedition33_ReinforcedArmor</li>
+            <li>Expedition33_MilitaryBoots</li>
+            <li>Expedition33_AntiGommageShield</li>
+        </apparelRequired>
+        
+        <initialResistanceRange>15~22</initialResistanceRange>
+        <initialWillRange>2~4</initialWillRange>
+    </PawnKindDef>
 
-	<PawnKindDef>
-		<defName>Expedition33_Eclaireur</defName>
-		<label>éclaireur</label>
-		<race>Human</race>
-		<defaultFactionType>Expedition33</defaultFactionType>
-		<combatPower>90</combatPower>
-		<canArriveManhunter>false</canArriveManhunter>
-		<canBeSapper>true</canBeSapper>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<shaderType>CutoutComplex</shaderType>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponTags>
-			<li>SniperRifle</li>
-		</weaponTags>
-		<apparelTags>
-			<li>IndustrialBasic</li>
-			<li>Military</li>
-		</apparelTags>
-		<initialResistanceRange>12~18</initialResistanceRange>
-		<initialWillRange>1~3</initialWillRange>
-	</PawnKindDef>
+    <!-- Éclaireur -->
+    <PawnKindDef>
+        <defName>Expedition_Eclaireur</defName>
+        <label>éclaireur</label>
+        <race>Human</race>
+        <defaultFactionType>Expedition33</defaultFactionType>
+        <combatPower>90</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <canBeSapper>true</canBeSapper>
+        
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Humanlike/Bodies/Naked_Male</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponMoney>500~700</weaponMoney>
+        <weaponTags>
+            <li>Expedition33_RifleWeapon</li>
+        </weaponTags>
+        
+        <apparelTags>
+            <li>Military</li>
+            <li>Expedition33</li>
+        </apparelTags>
+        
+        <!-- ✅ ÉQUIPEMENT ÉCLAIREUR LÉGER -->
+        <apparelRequired>
+            <li>Expedition33_Uniform</li>
+            <li>Expedition33_MilitaryBoots</li>
+        </apparelRequired>
+        
+        <initialResistanceRange>12~18</initialResistanceRange>
+        <initialWillRange>1~3</initialWillRange>
+    </PawnKindDef>
 </Defs>

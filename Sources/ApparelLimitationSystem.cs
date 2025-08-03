@@ -5,19 +5,17 @@ using Verse;
 
 namespace Mod_warult
 {
-    // Référence statique correcte pour votre couche d'apparel
     [DefOf]
     public static class Expedition33_ApparelLayerDefOf
     {
         public static ApparelLayerDef Expedition33_Accessories;
-        
+
         static Expedition33_ApparelLayerDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Expedition33_ApparelLayerDefOf));
         }
     }
 
-    // Extension pour vérifier les limites d'accessoires
     public static class PawnAccessoryExtensions
     {
         private const int MAX_ACCESSORIES = 4;
@@ -26,7 +24,6 @@ namespace Mod_warult
         {
             if (pawn?.apparel?.WornApparel == null) return false;
 
-            // CORRIGÉ : Utilisation correcte de DefDatabase
             var accessoryLayer = DefDatabase<ApparelLayerDef>.GetNamedSilentFail("Expedition33_Accessories");
             if (accessoryLayer == null) return true;
 
@@ -41,7 +38,6 @@ namespace Mod_warult
         {
             if (pawn?.apparel?.WornApparel == null) return 0;
 
-            // CORRIGÉ : Récupération sécurisée de la définition
             var accessoryLayer = DefDatabase<ApparelLayerDef>.GetNamedSilentFail("Expedition33_Accessories");
             if (accessoryLayer == null) return 0;
 
@@ -66,7 +62,7 @@ namespace Mod_warult
             if (!pawn.CanEquipAccessory(accessory))
             {
                 Messages.Message(
-                    $"{pawn.Name.ToStringShort} ne peut porter que {MAX_ACCESSORIES} accessoires maximum !",
+                    "Expedition33_MaxAccessoriesReached".Translate(pawn.Name.ToStringShort, MAX_ACCESSORIES),
                     MessageTypeDefOf.RejectInput
                 );
                 return false;
@@ -76,7 +72,6 @@ namespace Mod_warult
         }
     }
 
-    // Component simple pour les limitations d'accessoires
     public class CompProperties_AccessoryLimit : CompProperties
     {
         public string slotType = "default";
@@ -94,7 +89,7 @@ namespace Mod_warult
 
         public override bool AllowStackWith(Thing other)
         {
-            return false; // Empêcher l'empilement d'accessoires
+            return false;
         }
 
         public override string CompInspectStringExtra()
@@ -102,19 +97,19 @@ namespace Mod_warult
             if (parent.holdingOwner?.Owner is Pawn pawn)
             {
                 int accessoryCount = pawn.GetAccessoryCount();
-                return $"Accessoires: {accessoryCount}/4";
+                return "Expedition33_AccessoriesCount".Translate(accessoryCount);
             }
+
             return null;
         }
     }
 
-    // Alert pour trop d'accessoires
     public class Alert_TooManyAccessories : Alert
     {
         public Alert_TooManyAccessories()
         {
-            this.defaultLabel = "Trop d'accessoires Pictos";
-            this.defaultExplanation = "Certains colons portent plus de 4 accessoires Pictos.";
+            this.defaultLabel = "Expedition33_TooManyAccessoriesAlert".Translate();
+            this.defaultExplanation = "Expedition33_TooManyAccessoriesExplanation".Translate();
         }
 
         public override AlertReport GetReport()
@@ -139,13 +134,13 @@ namespace Mod_warult
         public override TaggedString GetExplanation()
         {
             var problematicPawns = GetProblematicPawns().Take(3);
-            string text = this.defaultExplanation + "\n\nColons concernés:\n";
+            string text = this.defaultExplanation + "\n\n" + "Expedition33_AffectedColonists".Translate() + "\n";
             
             foreach (var pawn in problematicPawns)
             {
-                text += $"• {pawn.Name.ToStringShort} ({pawn.GetAccessoryCount()}/4)\n";
+                text += "Expedition33_ColonistAccessoryCount".Translate(pawn.Name.ToStringShort, pawn.GetAccessoryCount());
             }
-            
+
             return text;
         }
     }

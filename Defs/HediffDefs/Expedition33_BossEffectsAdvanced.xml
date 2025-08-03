@@ -204,6 +204,35 @@
 </HediffDef>
 
 <HediffDef>
+  <defName>Expedition33_LightEffect</defName> <!-- ✅ Le nom que cherche votre code -->
+  <label>effet de lumière</label>
+  <description>Affecté par la manipulation de la lumière, vision et capacités altérées.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 1.0, 0.8)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1500</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+        <MeleeHitChance>0.7</MeleeHitChance>
+        <MoveSpeed>0.8</MoveSpeed>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.2</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
   <defName>Expedition33_EnergyShields</defName>
   <label>boucliers d'énergie</label>
   <description>Boucliers énergétiques qui absorbent les attaques.</description>
@@ -248,6 +277,37 @@
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- EFFETS DU MAÎTRE DES LAMPES -->
 <!-- ═══════════════════════════════════════════════════════════ -->
+
+<HediffDef>
+  <defName>Expedition33_IlluminationBurn</defName>
+  <label>brûlure d'illumination</label>
+  <description>Brûlé par les attaques lumineuses intenses du Maître des Lampes. Vision gravement altérée et douleurs constantes.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(1.0, 1.0, 0.6)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2400</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+        <MeleeHitChance>0.4</MeleeHitChance>
+        <MoveSpeed>0.7</MoveSpeed>
+        <WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.4</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
 
 <HediffDef>
   <defName>Expedition33_LightConfusion</defName>
@@ -333,6 +393,71 @@
           <mtbDays>5</mtbDays>
         </li>
       </hediffGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+xml
+<HediffDef>
+  <defName>Expedition33_DarknessEffect</defName>
+  <label>effet des ténèbres</label>
+  <description>Vision, réflexes et moral considérablement réduits par les forces obscures.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.15, 0.1, 0.2)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2000</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MoveSpeed>0.7</MoveSpeed>
+        <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+        <MeleeHitChance>0.5</MeleeHitChance>
+        <WorkSpeedGlobal>0.7</WorkSpeedGlobal>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.35</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef>
+  <defName>Expedition33_DarknessCurse</defName>
+  <label>malédiction des ténèbres</label>
+  <description>Ce personnage est victime d'une malédiction obscure qui affaiblit ses capacités mentales et physiques.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <isBad>true</isBad>
+  <defaultLabelColor>(0.25, 0.1, 0.3)</defaultLabelColor>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2400</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+        <MeleeHitChance>0.5</MeleeHitChance>
+        <MoveSpeed>0.7</MoveSpeed>
+        <WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.2</offset>
+        </li>
+      </capMods>
     </li>
   </stages>
 </HediffDef>
@@ -605,8 +730,37 @@
   </stages>
 </HediffDef>
 
+<HediffDef>
+  <defName>Expedition33_RealityDistorted</defName>
+  <label>distorsion de réalité</label>
+  <description>L'esprit de ce personnage est affecté par une anomalie fondamentale du tissu spatiotemporel.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.5, 0.3, 1.0)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3000</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        <MoveSpeed>0.6</MoveSpeed>
+        <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.3</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- EFFETS DE LA PEINTRESSE -->
+<!-- EFFETS DE LA Paintress -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <HediffDef>
@@ -643,7 +797,7 @@
 <HediffDef>
   <defName>Expedition33_CosmicPaint</defName>
   <label>peinture cosmique</label>
-  <description>Marqué par le pinceau cosmique de la Peintresse. La réalité se déforme autour de vous.</description>
+  <description>Marqué par le pinceau cosmique de la Paintress. La réalité se déforme autour de vous.</description>
   <hediffClass>HediffWithComps</hediffClass>
   <defaultLabelColor>(0.8, 0.2, 0.8)</defaultLabelColor>
   <isBad>true</isBad>
@@ -705,7 +859,7 @@
 <HediffDef>
   <defName>Expedition33_TimeConfusion</defName>
   <label>confusion temporelle</label>
-  <description>Pris dans les distorsions temporelles de la Peintresse. Le temps semble s'écouler différemment.</description>
+  <description>Pris dans les distorsions temporelles de la Paintress. Le temps semble s'écouler différemment.</description>
   <hediffClass>HediffWithComps</hediffClass>
   <defaultLabelColor>(0.7, 0.3, 0.7)</defaultLabelColor>
   <isBad>true</isBad>
@@ -779,32 +933,119 @@
 <!-- EFFETS DE VERSO -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
+
 <HediffDef>
-  <defName>Expedition33_ImmortalityBuff</defName>
-  <label>Fragment d'immortalité</label>
-  <description>Un fragment mystique qui régénère les blessures et renforce la vitalité.</description>
+  <defName>Expedition33_FaceShiftBuff</defName>
+  <label>changement de visage</label>
+  <description>Ce personnage traverse une transe déstabilisante, modifiant complètement son identité aux yeux des autres.</description>
   <hediffClass>HediffWithComps</hediffClass>
-  <defaultLabelColor>(0.8, 0.8, 1.0)</defaultLabelColor>
-  <isBad>false</isBad>
-  <maxSeverity>1.0</maxSeverity>
-  <comps>
-     <li Class="HediffCompProperties_SeverityPerDay">
-      <severityPerDay>-0.1</severityPerDay> <!-- Diminue lentement -->
+  <stages>
+    <li>
+      <label>Dissimulation totale</label>
+      <statFactors>
+        <PainShockThreshold>0.5</PainShockThreshold>
+        <SocialImpact>0</SocialImpact>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.4</offset>
+        </li>
+      </capMods>
     </li>
+  </stages>
+  <isBad>false</isBad>
+  <tendable>false</tendable>
+  <comps>
     <li Class="HediffCompProperties_Disappears">
-      <disappearsAfterTicks>3600</disappearsAfterTicks> <!-- 1 minute -->
+      <disappearsAfterTicks>1200</disappearsAfterTicks> <!-- Disparaît après 20s -->
+    </li>
+  </comps>
+</HediffDef>
+  <HediffDef>
+    <defName>Expedition33_LightBurn</defName>
+    <label>brûlure de lumière</label>
+    <description>Ce personnage a été sévèrement brûlé par une lumière surnaturelle, affectant sa vision et ses capacités.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <stages>
+      <li>
+        <label>Éblouissement</label>
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+        <painFactor>0.3</painFactor>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2000</disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Expedition33_ObscurEffect</defName>
+    <label>choc obscur</label>
+    <description>L'esprit de ce personnage est affecté par une vague d'énergie sombre, engendrant confusion et perte de repères.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <stages>
+      <li>
+        <label>Confusion obscure</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+        <painFactor>0.2</painFactor>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2400</disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+  
+<HediffDef>
+  <defName>Expedition33_DarknessDebuff</defName>
+  <label>brume obscure</label>
+  <description>Ce personnage est plongé dans les ténèbres, réduisant ses facultés motrices et mentales.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.2, 0.0, 0.2)</defaultLabelColor>
+  <isBad>true</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>2000</disappearsAfterTicks> <!-- ~33 secondes -->
     </li>
   </comps>
   <stages>
     <li>
+      <statFactors>
+        <MoveSpeed>0.6</MoveSpeed>
+        <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+        <MeleeHitChance>0.7</MeleeHitChance>
+        <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+      </statFactors>
       <capMods>
         <li>
-          <capacity>Manipulation</capacity>
-          <offset>0.1</offset>
-        </li>
-        <li>
-          <capacity>Moving</capacity>
-          <offset>0.1</offset>
+          <capacity>Sight</capacity>
+          <offset>-0.25</offset>
         </li>
       </capMods>
     </li>
@@ -812,4 +1053,65 @@
 </HediffDef>
 
 
-</Defs>
+<HediffDef>
+  <defName>Expedition33_DualityShiftBuff</defName>
+  <label>forme de dualité</label>
+  <description>Ce personnage est temporairement infusé par les pouvoirs de lumière et d’ombre, décuplant ses capacités.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.6, 0.0, 1.0)</defaultLabelColor>
+  <isBad>false</isBad>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>3000</disappearsAfterTicks> <!-- 50s -->
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <MeleeDamageFactor>1.4</MeleeDamageFactor>
+        <MoveSpeed>1.4</MoveSpeed>
+        <ShootingAccuracyPawn>1.2</ShootingAccuracyPawn>
+        <MeleeHitChance>1.2</MeleeHitChance>
+      </statFactors>
+    </li>
+  </stages>
+</HediffDef>
+<HediffDef>
+  <defName>Expedition33_FearAuraHediff</defName>
+  <label>aura de terreur</label>
+  <description>Paralysé par une terreur surnaturelle. Toutes les capacités sont drastiquement réduites par la peur.</description>
+  <hediffClass>HediffWithComps</hediffClass>
+  <defaultLabelColor>(0.5, 0.0, 0.0)</defaultLabelColor>
+  <isBad>true</isBad>
+  <maxSeverity>1.0</maxSeverity>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>1800</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <statFactors>
+        <ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+        <MeleeHitChance>0.3</MeleeHitChance>
+        <MoveSpeed>0.5</MoveSpeed>
+        <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+        <MentalBreakThreshold>2.5</MentalBreakThreshold>
+      </statFactors>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.2</offset>
+        </li>
+      </capMods>
+      <mentalStateGivers>
+        <li>
+          <mentalState>PanicFlee</mentalState>
+          <mtbDays>0.5</mtbDays>
+        </li>
+      </mentalStateGivers>
+    </li>
+  </stages>
+</HediffDef>
+
+  </Defs>

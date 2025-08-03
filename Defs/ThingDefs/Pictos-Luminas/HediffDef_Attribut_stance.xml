@@ -93,7 +93,7 @@
       <!-- Niveau Débutant -->
       <li>
         <minSeverity>0.1</minSeverity>
-        <label>puissance dévastatrice (débutant)</label>
+        <label>(débutant)</label>
         <statOffsets>
           <MeleeDamageFactor>0.06</MeleeDamageFactor>
           <ShootingAccuracyPawn>0.04</ShootingAccuracyPawn>
@@ -102,7 +102,7 @@
       <!-- Niveau Intermédiaire -->
       <li>
         <minSeverity>1.0</minSeverity>
-        <label>puissance dévastatrice (intermédiaire)</label>
+        <label>(intermédiaire)</label>
         <statOffsets>
           <MeleeDamageFactor>0.12</MeleeDamageFactor>
           <ShootingAccuracyPawn>0.08</ShootingAccuracyPawn>
@@ -112,7 +112,7 @@
       <!-- Niveau Avancé -->
       <li>
         <minSeverity>3.0</minSeverity>
-        <label>puissance dévastatrice (avancé)</label>
+        <label>(avancé)</label>
         <statOffsets>
           <MeleeDamageFactor>0.20</MeleeDamageFactor>
          <ShootingAccuracyPawn>0.12</ShootingAccuracyPawn>
@@ -123,7 +123,7 @@
       <!-- Niveau Expert -->
       <li>
         <minSeverity>6.0</minSeverity>
-        <label>puissance dévastatrice (expert)</label>
+        <label> (expert)</label>
         <statOffsets>
           <MeleeDamageFactor>0.30</MeleeDamageFactor>
           <ShootingAccuracyPawn>0.18</ShootingAccuracyPawn>
@@ -134,7 +134,7 @@
       <!-- Niveau Maître -->
       <li>
         <minSeverity>8.5</minSeverity>
-        <label>puissance dévastatrice (maître)</label>
+        <label> (maître)</label>
         <statOffsets>
           <MeleeDamageFactor>0.45</MeleeDamageFactor>
           <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
@@ -159,7 +159,7 @@
       <!-- Niveau Débutant -->
       <li>
         <minSeverity>0.1</minSeverity>
-        <label>agilité extraordinaire (débutant)</label>
+        <label> (débutant)</label>
         <statOffsets>
           <MoveSpeed>0.08</MoveSpeed>
           <WorkSpeedGlobal>0.04</WorkSpeedGlobal>
@@ -168,7 +168,7 @@
       <!-- Niveau Intermédiaire -->
       <li>
         <minSeverity>1.0</minSeverity>
-        <label>agilité extraordinaire (intermédiaire)</label>
+        <label> (intermédiaire)</label>
         <statOffsets>
           <MoveSpeed>0.15</MoveSpeed>
           <WorkSpeedGlobal>0.08</WorkSpeedGlobal>
@@ -178,7 +178,7 @@
       <!-- Niveau Avancé -->
       <li>
         <minSeverity>3.0</minSeverity>
-        <label>agilité extraordinaire (avancé)</label>
+        <label>(avancé)</label>
         <statOffsets>
           <MoveSpeed>0.25</MoveSpeed>
           <WorkSpeedGlobal>0.12</WorkSpeedGlobal>
@@ -189,7 +189,7 @@
       <!-- Niveau Expert -->
       <li>
         <minSeverity>6.0</minSeverity>
-        <label>agilité extraordinaire (expert)</label>
+        <label> (expert)</label>
         <statOffsets>
           <MoveSpeed>0.35</MoveSpeed>
           <WorkSpeedGlobal>0.18</WorkSpeedGlobal>
@@ -200,7 +200,7 @@
       <!-- Niveau Maître -->
       <li>
         <minSeverity>8.5</minSeverity>
-        <label>agilité extraordinaire (maître)</label>
+        <label> (maître)</label>
         <statOffsets>
           <MoveSpeed>0.5</MoveSpeed>
           <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
@@ -225,7 +225,7 @@
       <!-- Niveau Débutant -->
       <li>
         <minSeverity>0.1</minSeverity>
-        <label>défense inébranlable (débutant)</label>
+        <label>(débutant)</label>
         <statOffsets>
           <IncomingDamageFactor>-0.04</IncomingDamageFactor>
           <PainShockThreshold>0.06</PainShockThreshold>
@@ -234,7 +234,7 @@
       <!-- Niveau Intermédiaire -->
       <li>
         <minSeverity>1.0</minSeverity>
-        <label>défense inébranlable (intermédiaire)</label>
+        <label>(intermédiaire)</label>
         <statOffsets>
           <IncomingDamageFactor>-0.08</IncomingDamageFactor>
           <PainShockThreshold>0.12</PainShockThreshold>
@@ -244,7 +244,7 @@
       <!-- Niveau Avancé -->
       <li>
         <minSeverity>3.0</minSeverity>
-        <label>défense inébranlable (avancé)</label>
+        <label>(avancé)</label>
         <statOffsets>
           <IncomingDamageFactor>-0.12</IncomingDamageFactor>
           <PainShockThreshold>0.20</PainShockThreshold>
@@ -255,7 +255,7 @@
       <!-- Niveau Expert -->
       <li>
         <minSeverity>6.0</minSeverity>
-        <label>défense inébranlable (expert)</label>
+        <label>(expert)</label>
         <statOffsets>
           <IncomingDamageFactor>-0.18</IncomingDamageFactor>
           <PainShockThreshold>0.30</PainShockThreshold>
@@ -266,7 +266,7 @@
       <!-- Niveau Maître -->
       <li>
         <minSeverity>8.5</minSeverity>
-        <label>défense inébranlable (maître)</label>
+        <label>(maître)</label>
         <statOffsets>
           <IncomingDamageFactor>-0.25</IncomingDamageFactor>
           <PainShockThreshold>0.45</PainShockThreshold>
@@ -291,7 +291,7 @@
       <!-- Niveau Débutant -->
       <li>
         <minSeverity>0.1</minSeverity>
-        <label>chance miraculeuse (débutant)</label>
+        <label>(débutant)</label>
         <statOffsets>
           <TradePriceImprovement>0.04</TradePriceImprovement>
           <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
@@ -300,7 +300,7 @@
       <!-- Niveau Intermédiaire -->
       <li>
         <minSeverity>1.0</minSeverity>
-        <label>chance miraculeuse (intermédiaire)</label>
+        <label>(intermédiaire)</label>
         <statOffsets>
           <TradePriceImprovement>0.10</TradePriceImprovement>
           <ShootingAccuracyPawn>0.06</ShootingAccuracyPawn>
@@ -310,7 +310,7 @@
       <!-- Niveau Avancé -->
       <li>
         <minSeverity>3.0</minSeverity>
-        <label>chance miraculeuse (avancé)</label>
+        <label>(avancé)</label>
         <statOffsets>
           <TradePriceImprovement>0.18</TradePriceImprovement>
           <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
@@ -321,7 +321,7 @@
       <!-- Niveau Expert -->
       <li>
         <minSeverity>6.0</minSeverity>
-        <label>chance miraculeuse (expert)</label>
+        <label>(expert)</label>
         <statOffsets>
           <TradePriceImprovement>0.28</TradePriceImprovement>
           <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
@@ -333,7 +333,7 @@
       <!-- Niveau Maître -->
       <li>
         <minSeverity>8.5</minSeverity>
-        <label>chance miraculeuse (maître)</label>
+        <label>(maître)</label>
         <statOffsets>
           <TradePriceImprovement>0.40</TradePriceImprovement>
           <ShootingAccuracyPawn>0.22</ShootingAccuracyPawn>
@@ -359,7 +359,7 @@
       <!-- Niveau Apprenti (5-10) -->
       <li>
         <minSeverity>0.25</minSeverity>
-        <label>sagesse de l'expédition (apprenti)</label>
+        <label>(apprenti)</label>
         <statOffsets>
           <GlobalLearningFactor>0.06</GlobalLearningFactor>
         </statOffsets>
@@ -367,7 +367,7 @@
       <!-- Niveau Confirmé (15-25) -->
       <li>
         <minSeverity>1.0</minSeverity>
-        <label>sagesse de l'expédition (confirmé)</label>
+        <label>(confirmé)</label>
         <statOffsets>
           <GlobalLearningFactor>0.12</GlobalLearningFactor>
           <WorkSpeedGlobal>0.06</WorkSpeedGlobal>
@@ -376,7 +376,7 @@
       <!-- Niveau Expérimenté (35-50) -->
       <li>
         <minSeverity>2.5</minSeverity>
-        <label>sagesse de l'expédition (expérimenté)</label>
+        <label>(expérimenté)</label>
         <statOffsets>
           <GlobalLearningFactor>0.20</GlobalLearningFactor>
           <WorkSpeedGlobal>0.12</WorkSpeedGlobal>
@@ -386,7 +386,7 @@
       <!-- Niveau Vétéran (75-99) -->
       <li>
         <minSeverity>4.5</minSeverity>
-        <label>sagesse de l'expédition (vétéran)</label>
+        <label>(vétéran)</label>
         <statOffsets>
           <GlobalLearningFactor>0.30</GlobalLearningFactor>
           <WorkSpeedGlobal>0.20</WorkSpeedGlobal>

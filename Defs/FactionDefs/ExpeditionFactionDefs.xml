@@ -18,6 +18,9 @@
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
+		<hidden>false</hidden>
+		<maxConfigurableAtWorldCreation>4</maxConfigurableAtWorldCreation>
+<configurationListOrderPriority>60</configurationListOrderPriority>
 		
 		<mustStartOneEnemy>false</mustStartOneEnemy>
 
@@ -64,53 +67,59 @@
 			</points>
 		</maxPawnCostPerTotalPointsCurve>
 
+		<raidCommonalityFromPointsCurve>
+    <points>
+        <li>(0, 1)</li>
+    </points>
+</raidCommonalityFromPointsCurve>
+
 		<!-- CORRECTION - UN SEUL pawnGroupMaker Combat avec la Panteresse incluse -->
 		<pawnGroupMakers>
 			<li>
 				<kindDef>Combat</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<Expedition33_Expeditionnaire>15</Expedition33_Expeditionnaire>
-					<Expedition33_Garde>10</Expedition33_Garde>
-					<Expedition33_Eclaireur>8</Expedition33_Eclaireur>
-					<Expedition33_Commandant>2</Expedition33_Commandant>
-					<!--<Expedition33_PaintressBoss>0.1</Expedition33_PaintressBoss>-->
+					<Expedition_Expeditionnaire>15</Expedition_Expeditionnaire>
+					<Expedition_Garde>10</Expedition_Garde>
+					<Expedition_Eclaireur>8</Expedition_Eclaireur>
+					<Expedition_Commandant>2</Expedition_Commandant>
+					<!--<PaintressBoss>0.1</PaintressBoss>-->
 				</options>
 			</li>
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<Expedition33_Expeditionnaire>20</Expedition33_Expeditionnaire>
-					<Expedition33_Marchand>5</Expedition33_Marchand>
-					<Expedition33_Garde>5</Expedition33_Garde>
+					<Expedition_Expeditionnaire>20</Expedition_Expeditionnaire>
+					<Expedition_Marchand>5</Expedition_Marchand>
+					<Expedition_Garde>5</Expedition_Garde>
 				</options>
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
 				<commonality>100</commonality>
 				<traders>
-					<Expedition33_Marchand>1</Expedition33_Marchand>
+					<Expedition_Marchand>1</Expedition_Marchand>
 				</traders>
 				<carriers>
 					<Muffalo>6</Muffalo>
 					<Dromedary>5</Dromedary>
 				</carriers>
 				<guards>
-					<Expedition33_Expeditionnaire>4</Expedition33_Expeditionnaire>
-					<Expedition33_Garde>6</Expedition33_Garde>
-					<Expedition33_Eclaireur>3</Expedition33_Eclaireur>
+					<Expedition_Expeditionnaire>4</Expedition_Expeditionnaire>
+					<Expedition_Garde>6</Expedition_Garde>
+					<Expedition_Eclaireur>3</Expedition_Eclaireur>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<Expedition33_Expeditionnaire>12</Expedition33_Expeditionnaire>
-					<Expedition33_Garde>15</Expedition33_Garde>
-					<Expedition33_Commandant>8</Expedition33_Commandant>
-					<Expedition33_Eclaireur>6</Expedition33_Eclaireur>
-					<Expedition33_Marchand>2</Expedition33_Marchand>
+					<Expedition_Expeditionnaire>12</Expedition_Expeditionnaire>
+					<Expedition_Garde>15</Expedition_Garde>
+					<Expedition_Commandant>8</Expedition_Commandant>
+					<Expedition_Eclaireur>6</Expedition_Eclaireur>
+					<Expedition_Marchand>2</Expedition_Marchand>
 				</options>
 			</li>
 		</pawnGroupMakers>

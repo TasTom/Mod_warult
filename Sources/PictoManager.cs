@@ -23,7 +23,7 @@ namespace Mod_warult
         {
             base.ExposeData();
             Scribe_Collections.Look(ref learnedPictoTypes, "learnedPictoTypes", LookMode.Value);
-            Scribe_Collections.Look(ref pictoAbilities,   "pictoAbilities",   LookMode.Value, LookMode.Value);
+            Scribe_Collections.Look(ref pictoAbilities, "pictoAbilities", LookMode.Value, LookMode.Value);
 
             if (learnedPictoTypes == null)
                 learnedPictoTypes = new HashSet<string>();
@@ -32,7 +32,6 @@ namespace Mod_warult
         }
 
         /*------------------ ENREGISTREMENT ------------------*/
-
         public void RegisterPicto(CompPicto picto)
         {
             if (picto != null && !activePictos.Contains(picto))
@@ -43,42 +42,27 @@ namespace Mod_warult
         {
             learnedPictoTypes.Add(pictoType);
             pictoAbilities[pictoType] = ability;
-            Log.Message($"[Expedition33] Picto {pictoType} maîtrisé (passif : {ability})");
+            Log.Message("Expedition33_PictoMastered".Translate(pictoType, ability));
         }
 
         /*------------------ INTERROGATION ------------------*/
-
-        public bool IsPictoLearned(string pictoType)       => learnedPictoTypes.Contains(pictoType);
-        public List<string> GetLearnedPictos()             => learnedPictoTypes.ToList();
-
-        /*------------------ FIN DE COMBAT ------------------*/
-
-        public void OnCombatEnded()
-        {
-            foreach (var picto in activePictos.ToList())
-            {
-                if (picto?.parent?.Spawned == true)
-                    picto.RegisterKill();          // ← nouveau nom
-                else
-                    activePictos.Remove(picto);
-            }
-        }
+        public bool IsPictoLearned(string pictoType) => learnedPictoTypes.Contains(pictoType);
+        public List<string> GetLearnedPictos() => learnedPictoTypes.ToList();
 
         /*------------------ LUMINAS ------------------*/
-
         public void ActivateLumina(string pictoType, Pawn caster)
         {
             if (!IsPictoLearned(pictoType))
             {
-                Messages.Message("Picto non appris !", MessageTypeDefOf.RejectInput, false);
+                Messages.Message("Expedition33_PictoNotLearned".Translate(), MessageTypeDefOf.RejectInput, false);
                 return;
             }
 
             foreach (var pawn in PawnsFinder.AllMaps_FreeColonists)
                 ApplyLuminaEffect(pawn, pictoType);
 
-            Messages.Message($"Lumina {pictoType} activée pour toute l'équipe !",
-                             MessageTypeDefOf.PositiveEvent, false);
+            Messages.Message("Expedition33_LuminaActivated".Translate(pictoType),
+                MessageTypeDefOf.PositiveEvent, false);
         }
 
         private static void ApplyLuminaEffect(Pawn pawn, string pictoType)

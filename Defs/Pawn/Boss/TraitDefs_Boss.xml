@@ -23,11 +23,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_Goblu</defName>
     <label>Proctecteur des fleurs</label>
-    <description>Rapide et defend coute que coute son champ de fleur</description>
+  
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Goblu</label>
+          <description>Rapide et defend coute que coute son champ de fleur</description>
         <statOffsets>
           <MoveSpeed>0.50</MoveSpeed>
           <PsychicSensitivity>0.15</PsychicSensitivity>
@@ -43,11 +44,11 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_SakapatateRobuste</defName>
     <label>peau de quartz</label>
-    <description>Une masse végétale blindée, lente à blesser mais rapide à frapper.</description>
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Sakapatate robuste</label>
+         <description>Une masse de tissu blindée, lente à blesser mais rapide à frapper.</description>
         <statOffsets>
           <MoveSpeed>-0.10</MoveSpeed>
           <ArmorRating_Blunt>0.14</ArmorRating_Blunt>
@@ -61,11 +62,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_SakapatateUltime</defName>
     <label>cœur de granite</label>
-    <description>Régénère lentement ses blessures et déploie des boucliers d’énergie.</description>
+   
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Sakapatate ultime</label>
+         <description>Régénère lentement ses blessures et déploie des boucliers d’énergie.</description>
         <statOffsets>
           <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
           <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
@@ -79,11 +81,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_Dualiste</defName>
     <label>dualité incarnée</label>
-    <description>Alterne entre éclats de lumière aveuglante et ténèbres psychiques.</description>
+  
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Maître clair-obscur</label>
+          <description>Alterne entre éclats de lumière aveuglante et ténèbres psychiques.</description>
         <statOffsets>
           <GlobalLearningFactor>0.30</GlobalLearningFactor>
         </statOffsets>
@@ -92,31 +95,44 @@
   </TraitDef>
 
   <!-- FRANÇOIS ────────────────────────────────────────────── -->
-  <TraitDef>
-    <defName>Expedition33_BossTrait_Francois</defName>
-    <label>exécuteur né</label>
-    <description>Se délecte de la peur et porte des coups mortels.</description>
-    <commonality>0</commonality>
-    <degreeDatas>
-      <li>
-        <label>Assassin d’élite</label>
-        <statOffsets>
-          <MeleeHitChance>0.12</MeleeHitChance>
-          <MeleeDPS>0.25</MeleeDPS>
-        </statOffsets>
-      </li>
-    </degreeDatas>
-  </TraitDef>
+<TraitDef>
+  <defName>Expedition33_BossTrait_Francois</defName>
+  <label>tortue territoriale</label>
+  <description>Une tortue géante mélancolique qui protège jalousement son territoire et ses cailloux précieux.</description>
+  <commonality>0</commonality>
+  <degreeDatas>
+    <li>
+      <label>Gardien grognon</label>
+      <description>Cette tortue bioluminescente garde jalousement ses trésors minéraux. Malgré son attitude revêche, une profonde tristesse l'habite depuis la séparation avec Clea.</description>
+      <degree>0</degree>
+      <statOffsets>
+        <MiningYield>0.35</MiningYield>
+        <MiningSpeed>0.25</MiningSpeed>
+      </statOffsets>
+      <statFactors>
+        <SocialImpact>0.6</SocialImpact>
+      </statFactors>
+      <skillGains>
+        <Mining>3</Mining>
+        <Construction>1</Construction>
+      </skillGains>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>Kind</li>
+  </conflictingTraits>
+</TraitDef>
 
   <!-- MAÎTRE DES LAMPES ───────────────────────────────────── -->
   <TraitDef>
     <defName>Expedition33_BossTrait_MaitreLampes</defName>
     <label>architecte des lueurs</label>
-    <description>Contrôle l’éclairage, invoque des lampes spectrales et brûle ses ennemis.</description>
+   
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Mage luminescent</label>
+         <description>Contrôle l’éclairage, invoque des lampes spectrales et brûle ses ennemis.</description>
         <statOffsets>
           <PsychicSensitivity>0.20</PsychicSensitivity>
         </statOffsets>
@@ -128,11 +144,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_CommandantRenoir</defName>
     <label>stratège implacable</label>
-    <description>Accroît la force de ses troupes et exécute des frappes coordonnées.</description>
+
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Commandant vétéran</label>
+            <description>Accroît la force de ses troupes et exécute des frappes coordonnées.</description>
         <statOffsets>
           <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
         </statOffsets>
@@ -144,11 +161,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_Sirene</defName>
     <label>voix abyssale</label>
-    <description>Émet des ondes soniques et manipule l’esprit des mortels.</description>
+  
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Chanteuse cauchemardesque</label>
+          <description>Émet des ondes soniques et manipule l’esprit des mortels.</description>
         <statOffsets>
           <MoveSpeed>0.15</MoveSpeed>
         </statOffsets>
@@ -160,11 +178,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_Visages</defName>
     <label>porteur de mille masques</label>
-    <description>Change d’identité pour dérouter ses adversaires et distordre la réalité.</description>
+
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Illusionniste</label>
+            <description>Change d’identité pour dérouter ses adversaires et distordre la réalité.</description>
         <statOffsets>
           <SocialImpact>0.30</SocialImpact>
         </statOffsets>
@@ -172,15 +191,16 @@
     </degreeDatas>
   </TraitDef>
 
-  <!-- PEINTRESSE ──────────────────────────────────────────── -->
+  <!-- Paintress ──────────────────────────────────────────── -->
   <TraitDef>
-    <defName>Expedition33_BossTrait_Peintresse</defName>
+    <defName>Expedition33_BossTrait_Paintress</defName>
     <label>muse cosmique</label>
-    <description>Peint des zones de danger et canalise le pouvoir du Monolithe.</description>
+  
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Artiste stellaire</label>
+          <description>Peint des zones de danger et canalise le pouvoir du Monolithe.</description>
         <statOffsets>
           <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
         </statOffsets>
@@ -197,6 +217,7 @@
     <degreeDatas>
       <li>
         <label>Âme fracturée</label>
+        <description>Survivant de l'Expédition Zéro avec des capacités extraordinaires.</description>
         <statOffsets>
           <PainShockThreshold>0.20</PainShockThreshold>
         </statOffsets>
@@ -208,11 +229,12 @@
   <TraitDef>
     <defName>Expedition33_BossTrait_Mime</defName>
     <label>ombre silencieuse</label>
-    <description>Crée des zones de silence et des barrières invisibles.</description>
+   
     <commonality>0</commonality>
     <degreeDatas>
       <li>
         <label>Moi-même</label>
+         <description>Crée des zones de silence et des barrières invisibles.</description>
         <statOffsets>
           <MeleeDodgeChance>0.10</MeleeDodgeChance>
         </statOffsets>

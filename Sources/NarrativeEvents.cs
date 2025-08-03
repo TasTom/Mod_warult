@@ -1,6 +1,7 @@
 using RimWorld;
 using Verse;
 using System.Linq;
+using HarmonyLib;
 
 namespace Mod_warult
 {
@@ -8,77 +9,70 @@ namespace Mod_warult
     {
         public static void TriggerVersoArrival()
         {
-            var existingVerso = Find.Maps
-                .SelectMany(m => m.mapPawns.AllPawns)
-                .FirstOrDefault(p => p.kindDef?.defName == "Expedition33_Verso");
+            var verso = Find.Maps.SelectMany(m => m.mapPawns.AllPawns)
+                .FirstOrDefault(p => p.kindDef?.defName == "Expedition_Verso");
 
-            if (existingVerso != null)
+            if (verso != null)
             {
-                Log.Warning("[Expedition33] Verso existe déjà, annulation du spawn");
-                // ✅ Déclenche l'événement même si Verso existe déjà
-                var trackerquest = QuestEventUtility.FindQuestTracker();
-                if (trackerquest != null && trackerquest.currentQuestId == "ActeII_VersoArrival")
-                    QuestEventUtility.TriggerGlobalEvent("EVENT_VERSO_JOINED");
+                Log.Message("Expedition_VersoAlreadyExists".Translate());
                 return;
             }
 
-            // Génère Verso et l'ajoute à la faction du joueur
-            var verso = PawnGenerator.GeneratePawn(
-                DefDatabase<PawnKindDef>.GetNamed("Expedition33_Verso"));
-            verso.SetFaction(Faction.OfPlayer);
-
-            var map = Find.Maps.Where(m => m.IsPlayerHome).FirstOrDefault();
-            if (map != null)
+            try
             {
-                IntVec3 spawnSpot = CellFinder.RandomClosewalkCellNear(
-                    map.Center, map, 20, x => x.Standable(map));
+                var request = new PawnGenerationRequest(
+                    kind: DefDatabase<PawnKindDef>.GetNamed("Expedition_Verso"),
+                    faction: Faction.OfPlayer,
+                    mustBeCapableOfViolence: true
+                );
 
-                GenSpawn.Spawn(verso, spawnSpot, map);
+                var pawn = PawnGenerator.GeneratePawn(request);
+                BossNameManager.InitializeBossName(pawn);
 
-                Find.WindowStack.Add(new Dialog_MessageBox(
-                    "🔮 UN ÉTRANGER MYSTÉRIEUX\n\n" +
-                    "Un homme aux cheveux blancs apparaît près de votre campement. " +
-                    "Malgré son apparence âgée, il porte l'uniforme des expéditionnaires.\n\n" +
-                    "\"Je suis Verso, survivant de l'Expédition Zéro. Je connais les secrets " +
-                    "que vous cherchez, et les horreurs qui vous attendent. Laissez-moi " +
-                    "vous guider vers la vérité sur la Peintresse et le Gommage.\"\n\n" +
-                    "Verso a rejoint votre expédition !"));
+                Log.Message("Expedition_VersoFinalName".TranslateSimple().Formatted(pawn.Name.ToString()));
+
+                var map = Find.Maps.FirstOrDefault(m => m.IsPlayerHome) ?? Find.CurrentMap;
+                if (map != null)
+                {
+                    var spawnCell = CellFinder.RandomClosewalkCellNear(map.Center, map, 15);
+                    GenSpawn.Spawn(pawn, spawnCell, map);
+                    Messages.Message("Expedition_VersoJoined".Translate(), MessageTypeDefOf.PositiveEvent);
+                }
             }
-
-            // ✅ AJOUTE CETTE LIGNE : Déclenche l'événement après le spawn
-            var tracker = QuestEventUtility.FindQuestTracker();
-            if (tracker != null && tracker.currentQuestId == "ActeII_VersoArrival")
-                QuestEventUtility.TriggerGlobalEvent("EVENT_VERSO_JOINED");
+            catch (System.Exception e)
+            {
+                Log.Error("Expedition_VersoGenerationError".Translate(e.Message));
+            }
         }
-
-
-
 
         public static void TriggerActeICompletion()
         {
             Find.WindowStack.Add(new Dialog_MessageBox(
-                "🌅 FIN DE L'ACTE I\n\n" +
-                "Le Maître des Lampes s'effondre dans un éclat de lumière pure. " +
-                "Ses dernières paroles résonnent dans l'air :\n\n" +
-                "\"L'Acte I... se termine... Mais les véritables épreuves... " +
-                "commencent maintenant...\"\n\n" +
-                "Une nouvelle phase de votre expédition débute. Les mystères " +
-                "s'approfondissent, et la route vers la Peintresse se dessine."));
+                "Expedition33_ActeICompleted".Translate()));
         }
-        
+
         public static void TriggerFinalVictory()
         {
             Find.WindowStack.Add(new Dialog_MessageBox(
-                "🎨 VICTOIRE FINALE\n\n" +
-                "La Peintresse s'effondre, son pinceau cosmique se brisant en mille éclats. " +
-                "Le Monolithe noir se fissure, et tous les nombres inscrits s'effacent " +
-                "dans un flash de lumière pure.\n\n" +
-                "\"Le... cycle... est... brisé...\"\n\n" +
-                "Pour la première fois depuis des générations, aucun nombre ne sera " +
-                "inscrit. Le Gommage appartient désormais au passé.\n\n" +
-                "🏆 FÉLICITATIONS ! VOUS AVEZ COMPLÉTÉ EXPEDITION 33 !\n\n" +
-                "L'humanité est libre du cycle mortel. Votre courage et votre " +
-                "détermination ont sauvé tous ceux qui viendront après vous."));
+                "Expedition33_FinalVictory".Translate()));
+        }
+    }
+
+    [HarmonyPatch]
+    public static class VersoNamePatch
+    {
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(PawnBioAndNameGenerator), "GenerateFullPawnName")]
+        public static bool InterceptVersoNameGeneration(ThingDef genFor, ref Name __result)
+        {
+            if (genFor?.defName == "Expedition_VersoColon")
+            {
+                __result = new NameSingle("Verso");
+                Log.Message("Expedition_VersoNameIntercepted".Translate());
+                return false;
+            }
+
+            return true;
         }
     }
 }

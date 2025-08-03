@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Boss Body Types -->
+  <Eveque_Body.label>bishop body</Eveque_Body.label>
+  <Goblu_Body.label>goblu body</Goblu_Body.label>
+  <SakapatateRobuste_Body.label>robust sakapatate body</SakapatateRobuste_Body.label>
+  <Paintress_Body.label>Paintress body</Paintress_Body.label>
+  <SakapatateUltime_Body.label>ultimate sakapatate body</SakapatateUltime_Body.label>
+  <Francois_Body.label>françois body</Francois_Body.label>
+  <MaitreLampes_Body.label>lampmaster body</MaitreLampes_Body.label>
+  <Dualiste_Body.label>dualist body</Dualiste_Body.label>
+  <Renoir_Body.label>renoir body</Renoir_Body.label>
+  <Sirene_Body.label>siren body</Sirene_Body.label>
+  <Visages_Body.label>faces body</Visages_Body.label>
+  <Mime_Body.label>mime body</Mime_Body.label>
+  <Verso_Body.label>verso body</Verso_Body.label>
+</LanguageData>

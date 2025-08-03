@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Corps de Boss -->
+  <Eveque_Body.label>corps d'évêque</Eveque_Body.label>
+  <Goblu_Body.label>corps de goblu</Goblu_Body.label>
+  <SakapatateRobuste_Body.label>corps de sakapatate robuste</SakapatateRobuste_Body.label>
+  <Paintress_Body.label>corps de Paintress</Paintress_Body.label>
+  <SakapatateUltime_Body.label>corps de sakapatate ultime</SakapatateUltime_Body.label>
+  <Francois_Body.label>corps de françois</Francois_Body.label>
+  <MaitreLampes_Body.label>corps de maître des lampes</MaitreLampes_Body.label>
+  <Dualiste_Body.label>corps de dualiste</Dualiste_Body.label>
+  <Renoir_Body.label>corps de renoir</Renoir_Body.label>
+  <Sirene_Body.label>corps de sirène</Sirene_Body.label>
+  <Visages_Body.label>corps de visages</Visages_Body.label>
+  <Mime_Body.label>corps de mime</Mime_Body.label>
+   <Verso_Body.label>verso</Verso_Body.label>
+
+</LanguageData>

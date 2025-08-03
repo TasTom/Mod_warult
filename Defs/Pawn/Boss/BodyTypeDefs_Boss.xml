@@ -4,20 +4,115 @@
   <!-- =============================================================== -->
   <!--               BodyTypeDef pour l’apparence                     -->
   <!-- =============================================================== -->
+
+  <!-- Évêque -->
   <BodyTypeDef>
     <defName>Eveque_Body</defName>
     <label>évêque</label>
     <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque</bodyNakedGraphicPath>
     <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque</bodyDessicatedGraphicPath>
-    <!-- Uncommenter si vous fournissez un masque pour les vêtements
-    <bodyMaleMaskPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque_Mask</bodyMaleMaskPath>
-    <bodyFemaleMaskPath>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque_Mask</bodyFemaleMaskPath>
-    -->
   </BodyTypeDef>
 
+  <!-- Goblu -->
+  <BodyTypeDef>
+    <defName>Goblu_Body</defName>
+    <label>goblu</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/goblu/Goblu</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/goblu/Goblu</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Sakapatate Robuste -->
+  <BodyTypeDef>
+    <defName>SakapatateRobuste_Body</defName>
+    <label>sakapatate robuste</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/sakapataterobuste/SakapatateRobuste</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/sakapataterobuste/SakapatateRobuste</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Sakapatate Ultime -->
+  <BodyTypeDef>
+    <defName>SakapatateUltime_Body</defName>
+    <label>sakapatate ultime</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/sakapatateultime/SakapatateUltime</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/sakapatateultime/SakapatateUltime</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- François -->
+  <BodyTypeDef>
+    <defName>Francois_Body</defName>
+    <label>françois</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/francois/Francois</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/francois/Francois</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Maître des Lampes -->
+  <BodyTypeDef>
+    <defName>MaitreLampes_Body</defName>
+    <label>maître des lampes</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/maitrelampes/MaitreLampes</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/maitrelampes/MaitreLampes</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Dualiste -->
+  <BodyTypeDef>
+    <defName>Dualiste_Body</defName>
+    <label>dualiste</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/dualiste/Dualiste</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/dualiste/Dualiste</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Renoir -->
+  <BodyTypeDef>
+    <defName>Renoir_Body</defName>
+    <label>renoìr</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/renoir/Renoir</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/renoir/Renoir</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Sirène -->
+  <BodyTypeDef>
+    <defName>Sirene_Body</defName>
+    <label>sirène</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/sirene/Sirene</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/sirene/Sirene</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Visages -->
+  <BodyTypeDef>
+    <defName>Visages_Body</defName>
+    <label>visages</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/visages/Visages</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/visages/Visages</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Paintress -->
+  <BodyTypeDef>
+    <defName>Paintress_Body</defName>
+    <label>Paintress</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/Paintress/Paintress</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/Paintress/Paintress</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Verso -->
+  <BodyTypeDef>
+    <defName>Verso_Body</defName>
+    <label>verso</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/verso/Verso</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/verso/Verso</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+
+  <!-- Mime -->
+  <BodyTypeDef>
+    <defName>Mime_Body</defName>
+    <label>mime</label>
+    <bodyNakedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/mime/Mime</bodyNakedGraphicPath>
+    <bodyDessicatedGraphicPath>Things/Pawn/Humanlike/Bodies/Nevron/mime/Mime</bodyDessicatedGraphicPath>
+  </BodyTypeDef>
+  
   <!-- =============================================================== -->
-  <!--               BodyDef pour l’anatomie (gel, blessures, etc.)    -->
+  <!--               BodyDef type : utiliser la même que Eveque        -->
   <!-- =============================================================== -->
+  <!-- L'anatomie adaptée à chacun des boss (identique sauf défName/label) -->
   <BodyDef>
     <defName>Eveque_Body</defName>
     <label>corps d'évêque</label>
@@ -26,7 +121,6 @@
       <coverage>0.1</coverage>
       <depth>Outside</depth>
       <parts>
-        <!-- Cou et tête -->
         <li>
           <def>Neck</def>
           <coverage>0.1</coverage>
@@ -54,7 +148,6 @@
           </parts>
         </li>
 
-        <!-- Bras gauche -->
         <li>
           <def>Arm</def>
           <coverage>0.15</coverage>
@@ -68,7 +161,6 @@
           </parts>
         </li>
 
-        <!-- Bras droit -->
         <li>
           <def>Arm</def>
           <coverage>0.15</coverage>
@@ -82,7 +174,6 @@
           </parts>
         </li>
 
-        <!-- Jambe gauche -->
         <li>
           <def>Leg</def>
           <coverage>0.2</coverage>
@@ -96,7 +187,988 @@
           </parts>
         </li>
 
-        <!-- Jambe droite -->
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+  <!-- Duplicata adapté pour tous les boss -->
+  <BodyDef>
+    <defName>Goblu_Body</defName>
+    <label>corps de goblu</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+         <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>SakapatateRobuste_Body</defName>
+    <label>corps de sakapatate robuste</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+    <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>Paintress_Body</defName>
+    <label>corps de Paintress</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>SakapatateUltime_Body</defName>
+    <label>corps de sakapatate ultime</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>Francois_Body</defName>
+    <label>corps de françois</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>MaitreLampes_Body</defName>
+    <label>corps de maître des lampes</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>Dualiste_Body</defName>
+    <label>corps de dualiste</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+        <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>Renoir_Body</defName>
+    <label>corps de renoir</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>Sirene_Body</defName>
+    <label>corps de sirène</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+         <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>Visages_Body</defName>
+    <label>corps de visages</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+ 
+  <BodyDef>
+    <defName>Mime_Body</defName>
+    <label>corps de mime</label>
+    <corePart>
+      <def>Torso</def>
+      <coverage>0.1</coverage>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.1</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.1</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.05</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.05</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Arm</def>
+          <coverage>0.15</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Leg</def>
+          <coverage>0.2</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Foot</def>
+              <coverage>0.05</coverage>
+              <depth>Outside</depth>
+            </li>
+          </parts>
+        </li>
+
         <li>
           <def>Leg</def>
           <coverage>0.2</coverage>

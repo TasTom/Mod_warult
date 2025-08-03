@@ -9,8 +9,8 @@ namespace Mod_warult
     // ═══════════════════════════════════════════════════════════
     // CLASSE DE BASE SIMPLIFIÉE selon l'architecture RoM
     // ═══════════════════════════════════════════════════════════
-    
-   public abstract class Verb_CastAbility : Verb
+
+    public abstract class Verb_CastAbility : Verb
     {
         protected override bool TryCastShot()
         {
@@ -18,10 +18,10 @@ namespace Mod_warult
             try
             {
                 bool success = ExecuteAbilityEffect();
-                
+
                 // Logs de debug pour identifier les problèmes
                 Log.Message($"[DEBUG] {GetType().Name} - ExecuteAbilityEffect: {success}");
-                
+
                 return success;
             }
             catch (System.Exception e)
@@ -48,15 +48,15 @@ namespace Mod_warult
     // ABILITIES DE L'ÉVÊQUE - VERSION CORRIGÉE
     // ═══════════════════════════════════════════════════════════
 
-    public class Verb_CastAbility_SacredLight : Verb_CastAbility
+  public class Verb_CastAbility_SacredLight : Verb_CastAbility
     {
         protected override bool ExecuteAbilityEffect()
         {
             if (!currentTarget.IsValid || CasterPawn?.Map == null)
                 return false;
-
-            Log.Message($"[DEBUG] SacredLight - Caster: {CasterPawn.LabelShort}, Target: {currentTarget.Cell}");
-
+                
+            Log.Message("Expedition33_SacredLightCasting".Translate(CasterPawn.LabelShort, currentTarget.Cell));
+            
             try
             {
                 CreateSacredLightEffect(currentTarget.Cell, CasterPawn.Map);
@@ -64,7 +64,7 @@ namespace Mod_warult
             }
             catch (System.Exception e)
             {
-                Log.Error($"[DEBUG] Erreur SacredLight: {e.Message}");
+                Log.Error("Expedition33_SacredLightError".Translate(e.Message));
                 return false;
             }
         }
@@ -102,7 +102,7 @@ namespace Mod_warult
                 }
             }
 
-            Messages.Message($"✨ {CasterPawn.LabelShort} projette une lumière sacrée !",
+            Messages.Message("Expedition33_SacredLightExecuted".Translate(CasterPawn.LabelShort),
                 MessageTypeDefOf.ThreatBig);
         }
     }
@@ -156,7 +156,7 @@ namespace Mod_warult
             // Effet visuel massif blanc et doré
             for (int i = 0; i < 20; i++)
             {
-                FleckMaker.ThrowDustPuffThick(caster.Position.ToVector3Shifted(), 
+                FleckMaker.ThrowDustPuffThick(caster.Position.ToVector3Shifted(),
                     caster.Map, 3f, Color.white);
             }
 
@@ -540,7 +540,7 @@ namespace Mod_warult
                 for (int i = 0; i < 25; i++)
                 {
                     Color effectColor = Rand.Bool ? Color.white : Color.black;
-                    FleckMaker.ThrowDustPuffThick(CasterPawn.Position.ToVector3Shifted(), 
+                    FleckMaker.ThrowDustPuffThick(CasterPawn.Position.ToVector3Shifted(),
                         CasterPawn.Map, 3f, effectColor);
                 }
 
@@ -592,7 +592,7 @@ namespace Mod_warult
                 FleckMaker.ThrowMetaIcon(target.Position, target.Map, FleckDefOf.Heart);
                 for (int i = 0; i < 10; i++)
                 {
-                    FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), 
+                    FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(),
                         target.Map, 2f, Color.red);
                 }
 
@@ -742,12 +742,12 @@ namespace Mod_warult
         {
             // Invoque 2-3 membres corrompus de l'expédition
             int memberCount = Rand.Range(2, 4);
-            
+
             for (int i = 0; i < memberCount; i++)
             {
                 // Trouver une position libre près du caster
                 IntVec3 spawnPos = CellFinder.RandomClosewalkCellNear(caster.Position, caster.Map, 3);
-                
+
                 if (spawnPos.IsValid)
                 {
                     // Créer un membre corrompu
@@ -756,7 +756,7 @@ namespace Mod_warult
                     {
                         Pawn member = PawnGenerator.GeneratePawn(memberKind, caster.Faction);
                         GenSpawn.Spawn(member, spawnPos, caster.Map);
-                        
+
                         // Effet visuel d'invocation
                         FleckMaker.ThrowDustPuffThick(spawnPos.ToVector3Shifted(), caster.Map, 2f, Color.green);
                     }
@@ -940,7 +940,7 @@ namespace Mod_warult
                     // Effet visuel psychique
                     for (int i = 0; i < 12; i++)
                     {
-                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f, 
+                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f,
                             new Color(0.8f, 0.2f, 0.8f));
                     }
                 }
@@ -1039,7 +1039,7 @@ namespace Mod_warult
                             }
 
                             // Effet visuel kaléidoscopique
-                            FleckMaker.ThrowDustPuffThick(cell.ToVector3Shifted(), caster.Map, 2f, 
+                            FleckMaker.ThrowDustPuffThick(cell.ToVector3Shifted(), caster.Map, 2f,
                                 new Color(Rand.Value, Rand.Value, Rand.Value));
                         }
                     }
@@ -1052,7 +1052,7 @@ namespace Mod_warult
     }
 
     // ═══════════════════════════════════════════════════════════
-    // ABILITIES DE LA PEINTRESSE - VERSION RoM
+    // ABILITIES DE LA Paintress - VERSION RoM
     // ═══════════════════════════════════════════════════════════
 
     public class Verb_CastAbility_GommageRitual : Verb_CastAbility
@@ -1071,8 +1071,8 @@ namespace Mod_warult
         {
             // Rituel de gommage - menace tous les pawns d'un âge spécifique
             int gommageNumber = Rand.Range(15, 65);
-            
-            Messages.Message($"📜 LA PEINTRESSE INSCRIT LE NOMBRE {gommageNumber} !",
+
+            Messages.Message($"📜 THE Paintress WRITE THE NUMBER {gommageNumber} !",
                 MessageTypeDefOf.ThreatBig);
 
             // Affecte tous les pawns de cet âge
@@ -1088,7 +1088,7 @@ namespace Mod_warult
                     if (gommageHediff != null)
                         pawn.health.AddHediff(gommageHediff);
 
-                    Messages.Message($"💀 {pawn.LabelShort} ({gommageNumber} ans) est marqué pour le gommage !",
+                    Messages.Message($"💀 {pawn.LabelShort} ({gommageNumber} ans) is mark for the gommage !",
                         MessageTypeDefOf.ThreatBig);
                 }
             }
@@ -1125,7 +1125,7 @@ namespace Mod_warult
                     // Effet visuel cosmique
                     for (int i = 0; i < 15; i++)
                     {
-                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f, 
+                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f,
                             new Color(0.8f, 0.2f, 0.8f));
                     }
                 }
@@ -1151,13 +1151,13 @@ namespace Mod_warult
                         target.health.AddHediff(numberHediff);
 
                     int cursedNumber = Rand.Range(1, 999);
-                    Messages.Message($"🔢 La Peintresse inscrit le nombre {cursedNumber} sur {target.LabelShort} !",
+                    Messages.Message($"🔢 The Paintress write the number {cursedNumber} on {target.LabelShort} !",
                         MessageTypeDefOf.ThreatBig);
 
                     // Effet visuel numérique
                     for (int i = 0; i < 10; i++)
                     {
-                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 1.5f, 
+                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 1.5f,
                             new Color(0.9f, 0.1f, 0.1f));
                     }
                 }
@@ -1182,7 +1182,7 @@ namespace Mod_warult
         private void CreateMonolithPower(Pawn caster)
         {
             // Attaque finale dévastatrice
-            Messages.Message("⚫ LA PEINTRESSE CANALISE LE POUVOIR DU MONOLITHE !",
+            Messages.Message("⚫ LA Paintress CANALISE LE POUVOIR DU MONOLITHE !",
                 MessageTypeDefOf.ThreatBig);
 
             // Dégâts massifs à tous les ennemis sur la carte
@@ -1209,9 +1209,52 @@ namespace Mod_warult
                 FleckMaker.ThrowDustPuffThick(randomPos, caster.Map, 5f, Color.black);
             }
 
-            // Auto-dégâts à la Peintresse (attaque ultime coûteuse)
+            // Auto-dégâts à la Paintress (attaque ultime coûteuse)
             var selfDamage = new DamageInfo(DamageDefOf.Deterioration, 150f, 1f, -1f, caster);
             caster.TakeDamage(selfDamage);
+        }
+    }
+
+
+     public class Verb_CastAbility_NevronPainting : Verb_CastAbility
+    {
+        protected override bool TryCastShot()
+        {
+            if (base.TryCastShot())
+            {
+                NevronPainting(CasterPawn);
+                return true;
+            }
+            return false;
+        }
+
+        private void NevronPainting(Pawn caster)
+        {
+            // Invoque 2-3 membres corrompus de l'expédition
+            int memberCount = Rand.Range(2, 4);
+
+            for (int i = 0; i < memberCount; i++)
+            {
+                // Trouver une position libre près du caster
+                IntVec3 spawnPos = CellFinder.RandomClosewalkCellNear(caster.Position, caster.Map, 3);
+
+                if (spawnPos.IsValid)
+                {
+                    // Créer un membre corrompu
+                    PawnKindDef memberKind = DefDatabase<PawnKindDef>.GetNamedSilentFail("Expedition33_CorruptedMember");
+                    if (memberKind != null)
+                    {
+                        Pawn member = PawnGenerator.GeneratePawn(memberKind, caster.Faction);
+                        GenSpawn.Spawn(member, spawnPos, caster.Map);
+
+                        // Effet visuel d'invocation
+                        FleckMaker.ThrowDustPuffThick(spawnPos.ToVector3Shifted(), caster.Map, 2f, Color.green);
+                    }
+                }
+            }
+
+            Messages.Message($"👥 La peintress painting monsters !",
+                MessageTypeDefOf.ThreatBig);
         }
     }
 
@@ -1219,64 +1262,14 @@ namespace Mod_warult
     // ABILITIES SUPPLÉMENTAIRES - CAPACITÉS SPÉCIALES
     // ═══════════════════════════════════════════════════════════
 
-    public class Verb_CastAbility_ImmortalityFragment : Verb_CastAbility
-    {
-        protected override bool TryCastShot()
-        {
-            if (base.TryCastShot())
-            {
-                // Fragment d'immortalité - régénération extrême
-                var immortalityBuff = HediffMaker.MakeHediff(
-                    DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_DivineRegeneration"), CasterPawn);
-                if (immortalityBuff != null)
-                {
-                    immortalityBuff.Severity = 2.0f; // Double effet
-                    CasterPawn.health.AddHediff(immortalityBuff);
-                }
 
-                Messages.Message($"✨ {CasterPawn.LabelShort} active un fragment d'immortalité !",
-                    MessageTypeDefOf.ThreatBig);
 
-                // Effet visuel divin
-                for (int i = 0; i < 30; i++)
-                {
-                    FleckMaker.ThrowLightningGlow(CasterPawn.Position.ToVector3Shifted(), CasterPawn.Map, 4f);
-                }
-                return true;
-            }
-            return false;
-        }
-    }
 
-    public class Verb_CastAbility_FractureParfaite : Verb_CastAbility
-    {
-        protected override bool TryCastShot()
-        {
-            if (base.TryCastShot())
-            {
-                var target = currentTarget.Pawn;
-                if (target == null || target == CasterPawn) return false;
-                if (target != null )
-                {
-                    // Fracture parfaite - ignore toute armure et résistance
-                    var fractureDamage = new DamageInfo(DamageDefOf.Cut, 200f, 10f, -1f, CasterPawn);
-                    target.TakeDamage(fractureDamage);
 
-                    Messages.Message($"💎 Fracture parfaite sur {target.LabelShort} !",
-                        MessageTypeDefOf.ThreatBig);
 
-                    // Effet visuel cristallin
-                    for (int i = 0; i < 20; i++)
-                    {
-                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 2f,
-                            new Color(0.8f, 0.9f, 1f));
-                    }
-                }
-                return true;
-            }
-            return false;
-        }
-    }
+
+
+
 
     public class Verb_CastAbility_CorruptedRage : Verb_CastAbility
     {
@@ -1296,7 +1289,7 @@ namespace Mod_warult
                 // Effet visuel de rage
                 for (int i = 0; i < 25; i++)
                 {
-                    FleckMaker.ThrowDustPuffThick(CasterPawn.Position.ToVector3Shifted(), CasterPawn.Map, 3f, 
+                    FleckMaker.ThrowDustPuffThick(CasterPawn.Position.ToVector3Shifted(), CasterPawn.Map, 3f,
                         new Color(0.8f, 0f, 0f));
                 }
                 return true;
@@ -1366,7 +1359,7 @@ namespace Mod_warult
                     // Effet visuel subtil (barrières invisibles)
                     for (int i = 0; i < 8; i++)
                     {
-                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 1f, 
+                        FleckMaker.ThrowDustPuffThick(target.Position.ToVector3Shifted(), target.Map, 1f,
                             new Color(0.5f, 0.5f, 0.5f, 0.3f));
                     }
                 }
@@ -1375,4 +1368,94 @@ namespace Mod_warult
             return false;
         }
     }
+    public class Verb_CastAbility_RangeAttack : Verb_CastAbility
+    {
+        protected override bool TryCastShot()
+        {
+            if (currentTarget.Thing == null || CasterPawn?.Map == null)
+                return false;
+
+            if (verbProps.defaultProjectile == null)
+            {
+                Log.Error("[RangeAttack] Aucun projectile dans le AbilityDef !");
+                return false;
+            }
+
+            Projectile proj = (Projectile)GenSpawn.Spawn(verbProps.defaultProjectile, CasterPawn.Position, CasterPawn.Map);
+            proj.Launch(
+                CasterPawn,
+                CasterPawn.DrawPos,
+                currentTarget,
+                currentTarget,
+                ProjectileHitFlags.IntendedTarget
+            );
+
+            return true;
+        }
+    }
+    
+ public class Verb_CastAbility_CannonShot : Verb_CastAbility
+    {
+        protected override bool TryCastShot()
+        {
+            if (currentTarget.Thing == null || CasterPawn?.Map == null)
+                return false;
+
+            // Récupère le projectile depuis l'AbilityDef
+            ThingDef projectileDef = this.verbProps.defaultProjectile;
+            if (projectileDef == null)
+            {
+                Log.Error("[Verb_CastAbility_CannonShot] Aucun projectile défini !");
+                return false;
+            }
+
+            Projectile projectile = (Projectile)GenSpawn.Spawn(projectileDef, CasterPawn.Position, CasterPawn.Map);
+            projectile.Launch(
+                CasterPawn,
+                CasterPawn.DrawPos,
+                currentTarget,
+                currentTarget,
+                ProjectileHitFlags.IntendedTarget
+            );
+
+            // Effet visuel simple au lancement (optionnel)
+            FleckMaker.ThrowDustPuffThick(CasterPawn.Position.ToVector3Shifted(), CasterPawn.Map, 2f, UnityEngine.Color.gray);
+
+            return true;
+        }
+    }
+    
+ public class Verb_CastAbility_PrimalHeal : Verb_CastAbility
+    {
+        protected override bool ExecuteAbilityEffect()
+        {
+            if (CasterPawn == null)
+                return false;
+
+            // Appliquer le Hediff de soin (adapte le nom si besoin)
+            HediffDef hediff = HediffDef.Named("Expedition33_SlowRegeneration");
+            if (CasterPawn.health.hediffSet.HasHediff(hediff))
+            {
+                // Si déjà présent, prolonge ou refresh la durée
+                Hediff h = CasterPawn.health.hediffSet.GetFirstHediffOfDef(hediff);
+                var comp = h.TryGetComp<HediffComp_Disappears>();
+                if (comp != null)
+                    comp.ticksToDisappear = 3600;
+            }
+            else
+            {
+                Hediff hediffNew = HediffMaker.MakeHediff(hediff, CasterPawn);
+                CasterPawn.health.AddHediff(hediffNew);
+            }
+
+            // Petit effet visuel/apparence
+            FleckMaker.ThrowMicroSparks(CasterPawn.DrawPos, CasterPawn.Map);
+
+            // Message
+            Messages.Message($"{CasterPawn.LabelShort} active une régénération primitive !", CasterPawn, MessageTypeDefOf.PositiveEvent);
+
+            return true;
+        }
+    }
+
 }

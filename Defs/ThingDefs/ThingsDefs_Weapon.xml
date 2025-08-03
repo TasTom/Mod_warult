@@ -34,12 +34,17 @@
 				<cooldownTime>2.0</cooldownTime>
 			</li>
 		</tools>
+		<weaponTags>
+            <li>Expedition33_BasicWeapon</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        
 		<costList>
 			<Steel>75</Steel>
 			<WoodLog>20</WoodLog>
 			<Plasteel>20</Plasteel>
 		</costList>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
@@ -52,7 +57,7 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-		</recipeMaker>
+		</recipeMaker> -->
 	</ThingDef>
 
 	<!-- Lame Artistique Anti-Gommage -->
@@ -97,11 +102,16 @@
 				<cooldownTime>1.8</cooldownTime>
 			</li>
 		</tools>
+			        <weaponTags>
+            <li>Expedition33_EliteWeapon</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
 		<costList>
 			<Steel>80</Steel>
 			<Plasteel>40</Plasteel>
 			<Gold>25</Gold>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Expedition33_Chroma>10</Expedition33_Chroma>
 		</costList>
 		<recipeMaker>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -204,6 +214,11 @@
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
+	        <weaponTags>
+            <li>Expedition33_RifleWeapon</li>
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+        
 		<costList>
 			<Steel>100</Steel>
 			<WoodLog>15</WoodLog>
@@ -221,7 +236,7 @@
 				<li>Expedition33_Armory</li>
 			</recipeUsers>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>12</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 	</ThingDef>

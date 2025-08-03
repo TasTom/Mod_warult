@@ -84,6 +84,20 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	<ThoughtDef>
+    <defName>Expedition33_AntiPaintressHope</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Expedition33_AntiPaintressMotivation</hediff>
+    <validWhileDespawned>false</validWhileDespawned>
+    <stages>
+        <li>
+            <label>espoir de victoire</label>
+            <description>Nous avons survécu la Paintress peut être vaincue ! J'ai de l'espoir.</description>
+            <baseMoodEffect>8</baseMoodEffect>
+        </li>
+    </stages>
+</ThoughtDef>
+
 
 
 </Defs>

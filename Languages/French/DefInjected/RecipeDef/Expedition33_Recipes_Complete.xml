@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Recherche et analyse -->
+  <AnalyzeGommage.label>analyser le phénomène de gommage</AnalyzeGommage.label>
+  <AnalyzeGommage.description>Étudier les échantillons de corruption artistique pour comprendre les mécanismes du Gommage. Accélère la recherche anti-Gommage.</AnalyzeGommage.description>
+  <AnalyzeGommage.jobString>analyse le Gommage.</AnalyzeGommage.jobString>
+  
+  <PlanEmergencyMission.label>planifier mission d'urgence anti-gommage</PlanEmergencyMission.label>
+  <PlanEmergencyMission.description>Organiser une mission d'urgence pour évacuer les zones menacées par le Gommage. Améliore les chances de survie des colons.</PlanEmergencyMission.description>
+  <PlanEmergencyMission.jobString>planifie une mission d'urgence.</PlanEmergencyMission.jobString>
+  
+  <CalibrateDetector.label>calibrer détecteur d'âge maudit</CalibrateDetector.label>
+  <CalibrateDetector.description>Améliorer la précision du détecteur d'âge maudit pour des alertes plus fiables.</CalibrateDetector.description>
+  <CalibrateDetector.jobString>calibre le détecteur.</CalibrateDetector.jobString>
+
+  <!-- Fabrication d'équipement -->
+  <Make_AntiGommageShield.label>fabriquer bouclier anti-gommage</Make_AntiGommageShield.label>
+  <Make_AntiGommageShield.description>Fabrique un bouclier personnel contre les effets du Gommage. Protection limitée mais efficace.</Make_AntiGommageShield.description>
+  <Make_AntiGommageShield.jobString>fabrique un bouclier anti-gommage.</Make_AntiGommageShield.jobString>
+  
+  
+  <MakeExpeditionGear.label>fabriquer uniforme d'expédition</MakeExpeditionGear.label>
+  <MakeExpeditionGear.description>Créer l'uniforme standard de l'Expédition 33 pour identifier les membres et améliorer le moral.</MakeExpeditionGear.description>
+  <MakeExpeditionGear.jobString>fabrique un uniforme d'expédition.</MakeExpeditionGear.jobString>
+
+  <!-- Fabrication de Pictos -->
+  <Expedition33_CraftPictoGuardian.label>forger picto gardien</Expedition33_CraftPictoGuardian.label>
+  <Expedition33_CraftPictoGuardian.description>Forger un Picto Gardien à partir de Chroma et de matériaux nobles. Ce Picto confère une protection magique et peut débloquer la Lumina "Égide Cristalline".</Expedition33_CraftPictoGuardian.description>
+  <Expedition33_CraftPictoGuardian.jobString>Forge un Picto Gardien</Expedition33_CraftPictoGuardian.jobString>
+  
+  <Expedition33_CraftPictoStriker.label>forger picto frappeur</Expedition33_CraftPictoStriker.label>
+  <Expedition33_CraftPictoStriker.description>Forger un Picto Frappeur à partir de Chroma et de métaux purs. Ce Picto augmente les capacités offensives et peut débloquer la Lumina "Lame Chromatique".</Expedition33_CraftPictoStriker.description>
+  <Expedition33_CraftPictoStriker.jobString>Forge un Picto Frappeur</Expedition33_CraftPictoStriker.jobString>
+  
+  <Expedition33_CraftPictoHealer.label>forger picto soigneur</Expedition33_CraftPictoHealer.label>
+  <Expedition33_CraftPictoHealer.description>Forger un Picto Soigneur à partir de Chroma et de pierres précieuses. Ce Picto accélère la guérison et peut débloquer la Lumina "Restauration Vitale".</Expedition33_CraftPictoHealer.description>
+  <Expedition33_CraftPictoHealer.jobString>Forge un Picto Soigneur</Expedition33_CraftPictoHealer.jobString>
+  
+  <Expedition33_CraftPictoScholar.label>forger picto érudit</Expedition33_CraftPictoScholar.label>
+  <Expedition33_CraftPictoScholar.description>Forger un Picto Érudit à partir de Chroma et de matériaux nobles. Ce Picto améliore l'intellect et peut débloquer la Lumina "Perspicacité Chromatique".</Expedition33_CraftPictoScholar.description>
+  <Expedition33_CraftPictoScholar.jobString>Forge un Picto Érudit</Expedition33_CraftPictoScholar.jobString>
+
+  <!-- Traitement des matériaux -->
+  <Expedition33_ProcessChromaRaw.label>raffiner chroma brut</Expedition33_ProcessChromaRaw.label>
+  <Expedition33_ProcessChromaRaw.description>Traiter le Chroma brut collecté pour obtenir du Chroma pur utilisable dans la fabrication de Pictos.</Expedition33_ProcessChromaRaw.description>
+  <Expedition33_ProcessChromaRaw.jobString>Raffine du Chroma</Expedition33_ProcessChromaRaw.jobString>
+</LanguageData>

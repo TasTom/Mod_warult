@@ -2,10 +2,10 @@
 <Defs>
     <!-- Gestral tribal de base -->
     <PawnKindDef>
-        <defName>Expedition33_GestralTribal</defName>
+        <defName>GestralTribal</defName>
         <label>gestral tribal</label>
-        <race>Expedition33_Gestral</race>
-        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <race>Gestral</race>
+        <defaultFactionType>GestralTribe</defaultFactionType>
         <combatPower>65</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <canBeSapper>false</canBeSapper>
@@ -33,10 +33,10 @@
 
     <!-- Guerrier Gestral -->
     <PawnKindDef>
-        <defName>Expedition33_GestralWarrior</defName>
+        <defName>GestralWarrior</defName>
         <label>guerrier gestral</label>
-        <race>Expedition33_Gestral</race>
-        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <race>Gestral</race>
+        <defaultFactionType>GestralTribe</defaultFactionType>
         <combatPower>80</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <canBeSapper>false</canBeSapper>
@@ -65,10 +65,10 @@
 
     <!-- Champion Gestral -->
     <PawnKindDef>
-        <defName>Expedition33_GestralChampion</defName>
+        <defName>GestralChampion</defName>
         <label>champion gestral</label>
-        <race>Expedition33_Gestral</race>
-        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <race>Gestral</race>
+        <defaultFactionType>GestralTribe</defaultFactionType>
         <combatPower>120</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <canBeSapper>true</canBeSapper>
@@ -96,10 +96,10 @@
 
     <!-- Philosophe Gestral -->
     <PawnKindDef>
-        <defName>Expedition33_GestralPhilosopher</defName>
+        <defName>GestralPhilosopher</defName>
         <label>philosophe gestral</label>
-        <race>Expedition33_Gestral</race>
-        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <race>Gestral</race>
+        <defaultFactionType>GestralTribe</defaultFactionType>
         <combatPower>45</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <canBeSapper>false</canBeSapper>
@@ -126,10 +126,10 @@
 
     <!-- Commerçant Gestral -->
     <PawnKindDef>
-        <defName>Expedition33_GestralTrader</defName>
+        <defName>GestralTrader</defName>
         <label>commerçant gestral</label>
-        <race>Expedition33_Gestral</race>
-        <defaultFactionType>Expedition33_GestralTribe</defaultFactionType>
+        <race>Gestral</race>
+        <defaultFactionType>GestralTribe</defaultFactionType>
         <combatPower>60</combatPower>
         <trader>true</trader>
         <canArriveManhunter>false</canArriveManhunter>

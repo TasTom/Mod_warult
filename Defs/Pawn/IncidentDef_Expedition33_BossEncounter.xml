@@ -20,10 +20,11 @@
       <sitePartDefName>Expedition33_EvequeSitePart</sitePartDefName>
       <bossDefName>Expedition33_Eveque</bossDefName>
       <questId>ActeI_VallonsFleuris</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
-
 
 <IncidentDef>
   <defName>Expedition33_SpawnGobluSite</defName>
@@ -39,6 +40,8 @@
       <sitePartDefName>Expedition33_GobluSitePart</sitePartDefName>
       <bossDefName>Expedition33_Goblu</bossDefName>
       <questId>ActeI_OceanSuspendu</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -57,6 +60,8 @@
       <sitePartDefName>Expedition33_SakapatateRobusteSitePart</sitePartDefName>
       <bossDefName>Expedition33_SakapatateRobuste</bossDefName>
       <questId>ActeI_SanctuaireAncien</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -75,6 +80,8 @@
       <sitePartDefName>Expedition33_SakapatateUltimeSitePart</sitePartDefName>
       <bossDefName>Expedition33_SakapatateUltime</bossDefName>
       <questId>ActeI_SanctuaireAncien</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -93,6 +100,8 @@
       <sitePartDefName>Expedition33_FrancoisSitePart</sitePartDefName>
       <bossDefName>Expedition33_Francois</bossDefName>
       <questId>ActeI_NidEsquie</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -111,6 +120,8 @@
       <sitePartDefName>Expedition33_MaitreDesLampesSitePart</sitePartDefName>
       <bossDefName>Expedition33_MaitreDesLampes</bossDefName>
       <questId>ActeI_Final</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -129,6 +140,8 @@
       <sitePartDefName>Expedition33_DualisteSitePart</sitePartDefName>
       <bossDefName>Expedition33_Dualiste</bossDefName>
       <questId>ActeII_TerresOubliees</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -147,6 +160,8 @@
       <sitePartDefName>Expedition33_RenoirSitePart</sitePartDefName>
       <bossDefName>Expedition33_Renoir</bossDefName>
       <questId>ActeII_Manoir</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -164,7 +179,9 @@
     <li Class="Mod_warult.BossSiteExtension">
       <sitePartDefName>Expedition33_SireneSitePart</sitePartDefName>
       <bossDefName>Expedition33_Sirene</bossDefName>
-      <questId>ActeII_LesAxons</questId>
+      <questId>ActeII_SireneQuest</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
@@ -182,13 +199,15 @@
     <li Class="Mod_warult.BossSiteExtension">
       <sitePartDefName>Expedition33_VisagesSitePart</sitePartDefName>
       <bossDefName>Expedition33_Visages</bossDefName>
-      <questId>ActeII_LesAxons</questId>
+      <questId>ActeII_VisagesQuest</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
 </IncidentDef>
 
 <IncidentDef>
-  <defName>Expedition33_SpawnPeintresseSite</defName>
+  <defName>Expedition33_SpawnPaintressSite</defName>
   <label>découverte du Monolithe</label>
   <workerClass>Mod_warult.IncidentWorker_SpawnBossSite</workerClass>
   <category>Misc</category>
@@ -198,11 +217,27 @@
   </targetTags>
   <modExtensions>
     <li Class="Mod_warult.BossSiteExtension">
-      <sitePartDefName>Expedition33_PeintresseSitePart</sitePartDefName>
-      <bossDefName>Expedition33_Peintresse</bossDefName>
+      <sitePartDefName>Expedition33_PaintressSitePart</sitePartDefName>
+      <bossDefName>Expedition33_Paintress</bossDefName>
       <questId>ActeII_Final</questId>
+      <!-- ✅ AUCUN VÊTEMENT FORCÉ -->
+      <forcedApparelDefs></forcedApparelDefs>
     </li>
   </modExtensions>
+</IncidentDef>
+
+<IncidentDef>
+  <defName>Expedition33_AxonSiteSpawner</defName>
+  <workerClass>Mod_warult.IncidentWorker_SpawnAxonSites</workerClass>
+  <category>ThreatBig</category>
+  <baseChance>0</baseChance>
+  <minRefireDays>999999</minRefireDays>
+    <targetTags>
+    <li>World</li>
+  </targetTags>
+  <letterLabel>Sites Axons découverts</letterLabel>
+  <letterText>Deux mystérieux sites Axons sont apparus sur la carte du monde.</letterText>
+  <letterDef>ThreatBig</letterDef>
 </IncidentDef>
 
 </Defs>

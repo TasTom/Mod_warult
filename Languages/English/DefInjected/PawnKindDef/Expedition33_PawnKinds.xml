@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Boss -->
+  <Expedition_Verso.label>Verso</Expedition_Verso.label>
+  <Expedition33_Mime.label>the Mime</Expedition33_Mime.label>
+  <Expedition33_Goblu.label>The Goblu</Expedition33_Goblu.label>
+  <Expedition33_Goblu.modExtensions.0.creatureName>The Goblu</Expedition33_Goblu.modExtensions.0.creatureName>
+  <Expedition33_SakapatateRobuste.label>Sakapatate the Robust</Expedition33_SakapatateRobuste.label>
+  <Expedition33_SakapatateRobuste.modExtensions.0.creatureName>Sakapatate the Robust</Expedition33_SakapatateRobuste.modExtensions.0.creatureName>
+  <Expedition33_SakapatateUltime.label>Sakapatate the Ultimate</Expedition33_SakapatateUltime.label>
+  <Expedition33_SakapatateUltime.modExtensions.0.creatureName>Sakapatate the Ultimate</Expedition33_SakapatateUltime.modExtensions.0.creatureName>
+  <Expedition33_Francois.modExtensions.0.creatureName>François the Immortal</Expedition33_Francois.modExtensions.0.creatureName>
+  <Expedition33_MaitreDesLampes.label>The Lampmaster</Expedition33_MaitreDesLampes.label>
+  <Expedition33_MaitreDesLampes.modExtensions.0.creatureName>The Lampmaster</Expedition33_MaitreDesLampes.modExtensions.0.creatureName>
+  <Expedition33_Dualiste.modExtensions.0.creatureName>The Dualist</Expedition33_Dualiste.modExtensions.0.creatureName>
+  <Expedition33_Renoir.modExtensions.0.creatureName>Commander Renoir</Expedition33_Renoir.modExtensions.0.creatureName>
+  <Expedition33_Sirene.modExtensions.0.creatureName>The Siren</Expedition33_Sirene.modExtensions.0.creatureName>
+  <Expedition33_Visages.modExtensions.0.creatureName>The Faces</Expedition33_Visages.modExtensions.0.creatureName>
+  <Expedition33_Paintress.modExtensions.0.creatureName>The Paintress</Expedition33_Paintress.modExtensions.0.creatureName>
+  
+  <!-- Missing Boss Labels -->
+  <Expedition33_Eveque.label>The Bishop</Expedition33_Eveque.label>
+  <Expedition33_Francois.label>François the Immortal</Expedition33_Francois.label>
+  <Expedition33_Dualiste.label>The Dualist</Expedition33_Dualiste.label>
+  <Expedition33_Renoir.label>Commander Renoir</Expedition33_Renoir.label>
+  <Expedition33_Sirene.label>The Siren</Expedition33_Sirene.label>
+  <Expedition33_Visages.label>The Faces</Expedition33_Visages.label>
+  <Expedition33_Paintress.label>The Paintress</Expedition33_Paintress.label>
+  
+  <!-- Expedition Members -->
+  <Expedition33_CorruptedMember.label>Corrupted Member</Expedition33_CorruptedMember.label>
+  <Expedition33_CorruptedMember.modExtensions.0.creatureName>Corrupted Member</Expedition33_CorruptedMember.modExtensions.0.creatureName>
+  <Expedition_Expeditionnaire.label>expeditioner</Expedition_Expeditionnaire.label>
+  <Expedition_Commandant.label>expedition commander</Expedition_Commandant.label>
+  <Expedition_Marchand.label>expedition trader</Expedition_Marchand.label>
+  <Expedition_Garde.label>expedition guard</Expedition_Garde.label>
+  <Expedition_Eclaireur.label>scout</Expedition_Eclaireur.label>
+  
+  <!-- Gestrals -->
+  <GestralTribal.label>tribal gestral</GestralTribal.label>
+  <GestralWarrior.label>gestral warrior</GestralWarrior.label>
+  <GestralChampion.label>gestral champion</GestralChampion.label>
+  <GestralPhilosopher.label>gestral philosopher</GestralPhilosopher.label>
+  <GestralTrader.label>gestral trader</GestralTrader.label>
+  
+  <!-- Nevrons -->
+  <Nevron_Basic.label>Lancer</Nevron_Basic.label>
+  <Pitank.label>pitank</Pitank.label>
+  <Amphorien.label>Amphorien</Amphorien.label>
+  <NevronDechut.label>fallen nevron</NevronDechut.label>
+  <PitankAlpha.label>pitank alpha</PitankAlpha.label>
+</LanguageData>

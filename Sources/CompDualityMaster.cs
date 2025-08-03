@@ -7,18 +7,17 @@ namespace Mod_warult
     {
         public bool IsLightMode = true;
         private int lastShiftTick = 0;
-        
+
         public override void CompTick()
         {
             base.CompTick();
             
-            // Change automatiquement de mode toutes les 30 secondes si pas utilisé manuellement
             if (GenTicks.TicksGame - lastShiftTick > 1800)
             {
                 ShiftPolarity();
             }
         }
-        
+
         public void ShiftPolarity()
         {
             IsLightMode = !IsLightMode;
@@ -26,22 +25,25 @@ namespace Mod_warult
             
             if (parent is Pawn pawn)
             {
-                // Supprime les anciens hediffs de mode
                 var oldMode = pawn.health.hediffSet.GetFirstHediffOfDef(
                     DefDatabase<HediffDef>.GetNamed(IsLightMode ? "Expedition33_DarkMode" : "Expedition33_LightMode"));
+                    
                 if (oldMode != null)
                 {
                     pawn.health.RemoveHediff(oldMode);
                 }
-                
-                // Applique le nouveau mode
+
                 string newModeHediff = IsLightMode ? "Expedition33_LightMode" : "Expedition33_DarkMode";
                 var modeHediff = HediffMaker.MakeHediff(
                     DefDatabase<HediffDef>.GetNamed(newModeHediff), pawn);
                 pawn.health.AddHediff(modeHediff);
+
+                Messages.Message("Expedition33_DualityShift".Translate(
+                    IsLightMode ? "Expedition33_LightMode".Translate() : "Expedition33_DarkMode".Translate()),
+                    MessageTypeDefOf.NeutralEvent);
             }
         }
-        
+
         public override void PostExposeData()
         {
             base.PostExposeData();

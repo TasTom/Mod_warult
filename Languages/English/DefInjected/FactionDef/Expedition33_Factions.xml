@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Expedition33.label>Expedition 33</Expedition33.label>
+  <Expedition33.description>A military faction whose members are haunted by a mysterious phenomenon called "The Gommage".</Expedition33.description>
+  <Expedition33.fixedName>Expedition 33</Expedition33.fixedName>
+  <Expedition33.leaderTitle>commander</Expedition33.leaderTitle>
+  <Expedition33.messageDefendersAttacking>{0} from {1} are attacking your {2}.</Expedition33.messageDefendersAttacking>
+  <Expedition33.pawnSingular>expeditioner</Expedition33.pawnSingular>
+  <Expedition33.pawnsPlural>expeditioners</Expedition33.pawnsPlural>
+  
+  <GestralTribe.label>Gestral Tribe</GestralTribe.label>
+  <GestralTribe.description>A tribe of friendly but simple-minded Gestrals who love to fight. They respect powerful warriors and aren't afraid of death thanks to their rebirth ability at the Sacred River.</GestralTribe.description>
+  <GestralTribe.fixedName>Warrior Gestral Tribe</GestralTribe.fixedName>
+  <GestralTribe.leaderTitle>Great Warrior</GestralTribe.leaderTitle>
+  <GestralTribe.messageDefendersAttacking>{0} from {1} are attacking your {2}.</GestralTribe.messageDefendersAttacking>
+  <GestralTribe.pawnSingular>gestral</GestralTribe.pawnSingular>
+  <GestralTribe.pawnsPlural>gestrals</GestralTribe.pawnsPlural>
+  
+  <Nevrons.label>Gommage Forces</Nevrons.label>
+  <Nevrons.description>A corrupted faction mixing bestial creatures and humans fallen to the Paintress. These once-living entities were transformed by the Gommage, losing their humanity but retaining terrifying collective intelligence. They emerge from the depths to spread their corruption.</Nevrons.description>
+  <Nevrons.fixedName>Gommage Forces</Nevrons.fixedName>
+  <Nevrons.leaderTitle>Supreme Nevron</Nevrons.leaderTitle>
+  <Nevrons.pawnSingular>Nevron</Nevrons.pawnSingular>
+  <Nevrons.pawnsPlural>Nevrons</Nevrons.pawnsPlural>
+</LanguageData>

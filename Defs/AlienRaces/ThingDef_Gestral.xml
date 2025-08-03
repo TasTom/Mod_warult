@@ -6,11 +6,14 @@
             <Mass>70</Mass>
         </statBases>
         <inspectorTabs></inspectorTabs>
-        <comps></comps>
+              <comps>
+         <li Class="Mod_warult.CompProperties_AutoHealBleed"/>
+         <li Class="Mod_warult.CompProperties_NoNeeds"/>
+      </comps>
     </ThingDef>
 
     <AlienRace.ThingDef_AlienRace ParentName="BaseGestralPawn">
-        <defName>Expedition33_Gestral</defName>
+        <defName>Gestral</defName>
         <label>gestral</label>
         <description>Les Gestrals sont des êtres uniques ressemblant à des marionnettes en bois avec des pinceaux en guise de tête. Amicaux mais simples d'esprit, ils adorent se battre et respectent les puissants guerriers. Leur capacité de renaissance à la Rivière Sacrée les rend insouciants face au danger.</description>
         

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Expedition33_Gommage.label>Le Gommage</Expedition33_Gommage.label>
+  <Expedition33_Gommage.letterLabel>Le Gommage</Expedition33_Gommage.letterLabel>
+  <Expedition33_Gommage.letterText>Un phénomène mystérieux s'abat sur votre colonie...</Expedition33_Gommage.letterText>
+  
+  <Expedition33_Mission.label>Mission d'Expédition</Expedition33_Mission.label>
+  <Expedition33_Mission.letterLabel>Mission d'Expédition</Expedition33_Mission.letterLabel>
+  <Expedition33_Mission.letterText>L'Expédition 33 vous propose une mission...</Expedition33_Mission.letterText>
+  
+  <Expedition33_PainterSighting.label>Apparition de la Panteresse</Expedition33_PainterSighting.label>
+  <Expedition33_PainterSighting.letterLabel>La Panteresse</Expedition33_PainterSighting.letterLabel>
+  <Expedition33_PainterSighting.letterText>La terrifiante Panteresse a été aperçue près de votre colonie...</Expedition33_PainterSighting.letterText>
+  
+  <Expedition33_TestEvent.label>Test Expédition 33</Expedition33_TestEvent.label>
+  <Expedition33_TestEvent.letterLabel>Test Expédition 33</Expedition33_TestEvent.letterLabel>
+  <Expedition33_TestEvent.letterText>Ceci est un test pour vérifier que tes événements fonctionnent !</Expedition33_TestEvent.letterText>
+  
+  <GestralAwakening.label>réveil des anciens gestrals</GestralAwakening.label>
+  <GestralAwakening.letterLabel>Réveil des Anciens</GestralAwakening.letterLabel>
+  <GestralAwakening.letterText>D'anciens Gestrals-arbres se réveillent dans la région, attirés par la présence de leurs descendants. Ils apportent avec eux d'anciennes connaissances et des artefacts de l'Expédition 33.</GestralAwakening.letterText>
+  <Expedition33_SacredRiverPilgrimage.label>pèlerinage à la rivière sacrée</Expedition33_SacredRiverPilgrimage.label>
+  <Expedition33_SacredRiverPilgrimage.letterLabel>Pèlerinage Gestral</Expedition33_SacredRiverPilgrimage.letterLabel>
+  <Expedition33_SacredRiverPilgrimage.letterText>Vos Gestrals ressentent l'appel de la Rivière Sacrée. Un groupe souhaite entreprendre un pèlerinage pour honorer leurs ancêtres et récupérer des fragments de mémoire ancienne.</Expedition33_SacredRiverPilgrimage.letterText>
+  
+  <Expedition33_SpawnEvequeSite.label>découverte du Sanctuaire de l'Evêque</Expedition33_SpawnEvequeSite.label>
+  <Expedition33_SpawnGobluSite.label>découverte de l'Océan Suspendu</Expedition33_SpawnGobluSite.label>
+  <Expedition33_SpawnSakapatateRobusteSite.label>découverte du Sanctuaire Ancien</Expedition33_SpawnSakapatateRobusteSite.label>
+  <Expedition33_SpawnSakapatateUltimeSite.label>découverte du Sanctuaire Ancien</Expedition33_SpawnSakapatateUltimeSite.label>
+  <Expedition33_SpawnFrancoisSite.label>découverte du Nid d'Esquie</Expedition33_SpawnFrancoisSite.label>
+  <Expedition33_SpawnMaitreDesLampesSite.label>découverte du Sanctuaire de Lumière</Expedition33_SpawnMaitreDesLampesSite.label>
+  <Expedition33_SpawnDualisteSite.label>découverte des Terres Oubliées</Expedition33_SpawnDualisteSite.label>
+  <Expedition33_SpawnRenoirSite.label>découverte du Manoir de Renoir</Expedition33_SpawnRenoirSite.label>
+  <Expedition33_SpawnSireneSite.label>découverte du Domaine de la Sirène</Expedition33_SpawnSireneSite.label>
+  <Expedition33_SpawnVisagesSite.label>découverte du Palais des Visages</Expedition33_SpawnVisagesSite.label>
+  <Expedition33_SpawnPaintressSite.label>découverte du Monolithe</Expedition33_SpawnPaintressSite.label>
+  
+  <NevronMassRaid.label>marée du gommage</NevronMassRaid.label>
+  <NevronMassRaid.letterLabel>Marée du Gommage</NevronMassRaid.letterLabel>
+  <NevronMassRaid.letterText>Une vague de Nevrons corrompus par la Paintress déferle sur votre colonie, guidée par une volonté collective mystérieuse. Leur nombre et leur férocité sont inhabituels.</NevronMassRaid.letterText>
+  
+  <NevronNestDiscovery.label>nid chromatique découvert</NevronNestDiscovery.label>
+  <NevronNestDiscovery.letterLabel>Nid du Gommage</NevronNestDiscovery.letterLabel>
+  <NevronNestDiscovery.letterText>Vos colons tombent sur un amas de matière chromatique palpitante. À l'intérieur, des œufs de Nevrons et des fragments d'artefacts du Gommage attendent d'être étudiés... ou détruits.</NevronNestDiscovery.letterText>
+  
+  <PitankAlphaAttack.label>attaque du pitank alpha</PitankAlphaAttack.label>
+  <PitankAlphaAttack.letterLabel>Pitank Alpha</PitankAlphaAttack.letterLabel>
+  <PitankAlphaAttack.letterText>Un Pitank Alpha, colosse du Gommage, mène une horde de Nevrons. Sa présence déforme la réalité et galvanise ses congénères.</PitankAlphaAttack.letterText>
+  
+  <Expedition33_ChromaticArtifactDiscovery.label>artefact chromatique</Expedition33_ChromaticArtifactDiscovery.label>
+  <Expedition33_ChromaticArtifactDiscovery.letterLabel>Artefact Chromatique</Expedition33_ChromaticArtifactDiscovery.letterLabel>
+  <Expedition33_ChromaticArtifactDiscovery.letterText>Un artefact étrange, vibrant d'énergie chromatique, a été repéré non loin de votre colonie. Les Nevrons semblent irrésistiblement attirés par sa présence.</Expedition33_ChromaticArtifactDiscovery.letterText>
+  
+  <NevronMigration.label>migration de névrons</NevronMigration.label>
+  <NevronMigration.letterLabel>Migration Chromatique</NevronMigration.letterLabel>
+  <NevronMigration.letterText>Un troupeau de Nevrons traverse la région, fuyant une menace inconnue. Certains pourraient devenir agressifs si approchés.</NevronMigration.letterText>
+    <Expedition33_AxonSiteSpawner.letterLabel>Sites Axons découverts</Expedition33_AxonSiteSpawner.letterLabel>
+    <Expedition33_AxonSiteSpawner.letterText>Deux mystérieux sites Axons sont apparus sur la carte du monde.</Expedition33_AxonSiteSpawner.letterText>
+</LanguageData>

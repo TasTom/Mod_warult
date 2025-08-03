@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GommageAnxiety.stages.inquiet_du_Gommage.label>worried about the Gommage</GommageAnxiety.stages.inquiet_du_Gommage.label>
+  <GommageAnxiety.stages.inquiet_du_Gommage.description>I've heard about this mysterious phenomenon... What if my age is the next to be cursed?</GommageAnxiety.stages.inquiet_du_Gommage.description>
+  
+  <GommageAnxiety.stages.terrifi_par_le_Gommage.label>terrified by the Gommage</GommageAnxiety.stages.terrifi_par_le_Gommage.label>
+  <GommageAnxiety.stages.terrifi_par_le_Gommage.description>My age is approaching dangerous numbers! I could disappear at any moment!</GommageAnxiety.stages.terrifi_par_le_Gommage.description>
+  
+  <GommageAnxiety.stages.panique_du_Gommage.label>Gommage panic</GommageAnxiety.stages.panique_du_Gommage.label>
+  <GommageAnxiety.stages.panique_du_Gommage.description>This is a cursed age! I'm going to be erased! I have to do something!</GommageAnxiety.stages.panique_du_Gommage.description>
+  
+  <ExpeditionMissionReady.stages.prt_pour_la_mission.label>ready for the mission</ExpeditionMissionReady.stages.prt_pour_la_mission.label>
+  <ExpeditionMissionReady.stages.prt_pour_la_mission.description>We have an operational headquarters. I feel ready to face The Gommage!</ExpeditionMissionReady.stages.prt_pour_la_mission.description>
+  
+  <MemorialRespect.stages.respect_les_gomms.label>respected the erased</MemorialRespect.stages.respect_les_gomms.label>
+  <MemorialRespect.stages.respect_les_gomms.description>I paid tribute to those who were erased. Their sacrifice will not be forgotten.</MemorialRespect.stages.respect_les_gomms.description>
+  
+  <ExpeditionCamaraderie.stages.camaraderie_dexpdition.label>expedition camaraderie</ExpeditionCamaraderie.stages.camaraderie_dexpdition.label>
+  <ExpeditionCamaraderie.stages.camaraderie_dexpdition.description>I shared expedition stories with my companions. We are united against the Gommage.</ExpeditionCamaraderie.stages.camaraderie_dexpdition.description>
+  
+  <SurvivedGommage.stages.survcu_au_Gommage.label>survived the Gommage</SurvivedGommage.stages.survcu_au_Gommage.label>
+  <SurvivedGommage.stages.survcu_au_Gommage.description>We survived a Gommage! Maybe we can really defeat The Painter.</SurvivedGommage.stages.survcu_au_Gommage.description>
+  
+  <LostToGommage.stages.perdu_dans_le_Gommage.label>lost to the Gommage</LostToGommage.stages.perdu_dans_le_Gommage.label>
+  <LostToGommage.stages.perdu_dans_le_Gommage.description>Someone was erased... They simply disappeared, as if they had never existed.</LostToGommage.stages.perdu_dans_le_Gommage.description>
+</LanguageData>

@@ -6,8 +6,6 @@ namespace Mod_warult
 {
     public class ITab_Headquarters : ITab
     {
-        private Building_Headquarters SelectedHQ => (Building_Headquarters)this.SelThing;
-
         public ITab_Headquarters()
         {
             this.size = new Vector2(500f, 400f);
@@ -17,30 +15,21 @@ namespace Mod_warult
         protected override void FillTab()
         {
             Rect rect = new Rect(0f, 0f, this.size.x, this.size.y).ContractedBy(10f);
-            
+
             Text.Font = GameFont.Medium;
-            Widgets.Label(new Rect(rect.x, rect.y, 200f, 30f), "Quartier Général");
+            Widgets.Label(new Rect(rect.x, rect.y, rect.width, 30f), "Expedition33_CurrentMission".Translate());
 
             Text.Font = GameFont.Small;
-            float curY = rect.y + 40f;
+            var q = QuestManager.GetCurrentQuest();
 
-            if (SelectedHQ?.progressionManager != null)
+            if (q != null)
             {
-                var currentMission = SelectedHQ.progressionManager.GetCurrentMission();
-                if (currentMission != null)
-                {
-                    Widgets.Label(new Rect(rect.x, curY, rect.width, 25f), $"Mission actuelle: {currentMission.title}");
-                    curY += 30f;
-                    Widgets.Label(new Rect(rect.x, curY, rect.width, 60f), currentMission.description);
-                }
-                else
-                {
-                    Widgets.Label(new Rect(rect.x, curY, rect.width, 25f), "Toutes les missions terminées !");
-                }
+                Widgets.Label(new Rect(rect.x, rect.y + 40f, rect.width, 25f), q.title);
+                Widgets.Label(new Rect(rect.x, rect.y + 70f, rect.width, 60f), q.description);
             }
             else
             {
-                Widgets.Label(new Rect(rect.x, curY, rect.width, 25f), "Système de progression non initialisé");
+                Widgets.Label(new Rect(rect.x, rect.y + 40f, rect.width, 25f), "Expedition33_AllQuestsCompleted".Translate());
             }
         }
     }

@@ -191,7 +191,7 @@
   <modExtensions>
     <li Class="Mod_warult.BossSiteExtension">
       <bossDefName>Expedition33_Sirene</bossDefName>
-      <questId>ActeII_LesAxons</questId>
+      <questId>ActeII_SireneQuest</questId>
     </li>
   </modExtensions>
 </SitePartDef>
@@ -212,15 +212,15 @@
   <modExtensions>
     <li Class="Mod_warult.BossSiteExtension">
       <bossDefName>Expedition33_Visages</bossDefName>
-      <questId>ActeII_LesAxons</questId>
+      <questId>ActeII_VisagesQuest</questId>
     </li>
   </modExtensions>
 </SitePartDef>
 
 <SitePartDef>
-  <defName>Expedition33_PeintresseSitePart</defName>
-  <label>monolithe de la Peintresse</label>
-  <description>Le Monolithe noir où la Peintresse inscrit les nombres du Gommage. Le lieu de la confrontation finale.</description>
+  <defName>Expedition33_PaintressSitePart</defName>
+  <label>monolithe de la Paintress</label>
+  <description>Le Monolithe noir où la Paintress inscrit les nombres du Gommage. Le lieu de la confrontation finale.</description>
   <workerClass>Mod_warult.SitePartWorker_BossSpawn</workerClass>
    <siteTexture>UI/Icons/Site_boss</siteTexture>
     <expandingIconTexture>UI/Icons/Site_boss</expandingIconTexture>
@@ -232,7 +232,7 @@
   </tags>
   <modExtensions>
     <li Class="Mod_warult.BossSiteExtension">
-      <bossDefName>Expedition33_Peintresse</bossDefName>
+      <bossDefName>Expedition33_Paintress</bossDefName>
       <questId>ActeII_Final</questId>
     </li>
   </modExtensions>

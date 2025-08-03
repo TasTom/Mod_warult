@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <NamerPersonGestral.rulePack.rulesStrings>
+    <li>name->[gestralname]</li>
+    <li>gestralname->Brush-[color]</li>
+    <li>gestralname->Wood-[wood]</li>
+    <li>color->Red</li>
+    <li>color->Blue</li>
+    <li>color->Green</li>
+    <li>wood->Hard</li>
+    <li>wood->Soft</li>
+  </NamerPersonGestral.rulePack.rulesStrings>
+</LanguageData>

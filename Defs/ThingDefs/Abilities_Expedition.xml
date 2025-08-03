@@ -190,4 +190,55 @@
     <jobDef>CastAbilityOnThing</jobDef>
   </AbilityDef>
 
+  
+<AbilityDef>
+  <defName>Expedition33_ImmortalityFragment</defName>
+  <label>Fragment d'Immortalité</label>
+  <description>Verso active son fragment d'immortalité.</description>
+  <iconPath>UI/Icons/Abilities/ImmortalityFragment</iconPath>
+  <cooldownTicksRange>7200</cooldownTicksRange>
+  <aiCanUse>false</aiCanUse>
+  <targetRequired>false</targetRequired>
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_ImmortalityFragment</verbClass>
+    <range>0</range>
+    <warmupTime>2</warmupTime>
+    <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+  <canTargetPawns>false</canTargetPawns>
+  <canTargetLocations>false</canTargetLocations>
+  <canTargetBuildings>false</canTargetBuildings>
+  <canTargetFires>false</canTargetFires>
+  <canTargetHumans>false</canTargetHumans>
+  <canTargetAnimals>false</canTargetAnimals>
+  <canTargetItems>false</canTargetItems>
+    </targetParams>
+  </verbProperties>
+  <jobDef>CastAbilityOnThing</jobDef>
+</AbilityDef>
+
+<AbilityDef>
+  <defName>Expedition33_FractureParfaite</defName>
+  <label>fracture parfaite</label>
+  <description>Verso brise une cible avec une attaque chirurgicale parfaite, ignorant les protections.</description>
+  <iconPath>UI/Icons/Abilities/FractureParfaite</iconPath>
+  <cooldownTicksRange>4800</cooldownTicksRange>
+  <targetRequired>true</targetRequired>
+  <aiCanUse>false</aiCanUse>
+
+  <verbProperties>
+    <verbClass>Mod_warult.Verb_CastAbility_FractureParfaite</verbClass> <!-- 💥 Doit pointer exactement vers ta classe -->
+    <range>15</range>
+    <warmupTime>1.2</warmupTime>
+    <targetParams>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetHumans>true</canTargetHumans>
+    </targetParams>
+  </verbProperties>
+
+
+
+</AbilityDef>
+
 </Defs>

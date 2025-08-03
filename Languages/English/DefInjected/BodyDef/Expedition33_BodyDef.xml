@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Gestral Body -->
+  <Gestral.label>gestral body</Gestral.label>
+  <Gestral.corePart.parts.Neck.parts.Head.parts.pinceau.customLabel>brush</Gestral.corePart.parts.Neck.parts.Head.parts.pinceau.customLabel>
+  <Gestral.corePart.parts.Ribcage.parts.soufflet_de_bois-0.customLabel>wood bellows</Gestral.corePart.parts.Ribcage.parts.soufflet_de_bois-0.customLabel>
+  <Gestral.corePart.parts.Ribcage.parts.soufflet_de_bois-1.customLabel>wood bellows</Gestral.corePart.parts.Ribcage.parts.soufflet_de_bois-1.customLabel>
+
+  <!-- Nevron Body -->
+  <Expedition33_NevronBody.label>nevron body</Expedition33_NevronBody.label>
+  <Expedition33_NevronBody.corePart.parts.tte_chromatique.customLabel>chromatic head</Expedition33_NevronBody.corePart.parts.tte_chromatique.customLabel>
+  <Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.noyau_chromatique.customLabel>chromatic core</Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.noyau_chromatique.customLabel>
+  <Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.il_luisant-0.customLabel>glowing eye</Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.il_luisant-0.customLabel>
+  <Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.il_luisant-1.customLabel>glowing eye</Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.il_luisant-1.customLabel>
+  <Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.mchoire_corrosive.customLabel>corrosive jaw</Expedition33_NevronBody.corePart.parts.tte_chromatique.parts.mchoire_corrosive.customLabel>
+  <Expedition33_NevronBody.corePart.parts.cou_chromatique.customLabel>chromatic neck</Expedition33_NevronBody.corePart.parts.cou_chromatique.customLabel>
+  <Expedition33_NevronBody.corePart.parts.paule_avant_gauche.customLabel>left front shoulder</Expedition33_NevronBody.corePart.parts.paule_avant_gauche.customLabel>
+  <Expedition33_NevronBody.corePart.parts.paule_avant_gauche.parts.membre_avant_gauche.customLabel>left front limb</Expedition33_NevronBody.corePart.parts.paule_avant_gauche.parts.membre_avant_gauche.customLabel>
+  <Expedition33_NevronBody.corePart.parts.paule_avant_gauche.parts.membre_avant_gauche.parts.patte_griffue.customLabel>clawed paw</Expedition33_NevronBody.corePart.parts.paule_avant_gauche.parts.membre_avant_gauche.parts.patte_griffue.customLabel>
+  <Expedition33_NevronBody.corePart.parts.paule_avant_droite.customLabel>right front shoulder</Expedition33_NevronBody.corePart.parts.paule_avant_droite.customLabel>
+  <Expedition33_NevronBody.corePart.parts.paule_avant_droite.parts.membre_avant_droit.customLabel>right front limb</Expedition33_NevronBody.corePart.parts.paule_avant_droite.parts.membre_avant_droit.customLabel>
+  <Expedition33_NevronBody.corePart.parts.paule_avant_droite.parts.membre_avant_droit.parts.patte_griffue.customLabel>clawed paw</Expedition33_NevronBody.corePart.parts.paule_avant_droite.parts.membre_avant_droit.parts.patte_griffue.customLabel>
+  <Expedition33_NevronBody.corePart.parts.patte_arrire_gauche.customLabel>left rear paw</Expedition33_NevronBody.corePart.parts.patte_arrire_gauche.customLabel>
+  <Expedition33_NevronBody.corePart.parts.patte_arrire_gauche.parts.sabot_corrompu.customLabel>corrupted hoof</Expedition33_NevronBody.corePart.parts.patte_arrire_gauche.parts.sabot_corrompu.customLabel>
+  <Expedition33_NevronBody.corePart.parts.patte_arrire_droite.customLabel>right rear paw</Expedition33_NevronBody.corePart.parts.patte_arrire_droite.customLabel>
+  <Expedition33_NevronBody.corePart.parts.patte_arrire_droite.parts.sabot_corrompu.customLabel>corrupted hoof</Expedition33_NevronBody.corePart.parts.patte_arrire_droite.parts.sabot_corrompu.customLabel>
+  <Expedition33_NevronBody.corePart.parts.cage_thoracique.customLabel>rib cage</Expedition33_NevronBody.corePart.parts.cage_thoracique.customLabel>
+  <Expedition33_NevronBody.corePart.parts.cage_thoracique.parts.cur_chromatique.customLabel>chromatic heart</Expedition33_NevronBody.corePart.parts.cage_thoracique.parts.cur_chromatique.customLabel>
+  <Expedition33_NevronBody.corePart.parts.cage_thoracique.parts.poumon_gauche.customLabel>left lung</Expedition33_NevronBody.corePart.parts.cage_thoracique.parts.poumon_gauche.customLabel>
+  <Expedition33_NevronBody.corePart.parts.cage_thoracique.parts.poumon_droit.customLabel>right lung</Expedition33_NevronBody.corePart.parts.cage_thoracique.parts.poumon_droit.customLabel>
+
+  <!-- Boss Bodies -->
+  <Eveque_Body.label>bishop body</Eveque_Body.label>
+  <Goblu_Body.label>goblu body</Goblu_Body.label>
+  <SakapatateRobuste_Body.label>robust sakapatate body</SakapatateRobuste_Body.label>
+  <Paintress_Body.label>Paintress body</Paintress_Body.label>
+  <SakapatateUltime_Body.label>ultimate sakapatate body</SakapatateUltime_Body.label>
+  <Francois_Body.label>françois body</Francois_Body.label>
+  <MaitreLampes_Body.label>lampmaster body</MaitreLampes_Body.label>
+  <Dualiste_Body.label>dualist body</Dualiste_Body.label>
+  <Renoir_Body.label>renoir body</Renoir_Body.label>
+  <Sirene_Body.label>siren body</Sirene_Body.label>
+  <Visages_Body.label>faces body</Visages_Body.label>
+  <Mime_Body.label>mime body</Mime_Body.label>
+</LanguageData>

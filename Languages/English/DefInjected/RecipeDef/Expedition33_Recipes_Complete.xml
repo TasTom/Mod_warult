@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Research and Analysis -->
+  <AnalyzeGommage.label>analyze gommage phenomenon</AnalyzeGommage.label>
+  <AnalyzeGommage.description>Study artistic corruption samples to understand the Gommage mechanisms. Accelerates anti-Gommage research.</AnalyzeGommage.description>
+  <AnalyzeGommage.jobString>analyzing the Gommage.</AnalyzeGommage.jobString>
+  
+  <PlanEmergencyMission.label>plan anti-gommage emergency mission</PlanEmergencyMission.label>
+  <PlanEmergencyMission.description>Organize an emergency mission to evacuate areas threatened by the Gommage. Improves colonist survival chances.</PlanEmergencyMission.description>
+  <PlanEmergencyMission.jobString>planning emergency mission.</PlanEmergencyMission.jobString>
+  
+  <CalibrateDetector.label>calibrate cursed age detector</CalibrateDetector.label>
+  <CalibrateDetector.description>Improve the cursed age detector's precision for more reliable alerts.</CalibrateDetector.description>
+  <CalibrateDetector.jobString>calibrating detector.</CalibrateDetector.jobString>
+
+  <!-- Equipment Crafting -->
+  <Make_AntiGommageShield.label>craft anti-gommage shield</Make_AntiGommageShield.label>
+  <Make_AntiGommageShield.description>Craft a personal shield against Gommage effects. Limited but effective protection.</Make_AntiGommageShield.description>
+  <Make_AntiGommageShield.jobString>crafting anti-gommage shield.</Make_AntiGommageShield.jobString>
+  
+
+  
+  <MakeExpeditionGear.label>craft expedition uniform</MakeExpeditionGear.label>
+  <MakeExpeditionGear.description>Create the standard Expedition 33 uniform to identify members and boost morale.</MakeExpeditionGear.description>
+  <MakeExpeditionGear.jobString>crafting expedition uniform.</MakeExpeditionGear.jobString>
+
+  <!-- Picto Crafting -->
+  <Expedition33_CraftPictoGuardian.label>forge guardian picto</Expedition33_CraftPictoGuardian.label>
+  <Expedition33_CraftPictoGuardian.description>Forge a Guardian Picto from Chroma and noble materials. This Picto grants magical protection and can unlock the "Crystal Aegis" Lumina.</Expedition33_CraftPictoGuardian.description>
+  <Expedition33_CraftPictoGuardian.jobString>Forging Guardian Picto</Expedition33_CraftPictoGuardian.jobString>
+  
+  <Expedition33_CraftPictoStriker.label>forge striker picto</Expedition33_CraftPictoStriker.label>
+  <Expedition33_CraftPictoStriker.description>Forge a Striker Picto from Chroma and pure metals. This Picto enhances offensive capabilities and can unlock the "Chromatic Blade" Lumina.</Expedition33_CraftPictoStriker.description>
+  <Expedition33_CraftPictoStriker.jobString>Forging Striker Picto</Expedition33_CraftPictoStriker.jobString>
+  
+  <Expedition33_CraftPictoHealer.label>forge healer picto</Expedition33_CraftPictoHealer.label>
+  <Expedition33_CraftPictoHealer.description>Forge a Healer Picto from Chroma and precious stones. This Picto accelerates healing and can unlock the "Vital Restoration" Lumina.</Expedition33_CraftPictoHealer.description>
+  <Expedition33_CraftPictoHealer.jobString>Forging Healer Picto</Expedition33_CraftPictoHealer.jobString>
+  
+  <Expedition33_CraftPictoScholar.label>forge scholar picto</Expedition33_CraftPictoScholar.label>
+  <Expedition33_CraftPictoScholar.description>Forge a Scholar Picto from Chroma and noble materials. This Picto enhances intellect and can unlock the "Chromatic Insight" Lumina.</Expedition33_CraftPictoScholar.description>
+  <Expedition33_CraftPictoScholar.jobString>Forging Scholar Picto</Expedition33_CraftPictoScholar.jobString>
+
+  <!-- Material Processing -->
+  <Expedition33_ProcessChromaRaw.label>refine raw chroma</Expedition33_ProcessChromaRaw.label>
+  <Expedition33_ProcessChromaRaw.description>Process collected raw Chroma to obtain pure Chroma usable in Picto crafting.</Expedition33_ProcessChromaRaw.description>
+  <Expedition33_ProcessChromaRaw.jobString>Refining Chroma</Expedition33_ProcessChromaRaw.jobString>
+</LanguageData>

@@ -4,7 +4,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace Mod_warult // CORRIGÉ le namespace
+namespace Mod_warult
 {
     public class IncidentWorker_GestralAwakening : IncidentWorker
     {
@@ -12,23 +12,20 @@ namespace Mod_warult // CORRIGÉ le namespace
         {
             Map map = (Map)parms.target;
             return map.mapPawns.FreeColonistsSpawned
-                .Any(p => p.def.defName == "Expedition33_Gestral");
+                .Any(p => p.def.defName == "Gestral");
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
-
             var gestrals = map.mapPawns.FreeColonistsSpawned
-                .Where(p => p.def.defName == "Expedition33_Gestral").ToList();
+                .Where(p => p.def.defName == "Gestral").ToList();
 
             if (!gestrals.Any()) return false;
 
             List<Thing> rewards = GenerateExpeditionRewards();
 
-            // CORRIGÉ la signature
             DropCellFinder.FindSafeLandingSpot(out IntVec3 dropSpot, null, map);
-
             foreach (Thing reward in rewards)
             {
                 GenPlace.TryPlaceThing(reward, dropSpot, map, ThingPlaceMode.Near);
@@ -72,19 +69,17 @@ namespace Mod_warult // CORRIGÉ le namespace
         {
             Map map = (Map)parms.target;
             return map.mapPawns.FreeColonistsSpawned
-                .Any(p => p.def.defName == "Expedition33_Gestral");
+                .Any(p => p.def.defName == "Gestral");
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
-            
             var gestrals = map.mapPawns.FreeColonistsSpawned
-                .Where(p => p.def.defName == "Expedition33_Gestral").ToList();
-            
+                .Where(p => p.def.defName == "Gestral").ToList();
+
             if (!gestrals.Any()) return false;
 
-            // CORRIGÉ Math.Min au lieu de Mathf.Min
             int pilgrims = Math.Min(gestrals.Count, Rand.Range(1, 4));
             var chosenPilgrims = gestrals.InRandomOrder().Take(pilgrims).ToList();
 
@@ -96,12 +91,14 @@ namespace Mod_warult // CORRIGÉ le namespace
             GivePilgrimageRewards(map);
 
             string pilgrimage_text = $"{def.letterText}\n\n";
-            pilgrimage_text += $"Les Gestrals partis en pèlerinage :\n";
+            pilgrimage_text += "Expedition33_PilgrimsList".Translate() + "\n";
+
             foreach (Pawn pilgrim in chosenPilgrims)
             {
                 pilgrimage_text += $"• {pilgrim.Name.ToStringShort}\n";
             }
-            pilgrimage_text += "\nIls reviendront avec des bénédictions ancestrales.";
+
+            pilgrimage_text += "\n" + "Expedition33_PilgrimsReturn".Translate();
 
             Find.LetterStack.ReceiveLetter(def.letterLabel, pilgrimage_text, def.letterDef);
             return true;
@@ -120,7 +117,7 @@ namespace Mod_warult // CORRIGÉ le namespace
         private void GivePilgrimageRewards(Map map)
         {
             List<Thing> rewards = new List<Thing>();
-            
+
             Thing silver = ThingMaker.MakeThing(ThingDefOf.Silver);
             silver.stackCount = Rand.Range(150, 300);
             rewards.Add(silver);
@@ -129,7 +126,6 @@ namespace Mod_warult // CORRIGÉ le namespace
             jade.stackCount = Rand.Range(5, 15);
             rewards.Add(jade);
 
-            // CORRIGÉ la signature
             DropCellFinder.FindSafeLandingSpot(out IntVec3 dropSpot, null, map);
             foreach (Thing reward in rewards)
             {

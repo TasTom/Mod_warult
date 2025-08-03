@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Boss Races -->
+  <Expedition33_EvequeRace.label>Bishop</Expedition33_EvequeRace.label>
+  <Expedition33_EvequeRace.description>A divine guardian corrupted by chromatic energies, wielding sacred light as both blessing and weapon.</Expedition33_EvequeRace.description>
+  <Expedition33_EvequeRace.tools.left_fist.label>left fist</Expedition33_EvequeRace.tools.left_fist.label>
+  <Expedition33_EvequeRace.tools.left_fist.labelNoLocation>fist</Expedition33_EvequeRace.tools.left_fist.labelNoLocation>
+  <Expedition33_EvequeRace.tools.right_fist.label>right fist</Expedition33_EvequeRace.tools.right_fist.label>
+  <Expedition33_EvequeRace.tools.right_fist.labelNoLocation>fist</Expedition33_EvequeRace.tools.right_fist.labelNoLocation>
+  <Expedition33_EvequeRace.tools.teeth.label>teeth</Expedition33_EvequeRace.tools.teeth.label>
+  <Expedition33_EvequeRace.tools.head.label>head</Expedition33_EvequeRace.tools.head.label>
+
+  <!-- Base race tools -->
+  <Expedition33_BaseBossRace.tools.poingsGauches.label>corrupted left fists</Expedition33_BaseBossRace.tools.poingsGauches.label>
+  <Expedition33_BaseBossRace.tools.poingsDroits.label>corrupted right fists</Expedition33_BaseBossRace.tools.poingsDroits.label>
+  <Expedition33_BaseBossRace.tools.morsure.label>bestial bite</Expedition33_BaseBossRace.tools.morsure.label>
+
+  <!-- Évêque Boss Tools -->
+  <Expedition33_EvequeRace.tools.poingsGauches.label>corrupted left fists</Expedition33_EvequeRace.tools.poingsGauches.label>
+  <Expedition33_EvequeRace.tools.poingsDroits.label>corrupted right fists</Expedition33_EvequeRace.tools.poingsDroits.label>
+  <Expedition33_EvequeRace.tools.morsure.label>bestial bite</Expedition33_EvequeRace.tools.morsure.label>
+
+  <!-- Goblu Boss Tools -->
+  <Expedition33_GobluRace.tools.poingsGauches.label>corrupted left fists</Expedition33_GobluRace.tools.poingsGauches.label>
+  <Expedition33_GobluRace.tools.poingsDroits.label>corrupted right fists</Expedition33_GobluRace.tools.poingsDroits.label>
+  <Expedition33_GobluRace.tools.morsure.label>bestial bite</Expedition33_GobluRace.tools.morsure.label>
+
+  <!-- Sakapatate Robuste Boss Tools -->
+  <Expedition33_SakapatateRobusteRace.tools.poingsGauches.label>corrupted left fists</Expedition33_SakapatateRobusteRace.tools.poingsGauches.label>
+  <Expedition33_SakapatateRobusteRace.tools.poingsDroits.label>corrupted right fists</Expedition33_SakapatateRobusteRace.tools.poingsDroits.label>
+  <Expedition33_SakapatateRobusteRace.tools.morsure.label>bestial bite</Expedition33_SakapatateRobusteRace.tools.morsure.label>
+
+  <!-- Sakapatate Ultime Boss Tools -->
+  <Expedition33_SakapatateUltimeRace.tools.poingsGauches.label>corrupted left fists</Expedition33_SakapatateUltimeRace.tools.poingsGauches.label>
+  <Expedition33_SakapatateUltimeRace.tools.poingsDroits.label>corrupted right fists</Expedition33_SakapatateUltimeRace.tools.poingsDroits.label>
+  <Expedition33_SakapatateUltimeRace.tools.morsure.label>bestial bite</Expedition33_SakapatateUltimeRace.tools.morsure.label>
+
+  <!-- François Boss Tools -->
+  <Expedition33_FrancoisRace.tools.poingsGauches.label>corrupted left fists</Expedition33_FrancoisRace.tools.poingsGauches.label>
+  <Expedition33_FrancoisRace.tools.poingsDroits.label>corrupted right fists</Expedition33_FrancoisRace.tools.poingsDroits.label>
+  <Expedition33_FrancoisRace.tools.morsure.label>bestial bite</Expedition33_FrancoisRace.tools.morsure.label>
+
+  <!-- Maître des Lampes Boss Tools -->
+  <Expedition33_MaitreLampesRace.tools.poingsGauches.label>corrupted left fists</Expedition33_MaitreLampesRace.tools.poingsGauches.label>
+  <Expedition33_MaitreLampesRace.tools.poingsDroits.label>corrupted right fists</Expedition33_MaitreLampesRace.tools.poingsDroits.label>
+  <Expedition33_MaitreLampesRace.tools.morsure.label>bestial bite</Expedition33_MaitreLampesRace.tools.morsure.label>
+
+  <!-- Dualiste Boss Tools -->
+  <Expedition33_DualisteRace.tools.poingsGauches.label>corrupted left fists</Expedition33_DualisteRace.tools.poingsGauches.label>
+  <Expedition33_DualisteRace.tools.poingsDroits.label>corrupted right fists</Expedition33_DualisteRace.tools.poingsDroits.label>
+  <Expedition33_DualisteRace.tools.morsure.label>bestial bite</Expedition33_DualisteRace.tools.morsure.label>
+
+  <!-- Commandant Renoir Boss Tools -->
+  <Expedition33_RenoirRace.tools.poingsGauches.label>corrupted left fists</Expedition33_RenoirRace.tools.poingsGauches.label>
+  <Expedition33_RenoirRace.tools.poingsDroits.label>corrupted right fists</Expedition33_RenoirRace.tools.poingsDroits.label>
+  <Expedition33_RenoirRace.tools.morsure.label>bestial bite</Expedition33_RenoirRace.tools.morsure.label>
+
+  <!-- Sirène Boss Tools -->
+  <Expedition33_SireneRace.tools.poingsGauches.label>corrupted left fists</Expedition33_SireneRace.tools.poingsGauches.label>
+  <Expedition33_SireneRace.tools.poingsDroits.label>corrupted right fists</Expedition33_SireneRace.tools.poingsDroits.label>
+  <Expedition33_SireneRace.tools.morsure.label>bestial bite</Expedition33_SireneRace.tools.morsure.label>
+
+  <!-- Visages Boss Tools -->
+  <Expedition33_VisagesRace.tools.poingsGauches.label>corrupted left fists</Expedition33_VisagesRace.tools.poingsGauches.label>
+  <Expedition33_VisagesRace.tools.poingsDroits.label>corrupted right fists</Expedition33_VisagesRace.tools.poingsDroits.label>
+  <Expedition33_VisagesRace.tools.morsure.label>bestial bite</Expedition33_VisagesRace.tools.morsure.label>
+
+  <!-- Paintress Boss Tools -->
+  <Expedition33_PaintressRace.tools.poingsGauches.label>corrupted left fists</Expedition33_PaintressRace.tools.poingsGauches.label>
+  <Expedition33_PaintressRace.tools.poingsDroits.label>corrupted right fists</Expedition33_PaintressRace.tools.poingsDroits.label>
+  <Expedition33_PaintressRace.tools.morsure.label>bestial bite</Expedition33_PaintressRace.tools.morsure.label>
+
+  <!-- Mime Boss Tools -->
+  <Expedition33_MimeRace.tools.poingsGauches.label>corrupted left fists</Expedition33_MimeRace.tools.poingsGauches.label>
+  <Expedition33_MimeRace.tools.poingsDroits.label>corrupted right fists</Expedition33_MimeRace.tools.poingsDroits.label>
+  <Expedition33_MimeRace.tools.morsure.label>bestial bite</Expedition33_MimeRace.tools.morsure.label>
+
+  <Expedition33_GobluRace.label>Goblu</Expedition33_GobluRace.label>
+  <Expedition33_GobluRace.description>A primitive creature with savage instincts and formidable agility, defender of his sacred flower field.</Expedition33_GobluRace.description>
+  <Expedition33_GobluRace.tools.left_fist.label>left fist</Expedition33_GobluRace.tools.left_fist.label>
+  <Expedition33_GobluRace.tools.left_fist.labelNoLocation>fist</Expedition33_GobluRace.tools.left_fist.labelNoLocation>
+  <Expedition33_GobluRace.tools.right_fist.label>right fist</Expedition33_GobluRace.tools.right_fist.label>
+  <Expedition33_GobluRace.tools.right_fist.labelNoLocation>fist</Expedition33_GobluRace.tools.right_fist.labelNoLocation>
+  <Expedition33_GobluRace.tools.teeth.label>teeth</Expedition33_GobluRace.tools.teeth.label>
+  <Expedition33_GobluRace.tools.head.label>head</Expedition33_GobluRace.tools.head.label>
+
+  <Expedition33_SakapatateRobusteRace.label>Robust Sakapatate</Expedition33_SakapatateRobusteRace.label>
+  <Expedition33_SakapatateRobusteRace.description>An ancestral plant guardian, imposing mass of flesh and armored tubers.</Expedition33_SakapatateRobusteRace.description>
+  <Expedition33_SakapatateRobusteRace.tools.left_fist.label>left fist</Expedition33_SakapatateRobusteRace.tools.left_fist.label>
+  <Expedition33_SakapatateRobusteRace.tools.left_fist.labelNoLocation>fist</Expedition33_SakapatateRobusteRace.tools.left_fist.labelNoLocation>
+  <Expedition33_SakapatateRobusteRace.tools.right_fist.label>right fist</Expedition33_SakapatateRobusteRace.tools.right_fist.label>
+  <Expedition33_SakapatateRobusteRace.tools.right_fist.labelNoLocation>fist</Expedition33_SakapatateRobusteRace.tools.right_fist.labelNoLocation>
+  <Expedition33_SakapatateRobusteRace.tools.teeth.label>teeth</Expedition33_SakapatateRobusteRace.tools.teeth.label>
+  <Expedition33_SakapatateRobusteRace.tools.head.label>head</Expedition33_SakapatateRobusteRace.tools.head.label>
+
+  <Expedition33_SakapatateUltimeRace.label>Ultimate Sakapatate</Expedition33_SakapatateUltimeRace.label>
+  <Expedition33_SakapatateUltimeRace.description>The ultimate evolution of plant guardians, incarnation of millenary natural power.</Expedition33_SakapatateUltimeRace.description>
+  <Expedition33_SakapatateUltimeRace.tools.left_fist.label>left fist</Expedition33_SakapatateUltimeRace.tools.left_fist.label>
+  <Expedition33_SakapatateUltimeRace.tools.left_fist.labelNoLocation>fist</Expedition33_SakapatateUltimeRace.tools.left_fist.labelNoLocation>
+  <Expedition33_SakapatateUltimeRace.tools.right_fist.label>right fist</Expedition33_SakapatateUltimeRace.tools.right_fist.label>
+  <Expedition33_SakapatateUltimeRace.tools.right_fist.labelNoLocation>fist</Expedition33_SakapatateUltimeRace.tools.right_fist.labelNoLocation>
+  <Expedition33_SakapatateUltimeRace.tools.teeth.label>teeth</Expedition33_SakapatateUltimeRace.tools.teeth.label>
+  <Expedition33_SakapatateUltimeRace.tools.head.label>head</Expedition33_SakapatateUltimeRace.tools.head.label>
+
+  <Expedition33_FrancoisRace.label>François</Expedition33_FrancoisRace.label>
+  <Expedition33_FrancoisRace.description>A giant melancholic turtle with bioluminescent mushrooms on his shell. Despite his gruff attitude, he hides deep sadness.</Expedition33_FrancoisRace.description>
+  <Expedition33_FrancoisRace.tools.left_fist.label>left fist</Expedition33_FrancoisRace.tools.left_fist.label>
+  <Expedition33_FrancoisRace.tools.left_fist.labelNoLocation>fist</Expedition33_FrancoisRace.tools.left_fist.labelNoLocation>
+  <Expedition33_FrancoisRace.tools.right_fist.label>right fist</Expedition33_FrancoisRace.tools.right_fist.label>
+  <Expedition33_FrancoisRace.tools.right_fist.labelNoLocation>fist</Expedition33_FrancoisRace.tools.right_fist.labelNoLocation>
+  <Expedition33_FrancoisRace.tools.teeth.label>teeth</Expedition33_FrancoisRace.tools.teeth.label>
+  <Expedition33_FrancoisRace.tools.head.label>head</Expedition33_FrancoisRace.tools.head.label>
+
+  <Expedition33_MaitreLampesRace.label>Lamp Master</Expedition33_MaitreLampesRace.label>
+  <Expedition33_MaitreLampesRace.description>Lord of light, manipulator of illumination and creator of spectral lamps.</Expedition33_MaitreLampesRace.description>
+  <Expedition33_MaitreLampesRace.tools.left_fist.label>left fist</Expedition33_MaitreLampesRace.tools.left_fist.label>
+  <Expedition33_MaitreLampesRace.tools.left_fist.labelNoLocation>fist</Expedition33_MaitreLampesRace.tools.left_fist.labelNoLocation>
+  <Expedition33_MaitreLampesRace.tools.right_fist.label>right fist</Expedition33_MaitreLampesRace.tools.right_fist.label>
+  <Expedition33_MaitreLampesRace.tools.right_fist.labelNoLocation>fist</Expedition33_MaitreLampesRace.tools.right_fist.labelNoLocation>
+  <Expedition33_MaitreLampesRace.tools.teeth.label>teeth</Expedition33_MaitreLampesRace.tools.teeth.label>
+  <Expedition33_MaitreLampesRace.tools.head.label>head</Expedition33_MaitreLampesRace.tools.head.label>
+
+  <Expedition33_DualisteRace.label>Dualist</Expedition33_DualisteRace.label>
+  <Expedition33_DualisteRace.description>A cosmic entity incarnating the perfect balance between light and darkness.</Expedition33_DualisteRace.description>
+  <Expedition33_DualisteRace.tools.left_fist.label>left fist</Expedition33_DualisteRace.tools.left_fist.label>
+  <Expedition33_DualisteRace.tools.left_fist.labelNoLocation>fist</Expedition33_DualisteRace.tools.left_fist.labelNoLocation>
+  <Expedition33_DualisteRace.tools.right_fist.label>right fist</Expedition33_DualisteRace.tools.right_fist.label>
+  <Expedition33_DualisteRace.tools.right_fist.labelNoLocation>fist</Expedition33_DualisteRace.tools.right_fist.labelNoLocation>
+  <Expedition33_DualisteRace.tools.teeth.label>teeth</Expedition33_DualisteRace.tools.teeth.label>
+  <Expedition33_DualisteRace.tools.head.label>head</Expedition33_DualisteRace.tools.head.label>
+
+  <Expedition33_RenoirRace.label>Commander Renoir</Expedition33_RenoirRace.label>
+  <Expedition33_RenoirRace.description>A corrupted general of Expedition 33, master strategist of tactical warfare.</Expedition33_RenoirRace.description>
+  <Expedition33_RenoirRace.tools.left_fist.label>left fist</Expedition33_RenoirRace.tools.left_fist.label>
+  <Expedition33_RenoirRace.tools.left_fist.labelNoLocation>fist</Expedition33_RenoirRace.tools.left_fist.labelNoLocation>
+  <Expedition33_RenoirRace.tools.right_fist.label>right fist</Expedition33_RenoirRace.tools.right_fist.label>
+  <Expedition33_RenoirRace.tools.right_fist.labelNoLocation>fist</Expedition33_RenoirRace.tools.right_fist.labelNoLocation>
+  <Expedition33_RenoirRace.tools.teeth.label>teeth</Expedition33_RenoirRace.tools.teeth.label>
+  <Expedition33_RenoirRace.tools.head.label>head</Expedition33_RenoirRace.tools.head.label>
+
+  <Expedition33_SireneRace.label>Siren</Expedition33_SireneRace.label>
+  <Expedition33_SireneRace.description>An Axon from the depths, sonic entity capable of breaking minds with her voice.</Expedition33_SireneRace.description>
+  <Expedition33_SireneRace.tools.left_fist.label>left fist</Expedition33_SireneRace.tools.left_fist.label>
+  <Expedition33_SireneRace.tools.left_fist.labelNoLocation>fist</Expedition33_SireneRace.tools.left_fist.labelNoLocation>
+  <Expedition33_SireneRace.tools.right_fist.label>right fist</Expedition33_SireneRace.tools.right_fist.label>
+  <Expedition33_SireneRace.tools.right_fist.labelNoLocation>fist</Expedition33_SireneRace.tools.right_fist.labelNoLocation>
+  <Expedition33_SireneRace.tools.teeth.label>teeth</Expedition33_SireneRace.tools.teeth.label>
+  <Expedition33_SireneRace.tools.head.label>head</Expedition33_SireneRace.tools.head.label>
+
+  <Expedition33_VisagesRace.label>Visages</Expedition33_VisagesRace.label>
+  <Expedition33_VisagesRace.description>A multiform Axon, collective of consciousnesses capable of changing identity.</Expedition33_VisagesRace.description>
+  <Expedition33_VisagesRace.tools.left_fist.label>left fist</Expedition33_VisagesRace.tools.left_fist.label>
+  <Expedition33_VisagesRace.tools.left_fist.labelNoLocation>fist</Expedition33_VisagesRace.tools.left_fist.labelNoLocation>
+  <Expedition33_VisagesRace.tools.right_fist.label>right fist</Expedition33_VisagesRace.tools.right_fist.label>
+  <Expedition33_VisagesRace.tools.right_fist.labelNoLocation>fist</Expedition33_VisagesRace.tools.right_fist.labelNoLocation>
+  <Expedition33_VisagesRace.tools.teeth.label>teeth</Expedition33_VisagesRace.tools.teeth.label>
+  <Expedition33_VisagesRace.tools.head.label>head</Expedition33_VisagesRace.tools.head.label>
+
+  <Expedition33_PaintressRace.label>Paintress</Expedition33_PaintressRace.label>
+  <Expedition33_PaintressRace.description>A reality weaver, cosmic artist capable of reshaping existence itself.</Expedition33_PaintressRace.description>
+  <Expedition33_PaintressRace.tools.left_fist.label>left fist</Expedition33_PaintressRace.tools.left_fist.label>
+  <Expedition33_PaintressRace.tools.left_fist.labelNoLocation>fist</Expedition33_PaintressRace.tools.left_fist.labelNoLocation>
+  <Expedition33_PaintressRace.tools.right_fist.label>right fist</Expedition33_PaintressRace.tools.right_fist.label>
+  <Expedition33_PaintressRace.tools.right_fist.labelNoLocation>fist</Expedition33_PaintressRace.tools.right_fist.labelNoLocation>
+  <Expedition33_PaintressRace.tools.teeth.label>teeth</Expedition33_PaintressRace.tools.teeth.label>
+  <Expedition33_PaintressRace.tools.head.label>head</Expedition33_PaintressRace.tools.head.label>
+
+  <Expedition33_MimeRace.label>Mime</Expedition33_MimeRace.label>
+  <Expedition33_MimeRace.description>A silent entity, master of invisible illusions and intangible barriers.</Expedition33_MimeRace.description>
+  <Expedition33_MimeRace.tools.left_fist.label>left fist</Expedition33_MimeRace.tools.left_fist.label>
+  <Expedition33_MimeRace.tools.left_fist.labelNoLocation>fist</Expedition33_MimeRace.tools.left_fist.labelNoLocation>
+  <Expedition33_MimeRace.tools.right_fist.label>right fist</Expedition33_MimeRace.tools.right_fist.label>
+  <Expedition33_MimeRace.tools.right_fist.labelNoLocation>fist</Expedition33_MimeRace.tools.right_fist.labelNoLocation>
+  <Expedition33_MimeRace.tools.teeth.label>teeth</Expedition33_MimeRace.tools.teeth.label>
+  <Expedition33_MimeRace.tools.head.label>head</Expedition33_MimeRace.tools.head.label>
+
+  <!-- Creatures -->
+  <Gestral.label>gestral</Gestral.label>
+  <Gestral.description>Gestrals are unique beings resembling wooden puppets with brushes for heads. Friendly but simple-minded, they love to fight and respect powerful warriors. Their ability to resurrect at the Sacred River makes them carefree in the face of danger.</Gestral.description>
+  <Gestral.tools.Left_wooden_fist.label>left wooden fist</Gestral.tools.Left_wooden_fist.label>
+  <Gestral.tools.Right_wooden_fist.label>right wooden fist</Gestral.tools.Right_wooden_fist.label>
+
+  <Nevron.label>nevron</Nevron.label>
+  <Nevron.description>A once-living creature, now corrupted by The Gommage...</Nevron.description>
+  <Nevron.tools.griffes_chromatiques.label>chromatic claws</Nevron.tools.griffes_chromatiques.label>
+  <Nevron.tools.morsure_corrosive.label>corrosive bite</Nevron.tools.morsure_corrosive.label>
+  <Nevron.tools.charge_chromatique.label>chromatic charge</Nevron.tools.charge_chromatique.label>
+
+  <Pitank.label>pitank</Pitank.label>
+  <Pitank.description>An evolved Nevron, fusion of several corrupted creatures...</Pitank.description>
+  <Pitank.tools.griffes_massives.label>massive claws</Pitank.tools.griffes_massives.label>
+  <Pitank.tools.mchoires_broyeuses.label>crushing jaws</Pitank.tools.mchoires_broyeuses.label>
+  <Pitank.tools.charge_dvastatrice.label>devastating charge</Pitank.tools.charge_dvastatrice.label>
+
+  <NevronDechutRace.label>fallen nevron</NevronDechutRace.label>
+  <NevronDechutRace.description>A human corrupted by The Gommage, transformed into a bestial creature but retaining intelligence...</NevronDechutRace.description>
+  <NevronDechutRace.tools.griffes_corrompues_gauches.label>left corrupted claws</NevronDechutRace.tools.griffes_corrompues_gauches.label>
+  <NevronDechutRace.tools.griffes_corrompues_droites.label>right corrupted claws</NevronDechutRace.tools.griffes_corrompues_droites.label>
+  <NevronDechutRace.tools.morsure_bestiale.label>bestial bite</NevronDechutRace.tools.morsure_bestiale.label>
+
+  <Expedition_VersoColon.label>Verso</Expedition_VersoColon.label>
+  <Expedition_VersoColon.description>A colonist with special abilities.</Expedition_VersoColon.description>
+  <Expedition_VersoColon.tools.left_fist.label>left fist</Expedition_VersoColon.tools.left_fist.label>
+  <Expedition_VersoColon.tools.left_fist.labelNoLocation>fist</Expedition_VersoColon.tools.left_fist.labelNoLocation>
+  <Expedition_VersoColon.tools.right_fist.label>right fist</Expedition_VersoColon.tools.right_fist.label>
+  <Expedition_VersoColon.tools.right_fist.labelNoLocation>fist</Expedition_VersoColon.tools.right_fist.labelNoLocation>
+  <Expedition_VersoColon.tools.teeth.label>teeth</Expedition_VersoColon.tools.teeth.label>
+  <Expedition_VersoColon.tools.head.label>head</Expedition_VersoColon.tools.head.label>
+
+  <!-- Equipment -->
+  <Expedition33_Uniform.label>expeditionary uniform</Expedition33_Uniform.label>
+  <Expedition33_Uniform.description>An elegant Belle Époque military uniform worn by Expedition 33 members. Its golden buttons and epaulettes testify to the rank of the wearer. Offers basic protection against Gommage effects.</Expedition33_Uniform.description>
+
+  <Expedition33_AntiGommageShield.label>anti-gommage shield</Expedition33_AntiGommageShield.label>
+  <Expedition33_AntiGommageShield.description>A personal protection device that generates a protective field against Gommage effects. Its golden circuits sparkle with mystical energy. Has 3 protection charges before depletion.</Expedition33_AntiGommageShield.description>
+
+  <Expedition33_ReinforcedArmor.label>expedition reinforced armor</Expedition33_ReinforcedArmor.label>
+  <Expedition33_ReinforcedArmor.description>Advanced combat armor developed specifically to fight entities related to the Paintress. Its plates engraved with mystical symbols offer superior protection against artistic attacks.</Expedition33_ReinforcedArmor.description>
+
+  <Expedition33_OfficerHat.label>expedition officer cap</Expedition33_OfficerHat.label>
+  <Expedition33_OfficerHat.description>A military cap adorned with golden stripes and anti-Gommage symbols, worn by Expedition 33 officers. It confers authority and respect among troops while offering mental protection against Gommage psychological effects.</Expedition33_OfficerHat.description>
+
+  <Expedition33_MilitaryBoots.label>reinforced expedition boots</Expedition33_MilitaryBoots.label>
+  <Expedition33_MilitaryBoots.description>Robust leather boots worn by expeditionaries, reinforced with metal plates and anti-slip soles. Designed to withstand long marches and difficult terrain during missions against mysterious entities.</Expedition33_MilitaryBoots.description>
+
+  <!-- Buildings -->
+  <Expedition33_Headquarters.label>expedition headquarters</Expedition33_Headquarters.label>
+  <Expedition33_Headquarters.description>A command building used by Expedition 33 to plan their missions against The Gommage. Contains maps, secret files and communication equipment. Allows research of anti-Gommage technologies.</Expedition33_Headquarters.description>
+
+  <Expedition33_CursedAgeDetector.label>cursed age detector</Expedition33_CursedAgeDetector.label>
+  <Expedition33_CursedAgeDetector.description>A sophisticated device that analyzes artistic fluctuations to detect the age currently painted on the Paintress's monolith. Alerts the colony when a Gommage is imminent.</Expedition33_CursedAgeDetector.description>
+
+  <Expedition33_AntiGommageField.label>anti-gommage field generator</Expedition33_AntiGommageField.label>
+  <Expedition33_AntiGommageField.description>An advanced generator that creates a protective field within a 15-tile radius. Colonists in this area are protected against Gommage effects, but the device consumes enormous energy.</Expedition33_AntiGommageField.description>
+
+  <Expedition33_Memorial.label>memorial to the erased</Expedition33_Memorial.label>
+  <Expedition33_Memorial.description>A solemn monument dedicated to those who were erased by The Gommage. The names carved in stone remind that no one forgets the disappeared, even if reality has forgotten them. Improves survivors' morale.</Expedition33_Memorial.description>
+
+  <Expedition33_Armory.label>expedition armory</Expedition33_Armory.label>
+  <Expedition33_Armory.description>A specialized workshop for crafting unique Expedition 33 equipment. The artisans who work there know the manufacturing secrets of anti-Gommage weapons, protection shields, artistic weapons and chromatic Pictos.</Expedition33_Armory.description>
+
+  <!-- Resources -->
+  <Expedition33_Chroma.label>chroma</Expedition33_Chroma.label>
+  <Expedition33_Chroma.description>A crystalline substance with iridescent reflections, residue of pure creative energy. Chroma is the basis of all Picto manipulation and allows forging magical artifacts.</Expedition33_Chroma.description>
+
+  <Expedition33_ChromaRaw.label>raw chroma</Expedition33_ChromaRaw.label>
+  <Expedition33_ChromaRaw.description>Raw Chroma crystals extracted from the remains of creatures corrupted by The Gommage. These fragments of corrupted energy can be purified to create usable Chroma.</Expedition33_ChromaRaw.description>
+
+  <!-- Weapons -->
+  <ExpeditionScythe.label>expeditionary scythe</ExpeditionScythe.label>
+  <ExpeditionScythe.description>A war scythe used by Expedition 33 members. Its curved blade bears the marks of numerous battles against mysterious entities. Basic version of anti-Gommage weapons.</ExpeditionScythe.description>
+  <ExpeditionScythe.tools.lame.label>blade</ExpeditionScythe.tools.lame.label>
+  <ExpeditionScythe.tools.manche.label>handle</ExpeditionScythe.tools.manche.label>
+
+  <Expedition33_ArtisticBlade.label>artistic blade</Expedition33_ArtisticBlade.label>
+  <Expedition33_ArtisticBlade.description>A sword imbued with creative power, specially designed to combat entities related to the Paintress. Its blade sparkles with artistic glow and deals additional damage to painted creatures.</Expedition33_ArtisticBlade.description>
+  <Expedition33_ArtisticBlade.tools.lame_artistique.label>artistic blade</Expedition33_ArtisticBlade.tools.lame_artistique.label>
+  <Expedition33_ArtisticBlade.tools.pommeau.label>pommel</Expedition33_ArtisticBlade.tools.pommeau.label>
+
+  <Expedition33_LeverRifle.label>expedition lever rifle</Expedition33_LeverRifle.label>
+  <Expedition33_LeverRifle.description>A precision lever rifle used by Expedition 33 scouts. Its reliable mechanism and range make it the weapon of choice for reconnaissance missions against mysterious entities.</Expedition33_LeverRifle.description>
+  <Expedition33_LeverRifle.verbs.Verb_Shoot.label>expedition lever rifle</Expedition33_LeverRifle.verbs.Verb_Shoot.label>
+
+  <Bullet_ExpeditionRifle.label>expedition rifle shot</Bullet_ExpeditionRifle.label>
+  <Bullet_ArtisticRifle.label>artistic shot</Bullet_ArtisticRifle.label>
+
+  <!-- Plants -->
+  <Expedition33_CrimsonBlossom.label>crimson blossom</Expedition33_CrimsonBlossom.label>
+  <Expedition33_CrimsonBlossom.description>A deep red flower that seems to pulse with inner light.</Expedition33_CrimsonBlossom.description>
+
+  <Expedition33_StrangeBush.label>strange berry bush</Expedition33_StrangeBush.label>
+  <Expedition33_StrangeBush.description>A mysterious bush with purple leaves bearing deep red berries that seem to pulse with inner light. It thrives in the dark atmosphere of the Dark Continent.</Expedition33_StrangeBush.description>
+
+  <Expedition33_ShadowFern.label>shadow fern</Expedition33_ShadowFern.label>
+  <Expedition33_ShadowFern.description>A fern with almost black fronds that thrives in darkness.</Expedition33_ShadowFern.description>
+
+  <Expedition33_FlowerFern.label>flowering fern</Expedition33_FlowerFern.label>
+  <Expedition33_FlowerFern.description>A small fern with almost black fronds grouped with strange flowers.</Expedition33_FlowerFern.description>
+
+  <Expedition33_SculptedTree.label>sculpted tree</Expedition33_SculptedTree.label>
+  <Expedition33_SculptedTree.description>A tree with strangely geometric branches, as if carved by invisible artisans. Its mysterious purple foliage contrasts with its natural brown trunk. It produces dark wood with unique properties, prized by Dark Continent artisans.\n\nPlant details: The Sculpted Tree is a cultivable plant that also appears wild, requiring minimum fertility of 0.3. Can be harvested for sculpted wood.</Expedition33_SculptedTree.description>
+
+  <Projectile_EnergyWaveBullet.label>energy wave</Projectile_EnergyWaveBullet.label>
+</LanguageData>

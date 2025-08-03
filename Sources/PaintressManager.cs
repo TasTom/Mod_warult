@@ -1,4 +1,3 @@
-
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -12,25 +11,27 @@ namespace Mod_warult
             int tile = FindObscurContinentTile();
             if (tile < 0)
             {
-                Log.Error("Aucune tuile Continent Obscur trouvée !");
+                Log.Error("Expedition33_NoObscurTileFound".Translate());
                 return;
             }
 
             SitePartDef partDef = DefDatabase<SitePartDef>.GetNamedSilentFail("Expedition33_PeintresseSitePart");
             if (partDef == null)
             {
-                Log.Error("SitePartDef Monolith introuvable !");
+                Log.Error("Expedition33_MonolithSiteNotFound".Translate());
                 return;
             }
 
-            Faction bossFaction = Find.FactionManager.FirstFactionOfDef(DefDatabase<FactionDef>.GetNamed("Expedition33")) ?? Faction.OfAncientsHostile;
+            Faction bossFaction = Find.FactionManager.FirstFactionOfDef(
+                DefDatabase<FactionDef>.GetNamed("Expedition33")) ?? Faction.OfAncientsHostile;
+            
             Site site = SiteMaker.MakeSite(partDef, tile, bossFaction);
             site.SetFaction(bossFaction);
             Find.WorldObjects.Add(site);
-
+            
             Find.LetterStack.ReceiveLetter(
-                "CONFRONTATION FINALE",
-                "Le Monolithe de la Paintress est révélé sur le Continent Obscur. Préparez-vous à l’affronter !",
+                "Expedition33_FinalConfrontationTitle".Translate(),
+                "Expedition33_FinalConfrontationDesc".Translate(),
                 LetterDefOf.ThreatBig,
                 site
             );
@@ -47,5 +48,4 @@ namespace Mod_warult
             return -1;
         }
     }
-
 }

@@ -2,10 +2,9 @@
 <Defs>
     <!-- Nevron avec TAILLE AUGMENTÉE -->
     <ThingDef ParentName="AnimalThingBase">
-        <defName>Expedition33_Nevron</defName>
+        <defName>Nevron</defName>
         <label>nevron</label>
         <description>Une créature autrefois vivante, désormais corrompue par Le Gommage...</description>
-        
         <graphicData>
             <texPath>Things/Pawn/Animal/Nevrons/lancier</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -26,6 +25,7 @@
             <baseBodySize>2.0</baseBodySize>
             <baseHealthScale>1.5</baseHealthScale>
             <lifeExpectancy>100</lifeExpectancy>
+            <thinkTreeMain>NevronDechut_AI</thinkTreeMain>
             <predator>true</predator>
             <herdAnimal>false</herdAnimal>
             <foodType>CarnivoreAnimal</foodType>
@@ -85,17 +85,23 @@
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
                 <chanceFactor>0.2</chanceFactor>
             </li>
-        </tools>
-        
+        </tools>    
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>4</glowRadius>
                 <glowColor>(180,120,200,0)</glowColor>
-            </li>
+                </li>
+                    <li Class="Mod_warult.CompProperties_BossAggro">
+                    <aggroRadius>80</aggroRadius>
+                    <alwaysHostile>true</alwaysHostile>
+                </li>
+                <li Class="Mod_warult.CompProperties_AutoHealBleed"/>
+                <li Class="Mod_warult.CompProperties_NoNeeds"/>
+            
         </comps>
         
         <butcherProducts>
-            <Expedition33_ChromaRaw>3</Expedition33_ChromaRaw>
+            <Expedition33_ChromaRaw>6</Expedition33_ChromaRaw>
         </butcherProducts>
         
         <tradeTags>
@@ -106,10 +112,10 @@
 
     <!-- Pitank avec TAILLE ENCORE PLUS GRANDE -->
     <ThingDef ParentName="AnimalThingBase">
-        <defName>Expedition33_Pitank</defName>
+        <defName>Pitank</defName>
         <label>pitank</label>
         <description>Un Nevron évolué, fusion de plusieurs créatures corrompues...</description>
-
+    
         <graphicData>
             <texPath>Things/Pawn/Animal/Nevrons/petanque</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -194,6 +200,12 @@
                 <glowRadius>6</glowRadius>
                 <glowColor>(200,100,220,0)</glowColor>
             </li>
+            <li Class="Mod_warult.CompProperties_AutoHealBleed"/>
+            <li Class="Mod_warult.CompProperties_NoNeeds"/>
+            <li Class="Mod_warult.CompProperties_BossAggro">
+                    <aggroRadius>80</aggroRadius>
+                    <alwaysHostile>true</alwaysHostile>
+            </li>
         </comps>
         
         <butcherProducts>
@@ -207,10 +219,21 @@
     </ThingDef>
 
     <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
-        <defName>Expedition33_NevronDechutRace</defName>
+        <defName>NevronDechutRace</defName>
         <label>nevron déchu</label>
         <description>Un humain corrompu par Le Gommage, transformé en créature bestiale mais conservant son intelligence...</description>
-        
+              <comps>
+         <li Class="Mod_warult.CompProperties_AutoHealBleed"/>
+         <li Class="Mod_warult.CompProperties_NoNeeds"/>
+         <li Class="Mod_warult.CompProperties_AbilityUser">
+        <abilityDefs>
+          <li>Expedition33_RangeAttack</li>
+        </abilityDefs>
+      </li>
+      </comps>
+        <butcherProducts>
+            <Expedition33_ChromaRaw>10</Expedition33_ChromaRaw>
+        </butcherProducts>
         <alienRace>
             <graphicPaths>
                 <head>
@@ -334,7 +357,7 @@
         
         <race>
             <renderTree>Humanlike</renderTree>
-            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeMain>NevronDechut_AI</thinkTreeMain>
             <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
             <intelligence>Humanlike</intelligence>
             <makesFootprints>true</makesFootprints>
@@ -353,6 +376,7 @@
             <gestationPeriodDays>45</gestationPeriodDays>
             <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
             <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
+            <trainability>None</trainability>
 
             <lifeStageAges>
                 <li>

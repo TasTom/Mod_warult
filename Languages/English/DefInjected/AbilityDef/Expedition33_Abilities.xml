@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Player Abilities -->
+  <Expedition33_Regeneration.label>regeneration</Expedition33_Regeneration.label>
+  <Expedition33_Regeneration.description>Gradually regenerates wounds over 30 seconds.</Expedition33_Regeneration.description>
+  
+  <Expedition33_IronWill.label>iron will</Expedition33_IronWill.label>
+  <Expedition33_IronWill.description>Temporarily grants immunity to mental breaks.</Expedition33_IronWill.description>
+  
+  <Expedition33_BerserkerRage.label>berserker rage</Expedition33_BerserkerRage.label>
+  <Expedition33_BerserkerRage.description>Increases damage but reduces defense for 30 seconds.</Expedition33_BerserkerRage.description>
+  
+  <Expedition33_CrushingBlow.label>crushing blow</Expedition33_CrushingBlow.label>
+  <Expedition33_CrushingBlow.description>Deals damage in an area around the target.</Expedition33_CrushingBlow.description>
+  
+  <Expedition33_QuickStep.label>quick step</Expedition33_QuickStep.label>
+  <Expedition33_QuickStep.description>Instantly teleports to a nearby location.</Expedition33_QuickStep.description>
+  
+  <Expedition33_TimeSlip.label>time slip</Expedition33_TimeSlip.label>
+  <Expedition33_TimeSlip.description>Temporarily increases action speed.</Expedition33_TimeSlip.description>
+  
+  <Expedition33_IronSkin.label>iron skin</Expedition33_IronSkin.label>
+  <Expedition33_IronSkin.description>Significantly reduces damage taken for 25 seconds.</Expedition33_IronSkin.description>
+  
+  <Expedition33_Fortress.label>fortress</Expedition33_Fortress.label>
+  <Expedition33_Fortress.description>Near-complete immunity to damage for 8 seconds.</Expedition33_Fortress.description>
+  
+  <Expedition33_LuckyStrike.label>lucky strike</Expedition33_LuckyStrike.label>
+  <Expedition33_LuckyStrike.description>Drastically increases accuracy of the next attack.</Expedition33_LuckyStrike.description>
+  
+  <Expedition33_Miracle.label>miracle</Expedition33_Miracle.label>
+  <Expedition33_Miracle.description>Temporary divine protection against fatal wounds.</Expedition33_Miracle.description>
+
+  <!-- Boss Abilities -->
+  <Expedition33_ImmortalityFragment.label>immortality fragment</Expedition33_ImmortalityFragment.label>
+  <Expedition33_ImmortalityFragment.description>Verso activates his immortality fragment.</Expedition33_ImmortalityFragment.description>
+  
+  <Expedition33_FractureParfaite.label>perfect fracture</Expedition33_FractureParfaite.label>
+  <Expedition33_ractureParfaite.description>Verso shatters a target with a perfect surgical strike, ignoring all protection.</Expedition33_FractureParfaite.description>
+  
+  <Expedition33_SacredLight.label>sacred light</Expedition33_SacredLight.label>
+  <Expedition33_SacredLight.description>Projects a ray of sacred light: heals allies and blinds enemies.</Expedition33_SacredLight.description>
+  
+  <Expedition33_DivinePurification.label>divine purification</Expedition33_DivinePurification.label>
+  <Expedition33_DivinePurification.description>Creates a purification zone around Eveque: regenerates health and repels nearby enemies.</Expedition33_DivinePurification.description>
+  
+  <Expedition33_IndigoBlast.label>indigo blast</Expedition33_IndigoBlast.label>
+  <Expedition33_IndigoBlast.description>Indigo energy explosion that deals damage in a wide area.</Expedition33_IndigoBlast.description>
+  
+  <Expedition33_RapidMovement.label>rapid movement</Expedition33_RapidMovement.label>
+  <Expedition33_RapidMovement.description>Temporary speed boost allowing evasion of attacks.</Expedition33_RapidMovement.description>
+  
+  <Expedition33_HeavyArmor.label>reinforced armor</Expedition33_HeavyArmor.label>
+  <Expedition33_HeavyArmor.description>Activates temporary armor that drastically reduces damage taken.</Expedition33_HeavyArmor.description>
+  
+  <Expedition33_SlowRegeneration.label>slow regeneration</Expedition33_SlowRegeneration.label>
+  <Expedition33_SlowRegeneration.description>Constant but slow regeneration of wounds during combat.</Expedition33_SlowRegeneration.description>
+  
+  <Expedition33_EnergyShields.label>energy shields</Expedition33_EnergyShields.label>
+  <Expedition33_EnergyShields.description>Generates energy shields that absorb attacks.</Expedition33_EnergyShields.description>
+  
+  <Expedition33_AreaAttacks.label>area attacks</Expedition33_AreaAttacks.label>
+  <Expedition33_AreaAttacks.description>Devastating attack that hits all enemies in a wide radius.</Expedition33_AreaAttacks.description>
+  
+  <Expedition33_LightManipulation.label>light manipulation</Expedition33_LightManipulation.label>
+  <Expedition33_LightManipulation.description>Controls the lighting of the area, creating dark and bright zones.</Expedition33_LightManipulation.description>
+  
+  <Expedition33_IlluminationAttacks.label>illumination attacks</Expedition33_IlluminationAttacks.label>
+  <Expedition33_IlluminationAttacks.description>Projects light beams that blind and burn enemies.</Expedition33_IlluminationAttacks.description>
+  
+  <Expedition33_LampMastery.label>lamp mastery</Expedition33_LampMastery.label>
+  <Expedition33_LampMastery.description>Summons spectral lamps that illuminate and attack enemies.</Expedition33_LampMastery.description>
+  
+  <Expedition33_ClairStrike.label>light strike</Expedition33_ClairStrike.label>
+  <Expedition33_ClairStrike.description>Pure light attack that pierces armor and temporarily blinds.</Expedition33_ClairStrike.description>
+  
+  <Expedition33_ObscurBlast.label>shadow blast</Expedition33_ObscurBlast.label>
+  <Expedition33_ObscurBlast.description>Darkness explosion that drains life and slows enemies.</Expedition33_ObscurBlast.description>
+  
+  <Expedition33_DualityShift.label>duality shift</Expedition33_DualityShift.label>
+  <Expedition33_DualityShift.description>Reverses resistances between light and shadow, completely changing combat tactics.</Expedition33_DualityShift.description>
+  
+  <Expedition33_LethalStrike.label>lethal strike</Expedition33_LethalStrike.label>
+  <Expedition33_LethalStrike.description>Devastating attack capable of instantly eliminating an enemy. Extremely dangerous.</Expedition33_LethalStrike.description>
+  
+  <Expedition33_FearAura.label>fear aura</Expedition33_FearAura.label>
+  <Expedition33_FearAura.description>Generates an aura of fear that reduces accuracy and willpower of nearby enemies.</Expedition33_FearAura.description>
+  
+  <Expedition33_CommanderAura.label>commander aura</Expedition33_CommanderAura.label>
+  <Expedition33_CommanderAura.description>Boosts combat abilities of all allies in a wide radius.</Expedition33_CommanderAura.description>
+  
+  <Expedition33_TacticalStrike.label>tactical strike</Expedition33_TacticalStrike.label>
+  <Expedition33_TacticalStrike.description>Coordinated attack that deals more damage based on the number of allies present.</Expedition33_TacticalStrike.description>
+  
+  <Expedition33_ExpeditionMemory.label>expedition memory</Expedition33_ExpeditionMemory.label>
+  <Expedition33_ExpeditionMemory.description>Summons memories of Expedition Zero, making corrupted temporary members appear.</Expedition33_ExpeditionMemory.description>
+  
+  <Expedition33_SonicWave.label>sonic wave</Expedition33_SonicWave.label>
+  <Expedition33_SonicWave.description>The Siren emits a devastating sonic wave that passes through obstacles.</Expedition33_SonicWave.description>
+  
+  <Expedition33_MindControl.label>mind control</Expedition33_MindControl.label>
+  <Expedition33_MindControl.description>Temporarily takes control of an enemy, turning them against their allies.</Expedition33_MindControl.description>
+  
+  <Expedition33_FaceShift.label>face shift</Expedition33_FaceShift.label>
+  <Expedition33_FaceShift.description>The Visages change identity, confusing enemies and altering their abilities.</Expedition33_FaceShift.description>
+  
+  <Expedition33_RealityDistortion.label>reality distortion</Expedition33_RealityDistortion.label>
+  <Expedition33_RealityDistortion.description>Warps reality around the Visages, creating dangerous illusions.</Expedition33_RealityDistortion.description>
+  
+  <Expedition33_GommageRitual.label>gommage ritual</Expedition33_GommageRitual.label>
+  <Expedition33_GommageRitual.description>Begins inscribing a deadly number. All characters of this age risk disappearing.</Expedition33_GommageRitual.description>
+  
+  <Expedition33_CosmicBrush.label>cosmic brush</Expedition33_CosmicBrush.label>
+  <Expedition33_CosmicBrush.description>Paints danger zones on the map that evolve and move.</Expedition33_CosmicBrush.description>
+  
+  <Expedition33_NumberInscription.label>number inscription</Expedition33_NumberInscription.label>
+  <Expedition33_NumberInscription.description>Inscribes a number in the air that causes random effects based on its value.</Expedition33_NumberInscription.description>
+  
+  <Expedition33_MonolithPower.label>monolith power</Expedition33_MonolithPower.label>
+  <Expedition33_MonolithPower.description>Channels the power of the Monolith for a devastating final attack.</Expedition33_MonolithPower.description>
+  
+  <Expedition33_CorruptedRage.label>corrupted rage</Expedition33_CorruptedRage.label>
+  <Expedition33_CorruptedRage.description>Fury fueled by Gommage corruption.</Expedition33_CorruptedRage.description>
+  
+  <Expedition33_SilenceAura.label>silence aura</Expedition33_SilenceAura.label>
+  <Expedition33_SilenceAura.description>The Mime creates a zone of total silence around himself.</Expedition33_SilenceAura.description>
+  
+  <Expedition33_InvisibleBarriers.label>invisible barriers</Expedition33_InvisibleBarriers.label>
+  <Expedition33_InvisibleBarriers.description>Creates invisible barriers that block movement and projectiles.</Expedition33_InvisibleBarriers.description>
+  
+  <Expedition33_RangeAttack.label>ranged attack</Expedition33_RangeAttack.label>
+  <Expedition33_RangeAttack.description>Energy attack.</Expedition33_RangeAttack.description>
+
+  <Expedition33_NevronPainting.label>nevron painting</Expedition33_NevronPainting.label>
+  <Expedition33_NevronPainting.description>Creates a painting that invoque nevrons</Expedition33_NevronPainting.description>
+  <Expedition33_CannonShot.label>cannon shot</Expedition33_CannonShot.label>
+  <Expedition33_CannonShot.description>Sakapatate the Ultimate fires a powerful explosive shell.</Expedition33_CannonShot.description>
+  
+  <Expedition33_PrimalHeal.label>primal healing</Expedition33_PrimalHeal.label>
+  <Expedition33_PrimalHeal.description>Goblu uses an ancestral ritual to heal himself on the spot.</Expedition33_PrimalHeal.description>
+  
+  <Expedition33_MeteorsOfTheAbyss.label>meteors of the abyss</Expedition33_MeteorsOfTheAbyss.label>
+  <Expedition33_MeteorsOfTheAbyss.description>The Paintress summons a rain of meteors on her enemies.</Expedition33_MeteorsOfTheAbyss.description>
+</LanguageData>

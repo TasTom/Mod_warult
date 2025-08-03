@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- <JobDef>
+    <defName>CastAbilityOnThing</defName>
+    <driverClass>Verse.AI.JobDriver_Wait</driverClass>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <alwaysShowWeapon>False</alwaysShowWeapon>
+    <reportString>utilise une capacité...</reportString>
+    <checkOverrideOnDamage>OnlyIfInstigatorNotJobTarget</checkOverrideOnDamage>
+  </JobDef> -->
+</Defs>

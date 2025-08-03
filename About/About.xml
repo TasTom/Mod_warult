@@ -1,29 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Rim Expedition 33 Faction and others</name>
+	<name>Rim Expedition 33</name>
 	<author>Warult</author>
-	<packageId>warult.expedition33faction</packageId>
+	<packageId>warult.expedition33mod</packageId>
 	<modIconPath>UI/Icons/Expedition33Icon</modIconPath>
 	<description>
-		🎨 EXPÉDITION 33 - CLAIR OBSCUR 🎨
+	🎨 EXPÉDITION 33 - CLAIR OBSCUR - SURVIVEZ AU GOMMAGE !🎨
 
-		Ajoutez la mystérieuse faction militaire de l'Expédition 33 à votre RimWorld !
+	L'Expédition 33 arrive dans RimWorld avec une histoire terrifiante : le mystérieux phénomène du "Gommage" orchestré par la redoutable Paintress.
 
-		✨ CONTENU INCLUS :
-		• Faction Belle Époque avec 5 types d'unités spécialisées
-		• La terrifiante Panteresse - Boss unique avec pouvoirs artistiques
-		• Événements narratifs du "Gommage" - Phénomène d'effacement mystérieux
-		• Backstories thématiques pour l'immersion
-		• Système de raids et commerce équilibré
+	═══ FONCTIONNALITÉS PRINCIPALES ═══
 
-		🎭 INSPIRÉ DE CLAIR OBSCUR: EXPEDITION 33
-		Plongez dans l'univers sombre et artistique où la réalité peut être effacée d'un coup de pinceau...
+	🏛️ FACTION EXPÉDITION 33
+	• Faction militaire avec équipements uniques
+	• Faction Gestral et Nevrons
+	• Armes signature : Faux d'expéditionnaire, Fusil à levier
+	• Armures anti-Gommage et boucliers de protection
+	• Générateurs de champ anti-Gommage
 
-		⚠️ Requiert Humanoid Alien Races
+	⚰️ LE PHÉNOMÈNE DU GOMMAGE
+	• Système d'âges maudits par la Paintress
+	• Événement cyclique tous les 60 jours (1 an RimWorld)
+	• Premier Gommage après 15 jours de jeu
+	• Interface de surveillance en temps réel
+
+	🛡️ SYSTÈMES DE PROTECTION
+	• Boucliers personnels anti-Gommage (3 charges)
+	• Générateurs de champ de protection (rayon 15 cases)
+	• Système de Pictos avec progression par kills
+	• Luminas débloquables pour bonus permanents
+
+	📊 INTERFACE AVANCÉE
+	• Onglet de surveillance du Gommage
+	• Analyse des menaces en temps réel
+	• Historique détaillé des événements
+	• Comptage des colons protégés
+
+	🎯 BOSS FINAL
+	• La Paintress - entité mystique redoutable
+	• Combat épique pour briser le cycle du Gommage
+	• Récompenses uniques pour les vainqueurs
+
+	═══ GAMEPLAY ═══
+
+	Votre colonie devra s'adapter à un nouveau défi cyclique : tous les ans, la Paintress peint un nouvel âge sur son monolithe mystique. Tous vos colons de cet âge exact risquent d'être "gommés" (disparaître) lors du prochain événement.
+
+	Préparez vos défenses, recherchez les technologies anti-Gommage, et organisez des expéditions pour affronter la Paintress elle-même !
+
+	═══ COMPATIBILITÉ ═══
+
+	✅ Compatible avec la plupart des mods
+	✅ Sauvegarde automatique de tous les progrès
+	✅ Interface française intégrée pour le moment
 	</description>
 	<supportedVersions>
-		<li>1.4</li>
-		<li>1.5</li>
 		<li>1.6</li>
 	</supportedVersions>
 

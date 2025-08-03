@@ -32,7 +32,7 @@ namespace Mod_warult
         public override void LordJobTick()
         {
             base.LordJobTick();
-
+            
             // Vérifier toutes les 60 ticks (1 seconde)
             if (GenTicks.TicksGame % 60 == 0)
             {
@@ -43,18 +43,21 @@ namespace Mod_warult
         private void EnsureValidDuties()
         {
             if (lord?.ownedPawns == null) return;
-
+            
             foreach (Pawn pawn in lord.ownedPawns)
             {
                 if (pawn?.mindState == null) continue;
-
+                
                 // Vérifier si la duty est valide
                 if (IsInvalidDuty(pawn.mindState.duty))
                 {
                     // Créer une duty valide
                     pawn.mindState.duty = new PawnDuty(DutyDefOf.Defend, center, radius);
                     
-                    Log.Message($"[Expedition33] Duty corrigée pour {pawn.LabelShort}");
+                    if (Prefs.DevMode)
+                    {
+                        Log.Message("Expedition33_DutyCorrected".Translate(pawn.LabelShort));
+                    }
                 }
             }
         }

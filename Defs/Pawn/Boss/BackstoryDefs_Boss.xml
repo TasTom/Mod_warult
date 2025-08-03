@@ -49,16 +49,18 @@
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
+
 <!-- François - Adulthood -->
 <AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
   <defName>Expedition33_Francois_Adulthood</defName>
-  <title>Lame irréversible</title>
+  <title>Tortue bioluminescente</title>
   <titleShort>François</titleShort>
-  <baseDesc>{PAWN_nameDef} devint une entité immortelle de destruction, maître des coups fatals.</baseDesc>
+  <baseDesc>{PAWN_nameDef} devint une tortue géante mélancolique, sa carapace ornée de champignons bleus luminescents. Malgré son attitude grincheuse, il cache une profonde tristesse depuis la séparation d'avec Clea.</baseDesc>
   <slot>Adulthood</slot>
   <skillGains>
-    <Melee>6</Melee>
-    <Shooting>4</Shooting>
+    <Mining>5</Mining>
+    <Melee>3</Melee>
+    <Construction>3</Construction>
   </skillGains>
   <forcedTraitsChance>
     <li>
@@ -66,14 +68,16 @@
       <chance>100</chance>
     </li>
     <li>
-      <defName Degree="0">Bloodlust</defName>
-      <chance>50</chance>
+      <defName Degree="0">Abrasive</defName>
+      <chance>75</chance>
     </li>
   </forcedTraitsChance>
-  <workDisables>Animals</workDisables>
-  <workDisables>Caring</workDisables>
+  <bodyTypeMale>Hulk</bodyTypeMale>
+  <bodyTypeFemale>Hulk</bodyTypeFemale>
+  <workDisables>Social</workDisables>
+  <workDisables>Artistic</workDisables>
   <spawnCategories>
-    <li>Expedition33_ImmortalEntity</li>
+    <li>Expedition33_FrancoisEntity</li>
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
@@ -199,7 +203,7 @@
   <workDisables>Mining</workDisables>
   <workDisables>Hauling</workDisables>
   <spawnCategories>
-    <li>Expedition33_AxonEntity</li>
+    <li>Expedition33_SireneEntity</li>
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
@@ -223,15 +227,15 @@
   </forcedTraitsChance>
   <workDisables>Cooking</workDisables>
   <spawnCategories>
-    <li>Expedition33_AxonEntity</li>
+    <li>Expedition33_VisageEntity</li>
   </spawnCategories>
 </AlienRace.AlienBackstoryDef>
 
-<!-- Peintresse - Adulthood -->
+<!-- Paintress - Adulthood -->
 <AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
-  <defName>Expedition33_Peintresse_Adulthood</defName>
+  <defName>Expedition33_Paintress_Adulthood</defName>
   <title>Artiste cosmique</title>
-  <titleShort>Peintresse</titleShort>
+  <titleShort>Paintress</titleShort>
   <baseDesc>{PAWN_nameDef} devint une tisseuse de réalité, artiste cosmique capable de remodeler l'existence.</baseDesc>
   <slot>Adulthood</slot>
   <skillGains>
@@ -240,7 +244,7 @@
   </skillGains>
   <forcedTraitsChance>
     <li>
-      <defName Degree="0">Expedition33_BossTrait_Peintresse</defName>
+      <defName Degree="0">Expedition33_BossTrait_Paintress</defName>
       <chance>100</chance>
     </li>
   </forcedTraitsChance>
@@ -253,7 +257,7 @@
 
 <!-- Verso - Adulthood -->
 <AlienRace.AlienBackstoryDef ParentName="Expedition33BackStory">
-  <defName>Expedition33_Verso_Adulthood</defName>
+  <defName>Expedition_Verso_Adulthood</defName>
   <title>Fragment immortel</title>
   <titleShort>Verso</titleShort>
   <baseDesc>{PAWN_nameDef} devint un fragment d'immortalité brisée, entité régénératrice aux techniques de combat parfaites.</baseDesc>

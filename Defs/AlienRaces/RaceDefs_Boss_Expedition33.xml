@@ -4,55 +4,112 @@
   <!-- =============================================================== -->
   <!--               RACE DE BASE (abstraite)                          -->
   <!-- =============================================================== -->
-  <ThingDef Name="Expedition33_BaseBossRace" ParentName="Human" Abstract="True">
+  <ThingDef Name="Expedition33_BaseBossRace" ParentName="BasePawn" Abstract="True">
+    <comps>
+      <li Class="Mod_warult.CompProperties_BossAggro">
+        <aggroRadius>80</aggroRadius>
+        <alwaysHostile>true</alwaysHostile>
+      </li>
+      <li Class="Mod_warult.CompProperties_AutoHealBleed"/>
+      <li Class="Mod_warult.CompProperties_NoNeeds"/>
+    </comps>
+    
+    <statBases>
+      <MoveSpeed>5.0</MoveSpeed>
+      <MarketValue>500</MarketValue>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <LeatherAmount>0</LeatherAmount>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    
     <race>
-      <intelligence>Humanlike</intelligence>
+      <renderTree>Humanlike</renderTree>
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>200</lifeExpectancy>
+      <bloodDef>Filth_Blood</bloodDef>
+      <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
+      <leatherDef>Leather_Human</leatherDef>
+      <fleshType>Normal</fleshType>
+      <hasGenders>true</hasGenders>
       <nameCategory>HumanStandard</nameCategory>
       <body>Human</body>
-      <baseBodySize>1</baseBodySize>
+      <meatColor>(102, 51, 76)</meatColor>
       <baseHealthScale>1.2</baseHealthScale>
+      <baseBodySize>1</baseBodySize>
       <foodType>OmnivoreHuman</foodType>
-      <leatherDef>Leather_Human</leatherDef>
       <gestationPeriodDays>45</gestationPeriodDays>
-      <meatMarketValue>0.8</meatMarketValue>
       <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
-      <lifeExpectancy>80</lifeExpectancy>
+      <trainability>None</trainability>
 
-      <!-- stades de vie -->
-      <lifeStageAges Inherit="false">
+      <!-- Life stages cohérents avec la courbe d'âge -->
+      <lifeStageAges>
         <li><def>HumanlikeBaby</def><minAge>0</minAge></li>
         <li><def>HumanlikeChild</def><minAge>3</minAge></li>
-        <li><def>HumanlikeTeenager</def><minAge>7</minAge></li>
-        <li><def>HumanlikeAdult</def><minAge>13</minAge></li>
+        <li><def>HumanlikeTeenager</def><minAge>13</minAge></li>
+        <li><def>HumanlikeAdult</def><minAge>18</minAge></li>
       </lifeStageAges>
-
-      <!-- sons -->
+      
+      <!-- Sons -->
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Wood</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
       <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
-
-      <!-- ombre spéciale -->
-      <specialShadowData>
-        <volume>(0.3, 0.8, 0.3)</volume>
-        <offset>(0, 0, -0.3)</offset>
-      </specialShadowData>
-
-      <!-- courbe de génération d’âge -->
+      
+      <!-- Courbe d'âge cohérente avec life stages et lifeExpectancy -->
       <ageGenerationCurve>
         <points>
-          <li>(0.05,0)</li><li>(0.1,0.3)</li><li>(0.675,0.3)</li>
-          <li>(0.75,0.23)</li><li>(0.875,0.15)</li><li>(1,0.04)</li>
-          <li>(1.125,0)</li>
+          <li>(0, 0)</li>
+          <li>(18, 0)</li>    <!-- Correspond au début de HumanlikeAdult -->
+          <li>(25, 100)</li>  <!-- Pic optimal -->
+          <li>(100, 100)</li>
+          <li>(180, 30)</li>  <!-- Diminue avant la mort -->
+          <li>(200, 0)</li>   <!-- Correspond à lifeExpectancy -->
         </points>
       </ageGenerationCurve>
+      
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+        <li>Human</li>
+      </hediffGiverSets>
 
-      <hediffGiverSets><li>OrganicStandard</li></hediffGiverSets>
+      
     </race>
-  </ThingDef>
 
+      <tools>
+    <li>
+      <label>poingsGauches</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>18</power>
+      <cooldownTime>1.5</cooldownTime>
+      <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+    </li>
+    <li>
+      <label>poingsDroits</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>18</power>
+      <cooldownTime>1.5</cooldownTime>
+      <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+    </li>
+    <li>
+      <label>morsure</label>
+      <capacities>
+        <li>Bite</li>
+      </capacities>
+      <power>25</power>
+      <cooldownTime>2.0</cooldownTime>
+      <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      <chanceFactor>0.7</chanceFactor>
+    </li>
+  </tools>
+  </ThingDef>
 
   <!-- =============================================================== -->
   <!--               RACES SPÉCIFIQUES DE BOSS                         -->
@@ -61,125 +118,135 @@
   <!-- ÉVÊQUE -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_EvequeRace</defName>
-    <label>Évêque Boss</label>
-
-
-
+    <label>Évêque</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
           <li>Expedition33_SacredLight</li>
           <li>Expedition33_DivinePurification</li>
           <li>Expedition33_IndigoBlast</li>
+          <li>Expedition33_RangeAttack</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>30</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>3</lootCount>
+      </li>
     </comps>
-    <race>
-      <body>Human</body>
-      <thinkTreeMain>Expedition33_Eveque_AI</thinkTreeMain>
-      <nameCategory>HumanStandard</nameCategory> 
-      <hasGenders>false</hasGenders>
-      <baseBodySize>3.0</baseBodySize>
-      <baseHealthScale>2.0</baseHealthScale>
-      
-      <lifeStageAges>
-        <li Class="AlienRace.LifeStageAgeAlien">
-          <def>HumanlikeAdult</def>
-          <minAge>13</minAge>
-         
-        </li>
-      </lifeStageAges>
     
+    <race>
+      <thinkTreeMain>Expedition33_Eveque_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>6.0</baseHealthScale>
     </race>
-
 
     <alienRace>
       <graphicPaths>
         <head>
-            <path>Things/Pawn/Humanlike/Heads/None </path>
-             <headtypeGraphics>
-                <Eveque_None>Things/Pawn/Humanlike/Heads/None</Eveque_None>
-              </headtypeGraphics>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
         </head>
         <body>
-          <path>Things/Pawn/Humanlike/Bodies/Nevron/eveque/Eveque</path>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Eveque/eveque</path>
         </body>
       </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
         <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
-        <immuneToAge>false</immuneToAge>
-
+        <immuneToAge>true</immuneToAge>
+        
         <alienPartGenerator>
-          <bodyTypes>
-            <li>Eveque_Body</li>
-          </bodyTypes>
-          <headTypes>
-            <li>Eveque_None</li>
-          </headTypes>
+          <bodyTypes><li>Eveque_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
           <customDrawSize>(3, 3)</customDrawSize>
           <customHeadDrawSize>(0, 0)</customHeadDrawSize>
-          
         </alienPartGenerator>
-
-
-        <immuneToAge>true</immuneToAge>
       </generalSettings>
-      <raceRestriction>
       
-      </raceRestriction>
-       <styleSettings>
-        <li>
-            <key>HairDef</key>
-            <value>
-                <hasStyle>false</hasStyle>
-            </value>
-        </li>
-        <li>
-            <key>BeardDef</key>
-            <value>
-                <hasStyle>false</hasStyle>
-            </value>
-        </li>
-        <li>
-            <key>TattooDef</key>
-            <value>
-                <hasStyle>false</hasStyle>
-            </value>
-        </li>
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
       </styleSettings>
-
-
-
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
     </alienRace>
   </ThingDef>
 
   <!-- GOBLU -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_GobluRace</defName>
-    <label>Goblu Boss</label>
+    <label>Goblu</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
-        <abilityDefs><li>Expedition33_RapidMovement</li></abilityDefs>
+        <abilityDefs>
+          <li>Expedition33_RapidMovement</li>
+        </abilityDefs>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>35</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>4</lootCount>
       </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Goblu_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Goblu_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>7.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Goblu/Goblu</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Goblu_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- SAKAPATATE ROBUSTE -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_SakapatateRobusteRace</defName>
-    <label>Sakapatate Robuste Boss</label>
+    <label>Sakapatate Robuste</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
@@ -189,22 +256,62 @@
           <li>Expedition33_AreaAttacks</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>35</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>5</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_SakapatateRobuste_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_SakapatateRobuste_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>9.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Sakapatate/Sakapatate</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>SakapatateRobuste_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- SAKAPATATE ULTIME -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_SakapatateUltimeRace</defName>
-    <label>Sakapatate Ultime Boss</label>
+    <label>Sakapatate Ultime</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
@@ -214,69 +321,191 @@
           <li>Expedition33_SlowRegeneration</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>40</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>6</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_SakapatateUltime_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_SakapatateUltime_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Sakapatate/Sakapatate</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>SakapatateUltime_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- FRANÇOIS -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_FrancoisRace</defName>
-    <label>François Boss</label>
+    <label>François</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
+          <li>Expedition33_RangeAttack</li>
           <li>Expedition33_LethalStrike</li>
           <li>Expedition33_FearAura</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>50</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>5</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Francois_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Francois_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>11.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Francois/francois</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Francois_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- MAÎTRE DES LAMPES -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_MaitreLampesRace</defName>
-    <label>Maître des Lampes Boss</label>
+    <label>Maître des Lampes</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
+          <li>Expedition33_RangeAttack</li>
           <li>Expedition33_LightManipulation</li>
           <li>Expedition33_IlluminationAttacks</li>
           <li>Expedition33_LampMastery</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>60</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>6</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_MaitreDesLampes_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_MaitreDesLampes_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/LampMaster/lampmaster</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>MaitreLampes_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- DUALISTE -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_DualisteRace</defName>
-    <label>Dualiste Boss</label>
+    <label>Dualiste</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
@@ -285,69 +514,191 @@
           <li>Expedition33_DualityShift</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>60</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>10</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Dualiste_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Dualiste_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>12.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Dueliste/dueliste</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Dualiste_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- COMMANDANT RENOIR -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_RenoirRace</defName>
-    <label>Commandant Renoir Boss</label>
+    <label>Commandant Renoir</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
+          <li>Expedition33_RangeAttack</li>
           <li>Expedition33_CommanderAura</li>
           <li>Expedition33_TacticalStrike</li>
           <li>Expedition33_ExpeditionMemory</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>60</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>12</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Renoir_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Renoir_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>12.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Renoir/renoir</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Renoir_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- SIRÈNE -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_SireneRace</defName>
-    <label>Sirène Boss</label>
+    <label>Sirène</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
+          <li>Expedition33_RangeAttack</li>
           <li>Expedition33_SonicWave</li>
           <li>Expedition33_MindControl</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>80</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>15</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Sirene_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Sirene_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>14.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Sirene/sirene</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Sirene_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
   <!-- VISAGES -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_VisagesRace</defName>
-    <label>Visages Boss</label>
+    <label>Visages</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
@@ -355,64 +706,122 @@
           <li>Expedition33_RealityDistortion</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>80</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>15</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Visages_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Visages_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>14.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Visage/visage</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Visages_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
-  <!-- PEINTRESSE -->
+  <!-- PAINTRESS -->
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
-    <defName>Expedition33_PeintresseRace</defName>
-    <label>Peintresse Boss</label>
+    <defName>Expedition33_PaintressRace</defName>
+    <label>Paintress</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
+          <li>Expedition33_RangeAttack</li>
           <li>Expedition33_GommageRitual</li>
           <li>Expedition33_CosmicBrush</li>
           <li>Expedition33_NumberInscription</li>
           <li>Expedition33_MonolithPower</li>
+          <li>Expedition33_NevronPainting</li>
         </abilityDefs>
       </li>
-    </comps>
-    <race><thinkTreeMain>Expedition33_Peintresse_AI</thinkTreeMain></race>
-    <alienRace>
-      <generalSettings>
-        <allowHumanBios>false</allowHumanBios>
-
-        <corpseCategory>CorpsesHumanlike</corpseCategory>
-      </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
-    </alienRace>
-  </ThingDef>
-
-  <!-- VERSO -->
-  <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
-    <defName>Expedition33_VersoRace</defName>
-    <label>Verso Boss</label>
-    <comps>
-      <li Class="Mod_warult.CompProperties_AbilityUser">
-      <autocast>false</autocast>
-        <abilityDefs>
-          <li>Expedition33_ImmortalityFragment</li>
-          <li>Expedition33_FractureParfaite</li>
-        </abilityDefs>
+      <li Class="Mod_warult.CompProperties_PaintressDeath"/>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_ChromaRaw</lootDef>
+        <lootCount>200</lootCount>
+      </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>20</lootCount>
       </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Verso_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Paintress_AI</thinkTreeMain>
+      <baseBodySize>8.0</baseBodySize>
+      <baseHealthScale>20.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Animal/Nevrons/Paintress/Paintress</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Paintress_Body</li></bodyTypes>
+          <headTypes><li>Paintress_head</li></headTypes>
+          <customDrawSize>(10,10)</customDrawSize>
+          <customHeadDrawSize>(3,3)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 
@@ -420,6 +829,7 @@
   <ThingDef ParentName="Expedition33_BaseBossRace" Class="AlienRace.ThingDef_AlienRace">
     <defName>Expedition33_MimeRace</defName>
     <label>Mime Boss</label>
+    
     <comps>
       <li Class="Mod_warult.CompProperties_AbilityUser">
         <abilityDefs>
@@ -427,15 +837,50 @@
           <li>Expedition33_InvisibleBarriers</li>
         </abilityDefs>
       </li>
+      <li Class="Mod_warult.CompProperties_BossLootDrop">
+        <lootDef>Expedition33_Chroma</lootDef>
+        <lootCount>5</lootCount>
+      </li>
     </comps>
-    <race><thinkTreeMain>Expedition33_Mime_AI</thinkTreeMain></race>
+    
+    <race>
+      <thinkTreeMain>Expedition33_Mime_AI</thinkTreeMain>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+    </race>
+    
     <alienRace>
+      <graphicPaths>
+        <head>
+          <path>Things/Pawn/Humanlike/Heads/None</path>
+          <headtypeGraphics>
+            <Head_None>Things/Pawn/Humanlike/Heads/None</Head_None>
+          </headtypeGraphics>
+        </head>
+        <body>
+          <path>Things/Pawn/Humanlike/Bodies/Nevron/Mime/mime</path>
+        </body>
+      </graphicPaths>
+      
       <generalSettings>
         <allowHumanBios>false</allowHumanBios>
-
+        <humanRecipeImport>false</humanRecipeImport>
         <corpseCategory>CorpsesHumanlike</corpseCategory>
+        <immuneToAge>true</immuneToAge>
+        
+        <alienPartGenerator>
+          <bodyTypes><li>Mime_Body</li></bodyTypes>
+          <headTypes><li>Head_None</li></headTypes>
+          <customDrawSize>(3,3)</customDrawSize>
+          <customHeadDrawSize>(0,0)</customHeadDrawSize>
+        </alienPartGenerator>
       </generalSettings>
-      <graphicPaths><skinShader>CutoutSkin</skinShader></graphicPaths>
+      
+      <styleSettings>
+        <li><key>HairDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>BeardDef</key><value><hasStyle>false</hasStyle></value></li>
+        <li><key>TattooDef</key><value><hasStyle>false</hasStyle></value></li>
+      </styleSettings>
     </alienRace>
   </ThingDef>
 

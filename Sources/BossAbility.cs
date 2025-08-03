@@ -15,18 +15,21 @@ namespace Mod_warult
             this.selfCast = selfCast;
         }
 
-        public enum BossPhase
+        public override string ToString()
         {
-            Phase1_Normal,      // 100% - 70% santé
-            Phase2_Aggressive,  // 70% - 40% santé  
-            Phase3_Desperate    // 40% - 0% santé
+            return "Expedition33_AbilityInfo".TranslateSimple().Formatted(name, range, selfCast.ToString());
         }
 
+        public enum BossPhase
+        {
+            Phase1_Normal,
+            Phase2_Aggressive, 
+            Phase3_Desperate
+        }
 
         private BossPhase GetCurrentPhase(Pawn pawn)
         {
             float healthPercent = pawn.health.summaryHealth.SummaryHealthPercent;
-
             return healthPercent switch
             {
                 >= 0.7f => BossPhase.Phase1_Normal,
@@ -34,8 +37,5 @@ namespace Mod_warult
                 _ => BossPhase.Phase3_Desperate
             };
         }
-
     }
-
-    
 }

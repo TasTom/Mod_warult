@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <FactionDef>
-        <defName>Expedition33_Nevrons</defName>
+        <defName>Nevrons</defName>
         <label>Forces du Gommage</label>
         <description>Une faction corrompue mêlant créatures bestiales et humains déchus par la Paintress. Ces entités jadis vivantes ont été transformées par le Gommage, perdant leur humanité mais conservant une intelligence collective terrifiante. Ils émergent des profondeurs pour répandre leur corruption.</description>
         
@@ -14,6 +14,10 @@
         <canMakeRandomly>true</canMakeRandomly>
         <canSiege>true</canSiege>
         <canStageAttacks>true</canStageAttacks>
+        <hidden>false</hidden>
+        <maxConfigurableAtWorldCreation>4</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>60</configurationListOrderPriority>
+
         
         <!-- ✅ LEADERSHIP -->
         <leaderTitle>Nevron Suprême</leaderTitle>
@@ -60,7 +64,7 @@
         
         <!-- ✅ LEADERSHIP FIXE -->
         <fixedLeaderKinds>
-            <li>Expedition33_NevronDechut</li>
+            <li>NevronDechut</li>
         </fixedLeaderKinds>
         
         <!-- ✅ COMMERCE (Hostile mais peuvent dropper du loot) -->
@@ -76,7 +80,7 @@
                 <li>(500, 800)</li>
                 <li>(1000, 1000)</li>
                 <li>(2000, 1500)</li>
-                <li>(2001, 5000</li>
+                <li>(2001, 5000)</li>
                 <li>(100000, 10000)</li>
             </points>
         </maxPawnCostPerTotalPointsCurve>
@@ -90,83 +94,71 @@
                 <li>(2000, 500)</li>
             </points>
         </raidLootValueFromPointsCurve>
+
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li>
+                <li>(50, 1.5)</li>
+                <li>(200, 2)</li>
+                <li>(500, 2.5)</li>
+                <li>(1000, 3)</li>
+            </points>
+        </raidCommonalityFromPointsCurve>
         
         <!-- ✅ PAWN GROUP MAKERS COMPLETS -->
-        <pawnGroupMakers>
-            <!-- Combat Standard - Mélange équilibré -->
+      <pawnGroupMakers>
+            <!-- Combat Standard - Raids principaux -->
             <li>
                 <kindDef>Combat</kindDef>
                 <commonality>100</commonality>
                 <options>
-                    <Expedition33_Nevron_Basic>15</Expedition33_Nevron_Basic>
-                    <Expedition33_Amphorien>8</Expedition33_Amphorien>
-                    <Expedition33_Pitank>4</Expedition33_Pitank>
-                    <Expedition33_NevronDechut>6</Expedition33_NevronDechut>
+                    <Nevron_Basic>20</Nevron_Basic>           <!-- Unité de base, nombreuse -->
+                    <Amphorien>12</Amphorien>                 <!-- Support/range -->
+                    <Pitank>8</Pitank>                        <!-- Tank/breacher -->
+                    <NevronDechut>5</NevronDechut>           <!-- Elite/leader -->
+                    <PitankAlpha>1</PitankAlpha>             <!-- Boss rare -->
                 </options>
             </li>
             
-            <!-- Combat Breach - Plus agressif -->
+            <!-- Combat Breach - Raids destructeurs -->
             <li>
                 <kindDef>Combat</kindDef>
-                <commonality>30</commonality>
+                <commonality>25</commonality>
                 <options>
-                    <Expedition33_Pitank>8</Expedition33_Pitank>
-                    <Expedition33_NevronDechut>10</Expedition33_NevronDechut>
-                    <Expedition33_Nevron_Basic>12</Expedition33_Nevron_Basic>
-                    <Expedition33_Amphorien>5</Expedition33_Amphorien>
+                    <Pitank>15</Pitank>                       <!-- Focus sur destruction -->
+                    <PitankAlpha>3</PitankAlpha>             <!-- Plus de boss -->
+                    <NevronDechut>12</NevronDechut>          <!-- Leaders tactiques -->
+                    <Nevron_Basic>8</Nevron_Basic>           <!-- Support minimal -->
+                    <Amphorien>5</Amphorien>                 <!-- Soutien à distance -->
                 </options>
             </li>
             
-            <!-- Peaceful (pour événements non-hostiles) -->
+            <!-- Peaceful - Événements non-hostiles -->
             <li>
                 <kindDef>Peaceful</kindDef>
+                <commonality>10</commonality>
                 <options>
-                    <Expedition33_Nevron_Basic>20</Expedition33_Nevron_Basic>
-                    <Expedition33_NevronDechut>8</Expedition33_NevronDechut>
-                    <Expedition33_Amphorien>5</Expedition33_Amphorien>
-                    <Expedition33_Pitank>2</Expedition33_Pitank>
+                    <Nevron_Basic>25</Nevron_Basic>
+                    <Amphorien>8</Amphorien>
+                    <NevronDechut>3</NevronDechut>
+                    <Pitank>1</Pitank>
                 </options>
             </li>
             
-            <!-- Settlement Guards -->
+            <!-- Settlement - Base défensive -->
             <li>
                 <kindDef>Settlement</kindDef>
+                <commonality>50</commonality>
                 <options>
-                    <Expedition33_NevronDechut>20</Expedition33_NevronDechut>
-                    <Expedition33_Nevron_Basic>15</Expedition33_Nevron_Basic>
-                    <Expedition33_Amphorien>10</Expedition33_Amphorien>
-                    <Expedition33_Pitank>8</Expedition33_Pitank>
-                    <Expedition33_PitankAlpha>1</Expedition33_PitankAlpha>
+                    <NevronDechut>15</NevronDechut>          <!-- Gardiens élites -->
+                    <Pitank>12</Pitank>                       <!-- Défenseurs lourds -->
+                    <PitankAlpha>2</PitankAlpha>             <!-- Boss de base -->
+                    <Amphorien>10</Amphorien>                <!-- Tireurs défensifs -->
+                    <Nevron_Basic>15</Nevron_Basic>          <!-- Patrouilleurs -->
                 </options>
             </li>
-            
-            <!-- Miners (si Ideology)
-            <li MayRequire="Ludeon.RimWorld.Ideology">
-                <kindDef>Miners</kindDef>
-                <commonality>1</commonality>
-                <options>
-                    <Expedition33_NevronDechut>1</Expedition33_NevronDechut>
-                </options>
-            </li>
-            
-            Hunters (si Ideology)
-            <li MayRequire="Ludeon.RimWorld.Ideology">
-                <kindDef>Hunters</kindDef>
-                <commonality>1</commonality>
-                <options>
-                    <Expedition33_Amphorien>1</Expedition33_Amphorien>
-                </options>
-            </li>
-            
-            Loggers (si Ideology)
-            <li MayRequire="Ludeon.RimWorld.Ideology">
-                <kindDef>Loggers</kindDef>
-                <commonality>1</commonality>
-                <options>
-                    <Expedition33_Pitank>1</Expedition33_Pitank>
-                </options>
-            </li> -->
         </pawnGroupMakers>
+
         
         <!-- ✅ NOM FIXE -->
         <fixedName>Forces du Gommage</fixedName>

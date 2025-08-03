@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GommageAnxiety.stages.inquiet_du_Gommage.label>inquiet du Gommage</GommageAnxiety.stages.inquiet_du_Gommage.label>
+  <GommageAnxiety.stages.inquiet_du_Gommage.description>J'ai entendu parler de ce phénomène mystérieux... Et si mon âge était le prochain à être maudit ?</GommageAnxiety.stages.inquiet_du_Gommage.description>
+  
+  <GommageAnxiety.stages.terrifi_par_le_Gommage.label>terrifié par le Gommage</GommageAnxiety.stages.terrifi_par_le_Gommage.label>
+  <GommageAnxiety.stages.terrifi_par_le_Gommage.description>Mon âge approche des chiffres dangereux ! Je pourrais disparaître à tout moment !</GommageAnxiety.stages.terrifi_par_le_Gommage.description>
+  
+  <GommageAnxiety.stages.panique_du_Gommage.label>panique du Gommage</GommageAnxiety.stages.panique_du_Gommage.label>
+  <GommageAnxiety.stages.panique_du_Gommage.description>C'est un âge maudit ! Je vais être effacé ! Il faut que je fasse quelque chose !</GommageAnxiety.stages.panique_du_Gommage.description>
+  
+  <ExpeditionMissionReady.stages.prt_pour_la_mission.label>prêt pour la mission</ExpeditionMissionReady.stages.prt_pour_la_mission.label>
+  <ExpeditionMissionReady.stages.prt_pour_la_mission.description>Nous avons un quartier général opérationnel. Je me sens prêt à affronter le Gommage !</ExpeditionMissionReady.stages.prt_pour_la_mission.description>
+  
+  <MemorialRespect.stages.respect_les_gomms.label>respecté les gommés</MemorialRespect.stages.respect_les_gomms.label>
+  <MemorialRespect.stages.respect_les_gomms.description>J'ai rendu hommage à ceux qui ont été effacés. Leur sacrifice ne sera pas oublié.</MemorialRespect.stages.respect_les_gomms.description>
+  
+  <ExpeditionCamaraderie.stages.camaraderie_dexpdition.label>camaraderie d'expédition</ExpeditionCamaraderie.stages.camaraderie_dexpdition.label>
+  <ExpeditionCamaraderie.stages.camaraderie_dexpdition.description>J'ai partagé des histoires d'expédition avec mes compagnons. Nous sommes unis contre le Gommage.</ExpeditionCamaraderie.stages.camaraderie_dexpdition.description>
+  
+  <SurvivedGommage.stages.survcu_au_Gommage.label>survécu au Gommage</SurvivedGommage.stages.survcu_au_Gommage.label>
+  <SurvivedGommage.stages.survcu_au_Gommage.description>Nous avons survécu à un Gommage ! Peut-être pouvons-nous vraiment vaincre la Paintress.</SurvivedGommage.stages.survcu_au_Gommage.description>
+  
+  <LostToGommage.stages.perdu_dans_le_Gommage.label>perdu dans le Gommage</LostToGommage.stages.perdu_dans_le_Gommage.label>
+  <LostToGommage.stages.perdu_dans_le_Gommage.description>Quelqu'un a été effacé... Il a simplement disparu, comme s'il n'avait jamais existé.</LostToGommage.stages.perdu_dans_le_Gommage.description>
+
+</LanguageData>

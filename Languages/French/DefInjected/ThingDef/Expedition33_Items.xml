@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Ressources Chromatiques -->
+  <Expedition33_ChromaRaw.label>chroma brut</Expedition33_ChromaRaw.label>
+  <Expedition33_ChromaRaw.description>Énergie chromatique non traitée cristallisée sous une forme brute et instable. Cette substance pulse d'une énergie d'un autre monde et est essentielle pour créer la technologie avancée de l'Expédition 33. Manipuler avec une extrême prudence - une exposition prolongée peut causer des distorsions de réalité.</Expedition33_ChromaRaw.description>
+  
+  <Expedition33_Chroma.label>chroma raffiné</Expedition33_Chroma.label>
+  <Expedition33_Chroma.description>Énergie chromatique traitée sous sa forme pure et stable. Cette substance cristalline brille d'une lumière intérieure et est utilisée pour alimenter l'équipement le plus avancé de l'Expédition 33. L'énergie contenue semble exister dans plusieurs dimensions simultanément.</Expedition33_Chroma.description>
+  
+  <!-- Équipement -->
+  <Expedition33_OfficerHat.label>casquette d'officier Expédition 33</Expedition33_OfficerHat.label>
+  <Expedition33_OfficerHat.description>Une casquette de style militaire portée par les membres haut gradés de l'Expédition 33. L'insigne brille faiblement d'énergie chromatique, marquant le porteur comme quelqu'un qui a plongé profondément dans les connaissances interdites.</Expedition33_OfficerHat.description>
+  
+  <!-- Pictogrammes -->
+  <Expedition33_Picto_Guardian.label>Pictogramme Gardien</Expedition33_Picto_Guardian.label>
+  <Expedition33_Picto_Guardian.description>Un pictogramme ancien représentant une figure de gardien. Le symbole semble se déplacer et changer quand on le regarde directement, suggérant des connexions profondes avec les énergies protectrices.</Expedition33_Picto_Guardian.description>
+  
+  <Expedition33_Picto_Healer.label>Pictogramme Guérisseur</Expedition33_Picto_Healer.label>
+  <Expedition33_Picto_Healer.description>Un pictogramme mystique représentant la guérison et la restauration. Les symboles gravés pulsent d'une douce lumière qui semble apaiser la douleur et la souffrance.</Expedition33_Picto_Healer.description>
+  
+  <Expedition33_Picto_Scholar.label>Pictogramme Érudit</Expedition33_Picto_Scholar.label>
+  <Expedition33_Picto_Scholar.description>Un pictogramme complexe symbolisant la connaissance et la sagesse. Ceux qui l'étudient rapportent d'étranges visions et des aperçus soudains de vérités cosmiques.</Expedition33_Picto_Scholar.description>
+  
+  <Expedition33_Picto_Striker.label>Pictogramme Frappeur</Expedition33_Picto_Striker.label>
+  <Expedition33_Picto_Striker.description>Un pictogramme féroce représentant le combat et la destruction. Le symbole dégage une aura d'agression qui rend les armes à proximité plus légères et plus mortelles.</Expedition33_Picto_Striker.description>
+  
+  <!-- Objets de Protection -->
+  <Expedition33_AntiGommageShield.label>bouclier anti-gommage</Expedition33_AntiGommageShield.label>
+  <Expedition33_AntiGommageShield.description>Un dispositif protecteur conçu pour repousser les effets de distorsion de réalité du Gommage. Le bouclier crée un champ localisé qui maintient l'intégrité de l'espace-temps dans sa zone d'influence.</Expedition33_AntiGommageShield.description>
+</LanguageData>

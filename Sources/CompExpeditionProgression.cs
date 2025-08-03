@@ -94,7 +94,8 @@ namespace Mod_warult
 
             if (!string.IsNullOrEmpty(source))
             {
-                Messages.Message($"{pawn.LabelShort}: +{amount} XP Combat ({source})", MessageTypeDefOf.PositiveEvent);
+                Messages.Message("Expedition33_CombatXPGained".Translate(pawn.LabelShort, amount, source), 
+                    MessageTypeDefOf.PositiveEvent);
             }
         }
 
@@ -105,7 +106,8 @@ namespace Mod_warult
 
             if (!string.IsNullOrEmpty(source))
             {
-                Messages.Message($"{pawn.LabelShort}: +{amount} XP Âme ({source})", MessageTypeDefOf.PositiveEvent);
+                Messages.Message("Expedition33_SoulXPGained".Translate(pawn.LabelShort, amount, source), 
+                    MessageTypeDefOf.PositiveEvent);
             }
         }
 
@@ -130,7 +132,8 @@ namespace Mod_warult
             availablePoints += 3;
             ApplyLevelUpBonuses();
 
-            Messages.Message($"{pawn.LabelShort} atteint le niveau {currentLevel} ! (+3 points d'attribut)", MessageTypeDefOf.PositiveEvent);
+            Messages.Message("Expedition33_LevelUp".Translate(pawn.LabelShort, currentLevel), 
+                MessageTypeDefOf.PositiveEvent);
 
             if (pawn?.Spawned == true)
             {
@@ -177,7 +180,8 @@ namespace Mod_warult
             
             // Pour l'effet d'explosion, vous pouvez ajouter une logique personnalisée
             // ou laisser le système XML gérer l'explosion
-            Messages.Message($"💥 {pawn.LabelShort} prépare un coup dévastateur !", MessageTypeDefOf.PositiveEvent);
+            Messages.Message("Expedition33_CrushingBlowPrepared".Translate(pawn.LabelShort), 
+                MessageTypeDefOf.PositiveEvent);
         }
 
         private void ActivateTimeSlip()
@@ -215,8 +219,6 @@ namespace Mod_warult
             }
             VisualEffects.PlayMiracleEffect(pawn);
         }
-
-
 
         public bool TrySpendAttributePoint(AttributeType attribute)
         {
@@ -265,10 +267,8 @@ namespace Mod_warult
                 {
                     unlockedAbilities.Add(abilityKey);
 
-                    Messages.Message(
-                        $"🌟 {pawn.LabelShort} déverrouille '{data.name}' !",
-                        MessageTypeDefOf.PositiveEvent
-                    );
+                    Messages.Message("Expedition33_AbilityUnlocked".Translate(pawn.LabelShort, data.name),
+                        MessageTypeDefOf.PositiveEvent);
 
                     VisualEffects.PlayAbilityUnlockEffect(pawn);
                 }
@@ -277,13 +277,16 @@ namespace Mod_warult
 
         public bool CanUseAbility(string abilityKey)
         {
+            if (pawn?.Dead == true || pawn?.Map == null) return false; // ✅ PROTECTION AJOUTÉE
             if (!unlockedAbilities.Contains(abilityKey)) return false;
 
             int currentTick = GenTicks.TicksGame;
-            int cooldownEnd = 0;
-            abilityCooldowns.TryGetValue(abilityKey, out cooldownEnd);
+            if (abilityCooldowns.TryGetValue(abilityKey, out int cooldownEnd))
+            {
+                return currentTick >= cooldownEnd;
+            }
 
-            return currentTick >= cooldownEnd;
+            return true; // Pas de cooldown enregistré = utilisable
         }
 
         public bool TryActivateAbility(string abilityKey)
@@ -327,30 +330,44 @@ namespace Mod_warult
                     ActivateMiracle();
                     break;
                 default:
-                    Log.Warning($"[Expedition33] Ability non reconnue: {abilityKey}");
+                    Log.Warning("Expedition33_UnknownAbility".Translate(abilityKey));
                     return false;
             }
             
             abilityCooldowns[abilityKey] = currentTick + data.cooldownTicks;
-            Messages.Message(
-                $"⚡ {pawn.LabelShort} utilise {data.name} !",
-                MessageTypeDefOf.PositiveEvent
-            );
+            Messages.Message("Expedition33_AbilityActivated".Translate(pawn.LabelShort, data.name),
+                MessageTypeDefOf.PositiveEvent);
             return true;
         }
-
 
         // ✅ MÉTHODES D'ACTIVATION INTÉGRÉES (SANS PARAMÈTRE PAWN)
         private void ActivateRegeneration()
         {
-            var hediffDef = DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_RegenerationBuff");
-            if (hediffDef != null)
+            try
             {
-                var hediff = HediffMaker.MakeHediff(hediffDef, pawn);
-                hediff.Severity = 1.0f;
-                pawn.health.AddHediff(hediff);
+                var hediffDef = DefDatabase<HediffDef>.GetNamedSilentFail("Expedition33_RegenerationBuff");
+                if (hediffDef != null)
+                {
+                    // Retire l'ancien hediff s'il existe
+                    var existing = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
+                    if (existing != null)
+                        pawn.health.RemoveHediff(existing);
+
+                    var hediff = HediffMaker.MakeHediff(hediffDef, pawn);
+                    hediff.Severity = 1.0f;
+                    pawn.health.AddHediff(hediff);
+
+                    VisualEffects.PlayRegenerationEffect(pawn);
+                }
+                else
+                {
+                    Log.Warning("Expedition33_RegenerationHediffNotFound".Translate());
+                }
             }
-            VisualEffects.PlayRegenerationEffect(pawn);
+            catch (Exception ex)
+            {
+                Log.Error("Expedition33_RegenerationError".Translate(ex.Message));
+            }
         }
 
         private void ActivateBerserkerRage()
@@ -367,94 +384,90 @@ namespace Mod_warult
 
         private void ActivateQuickStep()
         {
+            // ✅ VÉRIFIER LA MAP EN PREMIER
+            if (pawn?.Map == null)
+            {
+                Log.Error("Expedition33_QuickStepMapError".Translate());
+                return;
+            }
+
+            Map currentMap = pawn.Map; // Sauvegarder la référence avant DeSpawn
             IntVec3 targetPos = FindDashDestination(pawn.Position, pawn.Rotation.FacingCell);
 
             if (targetPos.IsValid && IsValidDashTarget(targetPos))
             {
-                // Effets visuels au point de départ
-                VisualEffects.PlayDashEffect(pawn.Position, pawn.Map);
-                
-                // Téléportation sécurisée
+                VisualEffects.PlayDashEffect(pawn.Position, currentMap);
                 IntVec3 oldPosition = pawn.Position;
-                
-                // Méthode correcte pour déplacer un pawn
+
                 if (pawn.Spawned)
-                {
                     pawn.DeSpawn(DestroyMode.Vanish);
-                }
-                
-                GenSpawn.Spawn(pawn, targetPos, pawn.Map, pawn.Rotation);
-                
-                // Effets visuels au point d'arrivée
-                VisualEffects.PlayDashEffect(targetPos, pawn.Map);
-                
-                // Notification de téléportation
+
+                // ✅ UTILISER LA MAP SAUVEGARDÉE
+                GenSpawn.Spawn(pawn, targetPos, currentMap, pawn.Rotation);
+                VisualEffects.PlayDashEffect(targetPos, currentMap);
                 pawn.Notify_Teleported(false, true);
-                
-                // Message informatif
-                Messages.Message(
-                    $"⚡ {pawn.LabelShort} utilise Pas Éclair !",
-                    new TargetInfo(targetPos, pawn.Map),
-                    MessageTypeDefOf.PositiveEvent
-                );
+
+                Messages.Message("Expedition33_QuickStepUsed".Translate(pawn.LabelShort),
+                    new TargetInfo(targetPos, currentMap), MessageTypeDefOf.PositiveEvent);
             }
             else
             {
-                // Gestion d'échec
-                Messages.Message(
-                    $"❌ {pawn.LabelShort} ne peut pas se téléporter ici !",
-                    new TargetInfo(pawn.Position, pawn.Map),
-                    MessageTypeDefOf.RejectInput
-                );
+                Messages.Message("Expedition33_QuickStepFailed".Translate(pawn.LabelShort),
+                    new TargetInfo(pawn.Position, currentMap), MessageTypeDefOf.RejectInput);
             }
         }
 
         // Méthode de validation de la cible
         private bool IsValidDashTarget(IntVec3 targetPos)
         {
-            if (!targetPos.InBounds(pawn.Map))
-                return false;
-                
-            // Vérification que la case est praticable
-            if (!targetPos.Standable(pawn.Map))
-                return false;
-                
-            // Vérification qu'il n'y a pas de pawn sur la case
-            if (targetPos.GetFirstPawn(pawn.Map) != null)
-                return false;
-                
-            // Vérification de la distance maximale (7 cases selon votre XML)
+            if (pawn?.Map == null) return false;
+            if (!targetPos.InBounds(pawn.Map)) return false;
+            if (!targetPos.Standable(pawn.Map)) return false;
+            if (targetPos.GetFirstPawn(pawn.Map) != null) return false;
+
+            // Vérification de la distance maximale
             float distance = pawn.Position.DistanceTo(targetPos);
-            if (distance > 7f)
+            if (distance > 7f || distance < 1f) return false;
+
+            // Vérification qu'il n'y a pas de mur entre les deux positions
+            if (!GenSight.LineOfSight(pawn.Position, targetPos, pawn.Map, true))
                 return false;
-                
+
             return true;
         }
 
         // Implémentation de FindDashDestination si elle manque
         private IntVec3 FindDashDestination(IntVec3 startPos, IntVec3 facingDirection)
         {
-            // Cherche une position dans la direction regardée
+            if (pawn?.Map == null) return IntVec3.Invalid;
+
             IntVec3 targetPos = startPos;
-            
-            // Essaie jusqu'à 4 cases dans la direction regardée
-            for (int i = 1; i <= 4; i++)
+            IntVec3 direction = facingDirection;
+            // Normalisation manuelle : direction devient un vecteur de -1, 0 ou 1 sur chaque axe
+            direction = new IntVec3(
+                Math.Sign(direction.x),
+                0,
+                Math.Sign(direction.z)
+            );
+
+            // Si pas de direction claire, utilise la direction Nord par défaut
+            if (direction == IntVec3.Zero)
+                direction = IntVec3.North;
+
+            // Cherche la meilleure position dans un rayon de 4 cases
+            for (int distance = 1; distance <= 4; distance++)
             {
-                IntVec3 candidate = startPos + (facingDirection * i);
-                
-                if (candidate.InBounds(pawn.Map) && candidate.Standable(pawn.Map))
-                {
-                    targetPos = candidate;
-                }
-                else
-                {
-                    break; // Arrête si on rencontre un obstacle
-                }
+                IntVec3 candidate = startPos + (direction * distance);
+
+                if (!candidate.InBounds(pawn.Map)) break;
+                if (!candidate.Walkable(pawn.Map)) break;
+                if (candidate.GetFirstPawn(pawn.Map) != null) break;
+
+                targetPos = candidate;
             }
-            
+
             return targetPos;
         }
-
 
         private void ActivateIronSkin()
         {
@@ -479,8 +492,6 @@ namespace Mod_warult
             }
             VisualEffects.PlayLuckyStrikeEffect(pawn);
         }
-
-    
 
         // ✅ MÉTHODES D'EFFETS D'ATTRIBUTS (INCHANGÉES)
         private void ApplyAttributeEffects(AttributeType attribute)
@@ -517,7 +528,7 @@ namespace Mod_warult
             }
             catch (Exception ex)
             {
-                Log.Error($"[Expedition33] Erreur appliquant bonus vitalité: {ex.Message}");
+                Log.Error("Expedition33_VitalityEffectError".Translate(ex.Message));
             }
         }
 
@@ -540,7 +551,7 @@ namespace Mod_warult
             }
             catch (Exception ex)
             {
-                Log.Error($"[Expedition33] Erreur appliquant bonus puissance: {ex.Message}");
+                Log.Error("Expedition33_PowerEffectError".Translate(ex.Message));
             }
         }
 
@@ -625,8 +636,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Vitality,
                 requiredLevel = 20,
                 cooldownTicks = 20000, // Correspond au XML
-                name = "Régénération",
-                description = "Régénère progressivement les blessures pendant 30 secondes",
+                name = "Expedition33_RegenerationName".Translate(),
+                description = "Expedition33_RegenerationDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityRegeneration"
             },
             ["IronWill"] = new AbilityData
@@ -634,8 +645,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Vitality,
                 requiredLevel = 40,
                 cooldownTicks = 54000, // Correspond au XML
-                name = "Volonté d'Acier",
-                description = "Immunise temporairement contre les crises mentales",
+                name = "Expedition33_IronWillName".Translate(),
+                description = "Expedition33_IronWillDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityIronWill"
             },
 
@@ -645,8 +656,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Power,
                 requiredLevel = 20,
                 cooldownTicks = 30000, // Correspond au XML
-                name = "Rage Berserker",
-                description = "Augmente les dégâts mais réduit la défense pendant 30 secondes",
+                name = "Expedition33_BerserkerRageName".Translate(),
+                description = "Expedition33_BerserkerRageDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityBerserker"
             },
             ["CrushingBlow"] = new AbilityData
@@ -654,8 +665,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Power,
                 requiredLevel = 50,
                 cooldownTicks = 45000, // Correspond au XML
-                name = "Coup Dévastateur",
-                description = "Inflige des dégâts dans une zone autour de la cible",
+                name = "Expedition33_CrushingBlowName".Translate(),
+                description = "Expedition33_CrushingBlowDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityCrush"
             },
 
@@ -665,8 +676,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Agility,
                 requiredLevel = 20,
                 cooldownTicks = 18000, // Correspond au XML
-                name = "Pas Éclair",
-                description = "Se téléporte instantanément vers un lieu proche",
+                name = "Expedition33_QuickStepName".Translate(),
+                description = "Expedition33_QuickStepDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityQuickStep"
             },
             ["TimeSlip"] = new AbilityData
@@ -674,8 +685,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Agility,
                 requiredLevel = 60,
                 cooldownTicks = 60000, // Correspond au XML
-                name = "Glissement Temporel",
-                description = "Augmente temporairement la vitesse d'action",
+                name = "Expedition33_TimeSlipName".Translate(),
+                description = "Expedition33_TimeSlipDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityTimeSlip"
             },
 
@@ -685,8 +696,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Defense,
                 requiredLevel = 20,
                 cooldownTicks = 32000, // Correspond au XML
-                name = "Peau de Fer",
-                description = "Réduit considérablement les dégâts reçus pendant 25 secondes",
+                name = "Expedition33_IronSkinName".Translate(),
+                description = "Expedition33_IronSkinDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityIronSkin"
             },
             ["Fortress"] = new AbilityData
@@ -694,8 +705,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Defense,
                 requiredLevel = 80,
                 cooldownTicks = 90000, // Correspond au XML
-                name = "Forteresse",
-                description = "Immunité presque totale aux dégâts pendant 8 secondes",
+                name = "Expedition33_FortressName".Translate(),
+                description = "Expedition33_FortressDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityFortress"
             },
 
@@ -705,8 +716,8 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Chance,
                 requiredLevel = 20,
                 cooldownTicks = 20000, // Correspond au XML
-                name = "Coup de Chance",
-                description = "Augmente drastiquement la précision de la prochaine attaque",
+                name = "Expedition33_LuckyStrikeName".Translate(),
+                description = "Expedition33_LuckyStrikeDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityLuckyStrike"
             },
             ["Miracle"] = new AbilityData
@@ -714,15 +725,12 @@ namespace Mod_warult
                 requiredAttribute = AttributeType.Chance,
                 requiredLevel = 99,
                 cooldownTicks = 150000, // Correspond au XML
-                name = "Miracle",
-                description = "Protection divine temporaire contre les blessures mortelles",
+                name = "Expedition33_MiracleName".Translate(),
+                description = "Expedition33_MiracleDesc".Translate(),
                 iconPath = "UI/Icons/Abilities/AbilityMiracle"
             }
         };
-    
     }
-
-    
 
     public class AbilityData
     {
@@ -791,61 +799,68 @@ namespace Mod_warult
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = $"💪 Vitalité: {progression.vitality}",
-                    defaultDesc = $"Améliorer vitalité (+1)\nPoints disponibles: {progression.availablePoints}",
+                    defaultLabel = "Expedition33_VitalityGizmo".Translate(progression.vitality),
+                    defaultDesc = "Expedition33_VitalityGizmoDesc".Translate(progression.availablePoints),
                     icon = AttributeIcons.GetIcon(AttributeType.Vitality),
                     action = () =>
                     {
-                        if (progression.TrySpendAttributePoint(AttributeType.Vitality))
-                            Messages.Message($"Vitalité augmentée: {progression.vitality}", MessageTypeDefOf.PositiveEvent);
+                        if (progression.availablePoints > 0 && progression.TrySpendAttributePoint(AttributeType.Vitality))
+                        {
+                            Messages.Message("Expedition33_VitalityIncreased".Translate(progression.vitality), 
+                                MessageTypeDefOf.PositiveEvent);
+                        }
                     }
                 };
 
                 yield return new Command_Action
                 {
-                    defaultLabel = $"⚔️ Puissance: {progression.power}",
-                    defaultDesc = $"Améliorer puissance (+1)\nPoints disponibles: {progression.availablePoints}",
+                    defaultLabel = "Expedition33_PowerGizmo".Translate(progression.power),
+                    defaultDesc = "Expedition33_PowerGizmoDesc".Translate(progression.availablePoints),
                     icon = AttributeIcons.GetIcon(AttributeType.Power),
                     action = () =>
                     {
                         if (progression.TrySpendAttributePoint(AttributeType.Power))
-                            Messages.Message($"Puissance augmentée: {progression.power}", MessageTypeDefOf.PositiveEvent);
+                            Messages.Message("Expedition33_PowerIncreased".Translate(progression.power), 
+                                MessageTypeDefOf.PositiveEvent);
                     }
                 };
 
                 yield return new Command_Action
                 {
-                    defaultLabel = $"🏃 Agilité: {progression.agility}",
-                    defaultDesc = $"Améliorer agilité (+1)\nPoints disponibles: {progression.availablePoints}",
+                    defaultLabel = "Expedition33_AgilityGizmo".Translate(progression.agility),
+                    defaultDesc = "Expedition33_AgilityGizmoDesc".Translate(progression.availablePoints),
                     icon = AttributeIcons.GetIcon(AttributeType.Agility),
                     action = () =>
                     {
                         if (progression.TrySpendAttributePoint(AttributeType.Agility))
-                            Messages.Message($"Agilité augmentée: {progression.agility}", MessageTypeDefOf.PositiveEvent);
+                            Messages.Message("Expedition33_AgilityIncreased".Translate(progression.agility), 
+                                MessageTypeDefOf.PositiveEvent);
                     }
                 };
 
                 yield return new Command_Action
                 {
-                    defaultLabel = $"🛡️ Défense: {progression.defense}",
-                    defaultDesc = $"Améliorer défense (+1)\nPoints disponibles: {progression.availablePoints}",
+                    defaultLabel = "Expedition33_DefenseGizmo".Translate(progression.defense),
+                    defaultDesc = "Expedition33_DefenseGizmoDesc".Translate(progression.availablePoints),
                     icon = AttributeIcons.GetIcon(AttributeType.Defense),
                     action = () =>
                     {
                         if (progression.TrySpendAttributePoint(AttributeType.Defense))
-                            Messages.Message($"Défense augmentée: {progression.defense}", MessageTypeDefOf.PositiveEvent);
+                            Messages.Message("Expedition33_DefenseIncreased".Translate(progression.defense), 
+                                MessageTypeDefOf.PositiveEvent);
                     }
                 };
 
                 yield return new Command_Action
                 {
-                    defaultLabel = $"🍀 Chance: {progression.chance}",
-                    defaultDesc = $"Améliorer chance (+1)\nPoints disponibles: {progression.availablePoints}",
+                    defaultLabel = "Expedition33_ChanceGizmo".Translate(progression.chance),
+                    defaultDesc = "Expedition33_ChanceGizmoDesc".Translate(progression.availablePoints),
                     icon = AttributeIcons.GetIcon(AttributeType.Chance),
                     action = () =>
                     {
                         if (progression.TrySpendAttributePoint(AttributeType.Chance))
-                            Messages.Message($"Chance augmentée: {progression.chance}", MessageTypeDefOf.PositiveEvent);
+                            Messages.Message("Expedition33_ChanceIncreased".Translate(progression.chance), 
+                                MessageTypeDefOf.PositiveEvent);
                     }
                 };
             }
@@ -870,7 +885,7 @@ namespace Mod_warult
                     if (!progression.abilityCooldowns.TryGetValue(abilityKey, out cooldownEnd))
                         cooldownEnd = 0;
                     int remainingTicks = cooldownEnd - GenTicks.TicksGame;
-                    gizmo.Disable($"Cooldown: {(remainingTicks / 60f):F0}s");
+                    gizmo.Disable("Expedition33_CooldownRemaining".Translate((remainingTicks / 60f).ToString("F0")));
                 }
 
                 yield return gizmo;
@@ -879,20 +894,25 @@ namespace Mod_warult
             // Gizmos d'information
             yield return new Command_Action
             {
-                defaultLabel = "📊 Progression Détaillée",
-                defaultDesc = "Ouvrir la fenêtre de progression complète",
+                defaultLabel = "Expedition33_DetailedProgressionGizmo".Translate(),
+                defaultDesc = "Expedition33_DetailedProgressionGizmoDesc".Translate(),
                 icon = ContentFinder<Texture2D>.Get("UI/Icons/Progression", false) ?? BaseContent.BadTex,
                 action = () => Find.WindowStack.Add(new Window_ExpeditionProgression(__instance))
             };
 
             yield return new Command_Action
             {
-                defaultLabel = "📋 Info Progression",
-                defaultDesc = $"Niveau: {progression.currentLevel}\n" +
-                             $"💪 Vitalité: {progression.vitality} | ⚔️ Puissance: {progression.power}\n" +
-                             $"🏃 Agilité: {progression.agility} | 🛡️ Défense: {progression.defense} | 🍀 Chance: {progression.chance}\n" +
-                             $"XP Combat: {progression.combatXP:F1} | XP Âme: {progression.soulXP:F1}\n" +
-                             $"Points disponibles: {progression.availablePoints}",
+                defaultLabel = "Expedition33_ProgressionInfoGizmo".Translate(),
+                defaultDesc = "Expedition33_ProgressionInfoGizmoDesc".Translate(
+                    progression.currentLevel,
+                    progression.vitality,
+                    progression.power,
+                    progression.agility,
+                    progression.defense,
+                    progression.chance,
+                    progression.combatXP.ToString("F1"),
+                    progression.soulXP.ToString("F1"),
+                    progression.availablePoints),
                 icon = ContentFinder<Texture2D>.Get("UI/Icons/Progression", false) ?? BaseContent.BadTex,
                 action = () => { }
             };
@@ -905,7 +925,7 @@ namespace Mod_warult
 
             if (progression.CanUseAbility(abilityKey))
             {
-                return $"{baseDesc}\n\n✅ Prêt à utiliser !";
+                return "Expedition33_AbilityReady".Translate(baseDesc);
             }
             else
             {
@@ -914,42 +934,8 @@ namespace Mod_warult
                     cooldownEnd = 0;
                 progression.abilityCooldowns.TryGetValue(abilityKey, out cooldownEnd);
                 int remainingTicks = cooldownEnd - GenTicks.TicksGame;
-                return $"{baseDesc}\n\n⏱️ Cooldown: {(remainingTicks / 60f):F0}s";
+                return "Expedition33_AbilityCooldownInfo".Translate(baseDesc, (remainingTicks / 60f).ToString("F0"));
             }
-        }
-        
-        
-
-    }
-
-    // ✅ PATCHES XP (RÉÉQUILIBRÉS)
-    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
-    static class Patch_KillXP
-    {
-        static void Postfix(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit)
-        {
-            var killer = dinfo.HasValue ? dinfo.Value.Instigator as Pawn : null;
-            if (killer?.IsColonist != true) return;
-
-            var progression = ExpeditionProgressionHelper.GetOrCreateProgression(killer);
-            if (progression != null)
-            {
-                // ✅ VALEURS RÉÉQUILIBRÉES
-                float xpAmount = IsBoss(__instance) ? 75f : 8f;
-                progression.GainCombatXP(xpAmount, "Kill");
-            }
-        }
-
-        static bool IsBoss(Pawn p)
-        {
-            if (p?.kindDef?.defName == null) return false;
-
-            string defName = p.kindDef.defName;
-            return defName.IndexOf("boss", StringComparison.OrdinalIgnoreCase) >= 0
-                || defName.Contains("Alpha")
-                || defName.Contains("Boss")
-                || defName.Contains("Paintress")
-                || defName.Contains("NevronDechut");
         }
     }
 
@@ -967,7 +953,7 @@ namespace Mod_warult
                 var progression = ExpeditionProgressionHelper.GetOrCreateProgression(builder);
                 if (progression != null)
                 {
-                    progression.GainSoulXP(8f, "Construction importante"); // ✅ Valeur réduite
+                    progression.GainSoulXP(8f, "Expedition33_ImportantConstruction".Translate()); // ✅ Valeur réduite
                 }
             }
         }
@@ -993,11 +979,11 @@ namespace Mod_warult
             {
                 ExpeditionProgressionHelper.GainXP(selected, 1000f, "combat");
                 ExpeditionProgressionHelper.GainXP(selected, 200f, "soul");
-                Messages.Message($"{selected.Name} reçoit 200 XP combat et âme", MessageTypeDefOf.PositiveEvent);
+                Messages.Message("Expedition33_DebugXPGiven".TranslateSimple() + " " + selected.Name, MessageTypeDefOf.PositiveEvent);
             }
             else
             {
-                Messages.Message("Sélectionnez un colon d'abord", MessageTypeDefOf.RejectInput);
+                Messages.Message("Expedition33_SelectColonistFirst".Translate(), MessageTypeDefOf.RejectInput);
             }
         }
 
@@ -1011,11 +997,11 @@ namespace Mod_warult
                 if (progression != null)
                 {
                     // Déverrouillez toutes les capacités pour test
-                    progression.vitality = 25;
-                    progression.power = 25;
-                    progression.agility = 25;
-                    progression.defense = 25;
-                    progression.chance = 25;
+                    progression.vitality = 100;
+                    progression.power = 100;
+                    progression.agility = 100;
+                    progression.defense = 100;
+                    progression.chance = 100;
                     progression.CheckAbilityUnlocks();
                 }
             }
@@ -1091,9 +1077,18 @@ namespace Mod_warult
 
         public static void PlayDashEffect(IntVec3 position, Map map)
         {
-            for (int i = 0; i < 8; i++)
+            if (map == null) return; // ✅ PROTECTION AJOUTÉE
+            
+            try
             {
-                FleckMaker.ThrowDustPuffThick(position.ToVector3(), map, 1.0f, Color.blue);
+                for (int i = 0; i < 8; i++)
+                {
+                    FleckMaker.ThrowDustPuffThick(position.ToVector3(), map, 1.0f, Color.blue);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Warning("Expedition33_VisualEffectError".Translate("PlayDashEffect", ex.Message));
             }
         }
 
@@ -1120,61 +1115,60 @@ namespace Mod_warult
         }
 
         public static void PlayIronWillEffect(Pawn pawn)
-{
-    if (pawn.Spawned)
-    {
-        for (int i = 0; i < 10; i++)
         {
-            FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 1.5f, new Color(0.5f, 0.5f, 0.8f));
+            if (pawn.Spawned)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 1.5f, new Color(0.5f, 0.5f, 0.8f));
+                }
+            }
         }
-    }
-}
 
-public static void PlayCrushingBlowEffect(Pawn pawn)
-{
-    if (pawn.Spawned)
-    {
-        for (int i = 0; i < 15; i++)
+        public static void PlayCrushingBlowEffect(Pawn pawn)
         {
-            FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 2.5f, Color.black);
+            if (pawn.Spawned)
+            {
+                for (int i = 0; i < 15; i++)
+                {
+                    FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 2.5f, Color.black);
+                }
+            }
         }
-    }
-}
 
-public static void PlayTimeSlipEffect(Pawn pawn)
-{
-    if (pawn.Spawned)
-    {
-        for (int i = 0; i < 12; i++)
+        public static void PlayTimeSlipEffect(Pawn pawn)
         {
-            FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 1.8f, new Color(0.2f, 0.8f, 0.8f));
+            if (pawn.Spawned)
+            {
+                for (int i = 0; i < 12; i++)
+                {
+                    FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 1.8f, new Color(0.2f, 0.8f, 0.8f));
+                }
+            }
         }
-    }
-}
 
-public static void PlayFortressEffect(Pawn pawn)
-{
-    if (pawn.Spawned)
-    {
-        for (int i = 0; i < 20; i++)
+        public static void PlayFortressEffect(Pawn pawn)
         {
-            FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 2.0f, new Color(0.8f, 0.8f, 0.2f));
+            if (pawn.Spawned)
+            {
+                for (int i = 0; i < 20; i++)
+                {
+                    FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 2.0f, new Color(0.8f, 0.8f, 0.2f));
+                }
+            }
         }
-    }
-}
 
-public static void PlayMiracleEffect(Pawn pawn)
-{
-    if (pawn.Spawned)
-    {
-        for (int i = 0; i < 25; i++)
+        public static void PlayMiracleEffect(Pawn pawn)
         {
-            FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 3.0f, Color.white);
+            if (pawn.Spawned)
+            {
+                for (int i = 0; i < 25; i++)
+                {
+                    FleckMaker.ThrowDustPuffThick(pawn.Position.ToVector3(), pawn.Map, 3.0f, Color.white);
+                }
+                FleckMaker.ThrowLightningGlow(pawn.Position.ToVector3(), pawn.Map, 4f);
+            }
         }
-        FleckMaker.ThrowLightningGlow(pawn.Position.ToVector3(), pawn.Map, 4f);
-    }
-}
-
     }
 
     // ✅ CLASSE ICÔNES
@@ -1203,7 +1197,4 @@ public static void PlayMiracleEffect(Pawn pawn)
             return iconCache[type];
         }
     }
-
-    // ✅ MOD PRINCIPAL
-    
 }
