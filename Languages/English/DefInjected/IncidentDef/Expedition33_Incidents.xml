@@ -12,9 +12,9 @@
   <Expedition33_PainterSighting.letterLabel>The Paintress</Expedition33_PainterSighting.letterLabel>
   <Expedition33_PainterSighting.letterText>The terrifying Paintress has been spotted near your colony...</Expedition33_PainterSighting.letterText>
   
-  <Expedition33_TestEvent.label>Expedition 33 Test</Expedition33_TestEvent.label>
+  <!-- <Expedition33_TestEvent.label>Expedition 33 Test</Expedition33_TestEvent.label>
   <Expedition33_TestEvent.letterLabel>Expedition 33 Test</Expedition33_TestEvent.letterLabel>
-  <Expedition33_TestEvent.letterText>This is a test to verify that your events work!</Expedition33_TestEvent.letterText>
+  <Expedition33_TestEvent.letterText>This is a test to verify that your events work!</Expedition33_TestEvent.letterText> -->
 
   <GestralAwakening.label>ancient gestral awakening</GestralAwakening.label>
   <GestralAwakening.letterLabel>Awakening of the Ancients</GestralAwakening.letterLabel>

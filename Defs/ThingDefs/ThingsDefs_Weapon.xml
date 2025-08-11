@@ -44,20 +44,18 @@
 			<WoodLog>20</WoodLog>
 			<Plasteel>20</Plasteel>
 		</costList>
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Smith</soundWorking>
 			<recipeUsers>
-				<li>FueledSmithy</li>
-				<li>ElectricSmithy</li>
 				<li>Expedition33_Armory</li>
 			</recipeUsers>
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-		</recipeMaker> -->
+		</recipeMaker>
 	</ThingDef>
 
 	<!-- Lame Artistique Anti-Gommage -->
@@ -231,8 +229,6 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Smith</soundWorking>
 			<recipeUsers>
-				<li>FueledSmithy</li>
-				<li>ElectricSmithy</li>
 				<li>Expedition33_Armory</li>
 			</recipeUsers>
 			<skillRequirements>

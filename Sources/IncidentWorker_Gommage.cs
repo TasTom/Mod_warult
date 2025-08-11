@@ -391,12 +391,12 @@ namespace Mod_warult
         }
     }
 
-    public class IncidentWorker_TestEvent : IncidentWorker
-    {
-        protected override bool TryExecuteWorker(IncidentParms parms)
-        {
-            Messages.Message("Expedition33_TestEvent".Translate(), MessageTypeDefOf.PositiveEvent);
-            return true;
-        }
-    }
+    // public class IncidentWorker_TestEvent : IncidentWorker
+    // {
+    //     protected override bool TryExecuteWorker(IncidentParms parms)
+    //     {
+    //         Messages.Message("Expedition33_TestEvent".Translate(), MessageTypeDefOf.PositiveEvent);
+    //         return true;
+    //     }
+    // }
 }

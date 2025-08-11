@@ -135,7 +135,7 @@
 
 
     <!-- Recette pour fabriquer équipement d'expédition standard -->
-    <RecipeDef>
+    <!-- <RecipeDef>
         <defName>MakeExpeditionGear</defName>
         <label>fabriquer uniforme d'expédition</label>
         <description>Créer l'uniforme standard de l'Expédition 33 pour identifier les membres et améliorer le moral.</description>
@@ -183,7 +183,7 @@
             <Expedition33_Uniform>1</Expedition33_Uniform>
         </products>
         <workSkill>Crafting</workSkill>
-    </RecipeDef>
+    </RecipeDef> -->
 
     <!-- Recette pour calibrer détecteur d'âge maudit -->
     <RecipeDef>

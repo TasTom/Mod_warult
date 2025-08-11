@@ -54,7 +54,7 @@
 	</IncidentDef>
 
 	<!-- NOUVEAU - Test simple pour vérifier que ça fonctionne -->
-	<IncidentDef>
+	<!-- <IncidentDef>
 		<defName>Expedition33_TestEvent</defName>
 		<label>Test Expédition 33</label>
 		<workerClass>Mod_warult.IncidentWorker_TestEvent</workerClass>
@@ -68,7 +68,7 @@
 		<letterLabel>Test Expédition 33</letterLabel>
 		<letterText>Ceci est un test pour vérifier que tes événements fonctionnent !</letterText>
 		<letterDef>PositiveEvent</letterDef>
-	</IncidentDef>
+	</IncidentDef> -->
 
 
 

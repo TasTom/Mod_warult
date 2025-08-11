@@ -229,6 +229,7 @@
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
@@ -236,7 +237,7 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<buildingTags>
 				<li>Production</li>
-				<li>Expedition33</li>
+				<li>WorkTable</li>
 				<li>Crafting</li>
 			</buildingTags>
 		</building>
@@ -253,6 +254,10 @@
 					<li>ToolCabinet</li>
 				</linkableFacilities>
 			</li>
+			  <li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn</compClass>
+			</li>
 		</comps>
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
@@ -263,7 +268,12 @@
         <li>Expedition33_CraftPictoStriker</li>
         <li>Expedition33_CraftPictoHealer</li>
         <li>Expedition33_CraftPictoScholar</li>
-        <li>Expedition33_ProcessChromaRaw</li> -->
+        <li>Expedition33_ProcessChromaRaw</li>
+		<li>Make_ExpeditionScythe</li>
+		<li>Make_Expedition33_ArtisticBlade</li>
+		<li>Make_Expedition33_LeverRifle</li>
+		<li>MakeExpeditionGear</li>
+		<li>Make_AntiGommageShield</li> -->
     </recipes>
 
 		<researchPrerequisites>

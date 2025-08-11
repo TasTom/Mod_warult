@@ -109,7 +109,7 @@ namespace Mod_warult
             // CORRECTION : S'assurer que le délai est bien dans le futur
             int delayTicks = FIRST_GOMMAGE_DELAY_DAYS * TICKS_PER_DAY;
             nextPaintingTick = GenTicks.TicksGame + delayTicks;
-            currentPaintedAge = Rand.Range(33, 55);
+            currentPaintedAge = Rand.Range(40, 55);
 
             Messages.Message(
                 "Expedition33_PaintressSystemInit".Translate(currentPaintedAge, FIRST_GOMMAGE_DELAY_DAYS),

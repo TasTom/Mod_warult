@@ -24,6 +24,8 @@
 		<costList>
 			<Steel>50</Steel>
 			<Cloth>60</Cloth>
+			<Expedition33_Chroma>2</Expedition33_Chroma>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -54,7 +56,6 @@
 			<soundWorking>Recipe_Tailor</soundWorking>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
 				<li>Expedition33_Armory</li>
 			</recipeUsers>
 			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>

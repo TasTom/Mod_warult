@@ -24,7 +24,7 @@
                         <li>Expedition33_Chroma</li>
                     </thingDefs>
                 </filter>
-                <count>15</count>
+                <count>5</count>
             </li>
             <li>
                 <filter>
@@ -77,7 +77,7 @@
                         <li>Expedition33_Chroma</li>
                     </thingDefs>
                 </filter>
-                <count>12</count>
+                <count>5</count>
             </li>
             <li>
                 <filter>
@@ -131,7 +131,7 @@
                         <li>Expedition33_Chroma</li>
                     </thingDefs>
                 </filter>
-                <count>10</count>
+                <count>5</count>
             </li>
             <li>
                 <filter>
@@ -220,7 +220,7 @@
                     <li>Expedition33_Chroma</li>
                 </thingDefs>
             </filter>
-            <count>18</count>
+            <count>5</count>
         </li>
         <li>
             <filter>
